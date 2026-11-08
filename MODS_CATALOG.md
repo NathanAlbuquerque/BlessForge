@@ -8,10 +8,10 @@
 
 | Localização / Status | Quantidade | Descrição |
 | :--- | :---: | :--- |
-| 🟢 **ATIVOS NA RAIZ** (`.`) | **82** | Mods prontos para copiar/usar no Minecraft |
+| 🟢 **ATIVOS NA RAIZ** (`.`) | **83** | Mods prontos para copiar/usar no Minecraft |
 | 🔴 **DESATIVADOS** (`desativados/`) | **10** | Mods isolados (EMI, Chest Tracker, Tabs, Chunky, etc.) |
 | 🎨 **RESOURCE PACKS** (`resourcepacks/`) | **5** | Pacotes visuais e de áudio em formato `.zip` |
-| **Total Geral** | **92** | **Arquivos JAR únicos catalogados** |
+| **Total Geral** | **93** | **Arquivos JAR únicos catalogados** |
 
 ---
 
@@ -22,7 +22,7 @@
 - [⚡ Otimização & Performance (7 mods)](#otimização--performance)
 - [🎒 Armazenamento & Inventário (5 mods)](#armazenamento--inventário)
 - [🎨 Gráficos, Áudio & Imersão (7 mods)](#gráficos,-áudio--imersão)
-- [💡 Qualidade de Vida (QoL) & Utilidades (29 mods)](#qualidade-de-vida-qol--utilidades)
+- [💡 Qualidade de Vida (QoL) & Utilidades (30 mods)](#qualidade-de-vida-qol--utilidades)
 - [📚 Bibliotecas, Frameworks & APIs (23 mods)](#bibliotecas,-frameworks--apis)
 - [🖥️ Interface (UI/HUD) & Controles (11 mods)](#interface-ui/hud--controles)
 - [🗺️ Aventura, Dimensões & Estruturas (4 mods)](#aventura,-dimensões--estruturas)
@@ -109,6 +109,7 @@
 | 🟢 Ativo | **[FTB Ranks](https://www.curseforge.com/minecraft/mc-mods/ftb-ranks-forge)** | `ftb-ranks-neoforge-2101.1.5.jar` | Both | Mod | Architectury API, FTB Library | --- | A simple mod that lets you create ranks for players, similar to Discord roles, and manage permissions for them |
 | 🟢 Ativo | **[FTB Ultimine](https://www.curseforge.com/minecraft/mc-mods/ftb-ultimine-forge)** | `ftb-ultimine-neoforge-2101.1.15.jar` | Both | Mod | Architectury API, FTB Library, ftbezcrystals | --- | Allows you to break multiple blocks at once |
 | 🟢 Ativo | **[Gravestone Mod](https://www.curseforge.com/minecraft/mc-mods/gravestone-mod)** | `gravestone-neoforge-1.21.1-1.0.40.jar` | Both | Mod | Jade | --- | Places a gravestone with your inventory items inside when you die |
+| 🟢 Ativo | **[HennyFullbright](https://change.me.to.your.mods.homepage.example.invalid/)** | `hennyfullbright-neoforge-1.21.1-1.0.jar` | Both | Mod | --- | --- | Sem descrição detalhada disponível. |
 | 🟢 Ativo | **[Just Enough Items](https://www.curseforge.com/minecraft/mc-mods/jei)** | `jei-1.21.1-neoforge-19.57.0.450.jar` | Both | Mod | mezz_config, mezz_config_gui | ModernFix, Sophisticated Core | JEI is an item and recipe viewing mod for Minecraft, built from the ground up for stability and performance. |
 | 🟢 Ativo | **[Lootr](https://minecraft.curseforge.com/projects/lootr)** | `lootr-neoforge-1.21.1-1.11.38.127.jar` | Both | Mod | --- | --- | Generates unique loot for each player that opens a loot container. |
 | 🟢 Ativo | **[Mielon's The Sift](https://x.com/MielonDev)** | `mielon's-the-sift-1.1.0-mc1.21.1-neo.jar` | Both | Mod | GeckoLib | --- | Explore The Sift: a strange dimension of siftslate, Ichor, ancient life, and resonant souls. |
