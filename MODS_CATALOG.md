@@ -8,8 +8,8 @@
 
 | Localização / Status | Quantidade | Descrição |
 | :--- | :---: | :--- |
-| 🟢 **ATIVOS NA RAIZ** (`.`) | **85** | Mods prontos para copiar/usar no Minecraft |
-| 🔴 **DESATIVADOS** (`desativados/`) | **10** | Mods isolados (EMI, Chest Tracker, Tabs, Chunky, etc.) |
+| 🟢 **ATIVOS NA RAIZ** (`.`) | **83** | Mods prontos para copiar/usar no Minecraft |
+| 🔴 **DESATIVADOS** (`desativados/`) | **12** | Mods isolados (EMI, Chest Tracker, Tabs, Chunky, etc.) |
 | 🎨 **RESOURCE PACKS** (`resourcepacks/`) | **6** | Pacotes visuais e de áudio em formato `.zip` |
 | **Total Geral** | **95** | **Arquivos JAR únicos catalogados** |
 
@@ -96,7 +96,6 @@
 | Status | Mod / Nome | Arquivo JAR | Lado | Tipo | Dependências | Usado Por (Dependentes) | Descrição & Links |
 | :---: | :--- | :--- | :---: | :---: | :--- | :--- | :--- |
 | 🟢 Ativo | **[AmbientSounds](https://modrinth.com/mod/ambientsounds)** | `AmbientSounds_NEOFORGE_v6.3.11_mc1.21.1.jar` | Both | Mod | CreativeCore | --- | Expands minecraft's ambient sounds. |
-| 🟢 Ativo | **[Auto Eat](https://modrinth.com/project/automaticallyeat/)** | `autoeat-1.6.8.jar` | Both | Mod | Simple GUI API, multiloaderapi | --- | When your fullness drops below the specified value, you will automatically consume food items in your inventory. |
 | 🟢 Ativo | **[Bartering Station](https://github.com/Fuzss/barteringstation)** | `BarteringStation-v21.1.0-1.21.1-NeoForge.jar` | Both | Mod | Puzzles Lib | --- | Still running around bartering manually? Let's put those lazy piglins to work instead! |
 | 🟢 Ativo | **[Carry On](https://change.me.to.your.mods.homepage.example.invalid/)** | `carryon-neoforge-1.21.1-2.2.6.13.jar` | Both | Mod | --- | --- | Carry On is a simple mod that improves game interaction by allowing players to pick up, carry, and place single block Tile Entities using only their empty hands. |
 | 🟢 Ativo | **Cinematic Respawn** | `cinematic_respawn-1.21.1-neoforge-1.4.1.jar` | Client | Mod | --- | --- | Cinematic respawn experience for Minecraft. |
@@ -120,6 +119,7 @@
 | 🟢 Ativo | **[U Team Core](https://u-team.info/mods/uteamcore)** | `u_team_core-neoforge-1.21.1-5.6.2.384.jar` | Both | Mod | --- | Music Player | Join our discord server here: https://discord.hycrafthd.net\n\nThis library contains many useful modding stuff! |
 | 🟢 Ativo | **[Visual Workbench](https://github.com/Fuzss/visualworkbench)** | `VisualWorkbench-v21.1.2-1.21.1-NeoForge.jar` | Both | Mod | Puzzles Lib | --- | Items stay inside crafting tables and are also rendered on top. It's really fancy! |
 | 🟢 Ativo | **[Waystones](https://mods.twelveiterations.com/minecraft/waystones)** | `waystones-neoforge-1.21.1-21.1.46.jar` | Both | Mod | Balm | --- | Teleport back to activated waystones. For Survival, Adventure or Servers. |
+| 🔴 Desativado | **[Auto Eat](https://modrinth.com/project/automaticallyeat/)** | `autoeat-1.6.8.jar` | Both | Mod | Simple GUI API, multiloaderapi | --- | When your fullness drops below the specified value, you will automatically consume food items in your inventory. |
 | 🔴 Desativado | **[Chunky](https://github.com/pop4959/Chunky)** | `Chunky-NeoForge-1.4.23.jar` | Both | Mod | --- | --- | Pre-generates chunks, quickly, efficiently, and safely |
 | 🔴 Desativado | **EMI** | `emi-1.1.24+1.21.1+neoforge.jar` | Both | Mod | --- | EMI Loot | A featureful and accessible item and recipe viewer<br>⚠️ *Nota: Desativado temporariamente para testes com JEI.* |
 | 🔴 Desativado | **[EMI Loot](https://github.com/fzzyhmstrs/EMI_loot)** | `emi_loot-0.7.9+1.21+neoforge.jar` | Both | Mod | EMI, Fzzy Config | --- | Plugin for EMI that shows chest loot, block drops, mob drops, and gameplay loot like fishing.<br>⚠️ *Nota: Desativado temporariamente para testes com JEI.* |
@@ -151,12 +151,12 @@
 | 🟢 Ativo | **[MaFgLib](https://github.com/CagayakeGirls/malilib-neoforge)** | `mafglib-0.4.3+mc1.21.1.jar` | Both | Lib | --- | Forgematica | MaLiLib unofficial NeoForge port. Library mod for the NeoForge port of masa's mods. |
 | 🟢 Ativo | **[Player Animator](https://github.com/KosmX/minecraftPlayerAnimator)** | `player-animation-lib-forge-2.0.4+1.21.1.jar` | Both | Lib | --- | --- | A lightweight library to easily animate the player |
 | 🟢 Ativo | **[Puzzles Lib](https://www.curseforge.com/minecraft/mc-mods/puzzles-lib)** | `puzzleslib-v21.1.62-mc1.21.1+neoforge.jar` | Both | Lib | --- | Bartering Station, Distinguished Potions, Easy Anvils, Easy Magic, Visual Workbench | Why it's called Puzzles, you ask? That's the puzzle! |
-| 🟢 Ativo | **Simple GUI API** | `simpleguiapi-1.5.10.jar` | Both | Lib | multiloaderapi | Auto Eat | Reusable config GUI API for Forge mods. |
 | 🟢 Ativo | **[Sinytra Connector](https://www.curseforge.com/minecraft/mc-mods/sinytra-connector)** | `connector-2.0.0-beta.17+1.21.1-full.jar` | Both | Lib | --- | Mod Menu (NeoForge Edition), Continuity | Run Fabric mods on NeoForge / Forge |
 | 🟢 Ativo | **[Sophisticated Core](https://www.curseforge.com/minecraft/mc-mods/sophisticated-core)** | `sophisticatedcore-1.21.1-1.5.5.2363.jar` | Both | Lib | Just Enough Items | Sophisticated Backpacks | A library / shared functionality mod for Sophisticated Storage and Backpacks |
 | 🟢 Ativo | **YetAnotherConfigLib** | `yet_another_config_lib_v3-3.8.2+1.21.1-neoforge.jar` | Both | Lib | --- | Armor of the Ages, Chest Tracker | YetAnotherConfigLib (yacl) is just that. A builder-based configuration library for Minecraft.\n |
 | 🔴 Desativado | **[LibJF](https://git.frohnmeyer-wds.de/JfMods/LibJF)** | `libjf-3.17.4+forge.jar` | Both | Lib | --- | Resource Pack Options | Library mod by JFronny |
 | 🔴 Desativado | **[Resource Pack Options](https://git.frohnmeyer-wds.de/JfMods/Respackopts)** | `respackopts-4.11.3+forge.jar` | Both | Lib | libjf_base, libjf_data_manipulation_v0, libjf_config_core_v2, muscript | --- | Config menus for resource packs |
+| 🔴 Desativado | **Simple GUI API** | `simpleguiapi-1.5.10.jar` | Both | Lib | multiloaderapi | Auto Eat | Reusable config GUI API for Forge mods. |
 
 ---
 
