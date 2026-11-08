@@ -8,8 +8,8 @@
 
 | Localização / Status | Quantidade | Descrição |
 | :--- | :---: | :--- |
-| 🟢 **ATIVOS NA RAIZ** (`.`) | **83** | Mods prontos para copiar/usar no Minecraft |
-| 🔴 **DESATIVADOS** (`desativados/`) | **9** | Mods isolados (EMI, Chest Tracker, Tabs, Chunky, etc.) |
+| 🟢 **ATIVOS NA RAIZ** (`.`) | **82** | Mods prontos para copiar/usar no Minecraft |
+| 🔴 **DESATIVADOS** (`desativados/`) | **10** | Mods isolados (EMI, Chest Tracker, Tabs, Chunky, etc.) |
 | 🎨 **RESOURCE PACKS** (`resourcepacks/`) | **5** | Pacotes visuais e de áudio em formato `.zip` |
 | **Total Geral** | **92** | **Arquivos JAR únicos catalogados** |
 
@@ -109,7 +109,6 @@
 | 🟢 Ativo | **[FTB Ranks](https://www.curseforge.com/minecraft/mc-mods/ftb-ranks-forge)** | `ftb-ranks-neoforge-2101.1.5.jar` | Both | Mod | Architectury API, FTB Library | --- | A simple mod that lets you create ranks for players, similar to Discord roles, and manage permissions for them |
 | 🟢 Ativo | **[FTB Ultimine](https://www.curseforge.com/minecraft/mc-mods/ftb-ultimine-forge)** | `ftb-ultimine-neoforge-2101.1.15.jar` | Both | Mod | Architectury API, FTB Library, ftbezcrystals | --- | Allows you to break multiple blocks at once |
 | 🟢 Ativo | **[Gravestone Mod](https://www.curseforge.com/minecraft/mc-mods/gravestone-mod)** | `gravestone-neoforge-1.21.1-1.0.40.jar` | Both | Mod | Jade | --- | Places a gravestone with your inventory items inside when you die |
-| 🟢 Ativo | **Jack's Fullbright** | `jackfullbright-neoforge-26.3.jar` | Both | Mod | --- | --- | A configurable fullbright toggle with client-side night vision. |
 | 🟢 Ativo | **[Just Enough Items](https://www.curseforge.com/minecraft/mc-mods/jei)** | `jei-1.21.1-neoforge-19.57.0.450.jar` | Both | Mod | mezz_config, mezz_config_gui | ModernFix, Sophisticated Core | JEI is an item and recipe viewing mod for Minecraft, built from the ground up for stability and performance. |
 | 🟢 Ativo | **[Lootr](https://minecraft.curseforge.com/projects/lootr)** | `lootr-neoforge-1.21.1-1.11.38.127.jar` | Both | Mod | --- | --- | Generates unique loot for each player that opens a loot container. |
 | 🟢 Ativo | **[Mielon's The Sift](https://x.com/MielonDev)** | `mielon's-the-sift-1.1.0-mc1.21.1-neo.jar` | Both | Mod | GeckoLib | --- | Explore The Sift: a strange dimension of siftslate, Ichor, ancient life, and resonant souls. |
@@ -122,6 +121,7 @@
 | 🔴 Desativado | **[Chunky](https://github.com/pop4959/Chunky)** | `Chunky-NeoForge-1.4.23.jar` | Both | Mod | --- | --- | Pre-generates chunks, quickly, efficiently, and safely |
 | 🔴 Desativado | **EMI** | `emi-1.1.24+1.21.1+neoforge.jar` | Both | Mod | --- | EMI Loot | A featureful and accessible item and recipe viewer<br>⚠️ *Nota: Desativado temporariamente para testes com JEI.* |
 | 🔴 Desativado | **[EMI Loot](https://github.com/fzzyhmstrs/EMI_loot)** | `emi_loot-0.7.9+1.21+neoforge.jar` | Both | Mod | EMI, Fzzy Config | --- | Plugin for EMI that shows chest loot, block drops, mob drops, and gameplay loot like fishing.<br>⚠️ *Nota: Desativado temporariamente para testes com JEI.* |
+| 🔴 Desativado | **Jack's Fullbright** | `jackfullbright-neoforge-26.3.jar` | Both | Mod | --- | --- | A configurable fullbright toggle with client-side night vision. |
 | 🔴 Desativado | **[Pathogen : monster plague](https://www.curseforge.com/minecraft/mc-mods/pathogen)** | `pathogen-1.4.7-neoforge-1.21.1.jar` | Both | Mod | GeckoLib | --- | Sem descrição detalhada disponível. |
 | 🔴 Desativado | **Voxy** | `voxy-0.6.0.jar` | Both | Mod | Sodium, Forgified Fabric API | --- | Far distance rendering mod utilising LoDs |
 
