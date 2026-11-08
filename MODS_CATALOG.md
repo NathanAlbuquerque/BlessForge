@@ -8,10 +8,10 @@
 
 | Localização / Status | Quantidade | Descrição |
 | :--- | :---: | :--- |
-| 🟢 **ATIVOS NA RAIZ** (`.`) | **83** | Mods prontos para copiar/usar no Minecraft |
+| 🟢 **ATIVOS NA RAIZ** (`.`) | **85** | Mods prontos para copiar/usar no Minecraft |
 | 🔴 **DESATIVADOS** (`desativados/`) | **10** | Mods isolados (EMI, Chest Tracker, Tabs, Chunky, etc.) |
-| 🎨 **RESOURCE PACKS** (`resourcepacks/`) | **5** | Pacotes visuais e de áudio em formato `.zip` |
-| **Total Geral** | **93** | **Arquivos JAR únicos catalogados** |
+| 🎨 **RESOURCE PACKS** (`resourcepacks/`) | **6** | Pacotes visuais e de áudio em formato `.zip` |
+| **Total Geral** | **95** | **Arquivos JAR únicos catalogados** |
 
 ---
 
@@ -22,8 +22,8 @@
 - [⚡ Otimização & Performance (7 mods)](#otimização--performance)
 - [🎒 Armazenamento & Inventário (5 mods)](#armazenamento--inventário)
 - [🎨 Gráficos, Áudio & Imersão (7 mods)](#gráficos,-áudio--imersão)
-- [💡 Qualidade de Vida (QoL) & Utilidades (30 mods)](#qualidade-de-vida-qol--utilidades)
-- [📚 Bibliotecas, Frameworks & APIs (23 mods)](#bibliotecas,-frameworks--apis)
+- [💡 Qualidade de Vida (QoL) & Utilidades (31 mods)](#qualidade-de-vida-qol--utilidades)
+- [📚 Bibliotecas, Frameworks & APIs (24 mods)](#bibliotecas,-frameworks--apis)
 - [🖥️ Interface (UI/HUD) & Controles (11 mods)](#interface-ui/hud--controles)
 - [🗺️ Aventura, Dimensões & Estruturas (4 mods)](#aventura,-dimensões--estruturas)
 - [🎨 Resource Packs & Pacotes Visuais](#resource-packs--pacotes-visuais)
@@ -96,6 +96,7 @@
 | Status | Mod / Nome | Arquivo JAR | Lado | Tipo | Dependências | Usado Por (Dependentes) | Descrição & Links |
 | :---: | :--- | :--- | :---: | :---: | :--- | :--- | :--- |
 | 🟢 Ativo | **[AmbientSounds](https://modrinth.com/mod/ambientsounds)** | `AmbientSounds_NEOFORGE_v6.3.11_mc1.21.1.jar` | Both | Mod | CreativeCore | --- | Expands minecraft's ambient sounds. |
+| 🟢 Ativo | **[Auto Eat](https://modrinth.com/project/automaticallyeat/)** | `autoeat-1.6.8.jar` | Both | Mod | Simple GUI API, multiloaderapi | --- | When your fullness drops below the specified value, you will automatically consume food items in your inventory. |
 | 🟢 Ativo | **[Bartering Station](https://github.com/Fuzss/barteringstation)** | `BarteringStation-v21.1.0-1.21.1-NeoForge.jar` | Both | Mod | Puzzles Lib | --- | Still running around bartering manually? Let's put those lazy piglins to work instead! |
 | 🟢 Ativo | **[Carry On](https://change.me.to.your.mods.homepage.example.invalid/)** | `carryon-neoforge-1.21.1-2.2.6.13.jar` | Both | Mod | --- | --- | Carry On is a simple mod that improves game interaction by allowing players to pick up, carry, and place single block Tile Entities using only their empty hands. |
 | 🟢 Ativo | **Cinematic Respawn** | `cinematic_respawn-1.21.1-neoforge-1.4.1.jar` | Client | Mod | --- | --- | Cinematic respawn experience for Minecraft. |
@@ -150,6 +151,7 @@
 | 🟢 Ativo | **[MaFgLib](https://github.com/CagayakeGirls/malilib-neoforge)** | `mafglib-0.4.3+mc1.21.1.jar` | Both | Lib | --- | Forgematica | MaLiLib unofficial NeoForge port. Library mod for the NeoForge port of masa's mods. |
 | 🟢 Ativo | **[Player Animator](https://github.com/KosmX/minecraftPlayerAnimator)** | `player-animation-lib-forge-2.0.4+1.21.1.jar` | Both | Lib | --- | --- | A lightweight library to easily animate the player |
 | 🟢 Ativo | **[Puzzles Lib](https://www.curseforge.com/minecraft/mc-mods/puzzles-lib)** | `puzzleslib-v21.1.62-mc1.21.1+neoforge.jar` | Both | Lib | --- | Bartering Station, Distinguished Potions, Easy Anvils, Easy Magic, Visual Workbench | Why it's called Puzzles, you ask? That's the puzzle! |
+| 🟢 Ativo | **Simple GUI API** | `simpleguiapi-1.5.10.jar` | Both | Lib | multiloaderapi | Auto Eat | Reusable config GUI API for Forge mods. |
 | 🟢 Ativo | **[Sinytra Connector](https://www.curseforge.com/minecraft/mc-mods/sinytra-connector)** | `connector-2.0.0-beta.17+1.21.1-full.jar` | Both | Lib | --- | Mod Menu (NeoForge Edition), Continuity | Run Fabric mods on NeoForge / Forge |
 | 🟢 Ativo | **[Sophisticated Core](https://www.curseforge.com/minecraft/mc-mods/sophisticated-core)** | `sophisticatedcore-1.21.1-1.5.5.2363.jar` | Both | Lib | Just Enough Items | Sophisticated Backpacks | A library / shared functionality mod for Sophisticated Storage and Backpacks |
 | 🟢 Ativo | **YetAnotherConfigLib** | `yet_another_config_lib_v3-3.8.2+1.21.1-neoforge.jar` | Both | Lib | --- | Armor of the Ages, Chest Tracker | YetAnotherConfigLib (yacl) is just that. A builder-based configuration library for Minecraft.\n |
