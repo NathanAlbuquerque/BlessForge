@@ -1,0 +1,1897 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minecraft Mod Menu — NeoForge 1.21.1</title>
+  <style>
+    :root {
+      --bg-base: #0c0d12;
+      --bg-panel: #14161f;
+      --bg-card: #1c1f2b;
+      --bg-card-hover: #262a3b;
+      --bg-selected: #242c44;
+      --border-color: #2b3042;
+      --border-highlight: #475173;
+      --text-main: #f0f3fa;
+      --text-muted: #8e97b0;
+      --text-subtle: #5f6780;
+      --accent-forge: #ff7a29;
+      --accent-forge-hover: #ff914d;
+      --accent-green: #2ecc71;
+      --accent-red: #e74c3c;
+      --accent-blue: #3498db;
+      --accent-purple: #9b59b6;
+      --accent-cyan: #00e5ff;
+      --accent-gold: #f1c40f;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-base);
+      color: var(--text-main);
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* HEADER */
+    header {
+      background: var(--bg-panel);
+      border-bottom: 2px solid var(--border-color);
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-shrink: 0;
+      z-index: 10;
+    }
+
+    .header-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .logo-cube {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, #e65c00, #ff8c42);
+      border-radius: 6px;
+      box-shadow: 0 4px 12px rgba(255, 122, 41, 0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 20px;
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .brand-title {
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: -0.3px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .brand-tag {
+      background: rgba(255, 122, 41, 0.15);
+      color: var(--accent-forge);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 122, 41, 0.3);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .header-stats {
+      display: flex;
+      gap: 12px;
+    }
+
+    .stat-chip {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      padding: 4px 12px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .stat-chip span {
+      color: var(--text-main);
+      font-weight: 700;
+    }
+
+    .stat-chip.active span { color: var(--accent-green); }
+    .stat-chip.disabled span { color: var(--accent-red); }
+    .stat-chip.rp span { color: var(--accent-cyan); }
+
+    /* CONTROLS BAR */
+    .controls-bar {
+      background: #10121a;
+      border-bottom: 1px solid var(--border-color);
+      padding: 10px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-shrink: 0;
+    }
+
+    .tabs-nav {
+      display: flex;
+      gap: 6px;
+    }
+
+    .tab-btn {
+      background: transparent;
+      border: 1px solid transparent;
+      color: var(--text-muted);
+      padding: 7px 14px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .tab-btn:hover {
+      background: var(--bg-card);
+      color: var(--text-main);
+    }
+
+    .tab-btn.active {
+      background: var(--bg-card);
+      color: var(--text-main);
+      border-color: var(--border-highlight);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    .filters-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .search-box {
+      position: relative;
+      width: 320px;
+    }
+
+    .search-box input {
+      width: 100%;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      padding: 7px 12px 7px 34px;
+      color: var(--text-main);
+      font-size: 13px;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .search-box input:focus {
+      border-color: var(--accent-forge);
+      box-shadow: 0 0 0 2px rgba(255, 122, 41, 0.2);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 11px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-subtle);
+      pointer-events: none;
+      font-size: 13px;
+    }
+
+    .search-clear {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-subtle);
+      cursor: pointer;
+      font-size: 14px;
+      display: none;
+    }
+
+    .search-clear:hover { color: var(--text-main); }
+
+    .category-select {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      padding: 7px 12px;
+      color: var(--text-main);
+      font-size: 13px;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .category-select:focus {
+      border-color: var(--accent-forge);
+    }
+
+    /* MAIN CONTAINER (TWO PANELS) */
+    .app-main {
+      flex: 1;
+      display: flex;
+      overflow: hidden;
+    }
+
+    /* LEFT PANEL: MOD LIST */
+    .mod-list-panel {
+      width: 440px;
+      border-right: 1px solid var(--border-color);
+      display: flex;
+      flex-direction: column;
+      background: #11131b;
+      flex-shrink: 0;
+    }
+
+    .list-header {
+      padding: 10px 16px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-subtle);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .mod-list-scroll {
+      flex: 1;
+      overflow-y: auto;
+      padding: 8px;
+    }
+
+    .mod-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 9px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.15s;
+      margin-bottom: 4px;
+      border: 1px solid transparent;
+      user-select: none;
+    }
+
+    .mod-item:hover {
+      background: var(--bg-card);
+    }
+
+    .mod-item.selected {
+      background: var(--bg-selected);
+      border-color: var(--border-highlight);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    .mod-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 6px;
+      background: #181b26;
+      border: 1px solid var(--border-color);
+      object-fit: contain;
+      image-rendering: pixelated;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    .mod-icon img {
+      width: 100%;
+      height: 100%;
+      border-radius: 5px;
+      object-fit: contain;
+      image-rendering: auto;
+    }
+
+    .mod-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .mod-row-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 3px;
+    }
+
+    .mod-title {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--text-main);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .badge-status {
+      font-size: 10px;
+      font-weight: 700;
+      padding: 1px 6px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    .badge-status.ativo {
+      background: rgba(46, 204, 113, 0.15);
+      color: var(--accent-green);
+    }
+
+    .badge-status.desativado {
+      background: rgba(231, 76, 60, 0.15);
+      color: var(--accent-red);
+    }
+
+    .mod-row-bottom {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11.5px;
+      color: var(--text-muted);
+    }
+
+    .mod-category-pill {
+      background: rgba(255,255,255,0.06);
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-size: 10.5px;
+      white-space: nowrap;
+    }
+
+    .mod-side-pill {
+      font-size: 10.5px;
+      color: var(--text-subtle);
+    }
+
+    /* RIGHT PANEL: MOD DETAILS */
+    .mod-detail-panel {
+      flex: 1;
+      overflow-y: auto;
+      background: var(--bg-base);
+      padding: 24px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .detail-hero {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      background: var(--bg-panel);
+      padding: 20px 24px;
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+    }
+
+    .hero-icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 10px;
+      background: #181b26;
+      border: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .hero-icon img {
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+      object-fit: contain;
+    }
+
+    .hero-body {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .hero-title-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 6px;
+    }
+
+    .hero-title {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--text-main);
+      letter-spacing: -0.3px;
+    }
+
+    .hero-sub {
+      font-size: 13px;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn {
+      padding: 7px 14px;
+      border-radius: 6px;
+      font-size: 12.5px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: all 0.15s;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background: var(--accent-forge);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-forge-hover);
+    }
+
+    .btn-secondary {
+      background: var(--bg-card);
+      border-color: var(--border-color);
+      color: var(--text-main);
+    }
+
+    .btn-secondary:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-highlight);
+    }
+
+    /* DETAILS GRID */
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+    }
+
+    .meta-card {
+      background: var(--bg-panel);
+      border: 1px solid var(--border-color);
+      padding: 12px 16px;
+      border-radius: 8px;
+    }
+
+    .meta-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-subtle);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .meta-value {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    /* SECTIONS */
+    .section-card {
+      background: var(--bg-panel);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 16px 20px;
+    }
+
+    .section-title {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .desc-text {
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--text-main);
+    }
+
+    .user-comment-box {
+      margin-top: 12px;
+      background: rgba(241, 196, 15, 0.1);
+      border-left: 3px solid var(--accent-gold);
+      padding: 10px 14px;
+      border-radius: 0 6px 6px 0;
+      font-size: 13px;
+      color: #ffeaa7;
+    }
+
+    .tag-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .chip-interactive {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      padding: 5px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-main);
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .chip-interactive:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--accent-forge);
+      color: var(--accent-forge);
+    }
+
+    .chip-empty {
+      font-size: 13px;
+      color: var(--text-subtle);
+      font-style: italic;
+    }
+
+    /* OTHER TABS VIEW */
+    .grid-view-panel {
+      flex: 1;
+      overflow-y: auto;
+      padding: 24px 32px;
+      display: none;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 16px;
+    }
+
+    .resource-card {
+      background: var(--bg-panel);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: transform 0.15s, border-color 0.15s;
+    }
+
+    .resource-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--border-highlight);
+    }
+
+    .res-top {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .res-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 6px;
+      background: #181b26;
+      border: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .res-icon img {
+      width: 100%;
+      height: 100%;
+      border-radius: 5px;
+      object-fit: contain;
+    }
+
+    .res-meta {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .res-name {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 2px;
+    }
+
+    .res-file {
+      font-size: 11.5px;
+      color: var(--text-subtle);
+      font-family: monospace;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .res-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
+      flex: 1;
+    }
+
+    /* TOAST */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #1e2230;
+      border: 1px solid var(--accent-green);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 6px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+      font-size: 13px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.25s ease;
+      z-index: 999;
+    }
+
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* SCROLLBAR */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #2b3042;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #3e455e;
+    }
+
+    .btn-sync {
+      background: linear-gradient(135deg, #1f2330, #2b3042);
+      border: 1px solid var(--accent-forge);
+      color: var(--accent-forge);
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+
+    .btn-sync:hover {
+      background: var(--accent-forge);
+      color: #fff;
+      box-shadow: 0 0 12px rgba(255, 122, 41, 0.4);
+    }
+
+    .btn-sync.loading {
+      opacity: 0.7;
+      pointer-events: none;
+    }
+
+    /* MODAL */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(4px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    .modal-overlay.show {
+      display: flex;
+    }
+
+    .modal-box {
+      background: var(--bg-panel);
+      border: 1px solid var(--border-highlight);
+      border-radius: 12px;
+      width: 520px;
+      max-width: 90vw;
+      padding: 24px 28px;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.6);
+    }
+
+    .modal-box h3 {
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .modal-box p {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    .modal-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin-bottom: 12px;
+    }
+
+    .modal-card strong {
+      font-size: 13.5px;
+      color: var(--text-main);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .modal-card p {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    /* BUILDER BAR & SELECTION */
+    .mod-checkbox-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-right: 4px;
+    }
+
+    .mod-check {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 18px;
+      height: 18px;
+      border: 2px solid var(--border-highlight);
+      border-radius: 4px;
+      background: var(--bg-card);
+      cursor: pointer;
+      display: grid;
+      place-content: center;
+      transition: all 0.15s ease;
+      flex-shrink: 0;
+    }
+
+    .mod-check:checked {
+      background: var(--accent-forge);
+      border-color: var(--accent-forge);
+    }
+
+    .mod-check:checked::before {
+      content: "✔";
+      font-size: 11px;
+      color: #fff;
+      font-weight: 900;
+    }
+
+    .badge-auto-dep {
+      background: rgba(155, 89, 182, 0.2);
+      color: var(--accent-purple);
+      border: 1px solid rgba(155, 89, 182, 0.4);
+      font-size: 10px;
+      font-weight: 700;
+      padding: 1px 6px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    /* FOOTER BUILDER BAR */
+    .builder-bar {
+      background: #141722;
+      border-top: 2px solid var(--border-color);
+      padding: 10px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-shrink: 0;
+      box-shadow: 0 -4px 16px rgba(0,0,0,0.4);
+      z-index: 20;
+    }
+
+    .builder-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 13px;
+    }
+
+    .builder-chip {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      padding: 4px 10px;
+      border-radius: 6px;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .builder-chip strong {
+      color: var(--text-main);
+    }
+
+    .builder-chip.total strong {
+      color: var(--accent-forge);
+    }
+
+    .builder-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-export {
+      background: linear-gradient(135deg, #e65c00, #ff7a29);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 8px 18px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 12px rgba(255, 122, 41, 0.35);
+      transition: all 0.2s;
+    }
+
+    .btn-export:hover {
+      background: linear-gradient(135deg, #ff7a29, #ffa366);
+      box-shadow: 0 4px 16px rgba(255, 122, 41, 0.5);
+      transform: translateY(-1px);
+    }
+
+    .dropdown-preset {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      margin-bottom: 8px;
+      background: var(--bg-panel);
+      border: 1px solid var(--border-highlight);
+      border-radius: 8px;
+      width: 280px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+      display: none;
+      flex-direction: column;
+      padding: 6px;
+      z-index: 100;
+    }
+
+    .dropdown-menu.show {
+      display: flex;
+    }
+
+    .dropdown-item {
+      padding: 8px 12px;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--text-main);
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.15s;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .dropdown-item small {
+      font-size: 11px;
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+
+    .dropdown-item:hover {
+      background: var(--bg-card);
+      color: var(--accent-forge);
+    }
+
+    .dropdown-item.clear {
+      border-top: 1px solid var(--border-color);
+      margin-top: 4px;
+      color: var(--accent-red);
+    }
+
+    /* EXPORT MODAL */
+    .export-field {
+      margin-bottom: 14px;
+    }
+
+    .export-label {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .export-input {
+      width: 100%;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      padding: 8px 12px;
+      color: var(--text-main);
+      font-size: 13.5px;
+      outline: none;
+    }
+
+    .export-input:focus {
+      border-color: var(--accent-forge);
+    }
+
+    .export-preview-list {
+      max-height: 180px;
+      overflow-y: auto;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      padding: 8px 12px;
+      font-size: 12px;
+      margin-top: 8px;
+    }
+
+    .export-preview-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 4px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .export-fmt-group {
+      display: flex;
+      gap: 12px;
+      margin-top: 6px;
+    }
+
+    .export-fmt-card {
+      flex: 1;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 10px 14px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.15s;
+    }
+
+    .export-fmt-card.selected {
+      border-color: var(--accent-forge);
+      background: rgba(255, 122, 41, 0.1);
+    }
+  </style>
+
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-brand">
+      <div class="logo-cube">⛏️</div>
+      <div>
+        <div class="brand-title">
+          Minecraft Mod Menu
+          <span class="brand-tag">NeoForge 1.21.1</span>
+        </div>
+      </div>
+    </div>
+        <div class="header-stats">
+      <div class="stat-chip active">🟢 Ativos: <span id="stat-active">74</span></div>
+      <div class="stat-chip disabled">🔴 Desativados: <span id="stat-disabled">7</span></div>
+      <div class="stat-chip rp">🎨 Resource Packs: <span>5</span></div>
+      <div class="stat-chip">💡 Wishlist: <span>18</span></div>
+      <button class="btn-sync" id="btnSync" onclick="triggerSync()">🔄 Sincronizar Novos Mods</button>
+    </div>
+      <div class="stat-chip disabled">🔴 Desativados: <span id="stat-disabled">7</span></div>
+      <div class="stat-chip rp">🎨 Resource Packs: <span>5</span></div>
+      <div class="stat-chip">💡 Wishlist: <span>18</span></div>
+    </div>
+  </header>
+
+  <!-- CONTROLS BAR -->
+  <div class="controls-bar">
+    <div class="tabs-nav">
+      <button class="tab-btn active" data-tab="mods" onclick="switchMainTab('mods')">🎮 Mods (<span id="tab-count-mods">81</span>)</button>
+      <button class="tab-btn" data-tab="rp" onclick="switchMainTab('rp')">🎨 Resource Packs (6)</button>
+      <button class="tab-btn" data-tab="wishlist" onclick="switchMainTab('wishlist')">💡 Wishlist & Ideias (18)</button>
+    </div>
+
+    <div class="filters-group" id="mods-filters">
+      <select class="category-select" id="statusFilter" onchange="applyFilters()">
+        <option value="ALL">Status: Todos</option>
+        <option value="ATIVADO">Apenas Ativos (🟢 74)</option>
+        <option value="DESATIVADO">Apenas Desativados (🔴 7)</option>
+      </select>
+
+      <select class="category-select" id="categoryFilter" onchange="applyFilters()">
+        <option value="ALL">Categoria: Todas</option>
+      </select>
+
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" placeholder="Buscar mod por nome, ID ou autor... (Ctrl+K)" oninput="applyFilters()">
+        <span class="search-clear" id="searchClear" onclick="clearSearch()">✕</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN TWO-COLUMN VIEW (MODS) -->
+  <div class="app-main" id="modsView">
+    <!-- LEFT LIST -->
+    <div class="mod-list-panel">
+      <div class="list-header">
+        <span>Lista de Mods</span>
+        <span id="filteredCount">Exibindo 81 mods</span>
+      </div>
+      <div class="mod-list-scroll" id="modList">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+
+    <!-- RIGHT DETAILS INSPECTOR -->
+    <div class="mod-detail-panel" id="modDetail">
+      <!-- Rendered by JS -->
+    </div>
+  </div>
+
+  <!-- RESOURCE PACKS VIEW -->
+  <div class="grid-view-panel" id="rpView">
+    <div class="cards-grid" id="rpGrid">
+      <!-- Rendered by JS -->
+    </div>
+  </div>
+
+  <!-- WISHLIST VIEW -->
+  <div class="grid-view-panel" id="wishlistView">
+    <div class="cards-grid" id="wishlistGrid">
+      <!-- Rendered by JS -->
+    </div>
+  </div>
+
+
+  <!-- BUILDER BOTTOM BAR -->
+  <div class="builder-bar" id="builderBar">
+    <div class="builder-info">
+      <span style="font-size:16px;">📦</span>
+      <div class="builder-chip">
+        <span>Escolhidos:</span>
+        <strong id="builderSelectedCount">0</strong>
+      </div>
+      <div class="builder-chip">
+        <span>➕ Dependências:</span>
+        <strong id="builderDepsCount">0</strong>
+      </div>
+      <div class="builder-chip total">
+        <span>Total a Exportar:</span>
+        <strong id="builderTotalCount">0 mods</strong>
+      </div>
+    </div>
+
+    <div class="builder-actions">
+      <div class="dropdown-preset">
+        <button class="btn btn-secondary" onclick="togglePresetMenu()">⚡ Presets Rápidos ▾</button>
+        <div class="dropdown-menu" id="presetMenu">
+          <div class="dropdown-item" onclick="applyPreset('all')">
+            <span>🚀 Todos os Ativos (74)</span>
+            <small>Pacote completo com tudo o que está ativo</small>
+          </div>
+          <div class="dropdown-item" onclick="applyPreset('client_only')">
+            <span>🌐 Client-Side Only (Para Servidores)</span>
+            <small>Apenas mods visuais, HUD, áudio e otimização permitidos em qualquer servidor</small>
+          </div>
+          <div class="dropdown-item" onclick="applyPreset('vanilla_plus')">
+            <span>⚡ Vanilla+ & Otimização</span>
+            <small>Performance (Sodium/ModernFix) + QoL essencial</small>
+          </div>
+          <div class="dropdown-item" onclick="applyPreset('create')">
+            <span>⚙️ Create & Tecnologia</span>
+            <small>Create, armas e engenharias com dependências</small>
+          </div>
+          <div class="dropdown-item" onclick="applyPreset('rpg')">
+            <span>⚔️ Aventura & RPG Épico</span>
+            <small>Cataclysm, Twilight Forest, Simply Swords</small>
+          </div>
+          <div class="dropdown-item" onclick="applyPreset('storage')">
+            <span>🎒 Armazenamento Avançado</span>
+            <small>Backpacks, Tom's Storage, InventoryTweak</small>
+          </div>
+          <div class="dropdown-item clear" onclick="applyPreset('clear')">
+            <span>✕ Desmarcar Todos</span>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn-export" onclick="openExportModal()">
+        <span>📦 Exportar Modpack / Enviar para Amigos</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- EXPORT CONFIG MODAL -->
+  <div class="modal-overlay" id="exportModal">
+    <div class="modal-box" style="width: 580px;">
+      <h3>📦 Exportar Modpack Personalizado</h3>
+      <p>O sistema incluirá todos os mods escolhidos e suas respectivas dependências técnicas obrigatórias.</p>
+
+      <div class="export-field">
+        <label class="export-label">Nome do Modpack / Arquivo</label>
+        <input type="text" class="export-input" id="exportPresetName" value="MeuModpack-1.21.1">
+      </div>
+
+      <div class="export-field">
+        <label class="export-label">Formato de Exportação</label>
+        <div class="export-fmt-group">
+          <div class="export-fmt-card selected" id="fmtZip" onclick="selectExportFmt('zip')">
+            <span style="font-size:20px;">📦</span>
+            <div>
+              <strong style="font-size:13px; display:block;">Arquivo .ZIP</strong>
+              <small style="color:var(--text-muted); font-size:11px;">Ideal para enviar para amigos (Discord/Drive)</small>
+            </div>
+          </div>
+          <div class="export-fmt-card" id="fmtFolder" onclick="selectExportFmt('folder')">
+            <span style="font-size:20px;">📁</span>
+            <div>
+              <strong style="font-size:13px; display:block;">Pasta no Disco</strong>
+              <small style="color:var(--text-muted); font-size:11px;">Ideal para copiar direto para .minecraft</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="export-field">
+        <label class="export-label">Incluir Resource Packs (Opcional)</label>
+        <div id="exportRpList" style="display:flex; flex-wrap:wrap; gap:8px;">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+
+      <div class="export-field">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <label class="export-label" style="margin-bottom:0;">Resumo dos Mods Incluídos (<span id="modalTotalModCount">0</span>)</label>
+          <span style="font-size:11px; color:var(--accent-purple);" id="modalAutoDepsInfo">0 dependências automáticas</span>
+        </div>
+        <div class="export-preview-list" id="exportPreviewList">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-top:20px;">
+        <button class="btn btn-secondary" onclick="closeExportModal()">Cancelar</button>
+        <button class="btn-export" id="btnExecuteExport" onclick="executeExport()">
+          <span id="exportBtnIcon">🚀</span> <span id="exportBtnText">Gerar Modpack Agora</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SYNC MODAL -->
+  <div class="modal-overlay" id="syncModal">
+    <div class="modal-box">
+      <h3>🔄 Como Sincronizar Novos Mods</h3>
+      <p>Você abriu a interface diretamente no modo de arquivo estático (<code>file:///</code>). Por restrição de segurança do navegador, páginas locais não têm permissão para ler pastas no seu sistema operacional por conta própria.</p>
+      
+      <div class="modal-card">
+        <strong>Opção 1 (Recomendada): Abrir no modo com 1 clique</strong>
+        <p>Inicie o menu dando dois cliques em <code>abrir_mod_menu.sh</code>. Ele inicia um servidor local ultraleve onde o botão <strong>"🔄 Sincronizar Novos Mods"</strong> atualiza tudo automaticamente dentro do próprio navegador!</p>
+        <button class="btn btn-secondary" style="font-size:11.5px; padding:4px 10px;" onclick="copyToClipboard('./abrir_mod_menu.sh')">📋 Copiar comando ./abrir_mod_menu.sh</button>
+      </div>
+
+      <div class="modal-card">
+        <strong>Opção 2: Atualização via Script</strong>
+        <p>Basta dar dois cliques no arquivo <code>atualizar.sh</code> na pasta de mods ou rodar <code>python3 atualizar_catalogo.py</code>. Ele escaneia tudo e atualiza o arquivo HTML na hora.</p>
+        <button class="btn btn-secondary" style="font-size:11.5px; padding:4px 10px;" onclick="copyToClipboard('./atualizar.sh')">📋 Copiar comando ./atualizar.sh</button>
+      </div>
+
+      <div style="text-align: right; margin-top: 16px;">
+        <button class="btn btn-primary" onclick="closeSyncModal()">Entendi</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast">
+    <span>✅</span>
+    <span id="toastMsg">Copiado para a área de transferência!</span>
+  </div>
+
+  <script>
+    const DATA = {"mods": [{"id": "barteringstation", "name": "Bartering Station", "file": "BarteringStation-v21.1.0-1.21.1-NeoForge.jar", "version": "21.1.0", "status": "ATIVADO", "location": "BarteringStation-v21.1.0-1.21.1-NeoForge.jar", "category": "💡 Qualidade de Vida (QoL) & Utilidades", "type": "Mod", "side": "Both", "size": "95.9 KB", "url": "https://github.com/Fuzss/barteringstation", "desc": "Still running around bartering manually? Let's put those lazy piglins to work instead!", "deps": ["Puzzles Lib"], "dependents": [], "user_comment": "", "icon": "assets/icons/BarteringStation-v21.1.0-1.21.1-NeoForge.png"}, {"id": "betterf3", "name": "BetterF3", "file": "BetterF3-11.0.3-NeoForge-1.21.1.jar", "version": "11.0.3", "status": "ATIVADO", "location": "BetterF3-11.0.3-NeoForge-1.21.1.jar", "category": "🖥️ Interface (UI/HUD) & Controles", "type": "Mod", "side": "Client", "size": "470.4 KB", "url": "https://github.com/TreyRuffy/BetterF3/", "desc": "Better F3 for Minecraft NeoForge Replaces Minecraft's original debug HUD with a highly customizable, more human-readable HUD. The creator would like to thank: - cominixo for creating the Fabric version of the mod - Nirewen for creating the icon", "deps": ["Cloth Config API"], "dependents": [], "user_comment": "", "icon": "assets/icons/BetterF3-11.0.3-NeoForge-1.21.1.png"}, {"id": "distanthorizons", "name": "Distant Horizons", "file": "DistantHorizons-3.3.3-1.21.1-fabric-neoforge.jar", "version": "3.3.3", "status": "ATIVADO", "location": "DistantHorizons-3.3.3-1.21.1-fabric-neoforge.jar", "category": "🎨 Gráficos, Áudio & Imersão", "type": "Mod", "side": "Client", "size": "26.98 MB", "url": "https://modrinth.com/mod/distanthorizons", "desc": "This mod generates and renders simplified terrain beyond the normal view distance at a low performance cost. Allowing you to see much farther without turning your game into a slideshow.", "deps": ["ssrd"], "dependents": [], "user_comment": "", "icon": "assets/icons/DistantHorizons-3.3.3-1.21.1-fabric-neoforge.png"}, {"id": "distinguishedpotions", "name": "Distinguished Potions", "file": "DistinguishedPotions-v21.1.1-1.21.1-NeoForge.jar", "version": "21.1.1", "status": "ATIVADO", "location": "DistinguishedPotions-v21.1.1-1.21.1-NeoForge.jar", "category": "🖥️ Interface (UI/HUD) & Controles", "type": "Mod", "side": "Client", "size": "71.4 KB", "url": "https://github.com/Fuzss/distinguishedpotions", "desc": "Trouble telling your potions apart? Time to give you a helping hand with that.", "deps": ["Puzzles Lib"], "dependents": [], "user_comment": "", "icon": "assets/icons/DistinguishedPotions-v21.1.1-1.21.1-NeoForge.png"}, {"id": "dungeons_arise", "name": "When Dungeons Arise", "file": "DungeonsArise-1.21.1-2.1.68-release.jar", "version": "2.1.68", "status": "ATIVADO", "location": "DungeonsArise-1.21.1-2.1.68-release.jar", "category": "🗺️ Aventura, Dimensões & Estruturas", "type": "Mod", "side": "Both", "size": "11.29 MB", "url": "https://www.curseforge.com/minecraft/mc-mods/when-dungeons-arise", "desc": "Elegant - and likely dangerous - structures and roguelike dungeons to lose yourself in...", "deps": [], "dependents": [], "user_comment": "", "icon": "assets/icons/DungeonsArise-1.21.1-2.1.68-release.png"}, {"id": "easyanvils", "name": "Easy Anvils", "file": "EasyAnvils-v21.1.0-1.21.1-NeoForge.jar", "version": "21.1.0", "status": "ATIVADO", "location": "EasyAnvils-v21.1.0-1.21.1-NeoForge.jar", "category": "💡 Qualidade de Vida (QoL) & Utilidades", "type": "Mod", "side": "Both", "size": "148.7 KB", "url": "https://github.com/Fuzss/easyanvils", "desc": "Be ready for overhauled anvils! Items stay, better name tags, many tweaks!", "deps": ["Puzzles Lib"], "dependents": [], "user_comment": "", "icon": "assets/icons/EasyAnvils-v21.1.0-1.21.1-NeoForge.png"}, {"id": "easymagic", "name": "Easy Magic", "file": "EasyMagic-v21.1.4-1.21.1-NeoForge.jar", "version": "21.1.4", "status": "ATIVADO", "location": "EasyMagic-v21.1.4-1.21.1-NeoForge.jar", "category": "💡 Qualidade de Vida (QoL) & Utilidades", "type": "Mod", "side": "Both", "size": "140.6 KB", "url": "https://github.com/Fuzss/easymagic", "desc": "Enchanting tables as they always should have been! Items stay after closing, and easy re-rolls.", "deps": ["Puzzles Lib"], "dependents": [], "user_comment": "", "icon": "assets/icons/EasyMagic-v21.1.4-1.21.1-NeoForge.png"}, {"id": "forgeconfigapiport", "name": "Forge Config API Port", "file": "ForgeConfigAPIPort-v21.1.6-1.21.1-NeoForge.jar", "version": "21.1.6", "status": "ATIVADO", "location": "ForgeConfigAPIPort-v21.1.6-1.21.1-NeoForge.jar", "category": "📚 Bibliotecas, Frameworks & APIs", "type": "Lib", "side": "Both", "size": "102.2 KB", "url": "https://github.com/Fuzss/forgeconfigapiport", "desc": "Provides NeoForge's & Forge's config systems to other modding ecosystems. Designed for a multi-loader architecture.", "deps": [], "dependents": [], "user_comment": "", "icon": "assets/icons/ForgeConfigAPIPort-v21.1.6-1.21.1-NeoForge.png"}, {"id": "immediatelyfast", "name": "ImmediatelyFast", "file": "ImmediatelyFast-NeoForge-1.6.14+1.21.1.jar", "version": "1.6.14+1.21.1", "status": "ATIVADO", "location": "ImmediatelyFast-NeoForge-1.6.14+1.21.1.jar", "category": "⚡ Otimização & Performance", "type": "Mod", "side": "Client", "size": "356.6 KB", "url": "https://github.com/RaphiMC/ImmediatelyFast", "desc": "Speed up and optimize immediate mode rendering in Minecraft", "deps": [], "dependents": [], "user_comment": "", "icon": "assets/icons/ImmediatelyFast-NeoForge-1.6.14+1.21.1.png"}, {"id": "invmove", "name": "InvMove", "file": "InvMove-0.9.3+1.21.1-NeoForge.jar", "version": "0.9.3", "status": "ATIVADO", "location": "InvMove-0.9.3+1.21.1-NeoForge.jar", "category": "🖥️ Interface (UI/HUD) & Controles", "type": "Mod", "side": "Client", "size": "85.0 KB", "url": "https://www.curseforge.com/minecraft/mc-mods/invmove", "desc": "Lets you move while in inventories.", "deps": ["Cloth Config API", "invmove_compat"], "dependents": [], "user_comment": "", "icon": "assets/icons/InvMove-0.9.3+1.21.1-NeoForge.png"}, {"id": "jade", "name": "Jade", "file": "Jade-1.21.1-NeoForge-15.10.6.jar", "version": "${file.jarVersion}", "status": "ATIVADO", "location": "Jade-1.21.1-NeoForge-15.10.6.jar", "category": "🖥️ Interface (UI/HUD) & Controles", "type": "Mod", "side": "Both", "size": "709.8 KB", "url": "https://www.curseforge.com/minecraft/mc-mods/jade", "desc": "Minecraft mod shows what you are looking at. (Hwyla fork)", "deps": [], "dependents": ["Gravestone Mod"], "user_comment": "", "icon": "assets/icons/Jade-1.21.1-NeoForge-15.10.6.png"}, {"id": "klf", "name": "KotlinLangForge", "file": "KotlinLangForge-2.15.0-k2.4.21-3.0+neoforge.jar", "version": "2.15.0-k2.4.21-3.0+neoforge", "status": "ATIVADO", "location": "KotlinLangForge-2.15.0-k2.4.21-3.0+neoforge.jar", "category": "📚 Bibliotecas, Frameworks & APIs", "type": "Mod", "side": "Both", "size": "7.84 MB", "url": "https://modrinth.com/mod/kotlin-lang-forge", "desc": "Provides a Kotlin language adapter for Forge and Neoforge", "deps": [], "dependents": [], "user_comment": "", "icon": "assets/icons/KotlinLangForge-2.15.0-k2.4.21-3.0+neoforge.png"}, {"id": "cataclysm", "name": "L_Ender's Cataclysm 1.21.1", "file": "L_Ender's Cataclysm 1.21.1-3.33.jar", "version": "3.33", "status": "ATIVADO", "location": "L_Ender's Cataclysm 1.21.1-3.33.jar", "category": "🗺️ Aventura, Dimensões & Estruturas", "type": "Mod", "side": "Both", "size": "69.98 MB", "url": "https://change.me.to.your.mods.homepage.example.invalid/", "desc": "https://www.curseforge.com/minecraft/texture-packs/cataclysmic-tunes", "deps": ["Curios API", "Lionfish API"], "dependents": [], "user_comment": "", "icon": ""}, {"id": "mod_menu", "name": "Mod Menu (NeoForge Edition)", "file": "Mod Menu (NeoForge Edition) 1.21.1-1.0.2.jar", "version": "1.0.2", "status": "ATIVADO", "location": "Mod Menu (NeoForge Edition) 1.21.1-1.0.2.jar", "category": "🖥️ Interface (UI/HUD) & Controles", "type": "Mod", "side": "Client", "size": "911.4 KB", "url": "https://modrinth.com/mod/mod_menu", "desc": "NeoForge port of Mod Menu", "deps": ["Sinytra Connector"], "dependents": [], "user_comment": "", "icon": "assets/icons/Mod Menu (NeoForge Edition) 1.21.1-1.0.2.png"}, {"id": "mousetweaks", "name": "Mouse Tweaks", "file": "MouseTweaks-neoforge-mc1.21-2.26.1.jar", "version": "2.26.1", "status": "ATIVADO", "location": "MouseTweaks-neoforge-mc1.21-2.26.1.jar", "category": "🖥️ Interface (UI/HUD) & Controles", "type": "Mod", "side": "Client", "size": "72.2 KB", "url": "https://minecraft.curseforge.com/projects/mouse-tweaks", "desc": "A mod that enhances the inventory management by adding various additional functions to the usual mouse buttons.", "deps": [], "dependents": [], "user_comment": "", "icon": "assets/icons/MouseTweaks-neoforge-mc1.21-2.26.1.png"}, {"id": "naturescompass", "name": "Nature's Compass", "file": "NaturesCompass-1.21.1-3.4.0-neoforge.jar", "version": "1.21.1-3.4.0-neoforge", "status": "ATIVADO", "location": "NaturesCompass-1.21.1-3.4.0-neoforge.jar", "category": "💡 Qualidade de Vida (QoL) & Utilidades", "type": "Mod", "side": "Both", "size": "219.4 KB", "url": "https://github.com/MattCzyr/NaturesCompass", "desc": "Search for a biome and get information about it.", "deps": [], "dependents": [], "user_comment": "", "icon": ""}, {"id": "presencefootsteps", "name": "Presence Footsteps (NeoForge)", "file": "PresenceFootsteps-1.21.1-1.12.0-beta.1-1.21NeoForge.jar", "version": "1.21.1-1.12.0-beta.1", "status": "ATIVADO", "location": "PresenceFootsteps-1.21.1-1.12.0-beta.1-1.21NeoForge.jar", "category": "🎨 Gráficos, Áudio & Imersão", "type": "Mod", "side": "Client", "size": "6.77 MB", "url": "https://www.curseforge.com/minecraft/mc-mods/presence-footsteps", "desc": "An overly complicated sound mod", "deps": [], "dependents": [], "user_comment": "", "icon": "assets/icons/PresenceFootsteps-1.21.1-1.12.0-beta.1-1.21NeoForge.png"}, {"id": "scribble", "name": "Scribble", "file": "Scribble-1.5.1+mc1.21-neoforge.jar", "version": "1.5.1", "status": "ATIVADO", "location": "Scribble-1.5.1+mc1.21-neoforge.jar", "category": "🖥️ Interface (UI/HUD) & Controles", "type": "Mod", "side": "Client", "size": "84.9 KB", "url": "https://www.curseforge.com/minecraft/mc-mods/scribble", "desc": "Expertly edit your books with rich formatting options, page utilities and more!", "deps": [], "dependents": [], "user_comment": "", "icon": "assets/icons/Scribble-1.5.1+mc1.21-neoforge.png"}, {"id": "simplytooltips", "name": "Simply Tooltips", "file": "SimplyTooltips-neoforge-0.1.5.jar", "version": "0.1.5", "status": "ATIVADO", "location": "SimplyTooltips-neoforge-0.1.5.jar", "category": "🖥️ Interface (UI/HUD) & Controles", "type": "Mod", "side": "Client", "size": "5.26 MB", "url": "https://www.curseforge.com/minecraft/mc-mods/simply-tooltips", "desc": "Modern data driven tooltip renderer for Simply mods. Optionally available for other vanilla and modded items.", "deps": ["Architectury API", "Fzzy Config"], "dependents": ["Simply Swords"], "user_comment": "", "icon": "assets/icons/SimplyTooltips-neoforge-0.1.5.png"}, {"id": "visualworkbench", "name": "Visual Workbench", "file": "VisualWorkbench-v21.1.2-1.21.1-NeoForge.jar", "version": "21.1.2", "status": "ATIVADO", "location": "VisualWorkbench-v21.1.2-1.21.1-NeoForge.jar", "category": "💡 Qualidade de Vida (QoL) & Utilidades", "type": "Mod", "side": "Both", "size": "74.9 KB", "url": "https://github.com/Fuzss/visualworkbench", "desc": "Items stay inside crafting tables and are also rendered on top. It's really fancy!", "deps": ["Puzzles Lib"], "dependents": [], "user_comment": "", "icon": "assets/icons/VisualWorkbench-v21.1.2-1.21.1-NeoForge.png"}, {"id": "anvianslib", "name": "Anvian's Lib", "file": "anvianslib-neoforge-1.21-1.4.2.jar", "version": "1.4.2", "status": "ATIVADO", "location": "anvianslib-neoforge-1.21-1.4.2.jar", "category": "📚 Bibliotecas, Frameworks & APIs", "type": "Lib", "side": "Both", "size": "29.0 KB", "url": "https://modrinth.com/mod/anvians-lib", "desc": "A small utility library for Anvian's mods.", "deps": [], "dependents": ["Inventory Tweak"], "user_comment": "", "icon": "assets/icons/anvianslib-neoforge-1.21-1.4.2.png"}, {"id": "appleskin", "name": "AppleSkin", "file": "appleskin-neoforge-mc1.21-3.0.9.jar", "version": "${file.jarVersion}", "status": "ATIVADO", "location": "appleskin-neoforge-mc1.21-3.0.9.jar", "category": "🖥️ Interface (UI/HUD) & Controles", "type": "Mod", "side": "Client", "size": "74.0 KB", "url": "https://github.com/squeek502/AppleSkin", "desc": "Adds various food-related HUD improvements", "deps": [], "dependents": [], "user_comment": "", "icon": "assets/icons/appleskin-neoforge-mc1.21-3.0.9.png"}, {"id": "architectury", "name": "Architectury", "file": "architectury-13.0.11-neoforge.jar", "version": "13.0.11", "status": "ATIVADO", "location": "architectury-13.0.11-neoforge.jar", "category": "📚 Bibliotecas, Frameworks & APIs", "type": "Lib", "side": "Both", "size": "571.0 KB", "url": "https://www.curseforge.com/minecraft/mc-mods/architectury-api", "desc": "A intermediary api aimed to ease developing multiplatform mods.", "deps": [], "dependents": ["Simply Tooltips", "FTB Library", "FTB Ranks", "FTB Ultimine", "Simply Swords", "Skin Changer"], "user_comment": "", "icon": "assets/icons/architectury-13.0.11-neoforge.png"}, {"id": "armoroftheages", "name": "Armor of the Ages", "file": "armoroftheages-neoforge-1.21.1-1.5.11.jar", "version": "1.5.11", "status": "ATIVADO", "location": "armoroftheages-neoforge-1.21.1-1.5.11.jar", "category": "⚔️ Combate, Armas & Equipamentos", "type": "Mod", "side": "Both", "size": "556.7 KB", "url": "https://change.me.to.your.mods.homepage.example.invalid/", "desc": "A mod that adds fancy armors from different cultures.", "deps": ["YetAnotherConfigLib"], "dependents": [], "user_comment": "", "icon": "assets/icons/armoroftheages-neoforge-1.21.1-1.5.11.png"}, {"id": "balm", "name": "Balm", "file": "balm-neoforge-1.21.1-21.0.66.jar", "version": "21.0.66", "status": "ATIVADO", "location": "balm-neoforge-1.21.1-21.0.66.jar", "category": "📚 Bibliotecas, Frameworks & APIs", "type": "Lib", "side": "Both", "size": "765.4 KB", "url": "https://mods.twelveiterations.com/", "desc": "Abstraction Layer (but not really) for Blay's multiplatform mods", "deps": [], "dependents": ["Waystones"], "user_comment": "", "icon": "assets/icons/balm-neoforge-1.21.1-21.0.66.png"}, {"id": "blueprint", "name": "Blueprint", "file": "blueprint-1.21.1-8.2.0.jar", "version": "8.2.0", "status": "ATIVADO", "location": "blueprint-1.21.1-8.2.0.jar", "category": "📚 Bibliotecas, Frameworks & APIs", "type": "Lib", "side": "Both", "size": "1.16 MB", "url": "https://www.teamabnormals.com/mods/blueprint", "desc": "The library mod used by all Abnormals mods. Adds support for various types of blocks, helps with registering, and adds tons of misc. utils. Also comes with Endimator, an animation library that supports data-driven and coded animations.", "deps": [], "dependents": ["Caverns & Chasms"], "user_comment": "", "icon": "assets/icons/blueprint-1.21.1-8.2.0.png"}, {"id": "carryon", "name": "Carry On", "file": "carryon-neoforge-1.21.1-2.2.6.13.jar", "version": "2.2.6", "status": "ATIVADO", "location": "carryon-neoforge-1.21.1-2.2.6.13.jar", "category": "💡 Qualidade de Vida (QoL) & Utilidades", "type": "Mod", "side": "Both", "size": "353.0 KB", "url": "https://change.me.to.your.mods.homepage.example.invalid/", "desc": "Carry On is a simple mod that improves game interaction by allowing players to pick up, carry, and place single block Tile Entities using only their empty hands.", "deps": [], "dependents": [], "user_comment": "", "icon": "assets/icons/carryon-neoforge-1.21.1-2.2.6.13.png"}, {"id": "caverns_and_chasms", "name": "Caverns & Chasms", "file": "caverns_and_chasms-1.21.1-3.0.1.jar", "version": "3.0.1", "status": "ATIVADO", "location": "caverns_and_chasms-1.21.1-3.0.1.jar", "category": "🗺️ Aventura, Dimensões & Estruturas", "type": "Mod", "side": "Both", "size": "38.67 MB", "url": "https://www.teamabnormals.com/mods/caverns-and-chasms", "desc": "Expands caves, mining, and more with tons of new content!", "deps": ["Blueprint"], "dependents": [], "user_comment": "", "icon": "assets/icons/caverns_and_chasms-1.21.1-3.0.1.png"}, {"id": "cinematic_respawn", "name": "Cinematic Respawn", "file": "cinematic_respawn-1.21.1-neoforge-1.4.1.jar", "version": "1.4.1", "status": "ATIVADO", "location": "cinematic_respawn-1.21.1-neoforge-1.4.1.jar", "category": "💡 Qualidade de Vida (QoL) & Utilidades", "type": "Mod", "side": "Client", "size": "26.6 KB", "url": "", "desc": "Cinematic respawn experience for Minecraft.", "deps": [], "dependents": [], "user_comment": "", "icon": ""}, {"id": "cloth_config", "name": "Cloth Config v15 API", "file": "cloth-config-15.0.140-neoforge.jar", "version": "15.0.140", "status": "ATIVADO", "location": "cloth-config-15.0.140-neoforge.jar", "category": "📚 Bibliotecas, Frameworks & APIs", "type": "Lib", "side": "Both", "size": "1.11 MB", "url": "https://www.curseforge.com/minecraft/mc-mods/cloth-config-forge/", "desc": "An API for config screens.", "deps": [], "dependents": [], "user_comment": "", "icon": "assets/icons/cloth-config-15.0.140-neoforge.png"}, {"id": "connector", "name": "Sinytra Connector", "file": "connector-2.0.0-beta.17+1.21.1-full.jar", "version": "", "status": "ATIVADO", "location": "connector-2.0.0-beta.17+1.21.1-full.jar", "category": "📚 Bibliotecas, Frameworks & APIs", "type": "Lib", "side": "Both", "size": "4.36 MB", "url": "https://www.curseforge.com/minecraft/mc-mods/sinytra-connector", "desc": "Run Fabric mods on NeoForge / Forge", "deps": [], "dependents": ["Mod Menu (NeoForge Edition)", "Continuity"], "user_comment": "", "icon": ""}, {"id": "continuity", "name": "Continuity", "file": "continuity-3.0.0+1.21.neoforge.jar", "version": "3.0.0+1.21.neoforge", "status": "ATIVADO", "location": "continuity-3.0.0+1.21.neoforge.jar", "category": "🎨 Gráficos, Áudio & Imersão", "type": "Mod", "side": "Client", "size": "990.8 KB", "url": "https://modrinth.com/mod/continuity", "desc": "Continuity is a Fabric mod that allows resource packs that use the OptiFine connected textures format, OptiFine emissive textures format (only for blocks and item models), or OptiFine custom block layers format to work without OptiFine.", "deps": ["Sinytra Connector", "Forgified Fabric API"], "dependents": [], "user_comment": "", "icon": "assets/icons/continuity-3.0.0+1.21.neoforge.png"}, {"id": "create", "name": "Create", "file": "create-1.21.1-6.0.10.jar", "version": "6.0.10", "status": "ATIVADO", "location": "create-1.21.1-6.0.10.jar", "category": "⚙️ Tecnologia & Automação", "type": "Mod", "side": "Both", "size": "18.24 MB", "url": "https://www.curseforge.com/minecraft/mc-mods/create", "desc": "Technology that empowers the player.", "deps": ["flywheel", "ponder", "Sodium", "lithium", "journeymap", "xaeroworldmap", "radium", "palladium"], "dependents": ["Create: Gunsmithing"], "user_comment": "", "icon": "assets/icons/create-1.21.1-6.0.10.png"}, {"id": "cgs", "name": "Create: Gunsmithing", "file": "create-gunsmithing-1.21.1-1.4.9.jar", "version": "1.4.9", "status": "ATIVADO", "location": "create-gunsmithing-1.21.1-1.4.9.jar", "category": "⚙️ Tecnologia & Automação", "type": "Mod", "side": "Both", "size": "1.73 MB", "url": "", "desc": "\"Adds steampunk weapons to the Create mod\"", "deps": ["NukaTeam's Gun Lib", "Create"], "dependents": [], "user_comment": "", "icon": "assets/icons/create-gunsmithing-1.21.1-1.4.9.png"}, {"id": "curios", "name": "Curios API", "file": "curios-neoforge-9.5.1+1.21.1.jar", "version": "9.5.1+1.21.1", "status": "ATIVADO", "location": "curios-neoforge-9.5.1+1.21.1.jar", "category": "📚 Bibliotecas, Frameworks & APIs", "type": "Lib", "side": "Both", "size": "401.1 KB", "url": "https://github.com/TheIllusiveC4/Curios", "desc": "A flexible and expandable accessory/equipment API for users and developers.", "deps": [], "dependents": ["L_Ender's Cataclysm 1.21.1"], "user_comment": "", "icon": "assets/icons/curios-neoforge-9.5.1+1.21.1.png"}, {"id": "dynamic_fps", "name": "Dynamic FPS", "file": "dynamic-fps-3.11.4+minecraft-1.21.0-neoforge.jar", "version": "3.11.4", "status": "ATIVADO", "location": "dynamic-fps-3.11.4+minecraft-1.21.0-neoforge.jar", "category": "⚡ Otimização & Performance", "type": "Mod", "side": "Client", "size": "215.0 KB", "url": "https://dapprgames.com/mods", "desc": "Reduce resource usage while Minecraft is in the background or idle.", "deps": [], "dependents": [], "user_comment": "", "icon": "assets/icons/dynamic-fps-3.11.4+minecraft-1.21.0-neoforge.png"}, {"id": "ferritecore", "name": "FerriteCore", "file": "ferritecore-7.0.3-neoforge.jar", "version": "7.0.3", "status": "ATIVADO", "location": "ferritecore-7.0.3-neoforge.jar", "category": "⚡ Otimização & Performance", "type": "Mod", "side": "Both", "size": "118.7 KB", "url": "https://www.curseforge.com/minecraft/mc-mods/ferritecore-fabric", "desc": "Memory usage optimizations for modern Minecraft.", "deps": [], "dependents": [], "user_comment": "", "icon": "assets/icons/ferritecore-7.0.3-neoforge.png"}, {"id": "forgematica", "name": "Forgematica", "file": "forgematica-0.4.2+mc1.21.1.jar", "version": "0.4.2+mc1.21.1", "status": "ATIVADO", "location": "forgematica-0.4.2+mc1.21.1.jar", "category": "🖥️ Interface (UI/HUD) & Controles", "type": "Mod", "side": "Client", "size": "1.57 MB", "url": "https://github.com/CagayakeGirls/litematica-neoforge", "desc": "Litematica unofficial NeoForge port. A modern schematic mod for NeoForge.", "deps": ["MafgLib"], "dependents": [], "user_comment": "", "icon": "assets/icons/forgematica-0.4.2+mc1.21.1.png"}, {"id": "fabric_api", "name": "Forgified Fabric API", "file": "forgified-fabric-api-0.116.15+2.3.5+1.21.1.jar", "version": "${file.jarVersion}", "status": "ATIVADO", "location": "forgified-fabric-api-0.116.15+2.3.5+1.21.1.jar", "category": "📚 Bibliotecas, Frameworks & APIs", "type": "Lib", "side": "Both", "size": "5.35 MB", "url": "https://github.com/Sinytra/ForgifiedFabricAPI", "desc": "Core API module providing key hooks and intercompatibility features.", "deps": [], "dependents": ["Continuity", "Voxy"], "user_comment": "", "icon": "assets/icons/forgified-fabric-api-0.116.15+2.3.5+1.21.1.png"}, {"id": "ftblibrary", "name": "FTB Library", "file": "ftb-library-neoforge-2101.1.37.jar", "version": "2101.1.37", "status": "ATIVADO", "location": "ftb-library-neoforge-2101.1.37.jar", "category": "📚 Bibliotecas, Frameworks & APIs", "type": "Lib", "side": "Both", "size": "1.37 MB", "url": "https://www.curseforge.com/minecraft/mc-mods/ftb-library-forge", "desc": "FTB Library adds nothing.", "deps": ["Architectury API"], "dependents": ["FTB Ranks", "FTB Ultimine"], "user_comment": "", "icon": ""}, {"id": "ftbranks", "name": "FTB Ranks", "file": "ftb-ranks-neoforge-2101.1.5.jar", "version": "2101.1.5", "status": "ATIVADO", "location": "ftb-ranks-neoforge-2101.1.5.jar", "category": "💡 Qualidade de Vida (QoL) & Utilidades", "type": "Mod", "side": "Both", "size": "87.5 KB", "url": "https://www.curseforge.com/minecraft/mc-mods/ftb-ranks-forge", "desc": "A simple mod that lets you create ranks for players, similar to Discord roles, and manage permissions for them", "deps": ["Architectury API", "FTB Library"], "dependents": [], "user_comment": "", "icon": ""}, {"id": "ftbultimine", "name": "FTB Ultimine", "file": "ftb-ultimine-neoforge-2101.1.15.jar", "version": "2101.1.15", "status": "ATIVADO", "location": "ftb-ultimine-neoforge-2101.1.15.jar", "category": "💡 Qualidade de Vida (QoL) & Utilidades", "type": "Mod", "side": "Both", "size": "173.0 KB", "url": "https://www.curseforge.com/minecraft/mc-mods/ftb-ultimine-forge", "desc": "Allows you to break multiple blocks at once", "deps": ["Architectury API", "FTB Library", "ftbezcrystals"], "dependents": [], "user_comment": "", "icon": ""}, {"id": "fzzy_config", "name": "Fzzy Config", "file": "fzzy_config-0.7.7+1.21+neoforge.jar", "version": "0.7.7+1.21+neoforge", "status": "ATIVADO", "location": "fzzy_config-0.7.7+1.21+neoforge.jar", "category": "📚 Bibliotecas, Frameworks & APIs", "type": "Lib", "side": "Both", "size": "2.28 MB", "url": "", "desc": "Configuration engine with automatic GUI generation, client-server syncing, powerful validation and error handling, and much more.", "deps": ["Kotlin for Forge"], "dependents": ["Simply Tooltips", "Simply Swords", "EMI Loot"], "user_comment": "", "icon": "assets/icons/fzzy_config-0.7.7+1.21+neoforge.png"}, {"id": "geckolib", "name": "GeckoLib 4", "file": "geckolib-neoforge-1.21.1-4.9.3.jar", "version": "4.9.3", "status": "ATIVADO", "location": "geckolib-neoforge-1.21.1-4.9.3.jar", "category": "📚 Bibliotecas, Frameworks & APIs", "type": "Lib", "side": "Both", "size": "619.7 KB", "url": "http://geckolib.com/", "desc": "GeckoLib is an animation engine for Minecraft Mods, with support for complex 3D keyframe-based animations, 30+ easings, concurrent animation support, sound and particle keyframes, event keyframes, and more.", "deps": ["geckoanimfix"], "dependents": ["Mielon's The Sift", "NukaTeam's Gun Lib", "Pathogen : monster plague"], "user_comment": "", "icon": "assets/icons/geckolib-neoforge-1.21.1-4.9.3.png"}, {"id": "gravestone", "name": "Gravestone Mod", "file": "gravestone-neoforge-1.21.1-1.0.40.jar", "version": "1.21.1-1.0.40", "status": "ATIVADO", "location": "gravestone-neoforge-1.21.1-1.0.40.jar", "category": "💡 Qualidade de Vida (QoL) & Utilidades", "type": "Mod", "side": "Both", "size": "314.5 KB", "url": "https://www.curseforge.com/minecraft/mc-mods/gravestone-mod", "desc": "Places a gravestone with your inventory items inside when you die", "deps": ["Jade"], "dependents": [], "user_comment": "", "icon": "assets/icons/gravestone-neoforge-1.21.1-1.0.40.png"}, {"id": "inventorytweak", "name": "Inventory Tweak", "file": "inventorytweak-neoforge-1.21-3.3.jar", "version": "3.3", "status": "ATIVADO", "location": "inventorytweak-neoforge-1.21-3.3.jar", "category": "🎒 Armazenamento & Inventário", "type": "Mod", "side": "Both", "size": "47.7 KB", "url": "https://modrinth.com/mod/inventorytweak", "desc": "Fast and easy inventory sorter", "deps": ["Anvian's Lib", "Cloth Config API"], "dependents": [], "user_comment": "", "icon": "assets/icons/inventorytweak-neoforge-1.21-3.3.png"}, {"id": "jei", "name": "Just Enough Items", "file": "jei-1.21.1-neoforge-19.57.0.450.jar", "version": "19.57.0.450", "status": "ATIVADO", "location": "jei-1.21.1-neoforge-19.57.0.450.jar", "category": "💡 Qualidade de Vida (QoL) & Utilidades", "type": "Mod", "side": "Both", "size": "2.15 MB", "url": "https://www.curseforge.com/minecraft/mc-mods/jei", "desc": "JEI is an item and recipe viewing mod for Minecraft, built from the ground up for stability and performance.", "deps": ["mezz_config", "mezz_config_gui"], "dependents": ["ModernFix", "Sophisticated Core"], "user_comment": "", "icon": "assets/icons/jei-1.21.1-neoforge-19.57.0.450.png"}, {"id": "kotlinforforge", "name": "Kotlin for Forge", "file": "kotlinforforge-5.12.0-all.jar", "version": "", "status": "ATIVADO", "location": "kotlinforforge-5.12.0-all.jar", "category": "📚 Bibliotecas, Frameworks & APIs", "type": "Lib", "side": "Both", "size": "6.94 MB", "url": "https://www.curseforge.com/minecraft/mc-mods/kotlin-for-forge", "desc": "Provides Kotlin language support for Forge and NeoForge mods.", "deps": [], "dependents": ["Fzzy Config", "Symbols 'n' Stuff"], "user_comment": "", "icon": ""}, {"id": "lambdynlights", "name": "LambDynamicLights", "file": "lambdynamiclights-4.8.11+1.21.1.jar", "version": "4.8.11+1.21.1", "status": "ATIVADO", "location": "lambdynamiclights-4.8.11+1.21.1.jar", "category": "🎨 Gráficos, Áudio & Imersão", "type": "Mod", "side": "Client", "size": "1.93 MB", "url": "https://lambdaurora.dev/projects/lambdynamiclights", "desc": "The most feature-complete dynamic lighting mod.", "deps": ["lambdynlights_runtime"], "dependents": [], "user_comment": "", "icon": "assets/icons/lambdynamiclights-4.8.11+1.21.1.png"}, {"id": "libjf", "name": "LibJF", "file": "libjf-3.17.4+forge.jar", "version": "3.17.4+forge", "status": "ATIVADO", "location": "libjf-3.17.4+forge.jar", "category": "📚 Bibliotecas, Frameworks & APIs", "type": "Lib", "side": "Both", "size": "713.9 KB", "url": "https://git.frohnmeyer-wds.de/JfMods/LibJF", "desc": "Library mod by JFronny", "deps": [], "dependents": ["Resource Pack Options"], "user_comment": "", "icon": "assets/icons/libjf-3.17.4+forge.png"}, {"id": "lionfishapi", "name": "lionfishapi", "file": "lionfishapi-3.1.jar", "version": "3.1", "status": "ATIVADO", "location": "lionfishapi-3.1.jar", "category": "📚 Bibliotecas, Frameworks & APIs", "type": "Lib", "side": "Both", "size": "89.4 KB", "url": "https://change.me.to.your.mods.homepage.example.invalid/", "desc": "Sem descrição detalhada disponível.", "deps": [], "dependents": [], "user_comment": "", "icon": ""}, {"id": "lootr", "name": "Lootr", "file": "lootr-neoforge-1.21.1-1.11.38.127.jar", "version": "1.21.1-1.11.38.127", "status": "ATIVADO", "location": "lootr-neoforge-1.21.1-1.11.38.127.jar", "category": "💡 Qualidade de Vida (QoL) & Utilidades", "type": "Mod", "side": "Both", "size": "1.03 MB", "url": "https://minecraft.curseforge.com/projects/lootr", "desc": "Generates unique loot for each player that opens a loot container.", "deps": [], "dependents": [], "user_comment": "", "icon": "assets/icons/lootr-neoforge-1.21.1-1.11.38.127.png"}, {"id": "mafglib", "name": "MaFgLib", "file": "mafglib-0.4.3+mc1.21.1.jar", "version": "0.4.3+mc1.21.1", "status": "ATIVADO", "location": "mafglib-0.4.3+mc1.21.1.jar", "category": "📚 Bibliotecas, Frameworks & APIs", "type": "Lib", "side": "Both", "size": "1.25 MB", "url": "https://github.com/CagayakeGirls/malilib-neoforge", "desc": "MaLiLib unofficial NeoForge port. Library mod for the NeoForge port of masa's mods.", "deps": [], "dependents": ["Forgematica"], "user_comment": "", "icon": "assets/icons/mafglib-0.4.3+mc1.21.1.png"}, {"id": "the_sift", "name": "Mielon's The Sift", "file": "mielon's-the-sift-1.1.0-mc1.21.1-neo.jar", "version": "1.1.0", "status": "ATIVADO", "location": "mielon's-the-sift-1.1.0-mc1.21.1-neo.jar", "category": "💡 Qualidade de Vida (QoL) & Utilidades", "type": "Mod", "side": "Both", "size": "13.40 MB", "url": "https://x.com/MielonDev", "desc": "Explore The Sift: a strange dimension of siftslate, Ichor, ancient life, and resonant souls.", "deps": ["GeckoLib"], "dependents": [], "user_comment": "", "icon": "assets/icons/mielon's-the-sift-1.1.0-mc1.21.1-neo.png"}, {"id": "modernfix", "name": "ModernFix", "file": "modernfix-neoforge-5.27.24+mc1.21.1.jar", "version": "5.27.24+mc1.21.1", "status": "ATIVADO", "location": "modernfix-neoforge-5.27.24+mc1.21.1.jar", "category": "⚡ Otimização & Performance", "type": "Mod", "side": "Both", "size": "590.2 KB", "url": "https://modrinth.com/mod/modernfix", "desc": "Egregious, yet effective performance improvements for modern Minecraft", "deps": ["Just Enough Items"], "dependents": [], "user_comment": "", "icon": "assets/icons/modernfix-neoforge-5.27.24+mc1.21.1.png"}, {"id": "moreculling", "name": "More Culling", "file": "moreculling-neoforge-1.21.1-1.0.10.jar", "version": "1.0.10", "status": "ATIVADO", "location": "moreculling-neoforge-1.21.1-1.0.10.jar", "category": "⚡ Otimização & Performance", "type": "Mod", "side": "Client", "size": "327.8 KB", "url": "https://modrinth.com/mod/moreculling", "desc": "Processes main resources.", "deps": ["Cloth Config API", "Sodium"], "dependents": [], "user_comment": "", "icon": "assets/icons/moreculling-neoforge-1.21.1-1.0.10.png"}, {"id": "ntgl", "name": "NukaTeam's Gun Lib", "file": "ntgl-1.21.1-3.2.0.jar", "version": "3.2.0", "status": "ATIVADO", "location": "ntgl-1.21.1-3.2.0.jar", "category": "⚔️ Combate, Armas & Equipamentos", "type": "Lib", "side": "Both", "size": "3.78 MB", "url": "https://discord.com/invite/njb6EKaDVJ", "desc": "Core for weapon mods", "deps": ["GeckoLib"], "dependents": ["Create: Gunsmithing"], "user_comment": "", "icon": "assets/icons/ntgl-1.21.1-3.2.0.png"}, {"id": "playeranimator", "name": "Player Animator", "file": "player-animation-lib-forge-2.0.4+1.21.1.jar", "version": "2.0.4+1.21.1", "status": "ATIVADO", "location": "player-animation-lib-forge-2.0.4+1.21.1.jar", "category": "📚 Bibliotecas, Frameworks & APIs", "type": "Lib", "side": "Both", "size": "198.4 KB", "url": "https://github.com/KosmX/minecraftPlayerAnimator", "desc": "A lightweight library to easily animate the player", "deps": [], "dependents": [], "user_comment": "", "icon": ""}, {"id": "puzzleslib", "name": "Puzzles Lib", "file": "puzzleslib-v21.1.62-mc1.21.1+neoforge.jar", "version": "21.1.62", "status": "ATIVADO", "location": "puzzleslib-v21.1.62-mc1.21.1+neoforge.jar", "category": "📚 Bibliotecas, Frameworks & APIs", "type": "Lib", "side": "Both", "size": "1.38 MB", "url": "https://www.curseforge.com/minecraft/mc-mods/puzzles-lib", "desc": "Why it's called Puzzles, you ask? That's the puzzle!", "deps": [], "dependents": ["Bartering Station", "Distinguished Potions", "Easy Anvils", "Easy Magic", "Visual Workbench"], "user_comment": "", "icon": "assets/icons/puzzleslib-v21.1.62-mc1.21.1+neoforge.png"}, {"id": "respackopts", "name": "Resource Pack Options", "file": "respackopts-4.11.3+forge.jar", "version": "4.11.3+forge", "status": "ATIVADO", "location": "respackopts-4.11.3+forge.jar", "category": "📚 Bibliotecas, Frameworks & APIs", "type": "Lib", "side": "Both", "size": "533.5 KB", "url": "https://git.frohnmeyer-wds.de/JfMods/Respackopts", "desc": "Config menus for resource packs", "deps": ["libjf_base", "libjf_data_manipulation_v0", "libjf_config_core_v2", "muscript"], "dependents": [], "user_comment": "", "icon": "assets/icons/respackopts-4.11.3+forge.png"}, {"id": "simplyswords", "name": "Simply Swords", "file": "simplyswords-neoforge-1.70.2-1.21.1.jar", "version": "1.70.2-1.21.1", "status": "ATIVADO", "location": "simplyswords-neoforge-1.70.2-1.21.1.jar", "category": "⚔️ Combate, Armas & Equipamentos", "type": "Mod", "side": "Both", "size": "15.53 MB", "url": "https://www.curseforge.com/minecraft/mc-mods/simply-swords", "desc": "A variety of unique weapons to add to your minecraft repertoire", "deps": ["Architectury API", "Fzzy Config", "Simply Tooltips"], "dependents": [], "user_comment": "", "icon": "assets/icons/simplyswords-neoforge-1.70.2-1.21.1.png"}, {"id": "skin_changer", "name": "Skin Changer", "file": "skin_changer-neoforge-1.21-0.9.2.jar", "version": "0.9.2", "status": "ATIVADO", "location": "skin_changer-neoforge-1.21-0.9.2.jar", "category": "🎨 Gráficos, Áudio & Imersão", "type": "Mod", "side": "Client", "size": "62.3 KB", "url": "https://www.curseforge.com/minecraft/mc-mods/skinchanger", "desc": "This mod allows you to change your Minecraft server skin on the fly even if it is in offline mode.", "deps": ["Architectury API"], "dependents": [], "user_comment": "", "icon": "assets/icons/skin_changer-neoforge-1.21-0.9.2.png"}, {"id": "sodium_extra", "name": "Sodium Extra", "file": "sodium-extra-neoforge-0.9.4+mc1.21.1.jar", "version": "0.9.4+mc1.21.1", "status": "ATIVADO", "location": "sodium-extra-neoforge-0.9.4+mc1.21.1.jar", "category": "⚡ Otimização & Performance", "type": "Mod", "side": "Client", "size": "461.0 KB", "url": "https://www.curseforge.com/minecraft/mc-mods/sodium", "desc": "Features that shouldn't be in Sodium.", "deps": ["Sodium", "greenlight"], "dependents": ["Create", "More Culling", "Voxy"], "user_comment": "", "icon": "assets/icons/sodium-extra-neoforge-0.9.4+mc1.21.1.png"}, {"id": "sodium", "name": "Sodium", "file": "sodium-neoforge-0.8.13+mc1.21.1.jar", "version": "0.8.13+mc1.21.1", "status": "ATIVADO", "location": "sodium-neoforge-0.8.13+mc1.21.1.jar", "category": "⚡ Otimização & Performance", "type": "Mod", "side": "Client", "size": "1.23 MB", "url": "https://www.curseforge.com/minecraft/mc-mods/sodium", "desc": "Sodium is a powerful rendering engine for Minecraft which improves frame rates and reduces lag spikes.", "deps": ["embeddium"], "dependents": ["Create", "More Culling", "Sodium Extra", "Voxy"], "user_comment": "", "icon": "assets/icons/sodium-neoforge-0.8.13+mc1.21.1.png"}, {"id": "sophisticatedbackpacks", "name": "Sophisticated Backpacks", "file": "sophisticatedbackpacks-1.21.1-3.26.7.2182.jar", "version": "3.26.7", "status": "ATIVADO", "location": "sophisticatedbackpacks-1.21.1-3.26.7.2182.jar", "category": "🎒 Armazenamento & Inventário", "type": "Mod", "side": "Both", "size": "1.18 MB", "url": "https://www.curseforge.com/minecraft/mc-mods/sophisticated-backpacks", "desc": "Fancy and functional backpacks.", "deps": ["Sophisticated Core"], "dependents": [], "user_comment": "", "icon": "assets/icons/sophisticatedbackpacks-1.21.1-3.26.7.2182.png"}, {"id": "sophisticatedcore", "name": "Sophisticated Core", "file": "sophisticatedcore-1.21.1-1.5.5.2363.jar", "version": "1.5.5", "status": "ATIVADO", "location": "sophisticatedcore-1.21.1-1.5.5.2363.jar", "category": "📚 Bibliotecas, Frameworks & APIs", "type": "Lib", "side": "Both", "size": "1.73 MB", "url": "https://www.curseforge.com/minecraft/mc-mods/sophisticated-core", "desc": "A library / shared functionality mod for Sophisticated Storage and Backpacks", "deps": ["Just Enough Items"], "dependents": ["Sophisticated Backpacks"], "user_comment": "", "icon": ""}, {"id": "sound_physics_remastered", "name": "Sound Physics Remastered", "file": "sound-physics-remastered-neoforge-1.21.1-1.4.10.jar", "version": "1.21.1-1.4.10", "status": "ATIVADO", "location": "sound-physics-remastered-neoforge-1.21.1-1.4.10.jar", "category": "🎨 Gráficos, Áudio & Imersão", "type": "Mod", "side": "Client", "size": "194.6 KB", "url": "https://www.curseforge.com/minecraft/mc-mods/sound-physics-remastered", "desc": "Provides realistic sound attenuation, reverberation, and absorption through blocks.", "deps": ["Cloth Config API", "voicechat"], "dependents": [], "user_comment": "", "icon": "assets/icons/sound-physics-remastered-neoforge-1.21.1-1.4.10.png"}, {"id": "symbols_n_stuff", "name": "Symbols 'n' Stuff", "file": "symbols_n_stuff-0.1.2+1.21+neoforge.jar", "version": "0.1.2+1.21+neoforge", "status": "ATIVADO", "location": "symbols_n_stuff-0.1.2+1.21+neoforge.jar", "category": "🎨 Gráficos, Áudio & Imersão", "type": "Mod", "side": "Both", "size": "99.3 KB", "url": "", "desc": "Simple utility mod that adds text-based symbols for spicing up your tooltips, screens, and more!", "deps": ["Kotlin for Forge"], "dependents": [], "user_comment": "", "icon": "assets/icons/symbols_n_stuff-0.1.2+1.21+neoforge.png"}, {"id": "toms_storage", "name": "Tom's Simple Storage Mod", "file": "toms_storage-1.21-2.4.2.jar", "version": "2.4.2", "status": "ATIVADO", "location": "toms_storage-1.21-2.4.2.jar", "category": "🎒 Armazenamento & Inventário", "type": "Mod", "side": "Both", "size": "836.7 KB", "url": "https://www.curseforge.com/minecraft/mc-mods/toms-storage", "desc": "Simple vanilla style storage mod.", "deps": ["sophisticatedstorage"], "dependents": [], "user_comment": "", "icon": "assets/icons/toms_storage-1.21-2.4.2.png"}, {"id": "trade_cycling", "name": "Trade Cycling", "file": "trade-cycling-neoforge-1.21.1-1.0.22.jar", "version": "1.21.1-1.0.22", "status": "ATIVADO", "location": "trade-cycling-neoforge-1.21.1-1.0.22.jar", "category": "💡 Qualidade de Vida (QoL) & Utilidades", "type": "Mod", "side": "Both", "size": "84.7 KB", "url": "https://www.curseforge.com/minecraft/mc-mods/trade-cycling", "desc": "The trade cycling functionality from Easy Villagers.", "deps": [], "dependents": [], "user_comment": "", "icon": "assets/icons/trade-cycling-neoforge-1.21.1-1.0.22.png"}, {"id": "twilightforest", "name": "The Twilight Forest", "file": "twilightforest-1.21.1-4.8.3345-universal.jar", "version": "4.8.3345", "status": "ATIVADO", "location": "twilightforest-1.21.1-4.8.3345-universal.jar", "category": "🗺️ Aventura, Dimensões & Estruturas", "type": "Mod", "side": "Both", "size": "25.90 MB", "url": "https://www.curseforge.com/minecraft/mc-mods/the-twilight-forest", "desc": "An enchanted forest dimension.", "deps": [], "dependents": [], "user_comment": "", "icon": "assets/icons/twilightforest-1.21.1-4.8.3345-universal.png"}, {"id": "upgrader", "name": "Upgrader", "file": "upgrader-neoforge-1.2.1+1.21.1.jar", "version": "1.2.1", "status": "ATIVADO", "location": "upgrader-neoforge-1.2.1+1.21.1.jar", "category": "⚔️ Combate, Armas & Equipamentos", "type": "Mod", "side": "Both", "size": "104.4 KB", "url": "", "desc": "Gambling-style item upgrader: risk an item for a shot at a better one.", "deps": [], "dependents": [], "user_comment": "", "icon": ""}, {"id": "waystones", "name": "Waystones", "file": "waystones-neoforge-1.21.1-21.1.46.jar", "version": "21.1.46", "status": "ATIVADO", "location": "waystones-neoforge-1.21.1-21.1.46.jar", "category": "💡 Qualidade de Vida (QoL) & Utilidades", "type": "Mod", "side": "Both", "size": "1.17 MB", "url": "https://mods.twelveiterations.com/minecraft/waystones", "desc": "Teleport back to activated waystones. For Survival, Adventure or Servers.", "deps": ["Balm"], "dependents": [], "user_comment": "", "icon": "assets/icons/waystones-neoforge-1.21.1-21.1.46.png"}, {"id": "yet_another_config_lib_v3", "name": "YetAnotherConfigLib", "file": "yet_another_config_lib_v3-3.8.2+1.21.1-neoforge.jar", "version": "3.8.2+1.21.1-neoforge", "status": "ATIVADO", "location": "yet_another_config_lib_v3-3.8.2+1.21.1-neoforge.jar", "category": "📚 Bibliotecas, Frameworks & APIs", "type": "Lib", "side": "Both", "size": "1.07 MB", "url": "", "desc": "YetAnotherConfigLib (yacl) is just that. A builder-based configuration library for Minecraft.\n", "deps": [], "dependents": ["Armor of the Ages", "Chest Tracker"], "user_comment": "", "icon": "assets/icons/yet_another_config_lib_v3-3.8.2+1.21.1-neoforge.png"}, {"id": "chunky", "name": "Chunky", "file": "Chunky-NeoForge-1.4.23.jar", "version": "1.4.23", "status": "DESATIVADO", "location": "desativados/Chunky-NeoForge-1.4.23.jar", "category": "💡 Qualidade de Vida (QoL) & Utilidades", "type": "Mod", "side": "Both", "size": "332.6 KB", "url": "https://github.com/pop4959/Chunky", "desc": "Pre-generates chunks, quickly, efficiently, and safely", "deps": [], "dependents": [], "user_comment": "", "icon": "assets/icons/Chunky-NeoForge-1.4.23.png"}, {"id": "chesttracker", "name": "Chest Tracker", "file": "chesttracker-2.6.8+1.21.1-neoforge.jar", "version": "2.6.8+1.21.1-neoforge", "status": "DESATIVADO", "location": "desativados/chesttracker-2.6.8+1.21.1-neoforge.jar", "category": "🎒 Armazenamento & Inventário", "type": "Mod", "side": "Client", "size": "857.3 KB", "url": "https://github.com/JackFred2/ChestTracker", "desc": "Client-side item storage and searching for Minecraft. This is an unofficial NeoForge 1.21.1 port of Chest Tracker.", "deps": ["YetAnotherConfigLib"], "dependents": [], "user_comment": "Desativado temporariamente.", "icon": "assets/icons/chesttracker-2.6.8+1.21.1-neoforge.png"}, {"id": "emi", "name": "EMI", "file": "emi-1.1.24+1.21.1+neoforge.jar", "version": "1.1.24+1.21.1+neoforge", "status": "DESATIVADO", "location": "desativados/emi-1.1.24+1.21.1+neoforge.jar", "category": "💡 Qualidade de Vida (QoL) & Utilidades", "type": "Mod", "side": "Both", "size": "1.06 MB", "url": "", "desc": "A featureful and accessible item and recipe viewer", "deps": [], "dependents": ["EMI Loot"], "user_comment": "Desativado temporariamente para testes com JEI.", "icon": "assets/icons/emi-1.1.24+1.21.1+neoforge.png"}, {"id": "emi_loot", "name": "EMI Loot", "file": "emi_loot-0.7.9+1.21+neoforge.jar", "version": "0.7.9+1.21+neoforge", "status": "DESATIVADO", "location": "desativados/emi_loot-0.7.9+1.21+neoforge.jar", "category": "💡 Qualidade de Vida (QoL) & Utilidades", "type": "Mod", "side": "Both", "size": "455.0 KB", "url": "https://github.com/fzzyhmstrs/EMI_loot", "desc": "Plugin for EMI that shows chest loot, block drops, mob drops, and gameplay loot like fishing.", "deps": ["EMI", "Fzzy Config"], "dependents": [], "user_comment": "Desativado temporariamente para testes com JEI.", "icon": "assets/icons/emi_loot-0.7.9+1.21+neoforge.png"}, {"id": "inventorytabs", "name": "Improved Inventory Tabs", "file": "improved-inventory-tabs-neoforge-1.21.1-1.5.0.jar", "version": "1.5.0", "status": "DESATIVADO", "location": "desativados/improved-inventory-tabs-neoforge-1.21.1-1.5.0.jar", "category": "🎒 Armazenamento & Inventário", "type": "Mod", "side": "Client", "size": "82.4 KB", "url": "https://github.com/jackhair/InventoryTabs", "desc": "Processes main resources.", "deps": ["Cloth Config API"], "dependents": [], "user_comment": "Não melhorou muito a qualidade de vida, polui a tela e não se adequa muito as ui dos outros mods.", "icon": "assets/icons/improved-inventory-tabs-neoforge-1.21.1-1.5.0.png"}, {"id": "pathogen", "name": "Pathogen : monster plague", "file": "pathogen-1.4.7-neoforge-1.21.1.jar", "version": "1.4.7", "status": "DESATIVADO", "location": "desativados/pathogen-1.4.7-neoforge-1.21.1.jar", "category": "💡 Qualidade de Vida (QoL) & Utilidades", "type": "Mod", "side": "Both", "size": "14.42 MB", "url": "https://www.curseforge.com/minecraft/mc-mods/pathogen", "desc": "Sem descrição detalhada disponível.", "deps": ["GeckoLib"], "dependents": [], "user_comment": "", "icon": "assets/icons/pathogen-1.4.7-neoforge-1.21.1.png"}, {"id": "voxy", "name": "Voxy", "file": "voxy-0.6.0.jar", "version": "0.6.0", "status": "DESATIVADO", "location": "desativados/voxy-0.6.0.jar", "category": "💡 Qualidade de Vida (QoL) & Utilidades", "type": "Mod", "side": "Both", "size": "90.10 MB", "url": "", "desc": "Far distance rendering mod utilising LoDs", "deps": ["Sodium", "Forgified Fabric API"], "dependents": [], "user_comment": "", "icon": "assets/icons/voxy-0.6.0.png"}], "resourcePacks": [{"name": "Fantasy Ores by CesarZorak", "file": "Planilha / CurseForge", "status": "ATIVADO", "url": "https://www.curseforge.com/minecraft/texture-packs/fantasy-ores-by-cesarzorak", "desc": "Minérios com estilo visual de fantasia medieval refinada.", "icon_path": null}, {"name": "3D", "file": "3D Default 1.20+ v1.16.0.zip", "status": "PRONTO", "url": "https://www.curseforge.com/minecraft/texture-packs/3d-default-1.20+-v1.16.0", "desc": "Modelagem tridimensional sutil para blocos e itens no estilo vanilla.", "icon_path": "assets/icons/3D Default 1.20+ v1.16.0.png"}, {"name": "Connected-Paths", "file": "Connected-Paths 1.21-1.21.3 v3.1.1.zip", "status": "PRONTO", "url": "https://www.curseforge.com/minecraft/texture-packs/connected-paths-1.21-1.21.3-v3.1.1", "desc": "Conecta texturas de caminhos e estradas de terra perfeitamente.", "icon_path": "assets/icons/Connected-Paths 1.21-1.21.3 v3.1.1.png"}, {"name": "EvenBetterEnchants_v2_r1", "file": "EvenBetterEnchants_v2_r1.zip", "status": "PRONTO", "url": "https://www.curseforge.com/minecraft/texture-packs/evenbetterenchants_v2_r1", "desc": "Ícones e texturas visuais únicas para cada tipo de encantamento.", "icon_path": "assets/icons/EvenBetterEnchants_v2_r1.png"}, {"name": "Jackson's", "file": "Jackson's Cave Sounds.zip", "status": "PRONTO", "url": "https://www.curseforge.com/minecraft/texture-packs/jackson's-cave-sounds", "desc": "Efeitos sonoros imersivos, ecos e ambientação atmosférica para cavernas.", "icon_path": "assets/icons/Jackson's Cave Sounds.png"}, {"name": "LowOnFire", "file": "LowOnFire 1.21.3.zip", "status": "PRONTO", "url": "https://www.curseforge.com/minecraft/texture-packs/lowonfire-1.21.3", "desc": "Reduz a altura das chamas na tela quando o jogador está em chamas.", "icon_path": "assets/icons/LowOnFire 1.21.3.png"}], "wishlist": [{"name": "Fancy World Animation", "type": "Mod/Ideia", "url": "", "desc": "Ideia ou mod citado nas anotações."}, {"name": "Inventorio", "type": "Mod/Ideia", "url": "", "desc": "Ideia ou mod citado nas anotações."}, {"name": "Pumpkillagers Quest", "type": "Mod", "url": "https://www.curseforge.com/minecraft/mc-mods/pumpkillagers-quest", "desc": "Mod anotado para avaliação."}, {"name": "Fluxwolf", "type": "Mod", "url": "https://www.curseforge.com/minecraft/mc-mods/fluxwolf", "desc": "Mod anotado para avaliação."}, {"name": "The Bumblezone Forge", "type": "Mod", "url": "https://www.curseforge.com/minecraft/mc-mods/the-bumblezone-forge", "desc": "Mod anotado para avaliação."}, {"name": "Wall Climb", "type": "Mod", "url": "https://www.curseforge.com/minecraft/mc-mods/wall-climb", "desc": "Mod anotado para avaliação."}, {"name": "Customskinloader", "type": "Mod", "url": "https://www.curseforge.com/minecraft/mc-mods/customskinloader", "desc": "Mod anotado para avaliação."}, {"name": "Biomes O’ Plenty", "type": "Mod/Ideia", "url": "", "desc": "Ideia ou mod citado nas anotações."}, {"name": "Tinkers’ Construct", "type": "Mod/Ideia", "url": "", "desc": "Ideia ou mod citado nas anotações."}, {"name": "Geyser & Floodgate ou ViaVersion", "type": "Mod/Ideia", "url": "", "desc": "Ideia ou mod citado nas anotações."}, {"name": "Vista", "type": "Mod/Ideia", "url": "", "desc": "Ideia ou mod citado nas anotações."}, {"name": "Vanilla Tweaks", "type": "Mod/Ideia", "url": "", "desc": "Ideia ou mod citado nas anotações."}, {"name": "Just Enough Resources Jer", "type": "Mod", "url": "https://www.curseforge.com/minecraft/mc-mods/just-enough-resources-jer", "desc": "Mod anotado para avaliação."}, {"name": "Traveler Titles", "type": "Mod/Ideia", "url": "", "desc": "Ideia ou mod citado nas anotações."}, {"name": "minimapa com crias", "type": "Mod/Ideia", "url": "", "desc": "Ideia ou mod citado nas anotações."}, {"name": "SkyFactory 4", "type": "Mod/Ideia", "url": "", "desc": "Ideia ou mod citado nas anotações."}, {"name": "Old Ruin Structures", "type": "Mod", "url": "https://www.curseforge.com/minecraft/mc-mods/old-ruin-structures/", "desc": "Mod anotado para avaliação."}, {"name": "Abandoned Structures", "type": "Mod", "url": "https://www.curseforge.com/minecraft/mc-mods/abandoned-structures/", "desc": "Mod anotado para avaliação."}]};
+
+    let currentSelectedMod = null;
+    let filteredMods = [...DATA.mods];
+
+    // Initialize
+    function init() {
+      populateCategories();
+      applyFilters();
+      renderResourcePacks();
+      renderWishlist();
+
+      // Keyboard navigation
+      window.addEventListener('keydown', (e) => {
+        if (e.key === '/' || (e.ctrlKey && e.key.toLowerCase() === 'k')) {
+          e.preventDefault();
+          document.getElementById('searchInput').focus();
+        } else if (e.key === 'Escape') {
+          clearSearch();
+        } else if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+          navigateModList(e.key === 'ArrowDown' ? 1 : -1);
+        }
+      });
+    }
+
+    function populateCategories() {
+      const cats = Array.from(new Set(DATA.mods.map(m => m.category))).sort();
+      const select = document.getElementById('categoryFilter');
+      cats.forEach(c => {
+        const opt = document.createElement('option');
+        opt.value = c;
+        opt.textContent = c;
+        select.appendChild(opt);
+      });
+    }
+
+    function switchMainTab(tab) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
+      
+      const modsView = document.getElementById('modsView');
+      const rpView = document.getElementById('rpView');
+      const wishlistView = document.getElementById('wishlistView');
+      const modsFilters = document.getElementById('mods-filters');
+
+      modsView.style.display = tab === 'mods' ? 'flex' : 'none';
+      rpView.style.display = tab === 'rp' ? 'block' : 'none';
+      wishlistView.style.display = tab === 'wishlist' ? 'block' : 'none';
+      modsFilters.style.display = tab === 'mods' ? 'flex' : 'none';
+    }
+
+    function applyFilters() {
+      const query = document.getElementById('searchInput').value.trim().toLowerCase();
+      const statusFilter = document.getElementById('statusFilter').value;
+      const categoryFilter = document.getElementById('categoryFilter').value;
+      const clearBtn = document.getElementById('searchClear');
+
+      clearBtn.style.display = query ? 'block' : 'none';
+
+      filteredMods = DATA.mods.filter(m => {
+        if (statusFilter !== 'ALL' && m.status !== statusFilter) return false;
+        if (categoryFilter !== 'ALL' && m.category !== categoryFilter) return false;
+        if (query) {
+          const matchName = m.name.toLowerCase().includes(query);
+          const matchId = m.id.toLowerCase().includes(query);
+          const matchFile = m.file.toLowerCase().includes(query);
+          const matchDesc = m.desc.toLowerCase().includes(query);
+          if (!matchName && !matchId && !matchFile && !matchDesc) return false;
+        }
+        return true;
+      });
+
+      document.getElementById('filteredCount').textContent = `Exibindo ${filteredMods.length} de ${DATA.mods.length} mods`;
+      renderModList();
+
+      if (filteredMods.length > 0) {
+        // Select first if current not in filtered
+        if (!currentSelectedMod || !filteredMods.some(m => m.file === currentSelectedMod.file)) {
+          selectMod(filteredMods[0]);
+        } else {
+          renderModDetail(currentSelectedMod);
+        }
+      } else {
+        renderEmptyDetail();
+      }
+    }
+
+    function clearSearch() {
+      document.getElementById('searchInput').value = '';
+      applyFilters();
+      document.getElementById('searchInput').focus();
+    }
+
+    function renderModList() {
+      const container = document.getElementById('modList');
+      container.innerHTML = '';
+
+      filteredMods.forEach(m => {
+        const item = document.createElement('div');
+        item.className = 'mod-item' + (currentSelectedMod && currentSelectedMod.file === m.file ? ' selected' : '');
+        item.onclick = () => selectMod(m);
+
+        const iconHtml = m.icon
+          ? `<img src="${m.icon}" onerror="this.parentElement.textContent='📦'">`
+          : getCategoryIcon(m.category);
+
+        const statusClass = m.status === 'ATIVADO' ? 'ativo' : 'desativado';
+        const statusLabel = m.status === 'ATIVADO' ? 'Ativo' : 'Desativado';
+
+        const isChecked = selectedFiles.has(m.file);
+        const isAutoDep = autoResolvedFiles.has(m.file);
+        const checkHtml = `<div class="mod-checkbox-wrapper"><input type="checkbox" class="mod-check" ${isChecked ? 'checked' : ''} onclick="toggleSelectMod('${m.file}', event)"></div>`;
+        const autoTag = isAutoDep ? `<span class="badge-auto-dep">Auto</span>` : '';
+
+        item.innerHTML = `
+          ${checkHtml}
+          <div class="mod-icon">${iconHtml}</div>
+          <div class="mod-info">
+            <div class="mod-row-top">
+              <span class="mod-title">${m.name}</span>
+              <div style="display:flex; align-items:center; gap:4px;">
+                ${autoTag}
+                <span class="badge-status ${statusClass}">${statusLabel}</span>
+              </div>
+            </div>
+            <div class="mod-row-bottom">
+              <span class="mod-category-pill">${m.category.split(' ')[1] || m.category}</span>
+              <span class="mod-side-pill">• ${m.side}</span>
+            </div>
+          </div>
+        `;
+        container.appendChild(item);
+      });
+    }
+
+    function selectMod(mod) {
+      currentSelectedMod = mod;
+      document.querySelectorAll('.mod-item').forEach(el => el.classList.remove('selected'));
+      // re-highlight item
+      renderModList();
+      renderModDetail(mod);
+    }
+
+    function navigateModList(dir) {
+      if (filteredMods.length === 0) return;
+      const curIdx = filteredMods.findIndex(m => m.file === (currentSelectedMod ? currentSelectedMod.file : ''));
+      let newIdx = curIdx + dir;
+      if (newIdx < 0) newIdx = 0;
+      if (newIdx >= filteredMods.length) newIdx = filteredMods.length - 1;
+      selectMod(filteredMods[newIdx]);
+      // scroll into view
+      const selectedEl = document.querySelector('.mod-item.selected');
+      if (selectedEl) selectedEl.scrollIntoView({ block: 'nearest' });
+    }
+
+    function renderModDetail(m) {
+      const container = document.getElementById('modDetail');
+      
+      const iconHtml = m.icon
+        ? `<img src="${m.icon}" onerror="this.parentElement.textContent='📦'">`
+        : getCategoryIcon(m.category);
+
+      const statusBadge = m.status === 'ATIVADO'
+        ? '<span class="badge-status ativo" style="font-size:12px; padding:3px 8px;">🟢 Ativado na Raiz</span>'
+        : '<span class="badge-status desativado" style="font-size:12px; padding:3px 8px;">🔴 Desativado</span>';
+
+      const commentHtml = m.user_comment
+        ? `<div class="user-comment-box"><strong>⚠️ Nota do Usuário:</strong> ${m.user_comment}</div>`
+        : '';
+
+      const depsHtml = m.deps.length > 0
+        ? m.deps.map(d => `<span class="chip-interactive" onclick="searchModByName('${d}')">${d}</span>`).join('')
+        : '<span class="chip-empty">Nenhuma dependência obrigatória requerida</span>';
+
+      const dependentsHtml = m.dependents.length > 0
+        ? m.dependents.map(d => `<span class="chip-interactive" onclick="searchModByName('${d}')">${d}</span>`).join('')
+        : '<span class="chip-empty">Nenhum mod do modpack depende deste mod</span>';
+
+      const curseBtn = m.url
+        ? `<a href="${m.url}" target="_blank" class="btn btn-primary">🔗 Abrir Página Oficial</a>`
+        : '';
+
+      container.innerHTML = `
+        <div class="detail-hero">
+          <div class="hero-icon">${iconHtml}</div>
+          <div class="hero-body">
+            <div class="hero-title-row">
+              <span class="hero-title">${m.name}</span>
+              ${statusBadge}
+            </div>
+            <div class="hero-sub">
+              <span>ID: <code>${m.id || '---'}</code></span>
+              <span>•</span>
+              <span>Versão: <strong>${m.version || '1.21.1'}</strong></span>
+              <span>•</span>
+              <span>Tamanho: <strong>${m.size}</strong></span>
+            </div>
+            <div class="hero-actions">
+              ${curseBtn}
+              <button class="btn btn-secondary" onclick="copyToClipboard('${m.file}')">📋 Copiar Arquivo</button>
+              <button class="btn ${selectedFiles.has(m.file) ? 'btn-primary' : 'btn-secondary'}" style="${selectedFiles.has(m.file) ? 'background:#e74c3c;' : ''}" onclick="toggleSelectMod('${m.file}')">
+                ${selectedFiles.has(m.file) ? '✕ Remover do Pacote' : '✔ Adicionar ao Pacote'}
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="meta-grid">
+          <div class="meta-card">
+            <div class="meta-label">Categoria</div>
+            <div class="meta-value">${m.category}</div>
+          </div>
+          <div class="meta-card">
+            <div class="meta-label">Tipo</div>
+            <div class="meta-value">${m.type === 'Lib' ? '📚 Biblioteca / API' : '🎮 Mod de Jogo'}</div>
+          </div>
+          <div class="meta-card">
+            <div class="meta-label">Lado (Side)</div>
+            <div class="meta-value">${m.side === 'Client' ? '🖥️ Client-Side Only' : '🌐 Both (Client & Server)'}</div>
+          </div>
+          <div class="meta-card">
+            <div class="meta-label">Localização no Projeto</div>
+            <div class="meta-value" style="font-family:monospace; font-size:12px;">${m.location}</div>
+          </div>
+        </div>
+
+        <div class="section-card">
+          <div class="section-title">📖 Descrição do Mod</div>
+          <div class="desc-text">${m.desc}</div>
+          ${commentHtml}
+        </div>
+
+        <div class="section-card">
+          <div class="section-title">🧩 Dependências Exigidas (${m.deps.length})</div>
+          <div class="tag-chips">${depsHtml}</div>
+        </div>
+
+        <div class="section-card">
+          <div class="section-title">🔗 Mods Que Dependem Deste (${m.dependents.length})</div>
+          <div class="tag-chips">${dependentsHtml}</div>
+        </div>
+      `;
+    }
+
+    function renderEmptyDetail() {
+      document.getElementById('modDetail').innerHTML = `
+        <div style="text-align:center; padding: 60px 20px; color: var(--text-subtle);">
+          <div style="font-size: 40px; margin-bottom: 12px;">🔍</div>
+          <h3>Nenhum mod encontrado</h3>
+          <p>Tente ajustar os termos da busca ou os filtros de categoria/status.</p>
+        </div>
+      `;
+    }
+
+    function renderResourcePacks() {
+      const container = document.getElementById('rpGrid');
+      container.innerHTML = DATA.resourcePacks.map(rp => {
+        const iconHtml = rp.icon_path
+          ? `<img src="${rp.icon_path}" onerror="this.parentElement.textContent='🎨'">`
+          : '🎨';
+        return `
+          <div class="resource-card">
+            <div class="res-top">
+              <div class="res-icon">${iconHtml}</div>
+              <div class="res-meta">
+                <div class="res-name">${rp.name}</div>
+                <div class="res-file">${rp.file}</div>
+              </div>
+            </div>
+            <div class="res-desc">${rp.desc}</div>
+            <div>
+              <a href="${rp.url}" target="_blank" class="btn btn-secondary" style="font-size:11.5px; padding:4px 10px;">🔗 Ver Pack</a>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function renderWishlist() {
+      const container = document.getElementById('wishlistGrid');
+      container.innerHTML = DATA.wishlist.map(w => `
+        <div class="resource-card">
+          <div class="res-top">
+            <div class="res-icon" style="font-size:22px;">💡</div>
+            <div class="res-meta">
+              <div class="res-name">${w.name}</div>
+              <div class="res-file" style="color:var(--accent-forge); font-weight:600;">${w.type}</div>
+            </div>
+          </div>
+          <div class="res-desc">${w.desc}</div>
+          <div>
+            <a href="${w.url}" target="_blank" class="btn btn-secondary" style="font-size:11.5px; padding:4px 10px;">🔗 Abrir no CurseForge</a>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function searchModByName(name) {
+      document.getElementById('searchInput').value = name;
+      applyFilters();
+    }
+
+    function copyToClipboard(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        showToast(`Copiado: ${text}`);
+      }).catch(() => {
+        showToast(`Nome: ${text}`);
+      });
+    }
+
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      document.getElementById('toastMsg').textContent = msg;
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 2500);
+    }
+
+    function getCategoryIcon(cat) {
+      if (cat.includes('Performance') || cat.includes('Otimização')) return '⚡';
+      if (cat.includes('Tecnologia') || cat.includes('Automação')) return '⚙️';
+      if (cat.includes('Armazenamento') || cat.includes('Inventário')) return '🎒';
+      if (cat.includes('Aventura') || cat.includes('Dimensões')) return '🗺️';
+      if (cat.includes('Combate') || cat.includes('Armas')) return '⚔️';
+      if (cat.includes('Interface') || cat.includes('HUD')) return '🖥️';
+      if (cat.includes('Gráficos') || cat.includes('Áudio')) return '🎨';
+      if (cat.includes('Bibliotecas') || cat.includes('APIs')) return '📚';
+      return '💡';
+    }
+
+
+    async function triggerSync() {
+      const btn = document.getElementById('btnSync');
+      const originalText = btn.innerHTML;
+
+      if (!window.location.protocol.startsWith('http')) {
+        document.getElementById('syncModal').classList.add('show');
+        return;
+      }
+
+      btn.disabled = true;
+      btn.innerHTML = '⏳ Escaneando pasta...';
+      btn.classList.add('loading');
+
+      try {
+        const res = await fetch('/api/scan');
+        const json = await res.json();
+        if (json.success && json.data) {
+          DATA.mods = json.data.mods;
+          DATA.resourcePacks = json.data.resourcePacks;
+          DATA.wishlist = json.data.wishlist;
+
+          document.getElementById('stat-active').textContent = json.stats.active;
+          document.getElementById('stat-disabled').textContent = json.stats.disabled;
+          document.getElementById('tab-count-mods').textContent = json.stats.total;
+
+          applyFilters();
+          renderResourcePacks();
+          renderWishlist();
+
+          showToast(`🎉 Sincronizado! ${json.stats.active} mods ativos detectados.`);
+        } else {
+          showToast('❌ Erro ao atualizar catálogo.');
+        }
+      } catch (err) {
+        showToast('❌ Não foi possível contatar o servidor local.');
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = originalText;
+        btn.classList.remove('loading');
+      }
+    }
+
+    function closeSyncModal() {
+      document.getElementById('syncModal').classList.remove('show');
+    }
+
+    
+    // SELECTION & BUILDER STATE
+    const selectedFiles = new Set();
+    let autoResolvedFiles = new Set();
+    let depReasons = {};
+    let exportFormat = 'zip';
+
+    function initBuilder() {
+      // Default: select all active mods
+      DATA.mods.filter(m => m.status === 'ATIVADO').forEach(m => selectedFiles.add(m.file));
+      recalculateDependencies();
+      renderExportRpOptions();
+
+      // Close dropdowns on outside click
+      window.addEventListener('click', (e) => {
+        if (!e.target.closest('.dropdown-preset')) {
+          document.getElementById('presetMenu').classList.remove('show');
+        }
+      });
+    }
+
+    function toggleSelectMod(file, e) {
+      if (e) e.stopPropagation();
+      if (selectedFiles.has(file)) {
+        selectedFiles.delete(file);
+      } else {
+        selectedFiles.add(file);
+      }
+      recalculateDependencies();
+      renderModList();
+      if (currentSelectedMod && currentSelectedMod.file === file) {
+        renderModDetail(currentSelectedMod);
+      }
+    }
+
+    function togglePresetMenu() {
+      document.getElementById('presetMenu').classList.toggle('show');
+    }
+
+    function applyPreset(preset) {
+      document.getElementById('presetMenu').classList.remove('show');
+      selectedFiles.clear();
+
+      if (preset === 'all') {
+        DATA.mods.filter(m => m.status === 'ATIVADO').forEach(m => selectedFiles.add(m.file));
+        showToast('🚀 Todos os 74 mods ativos selecionados!');
+      } else if (preset === 'client_only') {
+        DATA.mods.filter(m => m.side === 'Client' && m.status === 'ATIVADO').forEach(m => selectedFiles.add(m.file));
+        showToast('🌐 Preset Client-Side (Servidores) selecionado!');
+      } else if (preset === 'vanilla_plus') {
+        DATA.mods.filter(m => m.category.includes('Otimização') || m.category.includes('Interface') || ['waystones-neoforge-1.21.1-21.1.46.jar', 'jei-1.21.1-neoforge-19.57.0.450.jar', 'carryon-neoforge-1.21.1-2.2.6.13.jar'].includes(m.file)).forEach(m => selectedFiles.add(m.file));
+        showToast('⚡ Preset Vanilla+ selecionado!');
+      } else if (preset === 'create') {
+        DATA.mods.filter(m => m.file.toLowerCase().includes('create') || m.file.toLowerCase().includes('gun')).forEach(m => selectedFiles.add(m.file));
+        showToast('⚙️ Preset Create & Tecnologia selecionado!');
+      } else if (preset === 'rpg') {
+        DATA.mods.filter(m => m.category.includes('Aventura') || m.category.includes('Combate')).forEach(m => selectedFiles.add(m.file));
+        showToast('⚔️ Preset Aventura & RPG selecionado!');
+      } else if (preset === 'storage') {
+        DATA.mods.filter(m => m.category.includes('Armazenamento')).forEach(m => selectedFiles.add(m.file));
+        showToast('🎒 Preset Armazenamento selecionado!');
+      } else if (preset === 'clear') {
+        showToast('✕ Seleção limpa.');
+      }
+
+      recalculateDependencies();
+      renderModList();
+      if (currentSelectedMod) renderModDetail(currentSelectedMod);
+    }
+
+    // Client-side recursive dependency resolution
+    function recalculateDependencies() {
+      autoResolvedFiles.clear();
+      depReasons = {};
+
+      const nameMap = {};
+      const fileMap = {};
+      const idMap = {};
+
+      DATA.mods.forEach(m => {
+        fileMap[m.file.toLowerCase()] = m;
+        if (m.id) idMap[m.id.toLowerCase()] = m;
+        nameMap[m.name.toLowerCase()] = m;
+        nameMap[m.file.split('-')[0].toLowerCase()] = m;
+      });
+
+      function findTarget(depStr) {
+        const q = depStr.trim().toLowerCase();
+        if (['minecraft', 'neoforge', 'forge', 'java'].includes(q)) return null;
+        if (idMap[q]) return idMap[q];
+        if (nameMap[q]) return nameMap[q];
+        if (fileMap[q]) return fileMap[q];
+        for (const m of DATA.mods) {
+          if (m.name.toLowerCase().includes(q) || m.file.toLowerCase().includes(q) || (m.id && m.id.toLowerCase().includes(q))) {
+            return m;
+          }
+        }
+        return null;
+      }
+
+      const queue = Array.from(selectedFiles);
+      const visited = new Set();
+
+      while (queue.length > 0) {
+        const curFile = queue.shift();
+        if (visited.has(curFile)) continue;
+        visited.add(curFile);
+
+        const curMod = fileMap[curFile.toLowerCase()];
+        if (!curMod) continue;
+
+        (curMod.deps || []).forEach(dep => {
+          const target = findTarget(dep);
+          if (target) {
+            const tf = target.file;
+            if (!selectedFiles.has(tf) && !autoResolvedFiles.has(tf)) {
+              autoResolvedFiles.add(tf);
+              queue.push(tf);
+            }
+            if (!depReasons[tf]) depReasons[tf] = [];
+            if (!depReasons[tf].includes(curMod.name)) depReasons[tf].push(curMod.name);
+          }
+        });
+      }
+
+      const totalCount = selectedFiles.size + autoResolvedFiles.size;
+      document.getElementById('builderSelectedCount').textContent = selectedFiles.size;
+      document.getElementById('builderDepsCount').textContent = autoResolvedFiles.size;
+      document.getElementById('builderTotalCount').textContent = `${totalCount} mods`;
+    }
+
+    function selectExportFmt(fmt) {
+      exportFormat = fmt;
+      document.getElementById('fmtZip').classList.toggle('selected', fmt === 'zip');
+      document.getElementById('fmtFolder').classList.toggle('selected', fmt === 'folder');
+    }
+
+    function renderExportRpOptions() {
+      const container = document.getElementById('exportRpList');
+      container.innerHTML = DATA.resourcePacks.filter(rp => rp.file.endsWith('.zip')).map(rp => `
+        <label style="background:var(--bg-panel); border:1px solid var(--border-color); padding:4px 10px; border-radius:6px; font-size:12px; cursor:pointer; display:flex; align-items:center; gap:6px;">
+          <input type="checkbox" class="export-rp-check" value="${rp.file}">
+          <span>${rp.name}</span>
+        </label>
+      `).join('');
+    }
+
+    function openExportModal() {
+      recalculateDependencies();
+      const allFiles = Array.from(new Set([...selectedFiles, ...autoResolvedFiles]));
+      if (allFiles.length === 0) {
+        showToast('⚠️ Selecione pelo menos 1 mod para exportar!');
+        return;
+      }
+
+      const modalTotal = document.getElementById('modalTotalModCount');
+      const modalDeps = document.getElementById('modalAutoDepsInfo');
+      const previewList = document.getElementById('exportPreviewList');
+
+      modalTotal.textContent = allFiles.length;
+      modalDeps.textContent = `${autoResolvedFiles.size} dependências automáticas incluídas`;
+
+      const fileMap = {};
+      DATA.mods.forEach(m => fileMap[m.file] = m);
+
+      previewList.innerHTML = allFiles.map(fn => {
+        const m = fileMap[fn] || { name: fn, file: fn, category: 'Mod' };
+        const isAuto = autoResolvedFiles.has(fn);
+        const tag = isAuto
+          ? `<span class="badge-auto-dep">Auto: Exigido por ${depReasons[fn]?.join(', ') || 'Mod'}</span>`
+          : `<span style="color:var(--accent-green); font-size:11px; font-weight:700;">[Escolhido]</span>`;
+        return `
+          <div class="export-preview-item">
+            <span><strong>${m.name}</strong> <small style="color:var(--text-subtle);">(${m.file})</small></span>
+            ${tag}
+          </div>
+        `;
+      }).join('');
+
+      document.getElementById('exportModal').classList.add('show');
+    }
+
+    function closeExportModal() {
+      document.getElementById('exportModal').classList.remove('show');
+    }
+
+    async function executeExport() {
+      const presetName = document.getElementById('exportPresetName').value.trim() || 'MeuModpack';
+      const selectedRps = Array.from(document.querySelectorAll('.export-rp-check:checked')).map(el => el.value);
+      const allFiles = Array.from(selectedFiles);
+
+      const btn = document.getElementById('btnExecuteExport');
+      const originalText = btn.innerHTML;
+      btn.disabled = true;
+      btn.innerHTML = '⏳ Gerando pacote...';
+
+      if (!window.location.protocol.startsWith('http')) {
+        // file:/// mode
+        closeExportModal();
+        showToast('💡 Execute ./abrir_mod_menu.sh ou ./exportar.sh para gerar o ZIP direto pelo sistema!');
+        document.getElementById('syncModal').classList.add('show');
+        btn.disabled = false;
+        btn.innerHTML = originalText;
+        return;
+      }
+
+      try {
+        const response = await fetch('/api/export', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: jsonStringify({
+            presetName: presetName,
+            selectedFiles: allFiles,
+            includeDeps: true,
+            selectedRps: selectedRps,
+            format: exportFormat
+          })
+        });
+
+        const res = await response.json();
+        if (res.success) {
+          closeExportModal();
+          if (exportFormat === 'zip') {
+            showToast(`🎉 Modpack ZIP gerado com sucesso! (${res.mod_count} mods, ${res.size})`);
+            // Trigger browser download
+            window.location.href = `/api/download?file=${encodeURIComponent(res.filename)}`;
+          } else {
+            showToast(`🎉 Pasta gerada em: ${res.relative_path}`);
+          }
+        } else {
+          showToast(`❌ Erro ao exportar: ${res.error || 'Falha desconhecida'}`);
+        }
+      } catch (err) {
+        showToast('❌ Erro de comunicação com o servidor local.');
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = originalText;
+      }
+    }
+
+    function jsonStringify(obj) {
+      return JSON.stringify(obj);
+    }
+
+    window.onload = () => { init(); initBuilder(); };
+
+  </script>
+</body>
+</html>
