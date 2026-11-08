@@ -1,7 +1,7 @@
-# 📦 Catálogo Geral & Organização de Mods — Minecraft 1.21.1 (NeoForge)
+# ⚔️ BlessForge — Catálogo Geral & Organização de Mods (NeoForge 1.21.1)
 
-> [!TIP] 🎮 Interface Visual Interativa (Mod Menu Web) Pronta!
-> Criamos uma interface visual completa estilo in-game **Mod Menu** para você explorar seus mods com ícones oficiais extraídos, pesquisa em tempo real (`Ctrl+K`), dependências clicáveis e alternância entre Ativos, Desativados, Resource Packs e Wishlist.
+> [!TIP] 🎮 Interface Visual Interativa (BlessForge Mod Menu) Pronta!
+> O BlessForge conta com uma interface visual completa estilo in-game **Mod Menu** para você explorar seus mods com ícones oficiais extraídos, pesquisa em tempo real (`Ctrl+K`), dependências clicáveis, construtor de modpack e alternância entre Ativos, Desativados, Resource Packs e Wishlist.
 > 🔗 **Para abrir:** Basta dar dois cliques em [mod_menu.html](file:///home/n31415/Games/Minecraft/Ultimate%20Mods/mod_menu.html) no seu navegador!
 
 ## 📦 Construtor e Exportador de Modpacks (Novo!)

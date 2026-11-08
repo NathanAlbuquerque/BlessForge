@@ -199,7 +199,7 @@ def generate_manifest_and_readme(preset_name, resolved_result, selected_rps=[], 
 def export_modpack(preset_name, selected_files, include_deps=True, selected_rps=[], export_format="zip"):
     safe_name = "".join(c if c.isalnum() or c in ('-', '_') else '_' for c in preset_name.strip()).strip('_')
     if not safe_name:
-        safe_name = f"Modpack-{time.strftime('%Y%m%d-%H%M%S')}"
+        safe_name = f"BlessForge-{time.strftime('%Y%m%d-%H%M%S')}"
         
     mods, all_rps, _ = scan_all()
     

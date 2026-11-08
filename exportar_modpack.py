@@ -44,7 +44,7 @@ PRESETS = {
 
 def main():
     print("\n" + "=" * 65)
-    print("📦 GERADOR E EXPORTADOR DE MODPACKS — MINECRAFT 1.21.1 (NEOFORGE)")
+    print("📦 BLESSFORGE — GERADOR E EXPORTADOR DE MODPACKS (1.21.1 NEOFORGE)")
     print("=" * 65)
     
     mods, rps, _ = scan_all()
@@ -73,7 +73,7 @@ def main():
         print(f"\n✅ Preset '{p['title']}' selecionado ({len(selected_files)} mods iniciais).")
         
     elif choice == "7":
-        preset_name = input("Nome do seu modpack (ex: MeuModpack-Amigos): ").strip() or "MeuModpack"
+        preset_name = input("Nome do seu modpack (ex: BlessForge-Amigos): ").strip() or "BlessForge-Custom"
         print("\nLista de mods disponíveis:")
         for idx, m in enumerate(active_mods):
             print(f"  [{idx+1:2d}] {m['name']} ({m['file']}) - {m['category']}")

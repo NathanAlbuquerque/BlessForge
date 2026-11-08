@@ -177,7 +177,7 @@ def run_server():
     httpd = HTTPServer(server_address, ModMenuHandler)
     url = f"http://localhost:{port}"
     print(f"\n=======================================================")
-    print(f"🚀 Minecraft Mod Menu Server rodando em:")
+    print(f"🚀 BlessForge Server rodando em:")
     print(f"   👉 {url}")
     print(f"=======================================================")
     print(f"Pressione Ctrl+C para encerrar o servidor a qualquer momento.\n")

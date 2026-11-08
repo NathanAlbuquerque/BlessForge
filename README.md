@@ -1,4 +1,4 @@
-# ⛏️ Ultimate Mods — Minecraft 1.21.1 (NeoForge)
+# ⚔️ BlessForge — Curated NeoForge 1.21.1 Modpack & Manager Suite
 
 [![Minecraft](https://img.shields.io/badge/Minecraft-1.21.1-brightgreen.svg?logo=minecraft)](https://minecraft.net/)
 [![Loader](https://img.shields.io/badge/ModLoader-NeoForge-orange.svg)](https://neoforged.net/)
