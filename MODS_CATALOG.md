@@ -1,42 +1,17 @@
-# ⚔️ BlessForge — Catálogo Geral & Organização de Mods (NeoForge 1.21.1)
+# 📦 Catálogo Geral & Organização de Mods — Minecraft 1.21.1 (NeoForge)
 
-> [!TIP] 🎮 Interface Visual Interativa (BlessForge Mod Menu) Pronta!
-> O BlessForge conta com uma interface visual completa estilo in-game **Mod Menu** para você explorar seus mods com ícones oficiais extraídos, pesquisa em tempo real (`Ctrl+K`), dependências clicáveis, construtor de modpack e alternância entre Ativos, Desativados, Resource Packs e Wishlist.
+> [!TIP] 🎮 Interface Visual Interativa (Mod Menu Web) Pronta!
+> Criamos uma interface visual completa estilo in-game **Mod Menu** para você explorar seus mods com ícones oficiais extraídos, pesquisa em tempo real (`Ctrl+K`), dependências clicáveis e alternância entre Ativos, Desativados, Resource Packs e Wishlist.
 > 🔗 **Para abrir:** Basta dar dois cliques em [mod_menu.html](file:///home/n31415/Games/Minecraft/Ultimate%20Mods/mod_menu.html) no seu navegador!
-
-## 📦 Construtor e Exportador de Modpacks (Novo!)
-
-Você pode selecionar qualquer combinação de mods para jogar ou enviar para amigos. O sistema **reconhece automaticamente todas as dependências técnicas** de cada mod selecionado e empacota tudo para você.
-
-### 🎮 Como Usar na Interface Visual (Mod Menu):
-1. Inicie o menu executando [abrir_mod_menu.sh](file:///home/n31415/Games/Minecraft/Ultimate%20Mods/abrir_mod_menu.sh).
-2. Marque a caixinha de seleção ao lado de cada mod que deseja incluir (ou use o botão **⚡ Presets Rápidos** no rodapé).
-3. O rodapé atualiza em tempo real a contagem: `X mods escolhidos + Y dependências automáticas = Total Z mods`.
-4. Use o botão **⚡ Presets Rápidos** para carregar combinações com 1 clique:
-   * **🌐 Client-Side Only (Para Servidores Multiplayer):** Seleciona todos os 21 mods de interface, HUD, áudio, gráficos e performance + 6 bibliotecas necessárias (27 mods no total, 100% seguro para conectar em qualquer servidor vanilla ou modpack de amigos sem erro de lista de mods).
-   * **🚀 Todos os 74 Ativos:** O pacote completo da sua biblioteca.
-   * **⚡ Vanilla+ & Otimização:** Foco total em FPS e utilidades essenciais.
-   * **⚙️ Create & Tecnologia:** Create, armas de fogo e engenharias.
-   * **⚔️ Aventura & RPG Épico:** Chefes (Cataclysm), Twilight Forest, Simply Swords.
-   * **🎒 Armazenamento Avançado:** Mochilas sofisticadas e sistemas de baús conectados.
-5. Clique em **📦 Exportar Modpack / Enviar para Amigos**:
-   * **Arquivo .ZIP:** Comprime todos os mods em uma pasta `mods/`, inclui os Resource Packs escolhidos, um `manifest.json` e um `LEIA-ME_INSTALACAO.txt` com passo a passo pronto para enviar no Discord/Drive.
-   * **Pasta Pronta:** Cria uma pasta pronta em `exportados/<Nome>/mods/` para você só arrastar para a sua pasta `.minecraft`.
-
-### ⚡ Como Usar no Terminal:
-* Dê dois cliques em [exportar.sh](file:///home/n31415/Games/Minecraft/Ultimate%20Mods/exportar.sh) (ou execute `python3 exportar_modpack.py`).
-* Um menu interativo guiará você pelos presets ou seleção manual de mods e gerará o ZIP em segundos.
-
----
 
 ## 📊 Resumo da Pasta Organizada
 
 | Localização / Status | Quantidade | Descrição |
 | :--- | :---: | :--- |
-| 🟢 **ATIVOS NA RAIZ** (`.`) | **74** | Mods prontos para copiar/usar no Minecraft |
-| 🔴 **DESATIVADOS** (`desativados/`) | **7** | Mods isolados (EMI, Chest Tracker, Tabs, Chunky, etc.) |
+| 🟢 **ATIVOS NA RAIZ** (`.`) | **83** | Mods prontos para copiar/usar no Minecraft |
+| 🔴 **DESATIVADOS** (`desativados/`) | **9** | Mods isolados (EMI, Chest Tracker, Tabs, Chunky, etc.) |
 | 🎨 **RESOURCE PACKS** (`resourcepacks/`) | **5** | Pacotes visuais e de áudio em formato `.zip` |
-| **Total Geral** | **81** | **Arquivos JAR únicos catalogados** |
+| **Total Geral** | **92** | **Arquivos JAR únicos catalogados** |
 
 ---
 
@@ -47,9 +22,9 @@ Você pode selecionar qualquer combinação de mods para jogar ou enviar para am
 - [⚡ Otimização & Performance (7 mods)](#otimização--performance)
 - [🎒 Armazenamento & Inventário (5 mods)](#armazenamento--inventário)
 - [🎨 Gráficos, Áudio & Imersão (7 mods)](#gráficos,-áudio--imersão)
-- [💡 Qualidade de Vida (QoL) & Utilidades (20 mods)](#qualidade-de-vida-qol--utilidades)
-- [📚 Bibliotecas, Frameworks & APIs (22 mods)](#bibliotecas,-frameworks--apis)
-- [🖥️ Interface (UI/HUD) & Controles (10 mods)](#interface-ui/hud--controles)
+- [💡 Qualidade de Vida (QoL) & Utilidades (29 mods)](#qualidade-de-vida-qol--utilidades)
+- [📚 Bibliotecas, Frameworks & APIs (23 mods)](#bibliotecas,-frameworks--apis)
+- [🖥️ Interface (UI/HUD) & Controles (11 mods)](#interface-ui/hud--controles)
 - [🗺️ Aventura, Dimensões & Estruturas (4 mods)](#aventura,-dimensões--estruturas)
 - [🎨 Resource Packs & Pacotes Visuais](#resource-packs--pacotes-visuais)
 - [📌 Mods e Datapacks em Análise / Lista de Desejos](#mods-e-datapacks-em-análise--lista-de-desejos)
@@ -120,19 +95,28 @@ Você pode selecionar qualquer combinação de mods para jogar ou enviar para am
 
 | Status | Mod / Nome | Arquivo JAR | Lado | Tipo | Dependências | Usado Por (Dependentes) | Descrição & Links |
 | :---: | :--- | :--- | :---: | :---: | :--- | :--- | :--- |
+| 🟢 Ativo | **[AmbientSounds](https://modrinth.com/mod/ambientsounds)** | `AmbientSounds_NEOFORGE_v6.3.11_mc1.21.1.jar` | Both | Mod | CreativeCore | --- | Expands minecraft's ambient sounds. |
 | 🟢 Ativo | **[Bartering Station](https://github.com/Fuzss/barteringstation)** | `BarteringStation-v21.1.0-1.21.1-NeoForge.jar` | Both | Mod | Puzzles Lib | --- | Still running around bartering manually? Let's put those lazy piglins to work instead! |
 | 🟢 Ativo | **[Carry On](https://change.me.to.your.mods.homepage.example.invalid/)** | `carryon-neoforge-1.21.1-2.2.6.13.jar` | Both | Mod | --- | --- | Carry On is a simple mod that improves game interaction by allowing players to pick up, carry, and place single block Tile Entities using only their empty hands. |
 | 🟢 Ativo | **Cinematic Respawn** | `cinematic_respawn-1.21.1-neoforge-1.4.1.jar` | Client | Mod | --- | --- | Cinematic respawn experience for Minecraft. |
+| 🟢 Ativo | **[CinematicZoom](https://github.com/smallinger/CinematicZoom)** | `cinematiczoom-1.0.0-1.21.1.jar` | Both | Mod | --- | --- | Smooth zoom with cinematic black bars and per-frame easing. Client-side only mod. |
+| 🟢 Ativo | **[CreativeCore](https://modrinth.com/mod/creativecore)** | `CreativeCore_NEOFORGE_v2.13.51_mc1.21.1.jar` | Both | Mod | --- | AmbientSounds | A simple but powerful coremod. |
 | 🟢 Ativo | **[Easy Anvils](https://github.com/Fuzss/easyanvils)** | `EasyAnvils-v21.1.0-1.21.1-NeoForge.jar` | Both | Mod | Puzzles Lib | --- | Be ready for overhauled anvils! Items stay, better name tags, many tweaks! |
 | 🟢 Ativo | **[Easy Magic](https://github.com/Fuzss/easymagic)** | `EasyMagic-v21.1.4-1.21.1-NeoForge.jar` | Both | Mod | Puzzles Lib | --- | Enchanting tables as they always should have been! Items stay after closing, and easy re-rolls. |
+| 🟢 Ativo | **EMI** | `emi-1.1.24+1.21.1+neoforge.jar` | Both | Mod | --- | EMI Loot | A featureful and accessible item and recipe viewer<br>⚠️ *Nota: Desativado temporariamente para testes com JEI.* |
+| 🟢 Ativo | **[EMI Loot](https://github.com/fzzyhmstrs/EMI_loot)** | `emi_loot-0.7.9+1.21+neoforge.jar` | Both | Mod | EMI, Fzzy Config | --- | Plugin for EMI that shows chest loot, block drops, mob drops, and gameplay loot like fishing.<br>⚠️ *Nota: Desativado temporariamente para testes com JEI.* |
+| 🟢 Ativo | **[Freecam](https://www.curseforge.com/minecraft/mc-mods/free-cam)** | `freecam-neoforge-1.3.0+mc1.21.jar` | Both | Mod | --- | --- | A highly customizable freecam mod. |
 | 🟢 Ativo | **[FTB Ranks](https://www.curseforge.com/minecraft/mc-mods/ftb-ranks-forge)** | `ftb-ranks-neoforge-2101.1.5.jar` | Both | Mod | Architectury API, FTB Library | --- | A simple mod that lets you create ranks for players, similar to Discord roles, and manage permissions for them |
 | 🟢 Ativo | **[FTB Ultimine](https://www.curseforge.com/minecraft/mc-mods/ftb-ultimine-forge)** | `ftb-ultimine-neoforge-2101.1.15.jar` | Both | Mod | Architectury API, FTB Library, ftbezcrystals | --- | Allows you to break multiple blocks at once |
 | 🟢 Ativo | **[Gravestone Mod](https://www.curseforge.com/minecraft/mc-mods/gravestone-mod)** | `gravestone-neoforge-1.21.1-1.0.40.jar` | Both | Mod | Jade | --- | Places a gravestone with your inventory items inside when you die |
+| 🟢 Ativo | **Jack's Fullbright** | `jackfullbright-neoforge-26.3.jar` | Both | Mod | --- | --- | A configurable fullbright toggle with client-side night vision. |
 | 🟢 Ativo | **[Just Enough Items](https://www.curseforge.com/minecraft/mc-mods/jei)** | `jei-1.21.1-neoforge-19.57.0.450.jar` | Both | Mod | mezz_config, mezz_config_gui | ModernFix, Sophisticated Core | JEI is an item and recipe viewing mod for Minecraft, built from the ground up for stability and performance. |
 | 🟢 Ativo | **[Lootr](https://minecraft.curseforge.com/projects/lootr)** | `lootr-neoforge-1.21.1-1.11.38.127.jar` | Both | Mod | --- | --- | Generates unique loot for each player that opens a loot container. |
 | 🟢 Ativo | **[Mielon's The Sift](https://x.com/MielonDev)** | `mielon's-the-sift-1.1.0-mc1.21.1-neo.jar` | Both | Mod | GeckoLib | --- | Explore The Sift: a strange dimension of siftslate, Ichor, ancient life, and resonant souls. |
+| 🟢 Ativo | **[Music Player](https://u-team.info/mods/musicplayer)** | `music_player-neoforge-1.21.1-2.7.3.373.jar` | Both | Mod | U Team Core | --- | Join our discord server here: https://discord.hycrafthd.net\n\nPlay every youtube video, livestream and more with this player! We use lava player to ensure this diversity.\n\nLearn more about lavaplayer here: https://github.com/sedmelluq/lavaplayer\n\nSources:\n - YouTube\n - SoundCloud\n - Bandcamp\n - Vimeo\n - Twitch streams\n - Local files\n - HTTP URLs\n\nFile formats:\n - MP3\n - FLAC\n - WAV\n - Matroska/WebM (AAC, Opus or Vorbis codecs)\n - MP4/M4A (AAC codec)\n - OGG streams (Opus, Vorbis and FLAC codecs)\n - AAC streams\n - Stream playlists (M3U and PLS) |
 | 🟢 Ativo | **[Nature's Compass](https://github.com/MattCzyr/NaturesCompass)** | `NaturesCompass-1.21.1-3.4.0-neoforge.jar` | Both | Mod | --- | --- | Search for a biome and get information about it. |
 | 🟢 Ativo | **[Trade Cycling](https://www.curseforge.com/minecraft/mc-mods/trade-cycling)** | `trade-cycling-neoforge-1.21.1-1.0.22.jar` | Both | Mod | --- | --- | The trade cycling functionality from Easy Villagers. |
+| 🟢 Ativo | **[U Team Core](https://u-team.info/mods/uteamcore)** | `u_team_core-neoforge-1.21.1-5.6.2.384.jar` | Both | Mod | --- | Music Player | Join our discord server here: https://discord.hycrafthd.net\n\nThis library contains many useful modding stuff! |
 | 🟢 Ativo | **[Visual Workbench](https://github.com/Fuzss/visualworkbench)** | `VisualWorkbench-v21.1.2-1.21.1-NeoForge.jar` | Both | Mod | Puzzles Lib | --- | Items stay inside crafting tables and are also rendered on top. It's really fancy! |
 | 🟢 Ativo | **[Waystones](https://mods.twelveiterations.com/minecraft/waystones)** | `waystones-neoforge-1.21.1-21.1.46.jar` | Both | Mod | Balm | --- | Teleport back to activated waystones. For Survival, Adventure or Servers. |
 | 🔴 Desativado | **[Chunky](https://github.com/pop4959/Chunky)** | `Chunky-NeoForge-1.4.23.jar` | Both | Mod | --- | --- | Pre-generates chunks, quickly, efficiently, and safely |
@@ -156,19 +140,20 @@ Você pode selecionar qualquer combinação de mods para jogar ou enviar para am
 | 🟢 Ativo | **[Forge Config API Port](https://github.com/Fuzss/forgeconfigapiport)** | `ForgeConfigAPIPort-v21.1.6-1.21.1-NeoForge.jar` | Both | Lib | --- | --- | Provides NeoForge's & Forge's config systems to other modding ecosystems. Designed for a multi-loader architecture. |
 | 🟢 Ativo | **[Forgified Fabric API](https://github.com/Sinytra/ForgifiedFabricAPI)** | `forgified-fabric-api-0.116.15+2.3.5+1.21.1.jar` | Both | Lib | --- | Continuity, Voxy | Core API module providing key hooks and intercompatibility features. |
 | 🟢 Ativo | **[FTB Library](https://www.curseforge.com/minecraft/mc-mods/ftb-library-forge)** | `ftb-library-neoforge-2101.1.37.jar` | Both | Lib | Architectury API | FTB Ranks, FTB Ultimine | FTB Library adds nothing. |
-| 🟢 Ativo | **Fzzy Config** | `fzzy_config-0.7.7+1.21+neoforge.jar` | Both | Lib | Kotlin for Forge | Simply Tooltips, Simply Swords, EMI Loot | Configuration engine with automatic GUI generation, client-server syncing, powerful validation and error handling, and much more. |
+| 🟢 Ativo | **Fzzy Config** | `fzzy_config-0.7.7+1.21+neoforge.jar` | Both | Lib | Kotlin for Forge | Simply Tooltips, EMI Loot, Simply Swords | Configuration engine with automatic GUI generation, client-server syncing, powerful validation and error handling, and much more. |
 | 🟢 Ativo | **[GeckoLib 4](http://geckolib.com/)** | `geckolib-neoforge-1.21.1-4.9.3.jar` | Both | Lib | geckoanimfix | Mielon's The Sift, NukaTeam's Gun Lib, Pathogen : monster plague | GeckoLib is an animation engine for Minecraft Mods, with support for complex 3D keyframe-based animations, 30+ easings, concurrent animation support, sound and particle keyframes, event keyframes, and more. |
 | 🟢 Ativo | **[Kotlin for Forge](https://www.curseforge.com/minecraft/mc-mods/kotlin-for-forge)** | `kotlinforforge-5.12.0-all.jar` | Both | Lib | --- | Fzzy Config, Symbols 'n' Stuff | Provides Kotlin language support for Forge and NeoForge mods. |
+| 🟢 Ativo | **[KotlinLangForge](https://modrinth.com/mod/kotlin-lang-forge)** | `KotlinLangForge-2.14.1-k2.4.20-3.0+neoforge.jar` | Both | Mod | --- | --- | Provides a Kotlin language adapter for Forge and Neoforge |
 | 🟢 Ativo | **[KotlinLangForge](https://modrinth.com/mod/kotlin-lang-forge)** | `KotlinLangForge-2.15.0-k2.4.21-3.0+neoforge.jar` | Both | Mod | --- | --- | Provides a Kotlin language adapter for Forge and Neoforge |
-| 🟢 Ativo | **[LibJF](https://git.frohnmeyer-wds.de/JfMods/LibJF)** | `libjf-3.17.4+forge.jar` | Both | Lib | --- | Resource Pack Options | Library mod by JFronny |
 | 🟢 Ativo | **[lionfishapi](https://change.me.to.your.mods.homepage.example.invalid/)** | `lionfishapi-3.1.jar` | Both | Lib | --- | --- | Sem descrição detalhada disponível. |
 | 🟢 Ativo | **[MaFgLib](https://github.com/CagayakeGirls/malilib-neoforge)** | `mafglib-0.4.3+mc1.21.1.jar` | Both | Lib | --- | Forgematica | MaLiLib unofficial NeoForge port. Library mod for the NeoForge port of masa's mods. |
 | 🟢 Ativo | **[Player Animator](https://github.com/KosmX/minecraftPlayerAnimator)** | `player-animation-lib-forge-2.0.4+1.21.1.jar` | Both | Lib | --- | --- | A lightweight library to easily animate the player |
 | 🟢 Ativo | **[Puzzles Lib](https://www.curseforge.com/minecraft/mc-mods/puzzles-lib)** | `puzzleslib-v21.1.62-mc1.21.1+neoforge.jar` | Both | Lib | --- | Bartering Station, Distinguished Potions, Easy Anvils, Easy Magic, Visual Workbench | Why it's called Puzzles, you ask? That's the puzzle! |
-| 🟢 Ativo | **[Resource Pack Options](https://git.frohnmeyer-wds.de/JfMods/Respackopts)** | `respackopts-4.11.3+forge.jar` | Both | Lib | libjf_base, libjf_data_manipulation_v0, libjf_config_core_v2, muscript | --- | Config menus for resource packs |
 | 🟢 Ativo | **[Sinytra Connector](https://www.curseforge.com/minecraft/mc-mods/sinytra-connector)** | `connector-2.0.0-beta.17+1.21.1-full.jar` | Both | Lib | --- | Mod Menu (NeoForge Edition), Continuity | Run Fabric mods on NeoForge / Forge |
 | 🟢 Ativo | **[Sophisticated Core](https://www.curseforge.com/minecraft/mc-mods/sophisticated-core)** | `sophisticatedcore-1.21.1-1.5.5.2363.jar` | Both | Lib | Just Enough Items | Sophisticated Backpacks | A library / shared functionality mod for Sophisticated Storage and Backpacks |
 | 🟢 Ativo | **YetAnotherConfigLib** | `yet_another_config_lib_v3-3.8.2+1.21.1-neoforge.jar` | Both | Lib | --- | Armor of the Ages, Chest Tracker | YetAnotherConfigLib (yacl) is just that. A builder-based configuration library for Minecraft.\n |
+| 🔴 Desativado | **[LibJF](https://git.frohnmeyer-wds.de/JfMods/LibJF)** | `libjf-3.17.4+forge.jar` | Both | Lib | --- | Resource Pack Options | Library mod by JFronny |
+| 🔴 Desativado | **[Resource Pack Options](https://git.frohnmeyer-wds.de/JfMods/Respackopts)** | `respackopts-4.11.3+forge.jar` | Both | Lib | libjf_base, libjf_data_manipulation_v0, libjf_config_core_v2, muscript | --- | Config menus for resource packs |
 
 ---
 
@@ -181,7 +166,8 @@ Você pode selecionar qualquer combinação de mods para jogar ou enviar para am
 | 🟢 Ativo | **[Distinguished Potions](https://github.com/Fuzss/distinguishedpotions)** | `DistinguishedPotions-v21.1.1-1.21.1-NeoForge.jar` | Client | Mod | Puzzles Lib | --- | Trouble telling your potions apart? Time to give you a helping hand with that. |
 | 🟢 Ativo | **[Forgematica](https://github.com/CagayakeGirls/litematica-neoforge)** | `forgematica-0.4.2+mc1.21.1.jar` | Client | Mod | MafgLib | --- | Litematica unofficial NeoForge port. A modern schematic mod for NeoForge. |
 | 🟢 Ativo | **[InvMove](https://www.curseforge.com/minecraft/mc-mods/invmove)** | `InvMove-0.9.3+1.21.1-NeoForge.jar` | Client | Mod | Cloth Config API, invmove_compat | --- | Lets you move while in inventories. |
-| 🟢 Ativo | **[Jade](https://www.curseforge.com/minecraft/mc-mods/jade)** | `Jade-1.21.1-NeoForge-15.10.6.jar` | Both | Mod | --- | Gravestone Mod | Minecraft mod shows what you are looking at. (Hwyla fork) |
+| 🟢 Ativo | **[Jade](https://www.curseforge.com/minecraft/mc-mods/jade)** | `Jade-1.21.1-NeoForge-15.10.6.jar` | Both | Mod | --- | Jade Addons, Gravestone Mod | Minecraft mod shows what you are looking at. (Hwyla fork) |
+| 🟢 Ativo | **[Jade Addons](https://www.curseforge.com/minecraft/mc-mods/jade-addons)** | `JadeAddons-1.21.1-NeoForge-6.1.2.jar` | Both | Mod | Jade | Gravestone Mod | Jade additional mod supports |
 | 🟢 Ativo | **[Mod Menu (NeoForge Edition)](https://modrinth.com/mod/mod_menu)** | `Mod Menu (NeoForge Edition) 1.21.1-1.0.2.jar` | Client | Mod | Sinytra Connector | --- | NeoForge port of Mod Menu |
 | 🟢 Ativo | **[Mouse Tweaks](https://minecraft.curseforge.com/projects/mouse-tweaks)** | `MouseTweaks-neoforge-mc1.21-2.26.1.jar` | Client | Mod | --- | --- | A mod that enhances the inventory management by adding various additional functions to the usual mouse buttons. |
 | 🟢 Ativo | **[Scribble](https://www.curseforge.com/minecraft/mc-mods/scribble)** | `Scribble-1.5.1+mc1.21-neoforge.jar` | Client | Mod | --- | --- | Expertly edit your books with rich formatting options, page utilities and more! |
