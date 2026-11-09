@@ -8,10 +8,10 @@
 
 | Localização / Status | Quantidade | Descrição |
 | :--- | :---: | :--- |
-| 🟢 **ATIVOS NA RAIZ** (`.`) | **91** | Mods prontos para copiar/usar no Minecraft |
+| 🟢 **ATIVOS NA RAIZ** (`.`) | **98** | Mods prontos para copiar/usar no Minecraft |
 | 🔴 **DESATIVADOS** (`desativados/`) | **12** | Mods isolados (EMI, Chest Tracker, Tabs, Chunky, etc.) |
 | 🎨 **RESOURCE PACKS** (`resourcepacks/`) | **6** | Pacotes visuais e de áudio em formato `.zip` |
-| **Total Geral** | **103** | **Arquivos JAR únicos catalogados** |
+| **Total Geral** | **110** | **Arquivos JAR únicos catalogados** |
 
 ---
 
@@ -22,8 +22,8 @@
 - [⚡ Otimização & Performance (7 mods)](#otimização--performance)
 - [🎒 Armazenamento & Inventário (5 mods)](#armazenamento--inventário)
 - [🎨 Gráficos, Áudio & Imersão (7 mods)](#gráficos,-áudio--imersão)
-- [💡 Qualidade de Vida (QoL) & Utilidades (38 mods)](#qualidade-de-vida-qol--utilidades)
-- [📚 Bibliotecas, Frameworks & APIs (25 mods)](#bibliotecas,-frameworks--apis)
+- [💡 Qualidade de Vida (QoL) & Utilidades (43 mods)](#qualidade-de-vida-qol--utilidades)
+- [📚 Bibliotecas, Frameworks & APIs (27 mods)](#bibliotecas,-frameworks--apis)
 - [🖥️ Interface (UI/HUD) & Controles (11 mods)](#interface-ui/hud--controles)
 - [🗺️ Aventura, Dimensões & Estruturas (4 mods)](#aventura,-dimensões--estruturas)
 - [🎨 Resource Packs & Pacotes Visuais](#resource-packs--pacotes-visuais)
@@ -107,12 +107,15 @@
 | 🟢 Ativo | **EMI** | `emi-1.1.24+1.21.1+neoforge.jar` | Both | Mod | --- | EMI Loot | A featureful and accessible item and recipe viewer<br>⚠️ *Nota: Desativado temporariamente para testes com JEI.* |
 | 🟢 Ativo | **[EMI Loot](https://github.com/fzzyhmstrs/EMI_loot)** | `emi_loot-0.7.9+1.21+neoforge.jar` | Both | Mod | EMI, Fzzy Config | --- | Plugin for EMI that shows chest loot, block drops, mob drops, and gameplay loot like fishing.<br>⚠️ *Nota: Desativado temporariamente para testes com JEI.* |
 | 🟢 Ativo | **[EntityCulling](https://modrinth.com/mod/entityculling)** | `entityculling-neoforge-1.11.3-mc1.21.1.jar` | Both | Mod | --- | --- | This mod uses async path-tracing to hide Tiles/Entities that are not visible. |
+| 🟢 Ativo | **[Explorify](https://modrinth.com/datapack/explorify)** | `Explorify-v1.6.6.jar` | Both | Mod | --- | --- | A simplistic, vanilla-friendly collection of new structures. |
 | 🟢 Ativo | **[Freecam](https://www.curseforge.com/minecraft/mc-mods/free-cam)** | `freecam-neoforge-1.3.0+mc1.21.jar` | Both | Mod | --- | --- | A highly customizable freecam mod. |
 | 🟢 Ativo | **[FTB Ranks](https://www.curseforge.com/minecraft/mc-mods/ftb-ranks-forge)** | `ftb-ranks-neoforge-2101.1.5.jar` | Both | Mod | Architectury API, FTB Library | --- | A simple mod that lets you create ranks for players, similar to Discord roles, and manage permissions for them |
 | 🟢 Ativo | **[FTB Ultimine](https://www.curseforge.com/minecraft/mc-mods/ftb-ultimine-forge)** | `ftb-ultimine-neoforge-2101.1.15.jar` | Both | Mod | Architectury API, FTB Library, ftbezcrystals | --- | Allows you to break multiple blocks at once |
 | 🟢 Ativo | **[Gravestone Mod](https://www.curseforge.com/minecraft/mc-mods/gravestone-mod)** | `gravestone-neoforge-1.21.1-1.0.40.jar` | Both | Mod | Jade | --- | Places a gravestone with your inventory items inside when you die |
 | 🟢 Ativo | **[HennyFullbright](https://change.me.to.your.mods.homepage.example.invalid/)** | `hennyfullbright-neoforge-1.21.1-1.0.jar` | Both | Mod | --- | --- | Sem descrição detalhada disponível. |
-| 🟢 Ativo | **[Just Enough Items](https://www.curseforge.com/minecraft/mc-mods/jei)** | `jei-1.21.1-neoforge-19.57.0.450.jar` | Both | Mod | mezz_config, mezz_config_gui | ModernFix, Sophisticated Core | JEI is an item and recipe viewing mod for Minecraft, built from the ground up for stability and performance. |
+| 🟢 Ativo | **[HT's TreeChop](https://github.com/hammertater/treechop)** | `TreeChop-1.21.1-neoforge-0.19.3.jar` | Both | Mod | --- | --- | Makes trees more choppable. |
+| 🟢 Ativo | **[Just Enough Items](https://www.curseforge.com/minecraft/mc-mods/jei)** | `jei-1.21.1-neoforge-19.57.0.450.jar` | Both | Mod | mezz_config, mezz_config_gui | Just Enough Resources, ModernFix, Sophisticated Core | JEI is an item and recipe viewing mod for Minecraft, built from the ground up for stability and performance. |
+| 🟢 Ativo | **[Just Enough Resources](https://www.curseforge.com/minecraft/mc-mods/just-enough-resources-jer)** | `JustEnoughResources-NeoForge-1.21.1-1.6.0.66.jar` | Both | Mod | Just Enough Items | --- | Adds Resources and Mob Drops to JEI |
 | 🟢 Ativo | **[Lithostitched](...)** | `lithostitched-1.8.1-neoforge-21.1.jar` | Both | Mod | apollib | Terralith | A library mod with new configurability and compatibility enhancements for worldgen |
 | 🟢 Ativo | **[Lootr](https://minecraft.curseforge.com/projects/lootr)** | `lootr-neoforge-1.21.1-1.11.38.127.jar` | Both | Mod | --- | --- | Generates unique loot for each player that opens a loot container. |
 | 🟢 Ativo | **[Mielon's The Sift](https://x.com/MielonDev)** | `mielon's-the-sift-1.1.0-mc1.21.1-neo.jar` | Both | Mod | GeckoLib | --- | Explore The Sift: a strange dimension of siftslate, Ichor, ancient life, and resonant souls. |
@@ -121,8 +124,10 @@
 | 🟢 Ativo | **spark** | `spark-1.10.124-neoforge.jar` | Both | Mod | --- | --- | spark is a performance profiling plugin/mod for Minecraft clients, servers and proxies. |
 | 🟢 Ativo | **[Tectonic](...)** | `tectonic-3.0.28-neoforge-21.1.jar` | Both | Mod | apollib | --- | Terrain shaping brought to new heights, grander and more varied than ever before! |
 | 🟢 Ativo | **[Terralith](https://www.stardustlabs.net/)** | `Terralith_1.21.1_v2.6.2_Neoforge.jar` | Both | Mod | Lithostitched | --- | Explore almost 100 new biomes consisting of both realism and light fantasy, using just Vanilla blocks. Complete with several immersive structures to compliment the overhauled terrain. |
+| 🟢 Ativo | **[The Bumblezone](https://www.curseforge.com/projects/362479)** | `the_bumblezone-7.17.3+1.21.1-neoforge.jar` | Both | Mod | --- | --- | A wonderful bee dimension mod with lots of new exploration and adventuring to do! Check out the advancements for how to play the mod! |
 | 🟢 Ativo | **[Towns and Towers](https://modrinth.com/mod/towns-and-towers)** | `t_and_t-fabric-neoforge-1.13.11.jar` | Both | Mod | Cristel Lib | Cristel Lib | Spice up your world with new villages, pillager outposts, and even new ships! |
 | 🟢 Ativo | **[Trade Cycling](https://www.curseforge.com/minecraft/mc-mods/trade-cycling)** | `trade-cycling-neoforge-1.21.1-1.0.22.jar` | Both | Mod | --- | --- | The trade cycling functionality from Easy Villagers. |
+| 🟢 Ativo | **[Traveler's Titles](https://www.curseforge.com/minecraft/mc-mods/travelers-titles-neoforge)** | `TravelersTitles-1.21.1-NeoForge-5.1.3.jar` | Both | Mod | YUNG's API | --- | Epic, RPG-like titles when entering biomes & dimensions |
 | 🟢 Ativo | **[U Team Core](https://u-team.info/mods/uteamcore)** | `u_team_core-neoforge-1.21.1-5.6.2.384.jar` | Both | Mod | --- | Music Player | Join our discord server here: https://discord.hycrafthd.net\n\nThis library contains many useful modding stuff! |
 | 🟢 Ativo | **[Visual Workbench](https://github.com/Fuzss/visualworkbench)** | `VisualWorkbench-v21.1.2-1.21.1-NeoForge.jar` | Both | Mod | Puzzles Lib | --- | Items stay inside crafting tables and are also rendered on top. It's really fancy! |
 | 🟢 Ativo | **[Waystones](https://mods.twelveiterations.com/minecraft/waystones)** | `waystones-neoforge-1.21.1-21.1.46.jar` | Both | Mod | Balm | --- | Teleport back to activated waystones. For Survival, Adventure or Servers. |
@@ -159,9 +164,11 @@
 | 🟢 Ativo | **[MaFgLib](https://github.com/CagayakeGirls/malilib-neoforge)** | `mafglib-0.4.3+mc1.21.1.jar` | Both | Lib | --- | Forgematica | MaLiLib unofficial NeoForge port. Library mod for the NeoForge port of masa's mods. |
 | 🟢 Ativo | **[Player Animator](https://github.com/KosmX/minecraftPlayerAnimator)** | `player-animation-lib-forge-2.0.4+1.21.1.jar` | Both | Lib | --- | --- | A lightweight library to easily animate the player |
 | 🟢 Ativo | **[Puzzles Lib](https://www.curseforge.com/minecraft/mc-mods/puzzles-lib)** | `puzzleslib-v21.1.62-mc1.21.1+neoforge.jar` | Both | Lib | --- | Bartering Station, Distinguished Potions, Easy Anvils, Easy Magic, Visual Workbench | Why it's called Puzzles, you ask? That's the puzzle! |
+| 🟢 Ativo | **Resourceful Lib** | `resourcefullib-neoforge-1.21-3.0.12.jar` | Both | Lib | --- | --- | Team Resourceful Library |
 | 🟢 Ativo | **[Sinytra Connector](https://www.curseforge.com/minecraft/mc-mods/sinytra-connector)** | `connector-2.0.0-beta.17+1.21.1-full.jar` | Both | Lib | --- | Mod Menu (NeoForge Edition), Continuity | Run Fabric mods on NeoForge / Forge |
 | 🟢 Ativo | **[Sophisticated Core](https://www.curseforge.com/minecraft/mc-mods/sophisticated-core)** | `sophisticatedcore-1.21.1-1.5.5.2363.jar` | Both | Lib | Just Enough Items | Sophisticated Backpacks | A library / shared functionality mod for Sophisticated Storage and Backpacks |
 | 🟢 Ativo | **YetAnotherConfigLib** | `yet_another_config_lib_v3-3.8.2+1.21.1-neoforge.jar` | Both | Lib | --- | Armor of the Ages, Chest Tracker | YetAnotherConfigLib (yacl) is just that. A builder-based configuration library for Minecraft.\n |
+| 🟢 Ativo | **[YUNG's API](https://www.curseforge.com/minecraft/mc-mods/yungs-api-neoforge)** | `YungsApi-1.21.1-NeoForge-5.1.9.jar` | Both | Lib | --- | Traveler's Titles | API Library for YUNG's minecraft mods. |
 | 🔴 Desativado | **[LibJF](https://git.frohnmeyer-wds.de/JfMods/LibJF)** | `libjf-3.17.4+forge.jar` | Both | Lib | --- | Resource Pack Options | Library mod by JFronny |
 | 🔴 Desativado | **[Resource Pack Options](https://git.frohnmeyer-wds.de/JfMods/Respackopts)** | `respackopts-4.11.3+forge.jar` | Both | Lib | libjf_base, libjf_data_manipulation_v0, libjf_config_core_v2, muscript | --- | Config menus for resource packs |
 | 🔴 Desativado | **Simple GUI API** | `simpleguiapi-1.5.10.jar` | Both | Lib | multiloaderapi | Auto Eat | Reusable config GUI API for Forge mods. |
