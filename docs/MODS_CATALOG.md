@@ -9,9 +9,9 @@
 | Localização / Status | Quantidade | Descrição |
 | :--- | :---: | :--- |
 | 🟢 **ATIVOS** (`mods/`) | **98** | Mods prontos para copiar/usar no Minecraft |
-| 🔴 **DESATIVADOS** (`desativados/`) | **12** | Mods isolados para teste ou backup |
+| 🔴 **DESATIVADOS** (`desativados/`) | **13** | Mods isolados para teste ou backup |
 | 🎨 **RESOURCE PACKS** (`resourcepacks/`) | **8** | Pacotes visuais e de áudio em formato `.zip` |
-| **Total Geral** | **110** | **Arquivos JAR únicos catalogados** |
+| **Total Geral** | **111** | **Arquivos JAR únicos catalogados** |
 
 ---
 
@@ -22,7 +22,7 @@
 - [⚡ Otimização & Performance (10 mods)](#otimização--performance)
 - [🎒 Armazenamento & Inventário (8 mods)](#armazenamento--inventário)
 - [🎨 Gráficos, Áudio & Imersão (9 mods)](#gráficos,-áudio--imersão)
-- [💡 Qualidade de Vida (QoL) & Utilidades (31 mods)](#qualidade-de-vida-qol--utilidades)
+- [💡 Qualidade de Vida (QoL) & Utilidades (32 mods)](#qualidade-de-vida-qol--utilidades)
 - [📚 Bibliotecas, Frameworks & APIs (26 mods)](#bibliotecas,-frameworks--apis)
 - [🖥️ Interface (UI/HUD) & Controles (11 mods)](#interface-ui/hud--controles)
 - [🗺️ Aventura, Dimensões & Estruturas (10 mods)](#aventura,-dimensões--estruturas)
@@ -113,12 +113,13 @@
 | 🔴 Desativado | **EMI** | `emi-1.1.24+1.21.1+neoforge.jar` | Both | Mod | --- | EMI Loot | --- |
 | 🟢 Ativo | **[EMI Loot](https://github.com/fzzyhmstrs/EMI_loot)** | `emi_loot-0.7.9+1.21+neoforge.jar` | Client | Mod | emi, fzzy_config | --- | Plugin for EMI that shows chest loot, block drops, mob drops, and gameplay loot like fishing. |
 | 🔴 Desativado | **[EMI Loot](https://github.com/fzzyhmstrs/EMI_loot)** | `emi_loot-0.7.9+1.21+neoforge.jar` | Client | Mod | emi, fzzy_config | --- | Plugin for EMI that shows chest loot, block drops, mob drops, and gameplay loot like fishing. |
+| 🟢 Ativo | **[FallingTree](https://www.curseforge.com/minecraft/mc-mods/falling-tree)** | `FallingTree-1.21.1-1.21.1.11.jar` | Client | Mod | cloth-config | --- | Change the way you cut trees. |
 | 🟢 Ativo | **[Freecam](https://www.curseforge.com/minecraft/mc-mods/free-cam)** | `freecam-neoforge-1.3.0+mc1.21.jar` | Client | Mod | --- | --- | --- |
 | 🟢 Ativo | **FTB Ranks** | `ftb-ranks-neoforge-2101.1.5.jar` | Client | Mod | architectury, ftblibrary | --- | --- |
 | 🟢 Ativo | **FTB Ultimine** | `ftb-ultimine-neoforge-2101.1.15.jar` | Both | Mod | architectury, ftblibrary, ftbezcrystals | --- | --- |
 | 🟢 Ativo | **[Gravestone Mod](https://www.curseforge.com/minecraft/mc-mods/gravestone-mod)** | `gravestone-neoforge-1.21.1-1.0.40.jar` | Both | Mod | jade | --- | Places a gravestone with your inventory items inside when you die |
 | 🟢 Ativo | **hennyfullbright-neoforge-1.21.1-1.0.jar** | `hennyfullbright-neoforge-1.21.1-1.0.jar` | Client | Mod | --- | --- | --- |
-| 🟢 Ativo | **[HT's TreeChop](https://github.com/hammertater/treechop)** | `TreeChop-1.21.1-neoforge-0.19.3.jar` | Both | Mod | --- | --- | Makes trees more choppable. |
+| 🔴 Desativado | **[HT's TreeChop](https://github.com/hammertater/treechop)** | `TreeChop-1.21.1-neoforge-0.19.3.jar` | Both | Mod | --- | --- | Makes trees more choppable. |
 | 🔴 Desativado | **improved-inventory-tabs-neoforge-1.21.1-1.5.0.jar** | `improved-inventory-tabs-neoforge-1.21.1-1.5.0.jar` | Client | Mod | cloth_config | --- | --- |
 | 🔴 Desativado | **Jack's Fullbright** | `jackfullbright-neoforge-26.3.jar` | Client | Mod | --- | --- | A configurable fullbright toggle with client-side night vision. |
 | 🟢 Ativo | **jei-1.21.1-neoforge-19.57.0.450.jar** | `jei-1.21.1-neoforge-19.57.0.450.jar` | Client | Mod | mezz_config" #mandatory, mezz_config_gui, neoforge" #mandatory, minecraft" #mandatory | --- | --- |
