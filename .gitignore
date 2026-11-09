@@ -2,8 +2,8 @@
 # Minecraft Mod Files & Resource Packs (Ignorar binários pesados)
 # ==============================================================================
 *.jar
-*/*.jar
-*/*/*.jar
+mods/*.jar
+desativados/*.jar
 resourcepacks/*.zip
 *.zip
 

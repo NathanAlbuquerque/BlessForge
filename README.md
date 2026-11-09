@@ -1,92 +1,64 @@
-# ⚔️ BlessForge — Curated NeoForge 1.21.1 Modpack & Manager Suite
+# ⚔️ BlessForge — Modpack & Ecossistema Minecraft 1.21.1 (NeoForge)
 
-[![Minecraft](https://img.shields.io/badge/Minecraft-1.21.1-brightgreen.svg?logo=minecraft)](https://minecraft.net/)
-[![Loader](https://img.shields.io/badge/ModLoader-NeoForge-orange.svg)](https://neoforged.net/)
-[![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg?logo=python)](https://python.org/)
-[![License](https://img.shields.io/badge/License-MIT-purple.svg)](LICENSE)
+[![Minecraft](https://img.shields.io/badge/Minecraft-1.21.1-brightgreen.svg)](https://www.minecraft.net/)
+[![NeoForge](https://img.shields.io/badge/NeoForge-21.1.259-orange.svg)](https://neoforged.net/)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-Sistema integrado de **gerenciamento, catalogação visual e exportação automatizada de modpacks** para Minecraft 1.21.1 NeoForge.
-
-O projeto resolve o problema clássico de gerenciar dezenas de mods e suas dependências técnicas, permitindo:
-1. Navegar por todos os mods em uma interface visual in-game (*Mod Menu*).
-2. Atualizar e sincronizar automaticamente metadados e logos ao adicionar novos arquivos `.jar`.
-3. Selecionar qualquer combinação de mods com **resolução recursiva de dependências** para exportar em formato `.zip` (para amigos) ou pasta pronta (para jogar).
+O **BlessForge** é uma curadoria de alta performance e aventura para Minecraft 1.21.1, combinando geração de terreno cinematográfica (**Tectonic + Terralith**), automação e engenharia (**Create**), chefes e dimensões épicas (**Cataclysm + Twilight Forest + Bumblezone**), combate dinâmico e otimizações extremas para máxima estabilidade de FPS.
 
 ---
 
-## 🚀 Funcionalidades Principais
+## 🌟 Destaques do Projeto
 
-- 🎮 **Visual Mod Menu Offline (`mod_menu.html`):**
-  - Interface rica com logos oficiais extraídos direto dos arquivos `.jar`.
-  - Pesquisa instantânea em tempo real (`Ctrl+K`), filtros por categoria e status.
-  - Inspetor completo de detalhes: links oficiais do CurseForge, escopo (*Client/Server*), tamanho em disco e árvore de dependências interativa.
-
-- 📦 **Construtor & Exportador de Modpacks (`exportador.py` / `exportar.sh`):**
-  - Selecione qualquer conjunto de mods (ou use *Presets Rápidos*).
-  - O sistema calcula automaticamente todas as bibliotecas e APIs obrigatórias.
-  - Gera pacotes comprimidos `.zip` com subpasta `mods/`, `resourcepacks/`, `manifest.json` e instruções passo a passo em `LEIA-ME_INSTALACAO.txt`.
-
-- ⚡ **Presets Rápidos Incluídos:**
-  - 🌐 **Client-Side Only (Para Servidores):** Seleciona exclusivamente mods de tela, HUD, som e performance que você pode usar ao entrar no servidor de amigos ou servidores públicos sem causar erro de incompatibilidade.
-  - 🚀 **Todos os Ativos:** O pacote completo com toda a biblioteca ativa.
-  - ⚡ **Vanilla+ & Otimização:** Otimização máxima (Sodium, ModernFix, FerriteCore) + QoL essencial.
-  - ⚙️ **Create & Tecnologia:** Create, armas de fogo (`Create: Gunsmithing`), engenharias e dependências gráficas.
-  - ⚔️ **Aventura & RPG:** Chefes épicos (*L_Ender's Cataclysm*), *The Twilight Forest*, *Simply Swords* e masmorras.
-  - 🎒 **Armazenamento Avançado:** *Sophisticated Backpacks*, *Tom's Simple Storage*, etc.
-
-- 🔄 **Sincronização com 1 Clique (`atualizar_catalogo.py` / `servidor_mod_menu.py`):**
-  - Extração automatizada de metadados (`neoforge.mods.toml`, `mods.toml`, `fabric.mod.json`).
-  - Botão de sincronização ao vivo direto na interface web.
+* 🏔️ **Geração Épica:** Cordilheiras realistas, rios navegáveis e mais de 90 biomas sem blocos incompatíveis.
+* ⚡ **Performance Otimizada:** Sodium, ModernFix, FerriteCore, EntityCulling, ImmediatelyFast e BadOptimizations.
+* 🎮 **Mod Menu Web Interativo:** Aplicativo offline local para explorar, filtrar e exportar seleções personalizadas do modpack.
+* 📦 **Resolvedor de Dependências Automático:** Exportador que garante que nenhum mod falte com dependências quebradas.
 
 ---
 
-## 🛠️ Como Usar
+## 📁 Estrutura do Repositório
 
-### 1. Abrir o Mod Menu Visual (Recomendado)
-Execute o script inicializador para abrir o servidor local com sincronização em tempo real:
-```bash
-./abrir_mod_menu.sh
+Consulte o documento completo de diretrizes em [ARQUITETURA.md](docs/ARQUITETURA.md).
+
 ```
-> O menu será aberto automaticamente no seu navegador padrão em `http://localhost:8080`.
-
-### 2. Exportar um Modpack Personalizado
-Você pode exportar diretamente pelo **Mod Menu visual** (marcando as caixinhas `[✔]` e clicando em **Exportar**) ou pelo terminal:
-```bash
-./exportar.sh
+BlessForge/
+├── mods/                  # Mods ativos (.jar) prontos para jogar
+├── desativados/           # Mods isolados para testes ou diagnóstico
+├── resourcepacks/         # Pacotes de recursos (.zip)
+├── exportados/            # Builds e pacotes gerados pelo exportador
+├── tools/                 # Automações Python (scanner, exportador, servidor)
+├── docs/                  # Documentação técnica e catálogo analítico
+├── assets/                # Recursos visuais e ícones extraídos dos mods
+├── abrir_mod_menu.sh      # Atalho para iniciar a interface web do Mod Menu
+├── atualizar.sh           # Atalho para sincronizar metadados e atualizar catálogos
+├── exportar.sh            # Atalho para exportar pacotes (.zip ou pastas)
+└── mod_menu.html          # Web app offline estilo in-game
 ```
-Os pacotes gerados serão salvos na pasta `exportados/`.
 
-### 3. Atualizar ao Baixar Novos Mods
-Sempre que colar novos arquivos `.jar` na pasta, clique em **"🔄 Sincronizar Novos Mods"** no topo da interface visual, ou execute no terminal:
+---
+
+## 🛠️ Como Utilizar
+
+### 1. Atualizar Catálogos e Metadados
+Após adicionar ou remover qualquer mod em `mods/`:
 ```bash
 ./atualizar.sh
 ```
 
----
+### 2. Abrir o Mod Menu Interativo no Navegador
+```bash
+./abrir_mod_menu.sh
+```
 
-## 📂 Estrutura de Pastas
-
-```text
-.
-├── .                           # Mods ativos (.jar) prontos para uso
-├── desativados/                # Mods desativados/em teste temporário
-├── resourcepacks/              # Pacotes de texturas e sons (.zip)
-├── exportados/                 # Pacotes .zip e pastas geradas pelo exportador
-├── assets/icons/               # Logos e ícones oficiais extraídos dos mods
-├── mod_menu.html               # Aplicação visual offline do Mod Menu
-├── MODS_CATALOG.md             # Catálogo estruturado em Markdown com tabelas completas
-├── ideias_e_links.txt          # Lista de desejos de mods/datapacks anotados
-├── servidor_mod_menu.py        # Servidor local para a interface web
-├── atualizar_catalogo.py       # Motor de extração e sincronização de metadados
-├── exportador.py               # Motor de resolução de dependências e empacotador
-├── abrir_mod_menu.sh           # Inicializador do Mod Menu no navegador
-├── atualizar.sh                # Script de sincronização rápida
-└── exportar.sh                 # Assistente de exportação no terminal
+### 3. Exportar Modpacks Personalizados
+Para gerar um pacote ZIP (ex: apenas Client-Side para entrar em servidores públicos, ou versão Vanilla+):
+```bash
+./exportar.sh
 ```
 
 ---
 
-## 📋 Requisitos do Sistema
-
-- **Python 3.8+** (utiliza apenas bibliotecas padrão do Python: `http.server`, `zipfile`, `json`, `urllib`).
-- Qualquer navegador moderno (Google Chrome, Firefox, Brave, Edge).
+## 📄 Catálogo Completo dos Mods
+A lista detalhada de cada mod instalado, suas versões, dependências e descrições encontra-se em:
+👉 **[Catálogo Geral de Mods (docs/MODS_CATALOG.md)](docs/MODS_CATALOG.md)**
