@@ -8,10 +8,10 @@
 
 | Localização / Status | Quantidade | Descrição |
 | :--- | :---: | :--- |
-| 🟢 **ATIVOS NA RAIZ** (`.`) | **83** | Mods prontos para copiar/usar no Minecraft |
+| 🟢 **ATIVOS NA RAIZ** (`.`) | **88** | Mods prontos para copiar/usar no Minecraft |
 | 🔴 **DESATIVADOS** (`desativados/`) | **12** | Mods isolados (EMI, Chest Tracker, Tabs, Chunky, etc.) |
 | 🎨 **RESOURCE PACKS** (`resourcepacks/`) | **6** | Pacotes visuais e de áudio em formato `.zip` |
-| **Total Geral** | **95** | **Arquivos JAR únicos catalogados** |
+| **Total Geral** | **100** | **Arquivos JAR únicos catalogados** |
 
 ---
 
@@ -22,8 +22,8 @@
 - [⚡ Otimização & Performance (7 mods)](#otimização--performance)
 - [🎒 Armazenamento & Inventário (5 mods)](#armazenamento--inventário)
 - [🎨 Gráficos, Áudio & Imersão (7 mods)](#gráficos,-áudio--imersão)
-- [💡 Qualidade de Vida (QoL) & Utilidades (31 mods)](#qualidade-de-vida-qol--utilidades)
-- [📚 Bibliotecas, Frameworks & APIs (24 mods)](#bibliotecas,-frameworks--apis)
+- [💡 Qualidade de Vida (QoL) & Utilidades (35 mods)](#qualidade-de-vida-qol--utilidades)
+- [📚 Bibliotecas, Frameworks & APIs (25 mods)](#bibliotecas,-frameworks--apis)
 - [🖥️ Interface (UI/HUD) & Controles (11 mods)](#interface-ui/hud--controles)
 - [🗺️ Aventura, Dimensões & Estruturas (4 mods)](#aventura,-dimensões--estruturas)
 - [🎨 Resource Packs & Pacotes Visuais](#resource-packs--pacotes-visuais)
@@ -111,10 +111,14 @@
 | 🟢 Ativo | **[Gravestone Mod](https://www.curseforge.com/minecraft/mc-mods/gravestone-mod)** | `gravestone-neoforge-1.21.1-1.0.40.jar` | Both | Mod | Jade | --- | Places a gravestone with your inventory items inside when you die |
 | 🟢 Ativo | **[HennyFullbright](https://change.me.to.your.mods.homepage.example.invalid/)** | `hennyfullbright-neoforge-1.21.1-1.0.jar` | Both | Mod | --- | --- | Sem descrição detalhada disponível. |
 | 🟢 Ativo | **[Just Enough Items](https://www.curseforge.com/minecraft/mc-mods/jei)** | `jei-1.21.1-neoforge-19.57.0.450.jar` | Both | Mod | mezz_config, mezz_config_gui | ModernFix, Sophisticated Core | JEI is an item and recipe viewing mod for Minecraft, built from the ground up for stability and performance. |
+| 🟢 Ativo | **[Lithostitched](...)** | `lithostitched-1.8.1-neoforge-21.1.jar` | Both | Mod | apollib | Terralith | A library mod with new configurability and compatibility enhancements for worldgen |
 | 🟢 Ativo | **[Lootr](https://minecraft.curseforge.com/projects/lootr)** | `lootr-neoforge-1.21.1-1.11.38.127.jar` | Both | Mod | --- | --- | Generates unique loot for each player that opens a loot container. |
 | 🟢 Ativo | **[Mielon's The Sift](https://x.com/MielonDev)** | `mielon's-the-sift-1.1.0-mc1.21.1-neo.jar` | Both | Mod | GeckoLib | --- | Explore The Sift: a strange dimension of siftslate, Ichor, ancient life, and resonant souls. |
 | 🟢 Ativo | **[Music Player](https://u-team.info/mods/musicplayer)** | `music_player-neoforge-1.21.1-2.7.3.373.jar` | Both | Mod | U Team Core | --- | Join our discord server here: https://discord.hycrafthd.net\n\nPlay every youtube video, livestream and more with this player! We use lava player to ensure this diversity.\n\nLearn more about lavaplayer here: https://github.com/sedmelluq/lavaplayer\n\nSources:\n - YouTube\n - SoundCloud\n - Bandcamp\n - Vimeo\n - Twitch streams\n - Local files\n - HTTP URLs\n\nFile formats:\n - MP3\n - FLAC\n - WAV\n - Matroska/WebM (AAC, Opus or Vorbis codecs)\n - MP4/M4A (AAC codec)\n - OGG streams (Opus, Vorbis and FLAC codecs)\n - AAC streams\n - Stream playlists (M3U and PLS) |
 | 🟢 Ativo | **[Nature's Compass](https://github.com/MattCzyr/NaturesCompass)** | `NaturesCompass-1.21.1-3.4.0-neoforge.jar` | Both | Mod | --- | --- | Search for a biome and get information about it. |
+| 🟢 Ativo | **[Tectonic](...)** | `tectonic-3.0.28-neoforge-21.1.jar` | Both | Mod | apollib | --- | Terrain shaping brought to new heights, grander and more varied than ever before! |
+| 🟢 Ativo | **[Terralith](https://www.stardustlabs.net/)** | `Terralith_1.21.1_v2.6.2_Neoforge.jar` | Both | Mod | Lithostitched | --- | Explore almost 100 new biomes consisting of both realism and light fantasy, using just Vanilla blocks. Complete with several immersive structures to compliment the overhauled terrain. |
+| 🟢 Ativo | **[Towns and Towers](https://modrinth.com/mod/towns-and-towers)** | `t_and_t-fabric-neoforge-1.13.11.jar` | Both | Mod | Cristel Lib | Cristel Lib | Spice up your world with new villages, pillager outposts, and even new ships! |
 | 🟢 Ativo | **[Trade Cycling](https://www.curseforge.com/minecraft/mc-mods/trade-cycling)** | `trade-cycling-neoforge-1.21.1-1.0.22.jar` | Both | Mod | --- | --- | The trade cycling functionality from Easy Villagers. |
 | 🟢 Ativo | **[U Team Core](https://u-team.info/mods/uteamcore)** | `u_team_core-neoforge-1.21.1-5.6.2.384.jar` | Both | Mod | --- | Music Player | Join our discord server here: https://discord.hycrafthd.net\n\nThis library contains many useful modding stuff! |
 | 🟢 Ativo | **[Visual Workbench](https://github.com/Fuzss/visualworkbench)** | `VisualWorkbench-v21.1.2-1.21.1-NeoForge.jar` | Both | Mod | Puzzles Lib | --- | Items stay inside crafting tables and are also rendered on top. It's really fancy! |
@@ -138,6 +142,7 @@
 | 🟢 Ativo | **[Balm](https://mods.twelveiterations.com/)** | `balm-neoforge-1.21.1-21.0.66.jar` | Both | Lib | --- | Waystones | Abstraction Layer (but not really) for Blay's multiplatform mods |
 | 🟢 Ativo | **[Blueprint](https://www.teamabnormals.com/mods/blueprint)** | `blueprint-1.21.1-8.2.0.jar` | Both | Lib | --- | Caverns & Chasms | The library mod used by all Abnormals mods. Adds support for various types of blocks, helps with registering, and adds tons of misc. utils. Also comes with Endimator, an animation library that supports data-driven and coded animations. |
 | 🟢 Ativo | **[Cloth Config v15 API](https://www.curseforge.com/minecraft/mc-mods/cloth-config-forge/)** | `cloth-config-15.0.140-neoforge.jar` | Both | Lib | --- | --- | An API for config screens. |
+| 🟢 Ativo | **[Cristel Lib](https://modrinth.com/mod/cristel-lib)** | `cristellib-neoforge-1.21.1-3.1.7.jar` | Both | Lib | Towns and Towers, expanded_ecosphere | Towns and Towers | A Library mod for easy structure config and runtime datapacks. |
 | 🟢 Ativo | **[Curios API](https://github.com/TheIllusiveC4/Curios)** | `curios-neoforge-9.5.1+1.21.1.jar` | Both | Lib | --- | L_Ender's Cataclysm 1.21.1 | A flexible and expandable accessory/equipment API for users and developers. |
 | 🟢 Ativo | **[Forge Config API Port](https://github.com/Fuzss/forgeconfigapiport)** | `ForgeConfigAPIPort-v21.1.6-1.21.1-NeoForge.jar` | Both | Lib | --- | --- | Provides NeoForge's & Forge's config systems to other modding ecosystems. Designed for a multi-loader architecture. |
 | 🟢 Ativo | **[Forgified Fabric API](https://github.com/Sinytra/ForgifiedFabricAPI)** | `forgified-fabric-api-0.116.15+2.3.5+1.21.1.jar` | Both | Lib | --- | Continuity, Voxy | Core API module providing key hooks and intercompatibility features. |
