@@ -8,10 +8,10 @@
 
 | Localização / Status | Quantidade | Descrição |
 | :--- | :---: | :--- |
-| 🟢 **ATIVOS NA RAIZ** (`.`) | **88** | Mods prontos para copiar/usar no Minecraft |
+| 🟢 **ATIVOS NA RAIZ** (`.`) | **91** | Mods prontos para copiar/usar no Minecraft |
 | 🔴 **DESATIVADOS** (`desativados/`) | **12** | Mods isolados (EMI, Chest Tracker, Tabs, Chunky, etc.) |
 | 🎨 **RESOURCE PACKS** (`resourcepacks/`) | **6** | Pacotes visuais e de áudio em formato `.zip` |
-| **Total Geral** | **100** | **Arquivos JAR únicos catalogados** |
+| **Total Geral** | **103** | **Arquivos JAR únicos catalogados** |
 
 ---
 
@@ -22,7 +22,7 @@
 - [⚡ Otimização & Performance (7 mods)](#otimização--performance)
 - [🎒 Armazenamento & Inventário (5 mods)](#armazenamento--inventário)
 - [🎨 Gráficos, Áudio & Imersão (7 mods)](#gráficos,-áudio--imersão)
-- [💡 Qualidade de Vida (QoL) & Utilidades (35 mods)](#qualidade-de-vida-qol--utilidades)
+- [💡 Qualidade de Vida (QoL) & Utilidades (38 mods)](#qualidade-de-vida-qol--utilidades)
 - [📚 Bibliotecas, Frameworks & APIs (25 mods)](#bibliotecas,-frameworks--apis)
 - [🖥️ Interface (UI/HUD) & Controles (11 mods)](#interface-ui/hud--controles)
 - [🗺️ Aventura, Dimensões & Estruturas (4 mods)](#aventura,-dimensões--estruturas)
@@ -96,6 +96,7 @@
 | Status | Mod / Nome | Arquivo JAR | Lado | Tipo | Dependências | Usado Por (Dependentes) | Descrição & Links |
 | :---: | :--- | :--- | :---: | :---: | :--- | :--- | :--- |
 | 🟢 Ativo | **[AmbientSounds](https://modrinth.com/mod/ambientsounds)** | `AmbientSounds_NEOFORGE_v6.3.11_mc1.21.1.jar` | Both | Mod | CreativeCore | --- | Expands minecraft's ambient sounds. |
+| 🟢 Ativo | **BadOptimizations** | `BadOptimizations-2.4.1-1.21.1.jar` | Both | Mod | --- | --- | Optimization mod that focuses on things other than rendering |
 | 🟢 Ativo | **[Bartering Station](https://github.com/Fuzss/barteringstation)** | `BarteringStation-v21.1.0-1.21.1-NeoForge.jar` | Both | Mod | Puzzles Lib | --- | Still running around bartering manually? Let's put those lazy piglins to work instead! |
 | 🟢 Ativo | **[Carry On](https://change.me.to.your.mods.homepage.example.invalid/)** | `carryon-neoforge-1.21.1-2.2.6.13.jar` | Both | Mod | --- | --- | Carry On is a simple mod that improves game interaction by allowing players to pick up, carry, and place single block Tile Entities using only their empty hands. |
 | 🟢 Ativo | **Cinematic Respawn** | `cinematic_respawn-1.21.1-neoforge-1.4.1.jar` | Client | Mod | --- | --- | Cinematic respawn experience for Minecraft. |
@@ -105,6 +106,7 @@
 | 🟢 Ativo | **[Easy Magic](https://github.com/Fuzss/easymagic)** | `EasyMagic-v21.1.4-1.21.1-NeoForge.jar` | Both | Mod | Puzzles Lib | --- | Enchanting tables as they always should have been! Items stay after closing, and easy re-rolls. |
 | 🟢 Ativo | **EMI** | `emi-1.1.24+1.21.1+neoforge.jar` | Both | Mod | --- | EMI Loot | A featureful and accessible item and recipe viewer<br>⚠️ *Nota: Desativado temporariamente para testes com JEI.* |
 | 🟢 Ativo | **[EMI Loot](https://github.com/fzzyhmstrs/EMI_loot)** | `emi_loot-0.7.9+1.21+neoforge.jar` | Both | Mod | EMI, Fzzy Config | --- | Plugin for EMI that shows chest loot, block drops, mob drops, and gameplay loot like fishing.<br>⚠️ *Nota: Desativado temporariamente para testes com JEI.* |
+| 🟢 Ativo | **[EntityCulling](https://modrinth.com/mod/entityculling)** | `entityculling-neoforge-1.11.3-mc1.21.1.jar` | Both | Mod | --- | --- | This mod uses async path-tracing to hide Tiles/Entities that are not visible. |
 | 🟢 Ativo | **[Freecam](https://www.curseforge.com/minecraft/mc-mods/free-cam)** | `freecam-neoforge-1.3.0+mc1.21.jar` | Both | Mod | --- | --- | A highly customizable freecam mod. |
 | 🟢 Ativo | **[FTB Ranks](https://www.curseforge.com/minecraft/mc-mods/ftb-ranks-forge)** | `ftb-ranks-neoforge-2101.1.5.jar` | Both | Mod | Architectury API, FTB Library | --- | A simple mod that lets you create ranks for players, similar to Discord roles, and manage permissions for them |
 | 🟢 Ativo | **[FTB Ultimine](https://www.curseforge.com/minecraft/mc-mods/ftb-ultimine-forge)** | `ftb-ultimine-neoforge-2101.1.15.jar` | Both | Mod | Architectury API, FTB Library, ftbezcrystals | --- | Allows you to break multiple blocks at once |
@@ -116,6 +118,7 @@
 | 🟢 Ativo | **[Mielon's The Sift](https://x.com/MielonDev)** | `mielon's-the-sift-1.1.0-mc1.21.1-neo.jar` | Both | Mod | GeckoLib | --- | Explore The Sift: a strange dimension of siftslate, Ichor, ancient life, and resonant souls. |
 | 🟢 Ativo | **[Music Player](https://u-team.info/mods/musicplayer)** | `music_player-neoforge-1.21.1-2.7.3.373.jar` | Both | Mod | U Team Core | --- | Join our discord server here: https://discord.hycrafthd.net\n\nPlay every youtube video, livestream and more with this player! We use lava player to ensure this diversity.\n\nLearn more about lavaplayer here: https://github.com/sedmelluq/lavaplayer\n\nSources:\n - YouTube\n - SoundCloud\n - Bandcamp\n - Vimeo\n - Twitch streams\n - Local files\n - HTTP URLs\n\nFile formats:\n - MP3\n - FLAC\n - WAV\n - Matroska/WebM (AAC, Opus or Vorbis codecs)\n - MP4/M4A (AAC codec)\n - OGG streams (Opus, Vorbis and FLAC codecs)\n - AAC streams\n - Stream playlists (M3U and PLS) |
 | 🟢 Ativo | **[Nature's Compass](https://github.com/MattCzyr/NaturesCompass)** | `NaturesCompass-1.21.1-3.4.0-neoforge.jar` | Both | Mod | --- | --- | Search for a biome and get information about it. |
+| 🟢 Ativo | **spark** | `spark-1.10.124-neoforge.jar` | Both | Mod | --- | --- | spark is a performance profiling plugin/mod for Minecraft clients, servers and proxies. |
 | 🟢 Ativo | **[Tectonic](...)** | `tectonic-3.0.28-neoforge-21.1.jar` | Both | Mod | apollib | --- | Terrain shaping brought to new heights, grander and more varied than ever before! |
 | 🟢 Ativo | **[Terralith](https://www.stardustlabs.net/)** | `Terralith_1.21.1_v2.6.2_Neoforge.jar` | Both | Mod | Lithostitched | --- | Explore almost 100 new biomes consisting of both realism and light fantasy, using just Vanilla blocks. Complete with several immersive structures to compliment the overhauled terrain. |
 | 🟢 Ativo | **[Towns and Towers](https://modrinth.com/mod/towns-and-towers)** | `t_and_t-fabric-neoforge-1.13.11.jar` | Both | Mod | Cristel Lib | Cristel Lib | Spice up your world with new villages, pillager outposts, and even new ships! |
