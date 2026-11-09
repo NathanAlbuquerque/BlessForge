@@ -10,7 +10,7 @@
 | :--- | :---: | :--- |
 | 🟢 **ATIVOS** (`mods/`) | **98** | Mods prontos para copiar/usar no Minecraft |
 | 🔴 **DESATIVADOS** (`desativados/`) | **12** | Mods isolados para teste ou backup |
-| 🎨 **RESOURCE PACKS** (`resourcepacks/`) | **6** | Pacotes visuais e de áudio em formato `.zip` |
+| 🎨 **RESOURCE PACKS** (`resourcepacks/`) | **8** | Pacotes visuais e de áudio em formato `.zip` |
 | **Total Geral** | **110** | **Arquivos JAR únicos catalogados** |
 
 ---
@@ -209,6 +209,7 @@
 | Pacote / Nome | Arquivo ZIP | Descrição & Links |
 | :--- | :--- | :--- |
 | **[3D Default 1.20+ v1.16.0](https://www.curseforge.com/minecraft/texture-packs/3d-default-1.20+-v1.16.0)** | `3D Default 1.20+ v1.16.0.zip` | 3D Default by GeForceLegend |
+| **[Cherry Grove Panorama](https://www.curseforge.com/minecraft/texture-packs/cherry-grove-panorama)** | `Cherry Grove Panorama.zip` | Panorama Of A Cherry Grove Biome and Mountains |
 | **[Connected-Paths 1.21-1.21.3 v3.1.1](https://www.curseforge.com/minecraft/texture-packs/connected-paths-1.21-1.21.3-v3.1.1)** | `Connected-Paths 1.21-1.21.3 v3.1.1.zip` | §7by §2Jacosvaldo |
 | **[EvenBetterEnchants_v2_r1](https://www.curseforge.com/minecraft/texture-packs/evenbetterenchants_v2_r1)** | `EvenBetterEnchants_v2_r1.zip` | §dby §6Mythitorium
 §7v2 §8- §71.21+ |
@@ -216,6 +217,8 @@
 ■ By FurGalaxy |
 | **[LowOnFire 1.21.3](https://www.curseforge.com/minecraft/texture-packs/lowonfire-1.21.3)** | `LowOnFire 1.21.3.zip` | §4❏ Lower Fire Texture §r
 ❏ By §6Haikis |
+| **[NightUI v1.4.1](https://www.curseforge.com/minecraft/texture-packs/nightui-v1.4.1)** | `NightUI v1.4.1.zip` | §5A Dark Themed Resource Pack
+§9👤§o NotToBlame |
 | **[Spectator_Xray_v1.2.1](https://www.curseforge.com/minecraft/texture-packs/spectator_xray_v1.2.1)** | `Spectator_Xray_v1.2.1.zip` | §bMade By AlphaLeoli
 §7Xray in spectator mode |
 
