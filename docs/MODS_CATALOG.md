@@ -8,10 +8,10 @@
 
 | Localização / Status | Quantidade | Descrição |
 | :--- | :---: | :--- |
-| 🟢 **ATIVOS** (`mods/`) | **98** | Mods prontos para copiar/usar no Minecraft |
+| 🟢 **ATIVOS** (`mods/`) | **99** | Mods prontos para copiar/usar no Minecraft |
 | 🔴 **DESATIVADOS** (`desativados/`) | **13** | Mods isolados para teste ou backup |
 | 🎨 **RESOURCE PACKS** (`resourcepacks/`) | **8** | Pacotes visuais e de áudio em formato `.zip` |
-| **Total Geral** | **111** | **Arquivos JAR únicos catalogados** |
+| **Total Geral** | **112** | **Arquivos JAR únicos catalogados** |
 
 ---
 
@@ -22,7 +22,7 @@
 - [⚡ Otimização & Performance (10 mods)](#otimização--performance)
 - [🎒 Armazenamento & Inventário (8 mods)](#armazenamento--inventário)
 - [🎨 Gráficos, Áudio & Imersão (9 mods)](#gráficos,-áudio--imersão)
-- [💡 Qualidade de Vida (QoL) & Utilidades (32 mods)](#qualidade-de-vida-qol--utilidades)
+- [💡 Qualidade de Vida (QoL) & Utilidades (33 mods)](#qualidade-de-vida-qol--utilidades)
 - [📚 Bibliotecas, Frameworks & APIs (26 mods)](#bibliotecas,-frameworks--apis)
 - [🖥️ Interface (UI/HUD) & Controles (11 mods)](#interface-ui/hud--controles)
 - [🗺️ Aventura, Dimensões & Estruturas (10 mods)](#aventura,-dimensões--estruturas)
@@ -127,6 +127,7 @@
 | 🟢 Ativo | **[Lootr](https://minecraft.curseforge.com/projects/lootr)** | `lootr-neoforge-1.21.1-1.11.38.127.jar` | Both | Mod | --- | --- | Generates unique loot for each player that opens a loot container. |
 | 🟢 Ativo | **[Nature's Compass](https://github.com/MattCzyr/NaturesCompass)** | `NaturesCompass-1.21.1-3.4.0-neoforge.jar` | Both | Mod | --- | --- | --- |
 | 🔴 Desativado | **[Pathogen : monster plague](https://www.curseforge.com/minecraft/mc-mods/pathogen)** | `pathogen-1.4.7-neoforge-1.21.1.jar` | Both | Mod | geckolib, GeckoLib | --- | --- |
+| 🟢 Ativo | **Projectiles Trajectory Prediction** | `ptp-1.21.1-1.0.35.jar` | * | Mod | fabric-api | --- | Shows the trajectory of projectiles like arrows, snowballs, eggs, tridents and ender pearls. |
 | 🔴 Desativado | **[Resource Pack Options](https://git.frohnmeyer-wds.de/JfMods/Respackopts)** | `respackopts-4.11.3+forge.jar` | Both | Mod | libjf_base, libjf_data_manipulation_v0, libjf_config_core_v2, muscript | --- | --- |
 | 🟢 Ativo | **[Skin Changer](https://www.curseforge.com/minecraft/mc-mods/skinchanger)** | `skin_changer-neoforge-1.21-0.9.2.jar` | Both | Mod | architectury | --- | This mod allows you to change your Minecraft server skin on the fly even if it is in offline mode. |
 | 🟢 Ativo | **Symbols 'n' Stuff** | `symbols_n_stuff-0.1.2+1.21+neoforge.jar` | Both | Mod | kotlinforforge | --- | --- |
