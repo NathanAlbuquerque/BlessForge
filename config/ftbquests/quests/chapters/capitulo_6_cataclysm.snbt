@@ -7,69 +7,48 @@
 		id: "cataclysm:monstrous_horn"
 	}
 	id: "1006000000000001"
-	order_index: 5
-	title: "6. O Fim dos Titãs (Cataclysm)"
+	images: [ ]
+	order_index: 6
+	quest_links: [ ]
 	quests: [
 		{
-			description: [
-				"Nas profundezas ardentes do Nether, dentro da Soul Blacksmith fornalha ancestral, repousa o gigante forjado em netherite pura."
-				"Cuidado com seus terremotos de lava e suas investidas brutais!"
-			]
 			icon: {
 				id: "cataclysm:monstrous_horn"
 			}
 			id: "1006000000000010"
-			shape: "diamond"
-			size: 1.5d
-			subtitle: "O colosso de lava e netherite"
-			tasks: [
-				{
-					entity: "cataclysm:netherite_monstrosity"
-					id: "1006000000000011"
-					type: "kill"
-					value: 1L
-				}
-			]
 			rewards: [
 				{
+					count: 2
 					id: "1006000000000012"
 					item: {
-						count: 2
+						count: 1
 						id: "cataclysm:monstrous_horn"
 					}
 					type: "item"
 				}
 				{
 					id: "1006000000000013"
-					xp_levels: 20
 					type: "xp_levels"
+					xp_levels: 20
 				}
 			]
-			title: "A Monstruosidade de Netherite"
+			shape: "diamond"
+			size: 1.5d
+			tasks: [{
+				entity: "cataclysm:netherite_monstrosity"
+				id: "1006000000000011"
+				type: "kill"
+				value: 1L
+			}]
 			x: -3.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["1006000000000010"]
-			description: [
-				"Nas profundezas abissais dos oceanos do Cataclysm dorme o Leviathan."
-				"Você precisará de artefatos de respiração aquática e mira perfeita para acertar seus pontos vitais em pleno nado submerso!"
-			]
 			icon: {
 				id: "cataclysm:abyss_eye"
 			}
 			id: "1006000000000020"
-			shape: "diamond"
-			size: 1.5d
-			subtitle: "O senhor dos abismos oceânicos"
-			tasks: [
-				{
-					entity: "cataclysm:the_leviathan"
-					id: "1006000000000021"
-					type: "kill"
-					value: 1L
-				}
-			]
 			rewards: [
 				{
 					id: "1006000000000022"
@@ -81,35 +60,27 @@
 				}
 				{
 					id: "1006000000000023"
-					xp_levels: 20
 					type: "xp_levels"
+					xp_levels: 20
 				}
 			]
-			title: "O Terror Abissal: Leviathan"
+			shape: "diamond"
+			size: 1.5d
+			tasks: [{
+				entity: "cataclysm:the_leviathan"
+				id: "1006000000000021"
+				type: "kill"
+				value: 1L
+			}]
 			x: -0.5d
 			y: -1.5d
 		}
 		{
 			dependencies: ["1006000000000010"]
-			description: [
-				"Uma máquina mortífera de guerra ancestral que dispara lasers, mísseis teleguiados e campos de força magnéticos."
-				"Use sua melhor armadura e armas de fogo para derrubar esse pesadelo mecânico!"
-			]
 			icon: {
 				id: "cataclysm:witherite_ingot"
 			}
 			id: "1006000000000030"
-			shape: "diamond"
-			size: 1.5d
-			subtitle: "A arma bélica do passado sombrio"
-			tasks: [
-				{
-					entity: "cataclysm:the_harbinger"
-					id: "1006000000000031"
-					type: "kill"
-					value: 1L
-				}
-			]
 			rewards: [
 				{
 					id: "1006000000000032"
@@ -121,59 +92,61 @@
 				}
 				{
 					id: "1006000000000033"
-					xp_levels: 20
 					type: "xp_levels"
+					xp_levels: 20
 				}
 			]
-			title: "O Heraldo da Destruição (The Harbinger)"
+			shape: "diamond"
+			size: 1.5d
+			tasks: [{
+				entity: "cataclysm:the_harbinger"
+				id: "1006000000000031"
+				type: "kill"
+				value: 1L
+			}]
 			x: -0.5d
 			y: 1.5d
 		}
 		{
-			dependencies: ["1006000000000020", "1006000000000030"]
-			description: [
-				"Você derrotou os titãs mais temidos de todo o Minecraft e seus mods."
-				"Sua bravura superou a tecnologia do Create, a mística da Twilight Forest, o enxame da Bumblezone e a fúria do Cataclysm."
-				"Você é o verdadeiro Soberano de BlessForge!"
+			dependencies: [
+				"1006000000000020"
+				"1006000000000030"
 			]
 			icon: {
 				id: "minecraft:dragon_egg"
 			}
 			id: "1006000000000040"
-			shape: "hexagon"
-			size: 2.0d
-			subtitle: "O ápice da jornada em BlessForge"
-			tasks: [
-				{
-					id: "1006000000000041"
-					title: "Soberania Eterna Alcançada"
-					type: "checkmark"
-				}
-			]
 			rewards: [
 				{
+					count: 64
 					id: "1006000000000042"
 					item: {
-						count: 64
+						count: 1
 						id: "minecraft:diamond"
 					}
 					type: "item"
 				}
 				{
+					count: 16
 					id: "1006000000000043"
 					item: {
-						count: 16
+						count: 1
 						id: "minecraft:netherite_ingot"
 					}
 					type: "item"
 				}
 				{
 					id: "1006000000000044"
-					xp_levels: 50
 					type: "xp_levels"
+					xp_levels: 50
 				}
 			]
-			title: "Lenda Viva de BlessForge"
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [{
+				id: "1006000000000041"
+				type: "checkmark"
+			}]
 			x: 2.5d
 			y: 0.0d
 		}

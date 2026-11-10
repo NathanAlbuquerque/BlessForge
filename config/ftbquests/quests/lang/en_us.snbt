@@ -1,0 +1,233 @@
+{
+	chapter.1000000000000001.title: "🌟 O Mundo Eterno: Boas-Vindas"
+	quest.1000000000000010.title: "O Chamado do Pioneiro"
+	quest.1000000000000010.quest_subtitle: "O Manifesto do seu Mundo Eterno"
+	quest.1000000000000010.quest_desc: [
+		"Seja muito bem-vindo ao BlessForge!"
+		"Este modpack foi desenhado com um propósito claro e carinhoso: ser o seu **Mundo Eterno**."
+		"Sabemos que a vida real é corrida, cheia de trabalho, estudos e compromissos. Você não tem tempo a perder com tarefas maçantes e repetitivas, mas quer sentir o prazer genuíno de jogar um Minecraft rico, imersivo e recompensador."
+		"Aqui, a regra de ouro é: **Jogue no seu ritmo, sem pressa de zerar, e sem desperdiçar seu tempo livre**."
+		"Abaixo, apresentamos os 4 pilares criados para tornar sua estadia extraordinária!"
+	]
+	quest.1000000000000020.title: "Pilar 1: Mobilidade Sem Tédio"
+	quest.1000000000000020.quest_subtitle: "Chega de andar horas a pé sem rumo"
+	quest.1000000000000020.quest_desc: [
+		"Caminhar milhares de blocos no chão consome horas preciosas do seu dia."
+		"Para que suas sessões de jogo sejam 100% produtivas e empolgantes, o modpack traz soluções inteligentes:"
+		"• **Waystones**: Marque vilas e sua base para viajar instantaneamente pelo mapa através de pergaminhos ou pedras de teleporte."
+		"• **Tirolesas & Correntes (Ziplines)**: Conecte correntes entre montanhas com Connectible Chains e deslize velozmente segurando qualquer picareta na mão!"
+		"• **Nature's Compass**: Encontre qualquer bioma exuberante do Terralith diretamente, sem perambular no escuro."
+	]
+	quest.1000000000000030.title: "Pilar 2: Armazenamento Sem Bagunça"
+	quest.1000000000000030.quest_subtitle: "Inventário inteligente e centralizado"
+	quest.1000000000000030.quest_desc: [
+		"Abrir cinquenta baús diferentes procurando onde ficou guardado um item é uma das coisas mais cansativas do jogo tradicional."
+		"Aqui seu tempo é respeitado com ferramentas modernas:"
+		"• **Tom's Simple Storage**: Todos os seus baús se conectam a um Terminal Central. Digite o nome do item e pegue-o imediatamente com busca instantânea!"
+		"• **Acesso Sem Fio (Wireless Terminal)**: Gerencie seus itens pelo ar enquanto constrói sua base nos arredores."
+		"• **Sophisticated Backpacks**: Mochilas modulares com upgrade de ímã e coleta automática do chão."
+	]
+	quest.1000000000000040.title: "Pilar 3: Progresso Justo e Direto"
+	quest.1000000000000040.quest_subtitle: "Menos esforço braçal, mais evolução"
+	quest.1000000000000040.quest_desc: [
+		"O modpack recompensa seu esforço de forma direta, sem depender de sorte ou repetições monótonas:"
+		"• **FallingTree**: Quebre a base de qualquer árvore e o tronco inteiro cai num instante. Chega de pular galho por galho! (Segure SHIFT para quebrar apenas 1 bloco quando quiser)."
+		"• **Upgrader Equilibrado**: Nós configuramos minuciosamente o valor de centenas de itens. Sobras de minérios e materiais raros podem ser sacrificados para aumentar o dano, armadura e velocidade dos seus itens com lógica e justiça."
+	]
+	quest.1000000000000050.title: "Pilar 4: Curiosidade & Descobertas"
+	quest.1000000000000050.quest_subtitle: "Aprenda mecânicas fascinantes sem pressa"
+	quest.1000000000000050.quest_desc: [
+		"Descubra os mods nas abas laterais deste livro, cada um no seu momento certo:"
+		"• **Create**: Entenda a beleza das engrenagens, prensas a vapor e até armas de fogo (Create: Gunsmithing) de forma suave e didática."
+		"• **Twilight Forest & Bumblezone**: Dimensões mágicas para visitar nos fins de semana e desbravar segredos com calma."
+		"• **L_Ender's Cataclysm**: Chefes monumentais guardando relíquias secretas para quando você desejar uma batalha épica e memorável!"
+	]
+	quest.1000000000000060.title: "O Início de um Legado"
+	quest.1000000000000060.quest_subtitle: "Seu kit de boas-vindas ao Mundo Eterno"
+	quest.1000000000000060.quest_desc: [
+		"Você agora possui a bússola filosófica do BlessForge!"
+		"Aqui está um kit inicial de boas-vindas com suprimentos de qualidade para você estabelecer seu primeiro lar sem passar perrengue."
+		"Aproveite seu tempo. Construa, explore, aprenda e divirta-se!"
+	]
+
+	chapter.1001000000000001.title: "1. O Despertar do Pioneiro"
+	chapter.1002000000000001.title: "2. Revolução do Vapor e Balística"
+	chapter.1003000000000001.title: "3. Além do Dossel (Twilight Forest)"
+	chapter.1004000000000001.title: "4. Zumbidos e Abismos (The Bumblezone)"
+	chapter.1005000000000001.title: "5. O Arsenal Lendário"
+	chapter.1006000000000001.title: "6. O Fim dos Titãs (Cataclysm)"
+	chapter_group.1A2B3C4D5E6F7001.title: "BlessForge: A Saga dos Pioneiros"
+	quest.1001000000000010.quest_desc: [
+		"Bem-vindo ao mundo do BlessForge!"
+		"Com o mod FallingTree instalado, quebrar a base de um tronco derrubará a árvore inteira instantaneamente."
+		"Dica: Segure SHIFT (agachar) caso queira coletar apenas um bloco de madeira sem derrubar o resto!"
+	]
+	quest.1001000000000010.quest_subtitle: "Derrube sua primeira árvore de uma só vez"
+	quest.1001000000000010.title: "A Queda da Floresta"
+	quest.1001000000000020.quest_desc: [
+		"Um bom aventureiro precisa carregar seus despojos sem sobrecarregar seus bolsos."
+		"A mochila de couro do Sophisticated Backpacks pode ser aprimorada depois para níveis de Ferro, Ouro e Diamante!"
+	]
+	quest.1001000000000020.quest_subtitle: "Armazenamento móvel de alta performance"
+	quest.1001000000000020.title: "Bagagem de Respeito"
+	quest.1001000000000030.quest_desc: [
+		"Com os mods Connectible Chains e Ziplines: Rezipped!, você pode deslizar rapidamente sobre abismos e montanhas!"
+		"Como funciona: Clique com correntes em cercas ou muros para criar uma linha suspensa no ar. Depois, pule na corrente segurando qualquer Picareta ou Chave Inglesa na mão para deslizar em alta velocidade!"
+	]
+	quest.1001000000000030.quest_subtitle: "Velocidade nos ares com Ziplines"
+	quest.1001000000000030.title: "Cortando os Céus"
+	quest.1001000000000040.quest_desc: [
+		"O Upgrader é o coração do balanceamento do seu poder no BlessForge."
+		"Com ele você queima itens valiosos para extrair pontos de experiência material e imbuir atributos em armaduras, espadas e arcos."
+	]
+	quest.1001000000000040.quest_subtitle: "A essência do poder evolutivo"
+	quest.1001000000000040.title: "A Forja Evolutiva"
+	quest.1001000000000050.quest_desc: [
+		"O mundo gerado pelo Terralith e Tectonic é gigantesco."
+		"Encontre ou fabrique uma Waystone para marcar sua base e poder voltar num piscar de olhos usando Scrolls ou Warp Stones!"
+	]
+	quest.1001000000000050.quest_subtitle: "Pontos de retorno no vasto horizonte"
+	quest.1001000000000050.title: "Marco no Horizonte"
+	quest.1001000000000060.quest_desc: [
+		"Você dominou os primeiros elementos da sobrevivência e está pronto para voos maiores."
+		"A partir daqui, os caminhos da Engenharia a Vapor (Create) e das Dimensões Místicas se abrem!"
+	]
+	quest.1001000000000060.quest_subtitle: "A encruzilhada do destino"
+	quest.1001000000000060.title: "Pioneiro Consagrado"
+	quest.1002000000000010.quest_desc: [
+		"A pedra angular de todas as máquinas rotacionais do Create."
+		"Misture cascalho de ferro com andesito para criar as ligas que suportam o estresse cinético das suas fábricas."
+	]
+	quest.1002000000000010.quest_subtitle: "O nascimento da mecânica"
+	quest.1002000000000010.title: "Liga de Andesito"
+	quest.1002000000000020.quest_desc: [
+		"A força da água fluindo move suas primeiras engrenagens."
+		"Gera a Força Rotacional (SU) necessária para alimentar trituradores, prensas e esteiras."
+	]
+	quest.1002000000000020.quest_subtitle: "A força dos rios ao seu favor"
+	quest.1002000000000020.title: "Energia Hidráulica"
+	quest.1002000000000030.quest_desc: [
+		"Posicione a prensa mecânica acima de uma base e aplique energia rotacional."
+		"Ela achatará lingotes em chapas perfeitas para a construção de mecanismos complexos."
+	]
+	quest.1002000000000030.quest_subtitle: "Amassando metais com precisão"
+	quest.1002000000000030.title: "Prensa Industrial"
+	quest.1002000000000040.quest_desc: [
+		"Chega de baús desorganizados!"
+		"O Tom's Simple Storage se conecta a qualquer baú ou container da sua base através de cabos e um conector, centralizando tudo em um terminal de busca com pesquisa instantânea."
+	]
+	quest.1002000000000040.quest_subtitle: "Central de controle dos seus itens"
+	quest.1002000000000040.title: "Armazenamento Centralizado"
+	quest.1002000000000050.quest_desc: [
+		"As feras das outras dimensões não terão piedade de quem usar apenas flechas comuns."
+		"Com o Create: Gunsmithing você forja canos de aço, câmaras e gatilhos para montar suas próprias armas de fogo!"
+	]
+	quest.1002000000000050.quest_subtitle: "Pólvora, cano de metal e chumbo grosso"
+	quest.1002000000000050.title: "A Arte da Armaria"
+	quest.1003000000000010.quest_desc: [
+		"Para abrir o portal para a dimensão do crepúsculo, cave um buraco 2x2 de água na grama, plante flores em toda a volta e atire um diamante lá dentro."
+		"Um raio cairá do céu abrindo o portal místico!"
+	]
+	quest.1003000000000010.quest_subtitle: "O ritual do diamante e das flores"
+	quest.1003000000000010.title: "O Chamado do Crepúsculo"
+	quest.1003000000000020.quest_desc: [
+		"A serpente gigante habita seu pátio de pedra cercado de hera."
+		"Mire na cauda dela para arrancar suas placas e expor seus pontos fracos!"
+	]
+	quest.1003000000000020.quest_subtitle: "O terror sinuoso do labirinto"
+	quest.1003000000000020.title: "A Fúria da Naga"
+	quest.1003000000000030.quest_desc: [
+		"No topo de sua colossal torre de pedra, o Lich conjura escudos mágicos impenetráveis."
+		"Rebata os projéteis mágicos de volta contra ele para quebrar seus escudos antes de partir para o ataque corporal!"
+	]
+	quest.1003000000000030.quest_subtitle: "O monarca esquelético da torre"
+	quest.1003000000000030.title: "O Eclipse do Lich"
+	quest.1003000000000040.quest_desc: [
+		"Nas profundezas escuras dos labirintos subterrâneos repousa o Minoshroom."
+		"Derrote-o para obter o lendário Diamond Minotaur Axe e a refeição fortificante Meef Stroganoff!"
+	]
+	quest.1003000000000040.quest_subtitle: "O guardião com chifres dos labirintos"
+	quest.1003000000000040.title: "Labirinto do Minotauro"
+	quest.1003000000000050.quest_desc: ["Com o poder dos chefes do Crepúsculo absorvido, você extrai o aço místico (Steelleaf e Ironwood) para fundir artefatos raros que serão essenciais na forja final de Simply Swords e Upgrader!"]
+	quest.1003000000000050.quest_subtitle: "A colheita do crepúsculo eterno"
+	quest.1003000000000050.title: "Metais Lendários do Crepúsculo"
+	quest.1004000000000010.quest_desc: [
+		"Para adentrar a dimensão colmeia The Bumblezone, atire uma Ender Pearl diretamente em uma colmeia ou ninho de abelha comum."
+		"Você será miniaturizado e teleportado para um universo feito inteiramente de cera, favos e néctar!"
+	]
+	quest.1004000000000010.quest_subtitle: "O mergulho microscópico na colmeia"
+	quest.1004000000000010.title: "A Invasão da Colmeia"
+	quest.1004000000000020.quest_desc: [
+		"Os cristais de mel são minérios bioluminescentes raríssimos da Bumblezone."
+		"Eles possuem dureza excepcional e capacidade de regeneração celular imediata quando consumidos ou aplicados em armas."
+	]
+	quest.1004000000000020.quest_subtitle: "A joia dourada dos enxames"
+	quest.1004000000000020.title: "Cristais de Âmbar Doce"
+	quest.1004000000000030.quest_desc: [
+		"A Geleia Real é a substância mais potente produzida pela Rainha das Abelhas."
+		"Concede efeitos drásticos de cura e amplificação de atributos físicos, sendo um dos ingredientes de sacrifício mais valiosos no Upgrader."
+	]
+	quest.1004000000000030.quest_subtitle: "O elixir supremo da monarquia abelínea"
+	quest.1004000000000030.title: "Geleia Real Soberana"
+	quest.1004000000000040.quest_desc: [
+		"O canhão de cristais dispara espinhos pontiagudos de néctar solidificado em altíssima velocidade."
+		"Uma arma biológica devastadora para complementar seu arsenal!"
+	]
+	quest.1004000000000040.quest_subtitle: "Artilharia entomológica pesada"
+	quest.1004000000000040.title: "Artilharia do Enxame"
+	quest.1005000000000010.quest_desc: [
+		"O Simply Swords adiciona armas ancestrais com animações e poderes mágicos únicos."
+		"Comece forjando suas primeiras variantes de lâminas pesadas (Claymores, Cutlasses, Chakrams ou Glaives)."
+	]
+	quest.1005000000000010.quest_subtitle: "Muito além da espada tradicional"
+	quest.1005000000000010.title: "A Arte da Lâmina Pesada"
+	quest.1005000000000020.quest_desc: [
+		"Em baús raros de estruturas (Lootr, Dungeons Arise e Explorify), você pode desenterrar armas místicas que possuem almas seladas."
+		"Exemplos: Brimstone Claymore, Runebreaker, Stormbringer, Arcanethyst."
+	]
+	quest.1005000000000020.quest_subtitle: "Lâminas forjadas pelos próprios deuses"
+	quest.1005000000000020.title: "Herança dos Titãs"
+	quest.1005000000000030.quest_desc: [
+		"Com os itens obtidos na Twilight Forest e na Bumblezone, alimente seu Upgrader com materiais nobres."
+		"Eleve sua arma e armadura principal para o patamar máximo de afiação e resistência!"
+	]
+	quest.1005000000000030.quest_subtitle: "O auge do refinamento material"
+	quest.1005000000000030.title: "Aprimoramento Absoluto"
+	quest.1005000000000040.quest_desc: [
+		"Você agora possui o equipamento mais poderoso que este mundo pode oferecer."
+		"Nada menos do que isso será suficiente para encarar o apocalipse biológico e cibernético de L_Ender's Cataclysm!"
+	]
+	quest.1005000000000040.quest_subtitle: "O guerreiro perfeito para o desafio final"
+	quest.1005000000000040.title: "O Campeão Forjado"
+	quest.1006000000000010.quest_desc: [
+		"Nas profundezas ardentes do Nether, dentro da Soul Blacksmith fornalha ancestral, repousa o gigante forjado em netherite pura."
+		"Cuidado com seus terremotos de lava e suas investidas brutais!"
+	]
+	quest.1006000000000010.quest_subtitle: "O colosso de lava e netherite"
+	quest.1006000000000010.title: "A Monstruosidade de Netherite"
+	quest.1006000000000020.quest_desc: [
+		"Nas profundezas abissais dos oceanos do Cataclysm dorme o Leviathan."
+		"Você precisará de artefatos de respiração aquática e mira perfeita para acertar seus pontos vitais em pleno nado submerso!"
+	]
+	quest.1006000000000020.quest_subtitle: "O senhor dos abismos oceânicos"
+	quest.1006000000000020.title: "O Terror Abissal: Leviathan"
+	quest.1006000000000030.quest_desc: [
+		"Uma máquina mortífera de guerra ancestral que dispara lasers, mísseis teleguiados e campos de força magnéticos."
+		"Use sua melhor armadura e armas de fogo para derrubar esse pesadelo mecânico!"
+	]
+	quest.1006000000000030.quest_subtitle: "A arma bélica do passado sombrio"
+	quest.1006000000000030.title: "O Heraldo da Destruição (The Harbinger)"
+	quest.1006000000000040.quest_desc: [
+		"Você derrotou os titãs mais temidos de todo o Minecraft e seus mods."
+		"Sua bravura superou a tecnologia do Create, a mística da Twilight Forest, o enxame da Bumblezone e a fúria do Cataclysm."
+		"Você é o verdadeiro Soberano de BlessForge!"
+	]
+	quest.1006000000000040.quest_subtitle: "O ápice da jornada em BlessForge"
+	quest.1006000000000040.title: "Lenda Viva de BlessForge"
+	task.1001000000000061.title: "Rumo à Próxima Era"
+	task.1003000000000011.title: "Abra o Portal do Crepúsculo"
+	task.1004000000000011.title: "Entre na Bumblezone"
+	task.1005000000000021.title: "Conquiste uma Espada Mítica"
+	task.1005000000000041.title: "Pronto para o Cataclismo"
+	task.1006000000000041.title: "Soberania Eterna Alcançada"
+}

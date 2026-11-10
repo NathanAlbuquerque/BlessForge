@@ -7,70 +7,47 @@
 		id: "simplyswords:brimstone_claymore"
 	}
 	id: "1005000000000001"
-	order_index: 4
-	title: "5. O Arsenal Lendário"
+	images: [ ]
+	order_index: 5
+	quest_links: [ ]
 	quests: [
 		{
-			description: [
-				"O Simply Swords adiciona armas ancestrais com animações e poderes mágicos únicos."
-				"Comece forjando suas primeiras variantes de lâminas pesadas (Claymores, Cutlasses, Chakrams ou Glaives)."
-			]
 			icon: {
 				id: "simplyswords:diamond_claymore"
 			}
 			id: "1005000000000010"
-			shape: "hexagon"
-			size: 1.3d
-			subtitle: "Muito além da espada tradicional"
-			tasks: [
-				{
-					id: "1005000000000011"
-					item: {
-						count: 1
-						id: "simplyswords:diamond_claymore"
-					}
-					type: "item"
-				}
-			]
 			rewards: [
 				{
+					count: 2
 					id: "1005000000000012"
 					item: {
-						count: 2
+						count: 1
 						id: "minecraft:netherite_scrap"
 					}
 					type: "item"
 				}
 				{
 					id: "1005000000000013"
-					xp: 200
 					type: "xp"
+					xp: 200
 				}
 			]
-			title: "A Arte da Lâmina Pesada"
+			shape: "hexagon"
+			size: 1.3d
+			tasks: [{
+				id: "1005000000000011"
+				item: { count: 1, id: "simplyswords:diamond_claymore" }
+				type: "item"
+			}]
 			x: -3.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["1005000000000010"]
-			description: [
-				"Em baús raros de estruturas (Lootr, Dungeons Arise e Explorify), você pode desenterrar armas místicas que possuem almas seladas."
-				"Exemplos: Brimstone Claymore, Runebreaker, Stormbringer, Arcanethyst."
-			]
 			icon: {
 				id: "simplyswords:brimstone_claymore"
 			}
 			id: "1005000000000020"
-			shape: "diamond"
-			size: 1.4d
-			subtitle: "Lâminas forjadas pelos próprios deuses"
-			tasks: [
-				{
-					id: "1005000000000021"
-					title: "Conquiste uma Espada Mítica"
-					type: "checkmark"
-				}
-			]
 			rewards: [
 				{
 					id: "1005000000000022"
@@ -82,37 +59,25 @@
 				}
 				{
 					id: "1005000000000023"
-					xp_levels: 10
 					type: "xp_levels"
+					xp_levels: 10
 				}
 			]
-			title: "Herança dos Titãs"
+			shape: "diamond"
+			size: 1.4d
+			tasks: [{
+				id: "1005000000000021"
+				type: "checkmark"
+			}]
 			x: -0.5d
 			y: -1.0d
 		}
 		{
 			dependencies: ["1005000000000010"]
-			description: [
-				"Com os itens obtidos na Twilight Forest e na Bumblezone, alimente seu Upgrader com materiais nobres."
-				"Eleve sua arma e armadura principal para o patamar máximo de afiação e resistência!"
-			]
 			icon: {
 				id: "upgrader:upgrader"
 			}
 			id: "1005000000000030"
-			shape: "gear"
-			subtitle: "O auge do refinamento material"
-			tasks: [
-				{
-					count: 4L
-					id: "1005000000000031"
-					item: {
-						count: 1
-						id: "minecraft:netherite_ingot"
-					}
-					type: "item"
-				}
-			]
 			rewards: [
 				{
 					id: "1005000000000032"
@@ -124,34 +89,29 @@
 				}
 				{
 					id: "1005000000000033"
-					xp_levels: 10
 					type: "xp_levels"
+					xp_levels: 10
 				}
 			]
-			title: "Aprimoramento Absoluto"
+			shape: "gear"
+			tasks: [{
+				count: 4L
+				id: "1005000000000031"
+				item: { count: 1, id: "minecraft:netherite_ingot" }
+				type: "item"
+			}]
 			x: -0.5d
 			y: 1.0d
 		}
 		{
-			dependencies: ["1005000000000020", "1005000000000030"]
-			description: [
-				"Você agora possui o equipamento mais poderoso que este mundo pode oferecer."
-				"Nada menos do que isso será suficiente para encarar o apocalipse biológico e cibernético de L_Ender's Cataclysm!"
+			dependencies: [
+				"1005000000000020"
+				"1005000000000030"
 			]
 			icon: {
 				id: "minecraft:nether_star"
 			}
 			id: "1005000000000040"
-			shape: "heart"
-			size: 1.5d
-			subtitle: "O guerreiro perfeito para o desafio final"
-			tasks: [
-				{
-					id: "1005000000000041"
-					title: "Pronto para o Cataclismo"
-					type: "checkmark"
-				}
-			]
 			rewards: [
 				{
 					id: "1005000000000042"
@@ -163,11 +123,16 @@
 				}
 				{
 					id: "1005000000000043"
-					xp_levels: 15
 					type: "xp_levels"
+					xp_levels: 15
 				}
 			]
-			title: "O Campeão Forjado"
+			shape: "heart"
+			size: 1.5d
+			tasks: [{
+				id: "1005000000000041"
+				type: "checkmark"
+			}]
 			x: 2.5d
 			y: 0.0d
 		}
