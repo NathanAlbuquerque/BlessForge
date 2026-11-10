@@ -4,116 +4,119 @@
 	filename: "capitulo_5_arsenal"
 	group: "1A2B3C4D5E6F7001"
 	icon: {
-		id: "simplyswords:brimstone_claymore"
+		id: "simplyswords:iron_longsword"
 	}
 	id: "1005000000000001"
 	order_index: 5
-	title: "5. O Arsenal Lendario"
+	title: "5. O Arsenal Lendario (Simply Swords e Armaduras)"
 	quests: [
 		{
 			description: [
-				"Para enfrentar as entidades supremas que ameacam o Mundo Eterno, laminas convencionais nao sao suficientes."
-				"Forje armas pesadas especializadas de diamante — Katana para golpes em sequencia rápida, Claymore para varreduras em arco ou Glaive para perfuracao com alcance ampliado!"
+				"O combate tradicional do Minecraft com espadas genericas e limitado. Com o Simply Swords e Armor of the Ages, seu arsenal ganha estilos marciais historicos e taticas unicas:"
+				"• Espadas longas fornecem alcance extendido;"
+				"• Rapieiras concedem sequencias de golpes ultra-rapidas;"
+				"• Claymores varrem hordas inteiras em arcos abertos."
+				"Descubra cada postura sem pressa e eleja suas laminas favoritas!"
 			]
 			icon: {
-				id: "simplyswords:diamond_claymore"
+				id: "minecraft:iron_sword"
 			}
 			id: "1005000000000010"
 			shape: "hexagon"
-			size: 1.4d
-			subtitle: "Armamentos de diamante com posturas de combate avançadas"
+			size: 1.5d
+			subtitle: "[Dificuldade: Facil] Cada lamina reflete uma postura de alma"
 			tasks: [
 				{
 					id: "1005000000000011"
+					title: "Inicie o Caminho do Armeiro"
+					type: "checkmark"
+				}
+			]
+			rewards: [
+				{
+					count: 8
+					id: "1005000000000012"
 					item: {
 						count: 1
-						id: "simplyswords:diamond_claymore"
+						id: "minecraft:iron_ingot"
 					}
+					type: "item"
+				}
+				{
+					id: "1005000000000013"
+					xp_levels: 3
+					type: "xp_levels"
+				}
+			]
+			title: "A Filosofia do Armeiro"
+			x: -9.8d
+			y: -3.0d
+		}
+		{
+			dependencies: ["1005000000000010"]
+			description: [
+				"Um verdadeiro guerreiro sabe que lamina cega e perigo certo. Tenha um Rebolo (Grindstone) em sua forja para remover impurezas e reciclar encantamentos antigos em pura experiencia."
+				"A forja bem cuidada e a base de todo arsenal formidavel."
+			]
+			icon: {
+				id: "minecraft:grindstone"
+			}
+			id: "1005000000000020"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Facil] Manutencao de fio e purificacao de metais"
+			tasks: [
+				{
+					id: "1005000000000021"
+					item: {
+						count: 1
+						id: "minecraft:grindstone"
+					}
+					title: "Construa um Rebolo"
 					type: "item"
 				}
 			]
 			rewards: [
 				{
 					count: 4
-					id: "1005000000000012"
+					id: "1005000000000022"
 					item: {
 						count: 1
-						id: "minecraft:diamond"
+						id: "minecraft:iron_ingot"
 					}
 					type: "item"
 				}
 				{
-					id: "1005000000000013"
-					type: "xp_levels"
-					xp_levels: 10
+					id: "1005000000000023"
+					xp: 100
+					type: "xp"
 				}
 			]
-			title: "A Forja da Lâmina Pesada"
-			x: -10.0d
-			y: 0.0d
+			title: "A Pedra de Amolar do Aprendiz"
+			x: -7.0d
+			y: -3.0d
 		}
 		{
-			dependencies: ["1005000000000010"]
+			dependencies: ["1005000000000020"]
 			description: [
-				"A Katana de Diamante e a lamina oriental veloz por excelencia, desferindo sequencias rapidas com alto dano de acerto continuo."
+				"A Longsword foi projetada para manter inimigos fora da distancia de golpe padrao. Seu alcance superior permite golpear rastejantes e esqueletos antes que alcancem voce."
+				"Forje sua primeira espada longa basica de ferro."
 			]
 			icon: {
-				id: "simplyswords:diamond_katana"
-			}
-			id: "1005000000000100"
-			shape: "circle"
-			size: 1.1d
-			subtitle: "[Dificuldade: Media] Cortes em alta frequencia e postura agil"
-			tasks: [
-				{
-					id: "1005000000000101"
-					item: {
-						count: 1
-						id: "simplyswords:diamond_katana"
-					}
-					type: "item"
-				}
-			]
-			rewards: [
-				{
-					count: 8
-					id: "1005000000000102"
-					item: {
-						count: 1
-						id: "minecraft:lapis_lazuli"
-					}
-					type: "item"
-				}
-				{
-					id: "1005000000000103"
-					type: "xp_levels"
-					xp_levels: 8
-				}
-			]
-			title: "A Katana das Sombras"
-			x: -10.0d
-			y: -2.5d
-		}
-		{
-			dependencies: ["1005000000000010"]
-			description: [
-				"O mod Armor of the Ages traz vestimentas de guerra dos maiores imperios da historia."
-				"Forje uma armadura cerimonial de Centuriao Romano para ganhar defesa equilibrada e estetica marcial imponente."
-			]
-			icon: {
-				id: "armoroftheages:centurion_armor_chest"
+				id: "simplyswords:iron_longsword"
 			}
 			id: "1005000000000030"
 			shape: "circle"
-			size: 1.1d
-			subtitle: "[Dificuldade: Media] As armaduras que ergueram os grandes imperios"
+			size: 1.2d
+			subtitle: "[Dificuldade: Facil] Alcance estendido e equilibrio impecavel"
 			tasks: [
 				{
 					id: "1005000000000031"
 					item: {
 						count: 1
-						id: "armoroftheages:centurion_armor_chest"
+						id: "simplyswords:iron_longsword"
 					}
+					title: "Forje uma Longsword de Ferro"
 					type: "item"
 				}
 			]
@@ -123,558 +126,217 @@
 					id: "1005000000000032"
 					item: {
 						count: 1
-						id: "minecraft:iron_ingot"
+						id: "minecraft:leather"
 					}
 					type: "item"
 				}
 				{
 					id: "1005000000000033"
-					type: "xp_levels"
-					xp_levels: 8
+					xp: 150
+					type: "xp"
 				}
 			]
-			title: "Armadura dos Seculos: O Centuriao"
-			x: -10.0d
-			y: 2.5d
-		}
-		{
-			dependencies: ["1005000000000010"]
-			description: [
-				"Revestir sua arma de combate com Netherite eleva sua massa e estabilidade, impedindo que golpes fortes sejam interrompidos por recuo."
-				"Com a Claymore de Netherite, cada golpe desestabiliza a armadura de chefes e colossos."
-			]
-			icon: {
-				id: "simplyswords:netherite_claymore"
-			}
-			id: "1005000000000020"
-			shape: "diamond"
-			size: 1.3d
-			subtitle: "[Dificuldade: Media] O impacto maciço do aco negro do Nether"
-			tasks: [
-				{
-					id: "1005000000000021"
-					item: {
-						count: 1
-						id: "simplyswords:netherite_claymore"
-					}
-					type: "item"
-				}
-			]
-			rewards: [
-				{
-					count: 1
-					id: "1005000000000022"
-					item: {
-						count: 1
-						id: "minecraft:netherite_ingot"
-					}
-					type: "item"
-				}
-				{
-					id: "1005000000000023"
-					type: "xp_levels"
-					xp_levels: 15
-				}
-			]
-			title: "O Peso do Netherite: Claymore Suprema"
-			x: -7.5d
-			y: 0.0d
-		}
-		{
-			dependencies: ["1005000000000100"]
-			description: [
-				"A Rapieira permite estocadas cirurgicas que penetram defesas pesadas e aumentam a esquiva lateral do duelista."
-			]
-			icon: {
-				id: "simplyswords:diamond_rapier"
-			}
-			id: "1005000000000110"
-			shape: "circle"
-			size: 1.1d
-			subtitle: "[Dificuldade: Media] Estocadas velozes e esquivas precisas"
-			tasks: [
-				{
-					id: "1005000000000111"
-					item: {
-						count: 1
-						id: "simplyswords:diamond_rapier"
-					}
-					type: "item"
-				}
-			]
-			rewards: [
-				{
-					count: 4
-					id: "1005000000000112"
-					item: {
-						count: 1
-						id: "minecraft:gold_ingot"
-					}
-					type: "item"
-				}
-				{
-					id: "1005000000000113"
-					type: "xp_levels"
-					xp_levels: 8
-				}
-			]
-			title: "A Rapieira do Duelista"
-			x: -7.5d
-			y: -2.5d
-		}
-		{
-			dependencies: ["1005000000000030"]
-			description: [
-				"A grandiosa armadura de placas lacadas O-Yoroi, usada pelos nobres generais samurais para intimidar e absorver flechas."
-			]
-			icon: {
-				id: "armoroftheages:o_yoroi_armor_chest"
-			}
-			id: "1005000000000130"
-			shape: "circle"
-			size: 1.1d
-			subtitle: "[Dificuldade: Dificil] A armadura dos generais samurais do Sol Nascente"
-			tasks: [
-				{
-					id: "1005000000000131"
-					item: {
-						count: 1
-						id: "armoroftheages:o_yoroi_armor_chest"
-					}
-					type: "item"
-				}
-			]
-			rewards: [
-				{
-					count: 4
-					id: "1005000000000132"
-					item: {
-						count: 1
-						id: "minecraft:iron_ingot"
-					}
-					type: "item"
-				}
-				{
-					id: "1005000000000133"
-					type: "xp_levels"
-					xp_levels: 10
-				}
-			]
-			title: "A Honra Samurai: Armadura O-Yoroi"
-			x: -7.5d
-			y: 2.5d
-		}
-		{
-			dependencies: ["1005000000000130"]
-			description: [
-				"O Chakram e uma lamina circular que pode ser arremessada cortando inimigos antes de retornar para a mao do guerreiro."
-			]
-			icon: {
-				id: "simplyswords:netherite_chakram"
-			}
-			id: "1005000000000170"
-			shape: "circle"
-			size: 1.1d
-			subtitle: "[Dificuldade: Dificil] O disco de arremesso rotativo do Nether"
-			tasks: [
-				{
-					id: "1005000000000171"
-					item: {
-						count: 1
-						id: "simplyswords:netherite_chakram"
-					}
-					type: "item"
-				}
-			]
-			rewards: [
-				{
-					count: 2
-					id: "1005000000000172"
-					item: {
-						count: 1
-						id: "minecraft:diamond"
-					}
-					type: "item"
-				}
-				{
-					id: "1005000000000173"
-					type: "xp_levels"
-					xp_levels: 10
-				}
-			]
-			title: "O Chakram de Netherite"
-			x: -7.5d
-			y: 5.0d
+			title: "Espada Longa de Ferro (Longsword)"
+			x: -4.2d
+			y: -3.0d
 		}
 		{
 			dependencies: ["1005000000000020"]
 			description: [
-				"O Altar Runico (Runic Forge) canaliza a energia de Tabuas Runicas para despertar habilidades sobrenaturais em armas ordinarias."
-				"Construa a forja para fundir runas de fogo, gelo, vacuo e cura diretamente no aco!"
+				"A Rapier possui taxa de ataque altissima. Ao atingir o alvo em sequencia ininterrupta, desfere dano acumulativo devastador."
+				"Excelente para jogadores que apreciam ritmo rapido e agilidade de esquiva."
 			]
 			icon: {
-				id: "simplyswords:runic_forge"
+				id: "simplyswords:iron_rapier"
 			}
 			id: "1005000000000040"
-			shape: "diamond"
-			size: 1.3d
-			subtitle: "[Dificuldade: Dificil] O altar místico de infusao de runas"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Facil] Velocidade cirurgica e estocadas consecutivas"
 			tasks: [
 				{
 					id: "1005000000000041"
 					item: {
 						count: 1
-						id: "simplyswords:runic_forge"
+						id: "simplyswords:iron_rapier"
+					}
+					title: "Forje uma Rapieira de Ferro"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 16
+					id: "1005000000000042"
+					item: {
+						count: 1
+						id: "minecraft:iron_nugget"
 					}
 					type: "item"
 				}
 				{
-					id: "1005000000000042"
+					id: "1005000000000043"
+					xp: 150
+					type: "xp"
+				}
+			]
+			title: "Rapieira de Ferro Veloz (Rapier)"
+			x: -1.4d
+			y: -3.0d
+		}
+		{
+			dependencies: ["1005000000000020"]
+			description: [
+				"O Sai e uma adaga de tres pontas oriental de manuseio duplo. Ele concede ataques rapidos como o relampago em combates a queima-roupa."
+				"Forje um par de Sais de ferro para treinar suas combinacoes marciais."
+			]
+			icon: {
+				id: "simplyswords:iron_sai"
+			}
+			id: "1005000000000050"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Facil] Combate de empunhadura dupla e desvio letal"
+			tasks: [
+				{
+					id: "1005000000000051"
 					item: {
 						count: 1
-						id: "simplyswords:runic_tablet"
+						id: "simplyswords:iron_sai"
 					}
+					title: "Forje um Sai de Ferro"
 					type: "item"
 				}
 			]
 			rewards: [
 				{
 					count: 8
-					id: "1005000000000043"
-					item: {
-						count: 1
-						id: "minecraft:diamond"
-					}
-					type: "item"
-				}
-				{
-					id: "1005000000000044"
-					type: "xp_levels"
-					xp_levels: 15
-				}
-			]
-			title: "A Forja Rúnica Mítica"
-			x: -5.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["1005000000000110"]
-			description: [
-				"A Glaive combina haste longa e lamina curvada para golpear inimigos a uma distancia segura."
-			]
-			icon: {
-				id: "simplyswords:diamond_glaive"
-			}
-			id: "1005000000000120"
-			shape: "circle"
-			size: 1.1d
-			subtitle: "[Dificuldade: Media] Alcance estendido e controle de perimetro"
-			tasks: [
-				{
-					id: "1005000000000121"
-					item: {
-						count: 1
-						id: "simplyswords:diamond_glaive"
-					}
-					type: "item"
-				}
-			]
-			rewards: [
-				{
-					count: 4
-					id: "1005000000000122"
-					item: {
-						count: 1
-						id: "minecraft:diamond"
-					}
-					type: "item"
-				}
-				{
-					id: "1005000000000123"
-					type: "xp_levels"
-					xp_levels: 8
-				}
-			]
-			title: "A Glaive de Longo Alcance"
-			x: -5.0d
-			y: -2.5d
-		}
-		{
-			dependencies: ["1005000000000130"]
-			description: [
-				"Inspirada nos governantes do Nilo, a armadura do Farao brilha em ouro e lapis-lazuli, garantindo presenca divina."
-			]
-			icon: {
-				id: "armoroftheages:pharaoh_armor_chest"
-			}
-			id: "1005000000000140"
-			shape: "circle"
-			size: 1.1d
-			subtitle: "[Dificuldade: Dificil] A majestade divina das dinastias do Nilo"
-			tasks: [
-				{
-					id: "1005000000000141"
-					item: {
-						count: 1
-						id: "armoroftheages:pharaoh_armor_chest"
-					}
-					type: "item"
-				}
-			]
-			rewards: [
-				{
-					count: 4
-					id: "1005000000000142"
-					item: {
-						count: 1
-						id: "minecraft:gold_block"
-					}
-					type: "item"
-				}
-				{
-					id: "1005000000000143"
-					type: "xp_levels"
-					xp_levels: 12
-				}
-			]
-			title: "A Gloria Dourada do Farao"
-			x: -5.0d
-			y: 2.5d
-		}
-		{
-			dependencies: ["1005000000000040"]
-			description: [
-				"Forjada nas profundezas vulcanicas do Nether, a Brimstone Claymore irradia ondas continuas de magma incandescente."
-				"Ao atingir inimigos, ergue colunas de chamas que incineram o terreno e causam queimaduras penetrantes."
-			]
-			icon: {
-				id: "simplyswords:brimstone_claymore"
-			}
-			id: "1005000000000050"
-			shape: "pentagon"
-			size: 1.3d
-			subtitle: "[Dificuldade: Dificil] O espadao forjado em rocha de enxofre ardente"
-			tasks: [
-				{
-					id: "1005000000000051"
-					item: {
-						count: 1
-						id: "simplyswords:brimstone_claymore"
-					}
-					type: "item"
-				}
-			]
-			rewards: [
-				{
-					count: 2
 					id: "1005000000000052"
 					item: {
 						count: 1
-						id: "minecraft:netherite_ingot"
+						id: "minecraft:flint"
 					}
 					type: "item"
 				}
 				{
 					id: "1005000000000053"
-					type: "xp_levels"
-					xp_levels: 20
+					xp: 150
+					type: "xp"
 				}
 			]
-			title: "A Furia Vulcanica: Brimstone Claymore"
-			x: -2.5d
-			y: -2.5d
+			title: "Par de Sais de Ferro Ageis (Sai)"
+			x: 1.4d
+			y: -3.0d
 		}
 		{
-			dependencies: ["1005000000000040"]
+			dependencies: ["1005000000000020"]
 			description: [
-				"A temida lamina sanguinea se alimenta do dano causado aos inimigos, convertendo ferimentos em roubo de vida imediato para o seu portador."
+				"A Halberd une uma cabeca de machado com uma ponta perfurante montada sobre uma longa haste de madeira."
+				"Capaz de quebrar escudos e repelir inimigos com violencia descomunal."
 			]
 			icon: {
-				id: "simplyswords:bloodwake"
-			}
-			id: "1005000000000070"
-			shape: "pentagon"
-			size: 1.3d
-			subtitle: "[Dificuldade: Dificil] O furor vampírico da maré carmesim"
-			tasks: [
-				{
-					id: "1005000000000071"
-					item: {
-						count: 1
-						id: "simplyswords:bloodwake"
-					}
-					type: "item"
-				}
-			]
-			rewards: [
-				{
-					count: 1
-					id: "1005000000000072"
-					item: {
-						count: 1
-						id: "minecraft:enchanted_golden_apple"
-					}
-					type: "item"
-				}
-				{
-					id: "1005000000000073"
-					type: "xp_levels"
-					xp_levels: 20
-				}
-			]
-			title: "O Despertar da Maré Vermelha: Bloodwake"
-			x: -2.5d
-			y: 0.0d
-		}
-		{
-			dependencies: ["1005000000000140"]
-			description: [
-				"Armadura de cruzados e paladinos da ordem sagrada, forjada com placas pesadas para abencoar seu portador contra mortos-vivos."
-			]
-			icon: {
-				id: "armoroftheages:holy_armor_chest"
-			}
-			id: "1005000000000150"
-			shape: "circle"
-			size: 1.1d
-			subtitle: "[Dificuldade: Dificil] A armadura dos paladinos e cavaleiros da fe"
-			tasks: [
-				{
-					id: "1005000000000151"
-					item: {
-						count: 1
-						id: "armoroftheages:holy_armor_chest"
-					}
-					type: "item"
-				}
-			]
-			rewards: [
-				{
-					count: 4
-					id: "1005000000000152"
-					item: {
-						count: 1
-						id: "minecraft:diamond"
-					}
-					type: "item"
-				}
-				{
-					id: "1005000000000153"
-					type: "xp_levels"
-					xp_levels: 12
-				}
-			]
-			title: "O Cavaleiro Sagrado: Holy Armor"
-			x: -2.5d
-			y: 2.5d
-		}
-		{
-			dependencies: ["1005000000000150"]
-			description: [
-				"Fundida com tabuas runicas arcanas, a Katana Runica desfere cortes fantasmas adicionais a cada golpe comum."
-			]
-			icon: {
-				id: "simplyswords:runic_katana"
-			}
-			id: "1005000000000180"
-			shape: "pentagon"
-			size: 1.25d
-			subtitle: "[Dificuldade: Dificil] Cortes dimensionais no altar runico"
-			tasks: [
-				{
-					id: "1005000000000181"
-					item: {
-						count: 1
-						id: "simplyswords:runic_katana"
-					}
-					type: "item"
-				}
-			]
-			rewards: [
-				{
-					count: 2
-					id: "1005000000000182"
-					item: {
-						count: 1
-						id: "minecraft:netherite_ingot"
-					}
-					type: "item"
-				}
-				{
-					id: "1005000000000183"
-					type: "xp_levels"
-					xp_levels: 18
-				}
-			]
-			title: "A Katana Rúnica Desperta"
-			x: -2.5d
-			y: 5.0d
-		}
-		{
-			dependencies: ["1005000000000040"]
-			description: [
-				"Imbuida com geodos de ametista pura e energia arcana, esta lamina projeta laminas espectrais flutuantes que buscam alvos automaticamente ao redor do atacante."
-			]
-			icon: {
-				id: "simplyswords:arcanethyst"
+				id: "simplyswords:iron_halberd"
 			}
 			id: "1005000000000060"
-			shape: "pentagon"
-			size: 1.3d
-			subtitle: "[Dificuldade: Dificil] Ressonância cristalina de ametista e magia pura"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Facil] A forca da haste contra cavaleiros e hordas"
 			tasks: [
 				{
 					id: "1005000000000061"
 					item: {
 						count: 1
-						id: "simplyswords:arcanethyst"
+						id: "simplyswords:iron_halberd"
 					}
+					title: "Forje uma Alabarda de Ferro"
 					type: "item"
 				}
 			]
 			rewards: [
 				{
-					count: 4
+					count: 16
 					id: "1005000000000062"
 					item: {
 						count: 1
-						id: "minecraft:amethyst_shard"
+						id: "minecraft:stick"
 					}
 					type: "item"
 				}
 				{
 					id: "1005000000000063"
-					type: "xp_levels"
-					xp_levels: 20
+					xp: 150
+					type: "xp"
 				}
 			]
-			title: "A Canção Arcana: Arcanethyst"
-			x: 0.0d
-			y: -2.5d
+			title: "Alabarda de Ferro de Infantaria"
+			x: 4.2d
+			y: -3.0d
 		}
 		{
-			dependencies: [
-				"1005000000000050"
-				"1005000000000070"
-			]
+			dependencies: ["1005000000000020"]
 			description: [
-				"Ao alimentar a espada dormente das almas com o sangue de inimigos caídos, a Lichblade atinge seu estagio desperto definitivo."
-				"Ela invoca guerreiros espectrais que lutam sob seu comando e drena a essencia vital de qualquer monstro que ouse cruzar seu caminho!"
+				"A Spear foi a arma mais dominante de todas as eras antigas por uma razao simples: alcanca o inimigo muito antes dele poder te tocar."
+				"Mantenha monstros perigosos a distancia de seguranca com precisao impecavel."
 			]
 			icon: {
-				id: "simplyswords:awakened_lichblade"
+				id: "simplyswords:iron_spear"
+			}
+			id: "1005000000000070"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Facil] Dominio do espaco com estocadas lineares"
+			tasks: [
+				{
+					id: "1005000000000071"
+					item: {
+						count: 1
+						id: "simplyswords:iron_spear"
+					}
+					title: "Forje uma Lanca de Ferro"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 8
+					id: "1005000000000072"
+					item: {
+						count: 1
+						id: "minecraft:oak_log"
+					}
+					type: "item"
+				}
+				{
+					id: "1005000000000073"
+					xp: 150
+					type: "xp"
+				}
+			]
+			title: "Lanca de Ferro Perfurante (Spear)"
+			x: 7.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["1005000000000020"]
+			description: [
+				"A Claymore possui arco de varredura massivo. Um unico golpe bem posicionado atinge e arremessa para tras tres ou quatro monstros simultaneamente."
+				"Perfeita para momentos em que voce se ve cercado em cavernas escuras."
+			]
+			icon: {
+				id: "simplyswords:iron_claymore"
 			}
 			id: "1005000000000080"
-			shape: "diamond"
-			size: 1.6d
-			subtitle: "[Dificuldade: Extrema] A lamina das almas ressuscitada em sua gloria máxima"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Facil] A grande lamina de duas maos das terras altas"
 			tasks: [
 				{
 					id: "1005000000000081"
 					item: {
 						count: 1
-						id: "simplyswords:awakened_lichblade"
+						id: "simplyswords:iron_claymore"
 					}
+					title: "Forje uma Claymore de Ferro"
 					type: "item"
 				}
 			]
@@ -684,105 +346,941 @@
 					id: "1005000000000082"
 					item: {
 						count: 1
-						id: "minecraft:netherite_block"
+						id: "minecraft:iron_ingot"
 					}
 					type: "item"
 				}
 				{
 					id: "1005000000000083"
+					xp_levels: 3
 					type: "xp_levels"
-					xp_levels: 40
 				}
 			]
-			title: "A Lâmina dos Mortos: Awakened Lichblade"
-			x: 0.0d
-			y: 0.0d
+			title: "Claymore de Ferro Devastadora"
+			x: 9.8d
+			y: -3.0d
 		}
 		{
-			dependencies: ["1005000000000150"]
+			dependencies: ["1005000000000030"]
 			description: [
-				"Leve seu conjunto de armadura e suas armas míticas para a mesa do Upgrader e eleve seus atributos de armadura, dureza e dano para os limites celestiais."
+				"A Katana une curvatura perfeita e borda ultra-fina. Seus ataques criticos causam sangramentos profundos que enfraquecem chefes com o tempo."
+				"Uma obra de arte oriental forjada na sua propria bigorna."
 			]
 			icon: {
-				id: "upgrader:upgrader"
+				id: "simplyswords:iron_katana"
 			}
-			id: "1005000000000160"
-			shape: "diamond"
-			size: 1.3d
-			subtitle: "[Dificuldade: Extrema] Aprimoramento maximo de atributos no Upgrader"
+			id: "1005000000000090"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Media] Cortes em saque rapido (Iaijutsu)"
 			tasks: [
 				{
-					id: "1005000000000161"
+					id: "1005000000000091"
 					item: {
 						count: 1
-						id: "upgrader:upgrader"
+						id: "simplyswords:iron_katana"
 					}
+					title: "Forje uma Katana de Ferro"
 					type: "item"
 				}
 			]
 			rewards: [
 				{
 					count: 4
-					id: "1005000000000162"
-					item: {
-						count: 1
-						id: "minecraft:netherite_ingot"
-					}
-					type: "item"
-				}
-				{
-					id: "1005000000000163"
-					type: "xp_levels"
-					xp_levels: 25
-				}
-			]
-			title: "Aprimoramento Absoluto no Upgrader"
-			x: 0.0d
-			y: 2.5d
-		}
-		{
-			dependencies: [
-				"1005000000000080"
-				"1005000000000060"
-				"1005000000000160"
-			]
-			description: [
-				"Voce reuniu as armas lendarias mais temidas do multiverso e atingiu a forca absoluta."
-				"Seus armamentos estao prontos para enfrentar os Titãs Cataclismicos que aguardam no capitulo final!"
-			]
-			icon: {
-				id: "simplyswords:slumbering_lichblade"
-			}
-			id: "1005000000000090"
-			shape: "hexagon"
-			size: 1.8d
-			subtitle: "O dominio absoluto sobre todas as laminas e armaduras"
-			tasks: [
-				{
-					id: "1005000000000091"
-					title: "Mestre Supremo do Arsenal"
-					type: "checkmark"
-				}
-			]
-			rewards: [
-				{
-					count: 2
 					id: "1005000000000092"
 					item: {
 						count: 1
-						id: "minecraft:enchanted_golden_apple"
+						id: "minecraft:gold_ingot"
 					}
 					type: "item"
 				}
 				{
 					id: "1005000000000093"
+					xp_levels: 5
 					type: "xp_levels"
-					xp_levels: 50
 				}
 			]
-			title: "O Mestre Supremo do Arsenal"
-			x: 2.5d
-			y: 0.0d
+			title: "Katana de Ferro e Disciplina"
+			x: -9.8d
+			y: 0.5d
+		}
+		{
+			dependencies: ["1005000000000030"]
+			description: [
+				"A Twinblade e empunhada no centro, girando como a helice de um moinho. Ao correr e atacar, voce se torna um furacao imune a flechas."
+				"Domine o movimento giratorio para surpreender agressores velozes."
+			]
+			icon: {
+				id: "simplyswords:iron_twinblade"
+			}
+			id: "1005000000000100"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Media] O torvelinho cortante de duas pontas"
+			tasks: [
+				{
+					id: "1005000000000101"
+					item: {
+						count: 1
+						id: "simplyswords:iron_twinblade"
+					}
+					title: "Forje uma Twinblade de Ferro"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 6
+					id: "1005000000000102"
+					item: {
+						count: 1
+						id: "minecraft:iron_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "1005000000000103"
+					xp_levels: 5
+					type: "xp_levels"
+				}
+			]
+			title: "Lamina Dupla Giratoria (Twinblade)"
+			x: -7.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["1005000000000040"]
+			description: [
+				"O Cutlass e leve, rapido e desenhado para duelos dinamicos. Permite manobras evasivas imediatas apos cada golpe desferido."
+				"Sinta-se o capitao dos sete mares explorando as costas do mundo."
+			]
+			icon: {
+				id: "simplyswords:iron_cutlass"
+			}
+			id: "1005000000000110"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Media] Destreza nos conveses e esquivas acrobaticas"
+			tasks: [
+				{
+					id: "1005000000000111"
+					item: {
+						count: 1
+						id: "simplyswords:iron_cutlass"
+					}
+					title: "Forje um Cutlass de Ferro"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 16
+					id: "1005000000000112"
+					item: {
+						count: 1
+						id: "minecraft:lapis_lazuli"
+					}
+					type: "item"
+				}
+				{
+					id: "1005000000000113"
+					xp_levels: 5
+					type: "xp_levels"
+				}
+			]
+			title: "Cutelo Pirata Veloz (Cutlass)"
+			x: -4.2d
+			y: 0.5d
+		}
+		{
+			dependencies: ["1005000000000060"]
+			description: [
+				"A Warglaive une lamina de alfanje a haste de impacto, conferindo varreduras aereas que acertam monstros voadores e alvos terrestres em sincronia."
+				"A arma favorita das vanguardas imperiais."
+			]
+			icon: {
+				id: "simplyswords:iron_warglaive"
+			}
+			id: "1005000000000120"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Media] Potencia cortante montada em haste balanceada"
+			tasks: [
+				{
+					id: "1005000000000121"
+					item: {
+						count: 1
+						id: "simplyswords:iron_warglaive"
+					}
+					title: "Forje uma Warglaive de Ferro"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 2
+					id: "1005000000000122"
+					item: {
+						count: 1
+						id: "minecraft:diamond"
+					}
+					type: "item"
+				}
+				{
+					id: "1005000000000123"
+					xp_levels: 6
+					type: "xp_levels"
+				}
+			]
+			title: "Glaive de Guerra dos Generais"
+			x: -1.4d
+			y: 0.5d
+		}
+		{
+			dependencies: ["1005000000000010"]
+			description: [
+				"A Runic Tablet e um molde antigo encontrado em baus de masmorras ou sintetizado com gemas e diamantes."
+				"Ela desbloqueia a infusao de almas elementais para transformar espadas comuns nas místicas armas de lenda!"
+			]
+			icon: {
+				id: "simplyswords:runic_tablet"
+			}
+			id: "1005000000000130"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Media] O molde sagrado para fundir laminas unicas"
+			tasks: [
+				{
+					id: "1005000000000131"
+					item: {
+						count: 1
+						id: "simplyswords:runic_tablet"
+					}
+					title: "Obtenha uma Tabua Runica (Runic Tablet)"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 3
+					id: "1005000000000132"
+					item: {
+						count: 1
+						id: "minecraft:diamond"
+					}
+					type: "item"
+				}
+				{
+					id: "1005000000000133"
+					xp_levels: 6
+					type: "xp_levels"
+				}
+			]
+			title: "A Tabua Runica Arcana"
+			x: 1.4d
+			y: 0.5d
+		}
+		{
+			dependencies: ["1005000000000010"]
+			description: [
+				"Antes de herdar as armaduras das grandes civilizacoes historicas, forje o Iron Plate Armor Chestplate do Armor of the Ages."
+				"Sua couraca protege os orgaos vitais e prepara seu corpo para suportar o peso dos conjuntos miticos."
+			]
+			icon: {
+				id: "armoroftheages:iron_plate_armor_chest"
+			}
+			id: "1005000000000140"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Media] A armadura de transicao para a Idade do Aco"
+			tasks: [
+				{
+					id: "1005000000000141"
+					item: {
+						count: 1
+						id: "armoroftheages:iron_plate_armor_chest"
+					}
+					title: "Forje o Peitoral de Placas de Ferro"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					id: "1005000000000142"
+					item: {
+						count: 1
+						id: "minecraft:iron_block"
+					}
+					type: "item"
+				}
+				{
+					id: "1005000000000143"
+					xp_levels: 5
+					type: "xp_levels"
+				}
+			]
+			title: "Peitoral de Placas de Ferro Reforcado"
+			x: 4.2d
+			y: 0.5d
+		}
+		{
+			dependencies: ["1005000000000140"]
+			description: [
+				"Inspirada na armadura dos comandantes da legiao romana, a armadura de Centuriao confere firmeza disciplinada e resistencia contra empurrao."
+				"Cerque-se de camaradas e avance em formacao de tartaruga invicta."
+			]
+			icon: {
+				id: "armoroftheages:centurion_armor_chest"
+			}
+			id: "1005000000000150"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Media] A gloria inquebravel das legioes de Roma"
+			tasks: [
+				{
+					id: "1005000000000151"
+					item: {
+						count: 1
+						id: "armoroftheages:centurion_armor_chest"
+					}
+					title: "Forje o Peitoral de Centuriao"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 6
+					id: "1005000000000152"
+					item: {
+						count: 1
+						id: "minecraft:gold_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "1005000000000153"
+					xp_levels: 6
+					type: "xp_levels"
+				}
+			]
+			title: "Armadura do Centuriao Romano"
+			x: 7.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["1005000000000140"]
+			description: [
+				"A Japanese Light Armor prioriza flexibilidade e esquivas rapidas sem sacrificar a resistencia contra flechas."
+				"O par perfeito para guerreiros que empunham katanas e nodachis."
+			]
+			icon: {
+				id: "armoroftheages:japanese_light_armor_chest"
+			}
+			id: "1005000000000160"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Media] O tecido encouraçado dos nobres samurais"
+			tasks: [
+				{
+					id: "1005000000000161"
+					item: {
+						count: 1
+						id: "armoroftheages:japanese_light_armor_chest"
+					}
+					title: "Forje a Armadura Leve Japonesa"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 12
+					id: "1005000000000162"
+					item: {
+						count: 1
+						id: "minecraft:leather"
+					}
+					type: "item"
+				}
+				{
+					id: "1005000000000163"
+					xp_levels: 6
+					type: "xp_levels"
+				}
+			]
+			title: "Armadura Leve Japonesa"
+			x: 9.8d
+			y: 0.5d
+		}
+		{
+			dependencies: ["1005000000000150"]
+			description: [
+				"A Holy Armor (Paladino) e forjada sob preces e oracoes. Ela repele mortos-vivos com auras luminosas e reduz drasticamente o dano de maldicoes e wither."
+				"Sua couraca dourada e uma fortaleza contra o mal."
+			]
+			icon: {
+				id: "armoroftheages:holy_armor_chest"
+			}
+			id: "1005000000000170"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Dificil] Bencaos de luz para combater a escuridao"
+			tasks: [
+				{
+					id: "1005000000000171"
+					item: {
+						count: 1
+						id: "armoroftheages:holy_armor_chest"
+					}
+					title: "Forje o Peitoral Sagrado (Holy Armor)"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 2
+					id: "1005000000000172"
+					item: {
+						count: 1
+						id: "minecraft:golden_apple"
+					}
+					type: "item"
+				}
+				{
+					id: "1005000000000173"
+					xp_levels: 8
+					type: "xp_levels"
+				}
+			]
+			title: "A Armadura Sagrada do Paladino"
+			x: -11.2d
+			y: 4.0d
+		}
+		{
+			dependencies: ["1005000000000160"]
+			description: [
+				"A O-Yoroi e a obra-prima da metalurgia e amarracao feudal japonesa. Placas laqueadas de ferro endurecido resistem a cortes devastadores de bestas colossais."
+				"A armadura definitiva para quem segue o codigo do Bushido."
+			]
+			icon: {
+				id: "armoroftheages:o_yoroi_armor_chest"
+			}
+			id: "1005000000000180"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Dificil] A grande armadura pesada do xogunato"
+			tasks: [
+				{
+					id: "1005000000000181"
+					item: {
+						count: 1
+						id: "armoroftheages:o_yoroi_armor_chest"
+					}
+					title: "Forje a Armadura O-Yoroi"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 4
+					id: "1005000000000182"
+					item: {
+						count: 1
+						id: "minecraft:diamond"
+					}
+					type: "item"
+				}
+				{
+					id: "1005000000000183"
+					xp_levels: 8
+					type: "xp_levels"
+				}
+			]
+			title: "A Armadura Samourai O-Yoroi"
+			x: -8.4d
+			y: 4.0d
+		}
+		{
+			dependencies: ["1005000000000140"]
+			description: [
+				"Inspirada na divindade chacal do antigo Egito, a armadura de Anubis concede resistencia a necroses e melhora o dano de estocada contra alvos amaldicoados."
+				"Caminhe pelas dunas com a presenca de um deus."
+			]
+			icon: {
+				id: "armoroftheages:anubis_armor_chest"
+			}
+			id: "1005000000000190"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Dificil] O guardiao dourado do submundo do Nilo"
+			tasks: [
+				{
+					id: "1005000000000191"
+					item: {
+						count: 1
+						id: "armoroftheages:anubis_armor_chest"
+					}
+					title: "Forje o Peitoral de Anubis"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 2
+					id: "1005000000000192"
+					item: {
+						count: 1
+						id: "minecraft:emerald_block"
+					}
+					type: "item"
+				}
+				{
+					id: "1005000000000193"
+					xp_levels: 8
+					type: "xp_levels"
+				}
+			]
+			title: "A Armadura Cerimonial de Anubis"
+			x: -5.6d
+			y: 4.0d
+		}
+		{
+			dependencies: ["1005000000000140"]
+			description: [
+				"A armadura de Raijin ressoa com eletricidade estatica pura. Cada golpe sofrido descarrega faiscas retaliatorias nos atacantes ao redor."
+				"Sinta os trovoes obedecerem a sua vontade em meio as tempestades."
+			]
+			icon: {
+				id: "armoroftheages:raijin_armor_chest"
+			}
+			id: "1005000000000200"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Dificil] O poder dos tambores celestes tempestuosos"
+			tasks: [
+				{
+					id: "1005000000000201"
+					item: {
+						count: 1
+						id: "armoroftheages:raijin_armor_chest"
+					}
+					title: "Forje a Armadura de Raijin"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 2
+					id: "1005000000000202"
+					item: {
+						count: 1
+						id: "minecraft:lightning_rod"
+					}
+					type: "item"
+				}
+				{
+					id: "1005000000000203"
+					xp_levels: 8
+					type: "xp_levels"
+				}
+			]
+			title: "A Armadura do Deus do Trovao: Raijin"
+			x: -2.8d
+			y: 4.0d
+		}
+		{
+			dependencies: ["1005000000000140"]
+			description: [
+				"Inspirada na deidade das civilizacoes mesoamericanas, a Quetzalcoatl Armor reduz gravidade em saltos e confere velocidade espetacular em selvas e montanhas."
+				"Um tributo a liberdade e ao esplendor do sol."
+			]
+			icon: {
+				id: "armoroftheages:quetzalcoatl_armor_chest"
+			}
+			id: "1005000000000210"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Dificil] A serpente emplumada dos templos solares"
+			tasks: [
+				{
+					id: "1005000000000211"
+					item: {
+						count: 1
+						id: "armoroftheages:quetzalcoatl_armor_chest"
+					}
+					title: "Forje a Armadura de Quetzalcoatl"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 2
+					id: "1005000000000212"
+					item: {
+						count: 1
+						id: "minecraft:gold_block"
+					}
+					type: "item"
+				}
+				{
+					id: "1005000000000213"
+					xp_levels: 8
+					type: "xp_levels"
+				}
+			]
+			title: "A Armadura Alada de Quetzalcoatl"
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["1005000000000130"]
+			description: [
+				"A Soulpyre e uma espada mistica imbuida com fogo espectral azul. Seus golpes incendeiam inimigos com chamas de almas que ignoram parte da armadura fisica."
+				"Forje ou recupere esta reliquia das cinzas antigas."
+			]
+			icon: {
+				id: "simplyswords:soulpyre"
+			}
+			id: "1005000000000220"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Dificil] A pira ardente das almas imortais"
+			tasks: [
+				{
+					id: "1005000000000221"
+					item: {
+						count: 1
+						id: "simplyswords:soulpyre"
+					}
+					title: "Obtenha a Lamina Soulpyre"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 2
+					id: "1005000000000222"
+					item: {
+						count: 1
+						id: "minecraft:soul_campfire"
+					}
+					type: "item"
+				}
+				{
+					id: "1005000000000223"
+					xp_levels: 9
+					type: "xp_levels"
+				}
+			]
+			title: "Lamina Lendaria: Soulpyre"
+			x: 2.8d
+			y: 4.0d
+		}
+		{
+			dependencies: ["1005000000000130"]
+			description: [
+				"A Stormbringer canaliza correntes atmosfericas para disparar laminas de vacuo a cada varredura de combate, acertando alvos distantes sem gasto de flechas."
+				"O poder do tufao ao alcance dos seus punhos."
+			]
+			icon: {
+				id: "simplyswords:stormbringer"
+			}
+			id: "1005000000000230"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Dificil] O arauto das tempestades e vendavais"
+			tasks: [
+				{
+					id: "1005000000000231"
+					item: {
+						count: 1
+						id: "simplyswords:stormbringer"
+					}
+					title: "Obtenha a Lamina Stormbringer"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 16
+					id: "1005000000000232"
+					item: {
+						count: 1
+						id: "minecraft:prismarine_shard"
+					}
+					type: "item"
+				}
+				{
+					id: "1005000000000233"
+					xp_levels: 9
+					type: "xp_levels"
+				}
+			]
+			title: "Lamina Lendaria: Stormbringer"
+			x: 5.6d
+			y: 4.0d
+		}
+		{
+			dependencies: ["1005000000000130"]
+			description: [
+				"Frostfall congela instantaneamente a agua sob os pes do guerreiro e envolve os inimigos em casulos de gelo comprimido."
+				"Ideal para anular chefes velozes que tentam flanquear sua posicao."
+			]
+			icon: {
+				id: "simplyswords:frostfall"
+			}
+			id: "1005000000000240"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Dificil] O sopro polar que petrifica os mares"
+			tasks: [
+				{
+					id: "1005000000000241"
+					item: {
+						count: 1
+						id: "simplyswords:frostfall"
+					}
+					title: "Obtenha a Lamina Frostfall"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 8
+					id: "1005000000000242"
+					item: {
+						count: 1
+						id: "minecraft:blue_ice"
+					}
+					type: "item"
+				}
+				{
+					id: "1005000000000243"
+					xp_levels: 9
+					type: "xp_levels"
+				}
+			]
+			title: "Lamina Lendaria: Frostfall"
+			x: 8.4d
+			y: 4.0d
+		}
+		{
+			dependencies: ["1005000000000130"]
+			description: [
+				"Sunfire e a contraparte da luz celestial. Ela cega momentaneamente oponentes com flashes solares no inicio dos golpes criticos."
+				"Uma dadiva majestosa para qualquer explorador das trevas."
+			]
+			icon: {
+				id: "simplyswords:sunfire"
+			}
+			id: "1005000000000250"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Dificil] A radiacao solar que purifica corrupcoes"
+			tasks: [
+				{
+					id: "1005000000000251"
+					item: {
+						count: 1
+						id: "simplyswords:sunfire"
+					}
+					title: "Obtenha a Lamina Sunfire"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 32
+					id: "1005000000000252"
+					item: {
+						count: 1
+						id: "minecraft:glowstone"
+					}
+					type: "item"
+				}
+				{
+					id: "1005000000000253"
+					xp_levels: 9
+					type: "xp_levels"
+				}
+			]
+			title: "Lamina Lendaria: Sunfire"
+			x: 11.2d
+			y: 4.0d
+		}
+		{
+			dependencies: ["1005000000000220"]
+			description: [
+				"A Twisted Blade distorce o tecido do espaco, puxando os inimigos mais distantes para o raio de impacto imediato da sua espada."
+				"Nenhum arqueiro ou feiticeiro escapa do seu raio de gravidade."
+			]
+			icon: {
+				id: "simplyswords:twisted_blade"
+			}
+			id: "1005000000000260"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Extrema] A distorcao da realidade espiralada"
+			tasks: [
+				{
+					id: "1005000000000261"
+					item: {
+						count: 1
+						id: "simplyswords:twisted_blade"
+					}
+					title: "Domine a Twisted Blade"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 4
+					id: "1005000000000262"
+					item: {
+						count: 1
+						id: "minecraft:ender_eye"
+					}
+					type: "item"
+				}
+				{
+					id: "1005000000000263"
+					xp_levels: 10
+					type: "xp_levels"
+				}
+			]
+			title: "Lamina Lendaria: Twisted Blade"
+			x: -4.2d
+			y: 7.5d
+		}
+		{
+			dependencies: ["1005000000000220"]
+			description: [
+				"A temida Soulstealer consome as almas dos inimigos abatidos, restaurando diretamente a vida e a saciedade do seu portador a cada golpe fatal."
+				"Com ela em maos, voce e praticamente imortal diante de hordas infinitas."
+			]
+			icon: {
+				id: "simplyswords:soulstealer"
+			}
+			id: "1005000000000270"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Extrema] O vampirismo das forcas vitais"
+			tasks: [
+				{
+					id: "1005000000000271"
+					item: {
+						count: 1
+						id: "simplyswords:soulstealer"
+					}
+					title: "Domine a Soulstealer"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 2
+					id: "1005000000000272"
+					item: {
+						count: 1
+						id: "minecraft:wither_skeleton_skull"
+					}
+					type: "item"
+				}
+				{
+					id: "1005000000000273"
+					xp_levels: 12
+					type: "xp_levels"
+				}
+			]
+			title: "Lamina Lendaria: Soulstealer"
+			x: -1.4d
+			y: 7.5d
+		}
+		{
+			dependencies: ["1005000000000230"]
+			description: [
+				"Forjada a partir de geodes de ametista pura sob pressoes colossais, a Arcanethyst emite pulsos sonoros que atordoam e quebram armaduras de chefes antigos."
+				"A harmonia perfeita entre geologia e magia marcial."
+			]
+			icon: {
+				id: "simplyswords:arcanethyst"
+			}
+			id: "1005000000000280"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Extrema] A ressonancia dos cristais arcanos"
+			tasks: [
+				{
+					id: "1005000000000281"
+					item: {
+						count: 1
+						id: "simplyswords:arcanethyst"
+					}
+					title: "Domine a Arcanethyst"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 8
+					id: "1005000000000282"
+					item: {
+						count: 1
+						id: "minecraft:amethyst_block"
+					}
+					type: "item"
+				}
+				{
+					id: "1005000000000283"
+					xp_levels: 12
+					type: "xp_levels"
+				}
+			]
+			title: "Lamina Lendaria: Arcanethyst"
+			x: 1.4d
+			y: 7.5d
+		}
+		{
+			dependencies: ["1005000000000230"]
+			description: [
+				"A lendaria Thunderbrand convoca raios celestiais reais sobre o alvo durante combates ao ar livre. Sob ceus de chuva, seu poder e simplesmente catastrofico!"
+				"Voce alcancou a maestria suprema sobre o Arsenal Lendario do BlessForge."
+			]
+			icon: {
+				id: "simplyswords:thunderbrand"
+			}
+			id: "1005000000000290"
+			shape: "diamond"
+			size: 1.5d
+			subtitle: "[Dificuldade: Extrema] O relampago personificado em aco mistico"
+			tasks: [
+				{
+					id: "1005000000000291"
+					item: {
+						count: 1
+						id: "simplyswords:thunderbrand"
+					}
+					title: "Domine a Thunderbrand"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					id: "1005000000000292"
+					item: {
+						count: 1
+						id: "minecraft:nether_star"
+					}
+					type: "item"
+				}
+				{
+					id: "1005000000000293"
+					xp_levels: 15
+					type: "xp_levels"
+				}
+			]
+			title: "Lamina Lendaria: Thunderbrand"
+			x: 4.2d
+			y: 7.5d
 		}
 	]
 }

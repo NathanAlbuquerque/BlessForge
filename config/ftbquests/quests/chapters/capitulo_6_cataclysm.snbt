@@ -8,36 +8,167 @@
 	}
 	id: "1006000000000001"
 	order_index: 6
-	title: "6. O Fim dos Titas (Cataclysm)"
+	title: "6. O Fim dos Titas (L_Ender's Cataclysm)"
 	quests: [
 		{
 			description: [
-				"O mod L_Ender's Cataclysm desperta deuses ancestrais e horrores colossais que habitam as ruinas esquecidas do mundo."
-				"Nas profundezas oceanicas da Cidade Submersa (Sunken City), guerreiros Deeplings e bruxos das profundezas protegem o altar do abismo."
-				"Sobreviva aos terrores aquaticos e colete Carne Abencoada de Caranguejo de Ametista!"
+				"O mundo em que voce pisa e o resultado de cataclismos colossais travados milenios antes da sua chegada."
+				"Monumentos submersos, forjas soterradas na lava e templos sob as dunas escondem sentinelas adormecidas."
+				"Antes de enfrentar essas forcas titanicas, e crucial comecar pela arqueologia calma: estudar materiais, provar alimentos das profundezas e preparar seu corpo com cautela."
 			]
 			icon: {
-				id: "cataclysm:blessed_amethyst_crab_meat"
+				id: "minecraft:ancient_debris"
 			}
 			id: "1006000000000010"
 			shape: "hexagon"
-			size: 1.4d
-			subtitle: "[Dificuldade: Media] As primeiras incursões na Cidade Submersa"
+			size: 1.5d
+			subtitle: "[Dificuldade: Facil] Os vestigios arqueologicos dos antigos cataclismos"
 			tasks: [
 				{
-					count: 2L
 					id: "1006000000000011"
+					title: "Estude a Historia dos Titas"
+					type: "checkmark"
+				}
+			]
+			rewards: [
+				{
+					count: 2
+					id: "1006000000000012"
+					item: {
+						count: 1
+						id: "minecraft:golden_apple"
+					}
+					type: "item"
+				}
+				{
+					id: "1006000000000013"
+					xp_levels: 3
+					type: "xp_levels"
+				}
+			]
+			title: "Ecos de Eras Esquecidas"
+			x: -8.4d
+			y: -3.0d
+		}
+		{
+			dependencies: ["1006000000000010"]
+			description: [
+				"Nas praias e proximidades de geodos litoraneos habitam os Amethyst Crabs. Sua carne e suculenta e fornece saturacao prolongada."
+				"Cozinhe a carne de caranguejo para manter sua stamina estavel durante longas caminhadas arqueologicas."
+			]
+			icon: {
+				id: "cataclysm:amethyst_crab_meat"
+			}
+			id: "1006000000000020"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Facil] Nutricao hiperenergetica das praias e fendas"
+			tasks: [
+				{
+					count: 4L
+					id: "1006000000000021"
+					item: {
+						count: 1
+						id: "cataclysm:amethyst_crab_meat"
+					}
+					title: "Obtenha Carne de Amethyst Crab"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 2
+					id: "1006000000000022"
 					item: {
 						count: 1
 						id: "cataclysm:blessed_amethyst_crab_meat"
 					}
 					type: "item"
 				}
+				{
+					id: "1006000000000023"
+					xp: 100
+					type: "xp"
+				}
+			]
+			title: "Carne de Caranguejo de Ametista"
+			x: -5.6d
+			y: -3.0d
+		}
+		{
+			dependencies: ["1006000000000020"]
+			description: [
+				"A carapaca dura desses crustaceos combina cristais de quartzo e minerais marinhos. Ela serve como base para reparos preliminares e forja de acessorios defensivos."
+				"Colete carapacas para estudar a resistencia dos materiais do Cataclysm."
+			]
+			icon: {
+				id: "cataclysm:amethyst_crab_shell"
+			}
+			id: "1006000000000030"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Facil] Placas quitinosas para reforco inicial"
+			tasks: [
+				{
+					count: 2L
+					id: "1006000000000031"
+					item: {
+						count: 1
+						id: "cataclysm:amethyst_crab_shell"
+					}
+					title: "Colete Carapacas de Caranguejo"
+					type: "item"
+				}
 			]
 			rewards: [
 				{
 					count: 8
-					id: "1006000000000012"
+					id: "1006000000000032"
+					item: {
+						count: 1
+						id: "minecraft:amethyst_shard"
+					}
+					type: "item"
+				}
+				{
+					id: "1006000000000033"
+					xp: 120
+					type: "xp"
+				}
+			]
+			title: "A Carapaca do Caranguejo de Ametista"
+			x: -2.8d
+			y: -3.0d
+		}
+		{
+			dependencies: ["1006000000000010"]
+			description: [
+				"Nos recifes proximos a Sunken City repousam blocos de Coral Chunks. Eles sao ricos em calcario endurecido sob pressao abissal."
+				"Recolha fragmentos de coral para sintetizar compostos de endurecimento de escudos."
+			]
+			icon: {
+				id: "cataclysm:coral_chunk"
+			}
+			id: "1006000000000040"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Facil] Minerais biologicos das cidades submersas"
+			tasks: [
+				{
+					count: 4L
+					id: "1006000000000041"
+					item: {
+						count: 1
+						id: "cataclysm:coral_chunk"
+					}
+					title: "Colete Coral Chunks"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 8
+					id: "1006000000000042"
 					item: {
 						count: 1
 						id: "minecraft:prismarine_crystals"
@@ -45,299 +176,256 @@
 					type: "item"
 				}
 				{
-					id: "1006000000000013"
-					type: "xp_levels"
-					xp_levels: 10
+					id: "1006000000000043"
+					xp: 120
+					type: "xp"
 				}
 			]
-			title: "O Chamado do Abismo Submerso"
-			x: -10.0d
-			y: 0.0d
+			title: "Pedacos de Coral dos Oceanos"
+			x: 0.0d
+			y: -3.0d
 		}
 		{
-			dependencies: ["1006000000000010"]
+			dependencies: ["1006000000000030"]
 			description: [
-				"Nas ruinas mecânicas da Fabrica Ancestral, monstros armados com serras hidraulicas trituram intrusos."
-				"Forje ou conquiste o Triturador de Carne (Meat Shredder) para retalhar hordas a curta distancia!"
+				"O Belt of Beginner e um acessorio criado especificamente para viajantes prudentes. Ele absorve trancos de quedas e distribui o peso da sua armadura com suavidade."
+				"Equipe-o no seu slot Curios para explorar as ruinas com seguranca."
 			]
 			icon: {
-				id: "cataclysm:meat_shredder"
+				id: "cataclysm:belt_of_beginner"
 			}
-			id: "1006000000000080"
+			id: "1006000000000050"
 			shape: "circle"
-			size: 1.1d
-			subtitle: "[Dificuldade: Media] Motores de retalhamento da Fabrica Perdida"
+			size: 1.2d
+			subtitle: "[Dificuldade: Facil] Acessorios ergonomicos para amortecer impactos"
 			tasks: [
 				{
-					id: "1006000000000081"
+					id: "1006000000000051"
 					item: {
 						count: 1
-						id: "cataclysm:meat_shredder"
+						id: "cataclysm:belt_of_beginner"
 					}
+					title: "Adquira o Belt of Beginner"
 					type: "item"
 				}
 			]
 			rewards: [
 				{
 					count: 8
-					id: "1006000000000082"
+					id: "1006000000000052"
 					item: {
 						count: 1
-						id: "minecraft:iron_ingot"
+						id: "minecraft:leather"
 					}
 					type: "item"
 				}
 				{
-					id: "1006000000000083"
+					id: "1006000000000053"
+					xp_levels: 3
 					type: "xp_levels"
-					xp_levels: 12
 				}
 			]
-			title: "O Triturador de Carne Mecânico"
-			x: -10.0d
-			y: -2.5d
+			title: "O Cinto do Iniciante (Belt of Beginner)"
+			x: 2.8d
+			y: -3.0d
 		}
 		{
-			dependencies: ["1006000000000010"]
+			dependencies: ["1006000000000040"]
 			description: [
-				"Na grandiosa Piramide Amaldicoada no deserto profundo dorme o Remanescente Ancestral (Ancient Remnant)."
-				"Desperto pelas areias movedicas, ele cria tempestades de poeira e investidas devastadoras. Abata-o para recolher o Lendario Colar do Deserto!"
+				"O Lionfish nada tranquilamente ao redor das colunas de Azure Seastone. Embora seus espinhos exijam cuidado, ele e vital para elixires de visao noturna e respiracao aquatica."
+				"Pesque ou capture um exemplar para suas analises alquimicas."
 			]
 			icon: {
-				id: "cataclysm:necklace_of_the_desert"
+				id: "cataclysm:lionfish"
 			}
-			id: "1006000000000030"
-			shape: "pentagon"
-			size: 1.3d
-			subtitle: "[Dificuldade: Dificil] O lorde serpentino das areias da Piramide Maldita"
-			tasks: [
-				{
-					entity: "cataclysm:ancient_remnant"
-					id: "1006000000000031"
-					type: "kill"
-					value: 1L
-				}
-				{
-					id: "1006000000000032"
-					item: {
-						count: 1
-						id: "cataclysm:necklace_of_the_desert"
-					}
-					type: "item"
-				}
-			]
-			rewards: [
-				{
-					count: 4
-					id: "1006000000000033"
-					item: {
-						count: 1
-						id: "minecraft:diamond_block"
-					}
-					type: "item"
-				}
-				{
-					id: "1006000000000034"
-					type: "xp_levels"
-					xp_levels: 20
-				}
-			]
-			title: "O Farao das Areias: Ancient Remnant"
-			x: -10.0d
-			y: 2.5d
-		}
-		{
-			dependencies: ["1006000000000010"]
-			description: [
-				"Nas profundezas do Nether, ergue-se a Forja das Almas (Soul Forge), onde repousa a Monstruosidade de Netherite."
-				"Armado com um martelo descomunal, este golem de magma e netherite esmaga o solo causando ondas de choque cataclismicas e vomitando lava viva."
-				"Quebre seus chifres para conquistar o Chifre Monstruoso e forjar o elmo invulneravel!"
-			]
-			icon: {
-				id: "cataclysm:monstrous_horn"
-			}
-			id: "1006000000000020"
-			shape: "pentagon"
-			size: 1.4d
-			subtitle: "[Dificuldade: Dificil] O titan de magma e aco negro da Forja das Almas"
-			tasks: [
-				{
-					entity: "cataclysm:netherite_monstrosity"
-					id: "1006000000000021"
-					type: "kill"
-					value: 1L
-				}
-				{
-					id: "1006000000000022"
-					item: {
-						count: 1
-						id: "cataclysm:monstrous_horn"
-					}
-					type: "item"
-				}
-			]
-			rewards: [
-				{
-					id: "1006000000000023"
-					item: {
-						count: 1
-						id: "cataclysm:monstrous_helm"
-					}
-					type: "item"
-				}
-				{
-					id: "1006000000000024"
-					type: "xp_levels"
-					xp_levels: 25
-				}
-			]
-			title: "A Monstruosidade de Netherite"
-			x: -7.5d
-			y: 0.0d
-		}
-		{
-			dependencies: ["1006000000000020"]
-			description: [
-				"O Olho de Chamas abre as portas colossais da Burning Arena no Nether, onde Ignis aguarda os desafiantes."
-			]
-			icon: {
-				id: "cataclysm:flame_eye"
-			}
-			id: "1006000000000090"
+			id: "1006000000000060"
 			shape: "circle"
-			size: 1.1d
-			subtitle: "[Dificuldade: Dificil] A chave de magma para a Arena Ardente"
+			size: 1.2d
+			subtitle: "[Dificuldade: Facil] Ictiologia das fossas abissais"
 			tasks: [
 				{
-					id: "1006000000000091"
+					id: "1006000000000061"
 					item: {
 						count: 1
-						id: "cataclysm:flame_eye"
+						id: "cataclysm:lionfish"
 					}
+					title: "Capture um Peixe-Leao"
 					type: "item"
 				}
 			]
 			rewards: [
 				{
 					count: 2
+					id: "1006000000000062"
+					item: {
+						count: 1
+						id: "minecraft:pufferfish"
+					}
+					type: "item"
+				}
+				{
+					id: "1006000000000063"
+					xp: 150
+					type: "xp"
+				}
+			]
+			title: "Peixe-Leao do Abismo Oceanico"
+			x: 5.6d
+			y: -3.0d
+		}
+		{
+			dependencies: ["1006000000000050"]
+			description: [
+				"O Black Steel e o metal estrutural do Cataclysm. Ele e denso, negro como a noite e infinitamente superior ao ferro comum."
+				"Colete ou forje lingotes de Black Steel para dar inicio ao seu arsenal resistente a impactos titanicos."
+			]
+			icon: {
+				id: "cataclysm:black_steel_ingot"
+			}
+			id: "1006000000000070"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Facil] A liga metalica que sustentou civilizacoes perdidas"
+			tasks: [
+				{
+					count: 4L
+					id: "1006000000000071"
+					item: {
+						count: 1
+						id: "cataclysm:black_steel_ingot"
+					}
+					title: "Forje Lingotes de Black Steel"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 4
+					id: "1006000000000072"
+					item: {
+						count: 1
+						id: "cataclysm:black_steel_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "1006000000000073"
+					xp_levels: 4
+					type: "xp_levels"
+				}
+			]
+			title: "O Aco Negro dos Antigos"
+			x: 8.4d
+			y: -3.0d
+		}
+		{
+			dependencies: ["1006000000000070"]
+			description: [
+				"A Black Steel Pickaxe possui durabilidade extraordinaria e velocidade de mineracao capaz de furar as muralhas das cidadelas ancestrais sem sofrer desgaste subito."
+				"Sua melhor companheira para escavacoes profundas."
+			]
+			icon: {
+				id: "cataclysm:black_steel_pickaxe"
+			}
+			id: "1006000000000080"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Media] Minando as rochas endurecidas das catacumbas"
+			tasks: [
+				{
+					id: "1006000000000081"
+					item: {
+						count: 1
+						id: "cataclysm:black_steel_pickaxe"
+					}
+					title: "Forje a Picareta de Black Steel"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 3
+					id: "1006000000000082"
+					item: {
+						count: 1
+						id: "minecraft:diamond"
+					}
+					type: "item"
+				}
+				{
+					id: "1006000000000083"
+					xp_levels: 5
+					type: "xp_levels"
+				}
+			]
+			title: "A Picareta de Aco Negro"
+			x: -8.4d
+			y: 0.5d
+		}
+		{
+			dependencies: ["1006000000000070"]
+			description: [
+				"A Black Steel Sword golpeia com a massa inercial de um martelo e a afiacao de uma navalha. Essencial para perfurar carapacas de Deeplings e Koboletons."
+				"Prepare sua espada antes de invadir as primeiras câmaras."
+			]
+			icon: {
+				id: "cataclysm:black_steel_sword"
+			}
+			id: "1006000000000090"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Media] Corte denso contra monstros couraçados"
+			tasks: [
+				{
+					id: "1006000000000091"
+					item: {
+						count: 1
+						id: "cataclysm:black_steel_sword"
+					}
+					title: "Forje a Espada de Black Steel"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
 					id: "1006000000000092"
 					item: {
 						count: 1
-						id: "minecraft:netherite_scrap"
+						id: "minecraft:iron_block"
 					}
 					type: "item"
 				}
 				{
 					id: "1006000000000093"
+					xp_levels: 5
 					type: "xp_levels"
-					xp_levels: 15
 				}
 			]
-			title: "O Olho de Chamas"
-			x: -7.5d
-			y: -2.5d
+			title: "A Espada de Aco Negro"
+			x: -5.6d
+			y: 0.5d
 		}
 		{
-			dependencies: ["1006000000000030"]
+			dependencies: ["1006000000000070"]
 			description: [
-				"O cranio do Remanescente Ancestral pulsa com o poder de tempestades de poeira sufocantes."
+				"O Black Steel Targe e um escudo circular balanceado que permite aparar ataques fisicos com precisao milimetrica, desestabilizando atacantes."
+				"Treine seu tempo de bloqueio contra ataques pesados."
 			]
 			icon: {
-				id: "cataclysm:remnant_skull"
-			}
-			id: "1006000000000140"
-			shape: "circle"
-			size: 1.1d
-			subtitle: "[Dificuldade: Dificil] O cranio fossilizado da besta do deserto"
-			tasks: [
-				{
-					id: "1006000000000141"
-					item: {
-						count: 1
-						id: "cataclysm:remnant_skull"
-					}
-					type: "item"
-				}
-			]
-			rewards: [
-				{
-					count: 8
-					id: "1006000000000142"
-					item: {
-						count: 1
-						id: "minecraft:gold_block"
-					}
-					type: "item"
-				}
-				{
-					id: "1006000000000143"
-					type: "xp_levels"
-					xp_levels: 15
-				}
-			]
-			title: "O Cranio do Remanescente"
-			x: -7.5d
-			y: 2.5d
-		}
-		{
-			dependencies: ["1006000000000020"]
-			description: [
-				"No centro da Arena em Chamas no Nether espera Ignis, o cavaleiro supremo do fogo."
-				"Empunhando a Incineradora, ele corta a realidade com laminas de labaredas e arremessa escudos de magma. Derrote-o para reivindicar a espada mais destrutiva do jogo!"
-			]
-			icon: {
-				id: "cataclysm:the_incinerator"
-			}
-			id: "1006000000000040"
-			shape: "diamond"
-			size: 1.6d
-			subtitle: "[Dificuldade: Extrema] O soberano em chamas da Arena Infernal"
-			tasks: [
-				{
-					entity: "cataclysm:ignis"
-					id: "1006000000000041"
-					type: "kill"
-					value: 1L
-				}
-			]
-			rewards: [
-				{
-					id: "1006000000000042"
-					item: {
-						count: 1
-						id: "cataclysm:the_incinerator"
-					}
-					type: "item"
-				}
-				{
-					id: "1006000000000043"
-					type: "xp_levels"
-					xp_levels: 35
-				}
-			]
-			title: "O Carrasco das Cinzas: Ignis"
-			x: -5.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["1006000000000040"]
-			description: [
-				"A Incineradora corta o ar criando arcos de chamas puras que incineram chefes em segundos."
-			]
-			icon: {
-				id: "cataclysm:the_incinerator"
+				id: "cataclysm:black_steel_targe"
 			}
 			id: "1006000000000100"
-			shape: "diamond"
-			size: 1.3d
-			subtitle: "[Dificuldade: Extrema] A grande lamina de fogo dos deuses cataclismicos"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Media] Parrying e bloqueio de ondas de choque"
 			tasks: [
 				{
 					id: "1006000000000101"
 					item: {
 						count: 1
-						id: "cataclysm:the_incinerator"
+						id: "cataclysm:black_steel_targe"
 					}
+					title: "Forje o Escudo Targe de Black Steel"
 					type: "item"
 				}
 			]
@@ -347,171 +435,533 @@
 					id: "1006000000000102"
 					item: {
 						count: 1
-						id: "minecraft:netherite_ingot"
+						id: "minecraft:golden_apple"
 					}
 					type: "item"
 				}
 				{
 					id: "1006000000000103"
+					xp_levels: 5
 					type: "xp_levels"
-					xp_levels: 25
 				}
 			]
-			title: "A Espada Incineradora"
-			x: -5.0d
-			y: -2.5d
+			title: "O Escudo Targe de Aco Negro"
+			x: -2.8d
+			y: 0.5d
 		}
 		{
 			dependencies: ["1006000000000040"]
 			description: [
-				"O Baluarte das Chamas bloqueia 100% de danos físicos e absorve fogo para contra-atacar em labaredas."
+				"Nas profundezas da Sunken City, o coral sofreu cristalizacao piezoeletrica, gerando os Crystallized Coral Fragments."
+				"Eles sao a fonte primordial para confeccionar arpoes e armaduras do oceano profundo."
 			]
 			icon: {
-				id: "cataclysm:bulwark_of_the_flame"
+				id: "cataclysm:crystallized_coral_fragments"
 			}
-			id: "1006000000000150"
+			id: "1006000000000110"
 			shape: "circle"
-			size: 1.1d
-			subtitle: "[Dificuldade: Dificil] O escudo impenetravel de fogo eterno"
+			size: 1.2d
+			subtitle: "[Dificuldade: Media] As formacoes brilhantes da Sunken City"
 			tasks: [
 				{
-					id: "1006000000000151"
+					count: 6L
+					id: "1006000000000111"
 					item: {
 						count: 1
-						id: "cataclysm:bulwark_of_the_flame"
+						id: "cataclysm:crystallized_coral_fragments"
 					}
+					title: "Colete Fragmentos de Coral Cristalizado"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 6
+					id: "1006000000000112"
+					item: {
+						count: 1
+						id: "cataclysm:crystallized_coral_fragments"
+					}
+					type: "item"
+				}
+				{
+					id: "1006000000000113"
+					xp_levels: 6
+					type: "xp_levels"
+				}
+			]
+			title: "Fragmentos de Coral Cristalizado"
+			x: 0.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["1006000000000010"]
+			description: [
+				"A Sandstorm In A Bottle aprisiona um redemoinho eterno do deserto. Ao ser aberta em salto, impulsiona o aventureiro a grandes alturas com um duplo salto de vento!"
+				"Mobilidade vertical perfeita para explorar ruinas elevadas."
+			]
+			icon: {
+				id: "cataclysm:sandstorm_in_a_bottle"
+			}
+			id: "1006000000000120"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Media] O turbilhao das piramides e templos do deserto"
+			tasks: [
+				{
+					id: "1006000000000121"
+					item: {
+						count: 1
+						id: "cataclysm:sandstorm_in_a_bottle"
+					}
+					title: "Encontre a Tempestade em Garrafa"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 32
+					id: "1006000000000122"
+					item: {
+						count: 1
+						id: "minecraft:sand"
+					}
+					type: "item"
+				}
+				{
+					id: "1006000000000123"
+					xp_levels: 6
+					type: "xp_levels"
+				}
+			]
+			title: "Tempestade de Areia Engarrafada"
+			x: 2.8d
+			y: 0.5d
+		}
+		{
+			dependencies: ["1006000000000050"]
+			description: [
+				"As Sturdy Boots possuem sola pesada magnetizada que impede que ondas de choque ou golpes colossais arremessem voce contra paredes ou abismos."
+				"Essenciais para enfrentar gigantes que produzem tremores de terra."
+			]
+			icon: {
+				id: "cataclysm:sturdy_boots"
+			}
+			id: "1006000000000130"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Media] Sturdy Boots e a ancoragem no solo"
+			tasks: [
+				{
+					id: "1006000000000131"
+					item: {
+						count: 1
+						id: "cataclysm:sturdy_boots"
+					}
+					title: "Equipe as Sturdy Boots"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 6
+					id: "1006000000000132"
+					item: {
+						count: 1
+						id: "minecraft:iron_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "1006000000000133"
+					xp_levels: 6
+					type: "xp_levels"
+				}
+			]
+			title: "Botas Resistentes das Profundezas"
+			x: 5.6d
+			y: 0.5d
+		}
+		{
+			dependencies: ["1006000000000050"]
+			description: [
+				"As Sticky Gloves permitem subir e se dependurar nas cornijas das masmorras monumentais sem precisar empilhar terra ou blocos deselegantes."
+				"Suba com agilidade natural para flanquear sentinelas."
+			]
+			icon: {
+				id: "cataclysm:sticky_gloves"
+			}
+			id: "1006000000000140"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Media] Sticky Gloves e a escalada de monumentos"
+			tasks: [
+				{
+					id: "1006000000000141"
+					item: {
+						count: 1
+						id: "cataclysm:sticky_gloves"
+					}
+					title: "Equipe as Sticky Gloves"
 					type: "item"
 				}
 			]
 			rewards: [
 				{
 					count: 8
+					id: "1006000000000142"
+					item: {
+						count: 1
+						id: "minecraft:slime_ball"
+					}
+					type: "item"
+				}
+				{
+					id: "1006000000000143"
+					xp_levels: 6
+					type: "xp_levels"
+				}
+			]
+			title: "Luvas Aderentes dos Exploradores"
+			x: 8.4d
+			y: 0.5d
+		}
+		{
+			dependencies: ["1006000000000080"]
+			description: [
+				"A Strange Key e um mecanismo esculpido com runas de pedra estelar. Ela destranca as portas de selo das masmorras onde os titas hibernam."
+				"Localize uma chave inspecionando baus de sentinelas de elite."
+			]
+			icon: {
+				id: "cataclysm:strange_key"
+			}
+			id: "1006000000000150"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Dificil] Strange Key e os portais selados"
+			tasks: [
+				{
+					id: "1006000000000151"
+					item: {
+						count: 1
+						id: "cataclysm:strange_key"
+					}
+					title: "Obtenha a Strange Key"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 4
 					id: "1006000000000152"
 					item: {
 						count: 1
-						id: "minecraft:netherite_scrap"
+						id: "minecraft:diamond"
 					}
 					type: "item"
 				}
 				{
 					id: "1006000000000153"
+					xp_levels: 7
 					type: "xp_levels"
-					xp_levels: 20
 				}
 			]
-			title: "O Baluarte das Chamas"
-			x: -5.0d
-			y: 2.5d
+			title: "A Chave Misteriosa dos Santuarios"
+			x: -9.8d
+			y: 4.0d
 		}
 		{
-			dependencies: ["1006000000000040"]
+			dependencies: ["1006000000000120"]
 			description: [
-				"Nas entranhas da Fabrica Ancestral descansa o Arauto (The Harbinger) — uma temivel arma cibernetica-wither do apocalipse."
-				"Ele dispara feixes continuos de laser letal e chuva teleguiada de misseis wither. Sobreviva a tempestade mecanica para extrair o Olho Mecanico!"
+				"O Necklace of the Desert e uma joia cerimonial encontrada nas profundezas das piramides amaldicoadas. Ele dissipa efeitos de queima e reduz a sede do calor."
+				"Um amuleto essencial antes de invadir a arena do Ancient Remnant."
 			]
 			icon: {
-				id: "cataclysm:void_core"
-			}
-			id: "1006000000000050"
-			shape: "diamond"
-			size: 1.6d
-			subtitle: "[Dificuldade: Extrema] O titã cibernetico de artilharia wither da Fabrica Ancestral"
-			tasks: [
-				{
-					entity: "cataclysm:the_harbinger"
-					id: "1006000000000051"
-					type: "kill"
-					value: 1L
-				}
-			]
-			rewards: [
-				{
-					count: 2
-					id: "1006000000000052"
-					item: {
-						count: 1
-						id: "minecraft:netherite_block"
-					}
-					type: "item"
-				}
-				{
-					id: "1006000000000053"
-					type: "xp_levels"
-					xp_levels: 35
-				}
-			]
-			title: "A Máquina do Fim: The Harbinger"
-			x: -2.5d
-			y: 0.0d
-		}
-		{
-			dependencies: ["1006000000000050"]
-			description: [
-				"O Nucleo do Vazio pulsa com a energia do apocalipse mecanico, sendo usado para criar canhoes de ombro e reatores."
-			]
-			icon: {
-				id: "cataclysm:void_core"
-			}
-			id: "1006000000000110"
-			shape: "circle"
-			size: 1.1d
-			subtitle: "[Dificuldade: Extrema] O coracao energetico do Harbinger"
-			tasks: [
-				{
-					id: "1006000000000111"
-					item: {
-						count: 1
-						id: "cataclysm:void_core"
-					}
-					type: "item"
-				}
-			]
-			rewards: [
-				{
-					count: 4
-					id: "1006000000000112"
-					item: {
-						count: 1
-						id: "minecraft:diamond_block"
-					}
-					type: "item"
-				}
-				{
-					id: "1006000000000113"
-					type: "xp_levels"
-					xp_levels: 25
-				}
-			]
-			title: "O Núcleo do Vazio"
-			x: -2.5d
-			y: -2.5d
-		}
-		{
-			dependencies: ["1006000000000050"]
-			description: [
-				"O Olho do Vazio desvela a entrada das Cidadelas do End, onde o Guardiao do Fim espera."
-			]
-			icon: {
-				id: "cataclysm:void_eye"
+				id: "cataclysm:necklace_of_the_desert"
 			}
 			id: "1006000000000160"
 			shape: "circle"
-			size: 1.1d
-			subtitle: "[Dificuldade: Dificil] A chave dimensional para a Cidadela do End"
+			size: 1.2d
+			subtitle: "[Dificuldade: Dificil] Protecao calorica contra as areias causticantes"
 			tasks: [
 				{
 					id: "1006000000000161"
 					item: {
 						count: 1
-						id: "cataclysm:void_eye"
+						id: "cataclysm:necklace_of_the_desert"
 					}
+					title: "Recupere o Colar do Deserto"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 2
+					id: "1006000000000162"
+					item: {
+						count: 1
+						id: "minecraft:gold_block"
+					}
+					type: "item"
+				}
+				{
+					id: "1006000000000163"
+					xp_levels: 8
+					type: "xp_levels"
+				}
+			]
+			title: "O Colar do Deserto Ancestral"
+			x: -7.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["1006000000000150"]
+			description: [
+				"O Flame Eye pulsa em direcao as muralhas de basalto negro da Burning Arena no Nether, onde Ignis guarda sua corte de fogo."
+				"Siga a trajetoria do olho para localizar o santuario sem errar caminhos no submundo."
+			]
+			icon: {
+				id: "cataclysm:flame_eye"
+			}
+			id: "1006000000000170"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Dificil] Flame Eye: O radar da Fortaleza Ardente do Nether"
+			tasks: [
+				{
+					id: "1006000000000171"
+					item: {
+						count: 1
+						id: "cataclysm:flame_eye"
+					}
+					title: "Forje ou Encontre o Flame Eye"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 8
+					id: "1006000000000172"
+					item: {
+						count: 1
+						id: "minecraft:blaze_rod"
+					}
+					type: "item"
+				}
+				{
+					id: "1006000000000173"
+					xp_levels: 8
+					type: "xp_levels"
+				}
+			]
+			title: "O Olho das Chamas Ardentes"
+			x: -4.2d
+			y: 4.0d
+		}
+		{
+			dependencies: ["1006000000000150"]
+			description: [
+				"O Abyss Eye detecta a pressao barometrica e aponta diretamente para a fosso central da Sunken City, covil do Leviathan."
+				"Prepare elixires de respiracao aquatica e guie-se atraves das profundezas oceanicas."
+			]
+			icon: {
+				id: "cataclysm:abyss_eye"
+			}
+			id: "1006000000000180"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Dificil] Abyss Eye: A bussola da Sunken City"
+			tasks: [
+				{
+					id: "1006000000000181"
+					item: {
+						count: 1
+						id: "cataclysm:abyss_eye"
+					}
+					title: "Forje ou Encontre o Abyss Eye"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 16
+					id: "1006000000000182"
+					item: {
+						count: 1
+						id: "minecraft:prismarine"
+					}
+					type: "item"
+				}
+				{
+					id: "1006000000000183"
+					xp_levels: 8
+					type: "xp_levels"
+				}
+			]
+			title: "O Olho das Profundezas Abissais"
+			x: -1.4d
+			y: 4.0d
+		}
+		{
+			dependencies: ["1006000000000150"]
+			description: [
+				"O Mech Eye emite pulsos de ondas eletromagneticas que sintonizam a frequencia da Fabrica Antiga soterrada, morada de The Harbinger."
+				"Siga o zumbido mecânico para descobrir o complexo subterraneo."
+			]
+			icon: {
+				id: "cataclysm:mech_eye"
+			}
+			id: "1006000000000190"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Dificil] Mech Eye: Rastreando a Fabrica Esquecida"
+			tasks: [
+				{
+					id: "1006000000000191"
+					item: {
+						count: 1
+						id: "cataclysm:mech_eye"
+					}
+					title: "Forje ou Encontre o Mech Eye"
 					type: "item"
 				}
 			]
 			rewards: [
 				{
 					count: 4
-					id: "1006000000000162"
+					id: "1006000000000192"
+					item: {
+						count: 1
+						id: "minecraft:redstone_block"
+					}
+					type: "item"
+				}
+				{
+					id: "1006000000000193"
+					xp_levels: 8
+					type: "xp_levels"
+				}
+			]
+			title: "O Olho Mecanico da Cidadela"
+			x: 1.4d
+			y: 4.0d
+		}
+		{
+			dependencies: ["1006000000000150"]
+			description: [
+				"O Monstrous Eye pulsa com a batida cardiaca pesada da Netherite Monstrosity. Ele indica a forja vulcanica soterrada no Nether onde ela repousa."
+				"Aproxime-se apenas quando estiver munido de pocoes de resistencia maxima a fogo."
+			]
+			icon: {
+				id: "cataclysm:monstrous_eye"
+			}
+			id: "1006000000000200"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Dificil] Monstrous Eye: O coracao de Netherite petrificado"
+			tasks: [
+				{
+					id: "1006000000000201"
+					item: {
+						count: 1
+						id: "cataclysm:monstrous_eye"
+					}
+					title: "Forje ou Encontre o Monstrous Eye"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 64
+					id: "1006000000000202"
+					item: {
+						count: 1
+						id: "minecraft:netherrack"
+					}
+					type: "item"
+				}
+				{
+					id: "1006000000000203"
+					xp_levels: 8
+					type: "xp_levels"
+				}
+			]
+			title: "O Olho Monstruoso do Subsolo"
+			x: 4.2d
+			y: 4.0d
+		}
+		{
+			dependencies: ["1006000000000150"]
+			description: [
+				"O Desert Eye gira com magnetismo de areia, indicando a piramide colossal enterrada sob as tempestades do deserto."
+				"La dentro aguardam mumias, armadilhas de queda e a sentinela fóssil."
+			]
+			icon: {
+				id: "cataclysm:desert_eye"
+			}
+			id: "1006000000000210"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Dificil] Desert Eye: A tumba esquecida do Ancient Remnant"
+			tasks: [
+				{
+					id: "1006000000000211"
+					item: {
+						count: 1
+						id: "cataclysm:desert_eye"
+					}
+					title: "Forje ou Encontre o Desert Eye"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 16
+					id: "1006000000000212"
+					item: {
+						count: 1
+						id: "minecraft:chiseled_sandstone"
+					}
+					type: "item"
+				}
+				{
+					id: "1006000000000213"
+					xp_levels: 8
+					type: "xp_levels"
+				}
+			]
+			title: "O Olho do Deserto Antigo"
+			x: 7.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["1006000000000150"]
+			description: [
+				"Nas ilhas remotas do End ergue-se a Ruined Citadel, guardada pelo Ender Guardian. O Void Eye indica a rota espacial atraves das ilhas do vazio."
+				"Leve foguetes, asas de elitra ou blocos suficientes para a travessia."
+			]
+			icon: {
+				id: "cataclysm:void_eye"
+			}
+			id: "1006000000000220"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Dificil] Void Eye: Rumo a Cidadela Flutuante do The End"
+			tasks: [
+				{
+					id: "1006000000000221"
+					item: {
+						count: 1
+						id: "cataclysm:void_eye"
+					}
+					title: "Forje ou Encontre o Void Eye"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 16
+					id: "1006000000000222"
 					item: {
 						count: 1
 						id: "minecraft:ender_pearl"
@@ -519,213 +969,86 @@
 					type: "item"
 				}
 				{
-					id: "1006000000000163"
+					id: "1006000000000223"
+					xp_levels: 9
 					type: "xp_levels"
-					xp_levels: 15
 				}
 			]
-			title: "O Olho do Vazio"
-			x: -2.5d
-			y: 2.5d
+			title: "O Olho do Vazio Cosmico"
+			x: 9.8d
+			y: 4.0d
 		}
 		{
-			dependencies: ["1006000000000050"]
+			dependencies: ["1006000000000200"]
 			description: [
-				"No fosso mais profundo da Cidade Submersa, realize o Sacrificio Abissal no Altar do Abismo."
-				"O Leviata emerge com suas garras titanicas e boca de fendas dimensionais, invocando buracos negros e turbilhoes maremotos."
-				"Sobreviva a este deus marinho para forjar as Manoplas do Maelstrom!"
+				"A Netherite Monstrosity empunha um martelo que pulveriza rochas e descarrega ondas de choque de magma no solo."
+				"Atraia a besta para areas abertas e desvie dos disparos de lava antes de castiga-la com golpes criticos!"
 			]
 			icon: {
-				id: "cataclysm:abyssal_sacrifice"
+				id: "cataclysm:monstrous_horn"
 			}
-			id: "1006000000000060"
-			shape: "diamond"
-			size: 1.6d
-			subtitle: "[Dificuldade: Extrema] O deus ancestral das profundezas e dos buracos negros"
-			tasks: [
-				{
-					entity: "cataclysm:the_leviathan"
-					id: "1006000000000061"
-					type: "kill"
-					value: 1L
-				}
-			]
-			rewards: [
-				{
-					id: "1006000000000062"
-					item: {
-						count: 1
-						id: "cataclysm:gauntlet_of_maelstrom"
-					}
-					type: "item"
-				}
-				{
-					id: "1006000000000063"
-					type: "xp_levels"
-					xp_levels: 40
-				}
-			]
-			title: "O Soberano dos Oceanos: The Leviathan"
-			x: 0.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["1006000000000060"]
-			description: [
-				"As Manoplas do Maelstrom disparam turbilhoes aquaticos que sugam inimigos para um vortice destrutivo."
-			]
-			icon: {
-				id: "cataclysm:gauntlet_of_maelstrom"
-			}
-			id: "1006000000000120"
-			shape: "diamond"
-			size: 1.3d
-			subtitle: "[Dificuldade: Extrema] O poder dos maremotos canalizado nos punhos"
-			tasks: [
-				{
-					id: "1006000000000121"
-					item: {
-						count: 1
-						id: "cataclysm:gauntlet_of_maelstrom"
-					}
-					type: "item"
-				}
-			]
-			rewards: [
-				{
-					count: 2
-					id: "1006000000000122"
-					item: {
-						count: 1
-						id: "minecraft:netherite_block"
-					}
-					type: "item"
-				}
-				{
-					id: "1006000000000123"
-					type: "xp_levels"
-					xp_levels: 30
-				}
-			]
-			title: "As Manoplas do Maelstrom"
-			x: 0.0d
-			y: -2.5d
-		}
-		{
-			dependencies: ["1006000000000160"]
-			description: [
-				"Na Cidadela do End desperta o colossal Guardiao do Fim (Ender Guardian)."
-				"Com socos que quebram o espaco-tempo e teletransporte violento, ele desafia qualquer heroi mortal."
-			]
-			icon: {
-				id: "cataclysm:gauntlet_of_guard"
-			}
-			id: "1006000000000170"
-			shape: "diamond"
-			size: 1.5d
-			subtitle: "[Dificuldade: Extrema] O colosso espacial da Cidadela em Ruinas"
-			tasks: [
-				{
-					entity: "cataclysm:ender_guardian"
-					id: "1006000000000171"
-					type: "kill"
-					value: 1L
-				}
-			]
-			rewards: [
-				{
-					id: "1006000000000172"
-					item: {
-						count: 1
-						id: "cataclysm:gauntlet_of_guard"
-					}
-					type: "item"
-				}
-				{
-					id: "1006000000000173"
-					type: "xp_levels"
-					xp_levels: 35
-				}
-			]
-			title: "O Guardião do Fim: Ender Guardian"
-			x: 0.0d
-			y: 2.5d
-		}
-		{
-			dependencies: ["1006000000000060"]
-			description: [
-				"Voce superou os terrores do Overworld, dominou o vapor do Create, desbravou o Crepusculo e o Bumblezone, forjou as armas runicas lendarias e destruiu todos os titas cataclismicos."
-				"Seu legado no Mundo Eterno esta gravado para sempre nas estrelas. Nada mais pode ameacar a sua supremacia!"
-			]
-			icon: {
-				id: "cataclysm:gauntlet_of_guard"
-			}
-			id: "1006000000000070"
+			id: "1006000000000230"
 			shape: "hexagon"
-			size: 2.0d
-			subtitle: "A consumação suprema da jornada do seu Mundo Eterno"
+			size: 1.4d
+			subtitle: "[Dificuldade: Extrema] O colosso de metal fundido do Soul Blacksmith"
 			tasks: [
 				{
-					id: "1006000000000071"
-					title: "O Conquistador Imortal do BlessForge"
-					type: "checkmark"
-				}
-			]
-			rewards: [
-				{
-					count: 1
-					id: "1006000000000072"
+					id: "1006000000000231"
 					item: {
 						count: 1
-						id: "minecraft:dragon_egg"
+						id: "cataclysm:monstrous_horn"
 					}
-					type: "item"
-				}
-				{
-					count: 4
-					id: "1006000000000073"
-					item: {
-						count: 1
-						id: "minecraft:netherite_block"
-					}
-					type: "item"
-				}
-				{
-					id: "1006000000000074"
-					type: "xp_levels"
-					xp_levels: 100
-				}
-			]
-			title: "O Panteao da Eternidade"
-			x: 2.5d
-			y: 0.0d
-		}
-		{
-			dependencies: ["1006000000000120"]
-			description: [
-				"A Forja do Vazio canaliza minerios cósmicos e placas de netherite para aprimorar os artefatos do Cataclysm ao seu potencial máximo."
-			]
-			icon: {
-				id: "cataclysm:void_forge"
-			}
-			id: "1006000000000130"
-			shape: "circle"
-			size: 1.1d
-			subtitle: "[Dificuldade: Extrema] A forja abissal do vazio absoluto"
-			tasks: [
-				{
-					id: "1006000000000131"
-					item: {
-						count: 1
-						id: "cataclysm:void_forge"
-					}
+					title: "Obtenha o Monstrous Horn"
 					type: "item"
 				}
 			]
 			rewards: [
 				{
 					count: 2
-					id: "1006000000000132"
+					id: "1006000000000232"
+					item: {
+						count: 1
+						id: "minecraft:netherite_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "1006000000000233"
+					xp_levels: 12
+					type: "xp_levels"
+				}
+			]
+			title: "A Monstruosidade de Netherite"
+			x: -9.8d
+			y: 7.5d
+		}
+		{
+			dependencies: ["1006000000000230"]
+			description: [
+				"Com o chifre da monstruosidade forja-se a Infernal Forge. Cada golpe no chao levanta pedras incandescentes que esmagam grupos de inimigos com fisica realista!"
+				"Uma das armas pesadas mais iconicas de toda a historia dos mods."
+			]
+			icon: {
+				id: "cataclysm:infernal_forge"
+			}
+			id: "1006000000000240"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Extrema] O martelo monumental de impacto vulcanico"
+			tasks: [
+				{
+					id: "1006000000000241"
+					item: {
+						count: 1
+						id: "cataclysm:infernal_forge"
+					}
+					title: "Forje a Infernal Forge"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					id: "1006000000000242"
 					item: {
 						count: 1
 						id: "minecraft:netherite_block"
@@ -733,56 +1056,277 @@
 					type: "item"
 				}
 				{
-					id: "1006000000000133"
+					id: "1006000000000243"
+					xp_levels: 12
 					type: "xp_levels"
-					xp_levels: 30
 				}
 			]
-			title: "A Forja do Vazio"
-			x: 2.5d
-			y: -2.5d
+			title: "A Forja Infernal Desperta"
+			x: -7.0d
+			y: 7.5d
 		}
 		{
 			dependencies: ["1006000000000170"]
 			description: [
-				"As Manoplas da Guarda Dimensional permitem bloquear impactos gigantescos e contra-atacar com explosoes de teleporte do End."
+				"Ignis e um mestre da esgrima flamejante. Suas investidas aereas desenham arcos incandescentes e ele desvia de flechas com facilidade desconcertante."
+				"Encare-o em combate corpo a corpo com escudo resistente e tempos de aparo perfeitos."
 			]
 			icon: {
-				id: "cataclysm:gauntlet_of_guard"
+				id: "cataclysm:burning_ashes"
 			}
-			id: "1006000000000180"
-			shape: "circle"
-			size: 1.1d
-			subtitle: "[Dificuldade: Extrema] A defesa espacial definitiva"
+			id: "1006000000000250"
+			shape: "hexagon"
+			size: 1.4d
+			subtitle: "[Dificuldade: Extrema] O duelista supremo da Burning Arena"
 			tasks: [
 				{
-					id: "1006000000000181"
+					id: "1006000000000251"
 					item: {
 						count: 1
-						id: "cataclysm:gauntlet_of_guard"
+						id: "cataclysm:burning_ashes"
 					}
+					title: "Obtenha as Cinzas Ardentes de Ignis"
 					type: "item"
 				}
 			]
 			rewards: [
 				{
 					count: 2
-					id: "1006000000000182"
+					id: "1006000000000252"
 					item: {
 						count: 1
-						id: "minecraft:netherite_block"
+						id: "minecraft:netherite_ingot"
 					}
 					type: "item"
 				}
 				{
-					id: "1006000000000183"
+					id: "1006000000000253"
+					xp_levels: 12
 					type: "xp_levels"
-					xp_levels: 30
 				}
 			]
-			title: "Manoplas da Guarda Dimensional"
-			x: 2.5d
-			y: 2.5d
+			title: "Ignis: O Cavaleiro do Fogo Eterno"
+			x: -4.2d
+			y: 7.5d
+		}
+		{
+			dependencies: ["1006000000000250"]
+			description: [
+				"A espada empunhada por Ignis agora e sua. A Incinerator projeta ondas de calor que cortam armaduras e incineram tudo a sua frente com elegancia mortal."
+				"O trofeu supremo dos duelos do submundo."
+			]
+			icon: {
+				id: "cataclysm:the_incinerator"
+			}
+			id: "1006000000000260"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Extrema] A grande espada forjada no fogo sagrado"
+			tasks: [
+				{
+					id: "1006000000000261"
+					item: {
+						count: 1
+						id: "cataclysm:the_incinerator"
+					}
+					title: "Empunhe The Incinerator"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 16
+					id: "1006000000000262"
+					item: {
+						count: 1
+						id: "minecraft:blaze_rod"
+					}
+					type: "item"
+				}
+				{
+					id: "1006000000000263"
+					xp_levels: 12
+					type: "xp_levels"
+				}
+			]
+			title: "A Lamina Devastadora: Incinerator"
+			x: -1.4d
+			y: 7.5d
+		}
+		{
+			dependencies: ["1006000000000190"]
+			description: [
+				"O Harbinger dispara misseis teleguiados, rajadas de laser mortais e ondas eletromagneticas que desestabilizam escudos."
+				"Use pilares e a arquitetura da fábrica como cobertura para desviar dos lasers antes de engajar no ataque."
+			]
+			icon: {
+				id: "cataclysm:emp"
+			}
+			id: "1006000000000270"
+			shape: "hexagon"
+			size: 1.4d
+			subtitle: "[Dificuldade: Extrema] O guardiao cibernetico da Fabrica Perdida"
+			tasks: [
+				{
+					id: "1006000000000271"
+					item: {
+						count: 1
+						id: "cataclysm:emp"
+					}
+					title: "Obtenha o Nucleo EMP do Harbinger"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 4
+					id: "1006000000000272"
+					item: {
+						count: 1
+						id: "minecraft:netherite_scrap"
+					}
+					type: "item"
+				}
+				{
+					id: "1006000000000273"
+					xp_levels: 12
+					type: "xp_levels"
+				}
+			]
+			title: "The Harbinger: A Calamidade Mecanica"
+			x: 1.4d
+			y: 7.5d
+		}
+		{
+			dependencies: ["1006000000000180"]
+			description: [
+				"O colossal Leviathan nada em circulos ao redor do altar abissal. Quando ele ruge, ondas gravitacionais sugam o jogador em direcao a sua bocarra gigante!"
+				"Nade com velocidade usando nadadeiras ou tridente para atingir seus pontos fracos nas costas."
+			]
+			icon: {
+				id: "cataclysm:abyssal_sacrifice"
+			}
+			id: "1006000000000280"
+			shape: "hexagon"
+			size: 1.4d
+			subtitle: "[Dificuldade: Extrema] O senhor das profundezas da Sunken City"
+			tasks: [
+				{
+					id: "1006000000000281"
+					item: {
+						count: 1
+						id: "cataclysm:abyssal_sacrifice"
+					}
+					title: "Conquiste o Tributo do Abismo"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					id: "1006000000000282"
+					item: {
+						count: 1
+						id: "minecraft:heart_of_the_sea"
+					}
+					type: "item"
+				}
+				{
+					id: "1006000000000283"
+					xp_levels: 15
+					type: "xp_levels"
+				}
+			]
+			title: "The Leviathan: O Terror do Abismo"
+			x: 4.2d
+			y: 7.5d
+		}
+		{
+			dependencies: ["1006000000000210"]
+			description: [
+				"Maledictus vagueia pelas catacumbas invocando espectros e prendendo a alma do jogador em correntes de sombras que restringem o movimento."
+				"Quebre as correntes com ataques fisicos rapidos para manter-se livre e triunfar!"
+			]
+			icon: {
+				id: "cataclysm:cursed_tombstone"
+			}
+			id: "1006000000000290"
+			shape: "hexagon"
+			size: 1.4d
+			subtitle: "[Dificuldade: Extrema] O fantasma amaldicoado dos templos sombrios"
+			tasks: [
+				{
+					id: "1006000000000291"
+					item: {
+						count: 1
+						id: "cataclysm:cursed_tombstone"
+					}
+					title: "Obtenha a Lapide Amaldicoada"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 4
+					id: "1006000000000292"
+					item: {
+						count: 1
+						id: "minecraft:echo_shard"
+					}
+					type: "item"
+				}
+				{
+					id: "1006000000000293"
+					xp_levels: 12
+					type: "xp_levels"
+				}
+			]
+			title: "Maledictus: A Maldicao Espectral"
+			x: 7.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["1006000000000220", "1006000000000240", "1006000000000260", "1006000000000270", "1006000000000280"]
+			description: [
+				"No topo da Ruined Citadel aguarda o mais formidavel dos titas: o Ender Guardian. Ele manipula a gravidade, abre fendas no espaco e desfere socos que quebram o proprio ar!"
+				"Ao derrota-lo, voce encerra a era dos titas e se consagra como a lenda viva absoluta do Mundo Eterno!"
+			]
+			icon: {
+				id: "cataclysm:void_core"
+			}
+			id: "1006000000000300"
+			shape: "diamond"
+			size: 1.6d
+			subtitle: "[Dificuldade: Extrema] A sentinela suprema do vazio cosmico"
+			tasks: [
+				{
+					id: "1006000000000301"
+					item: {
+						count: 1
+						id: "cataclysm:void_core"
+					}
+					title: "Conquiste o Void Core do Ender Guardian"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 2
+					id: "1006000000000302"
+					item: {
+						count: 1
+						id: "minecraft:nether_star"
+					}
+					type: "item"
+				}
+				{
+					id: "1006000000000303"
+					xp_levels: 20
+					type: "xp_levels"
+				}
+			]
+			title: "O Guardiao do Fim: Ender Guardian"
+			x: 9.8d
+			y: 7.5d
 		}
 	]
 }

@@ -4,16 +4,16 @@
 	filename: "capitulo_4_bumblezone"
 	group: "1A2B3C4D5E6F7001"
 	icon: {
-		id: "the_bumblezone:royal_jelly_bottle"
+		id: "the_bumblezone:bee_bread"
 	}
 	id: "1004000000000001"
 	order_index: 4
-	title: "4. Zumbidos e Abismos (The Bumblezone)"
+	title: "4. No Coracao da Colmeia (The Bumblezone)"
 	quests: [
 		{
 			description: [
-				"Para ingressar no reino milenar das abelhas, arremesse uma Perola do Ender diretamente contra qualquer colmeia ou ninho de abelha comum no Overworld."
-				"Voce sera encolhido e transportado para um universo colossal feito inteiramente de favos dourados, rios de mel e zumbidos estrondosos!"
+				"Para entrar no reino sagrado das abelhas, localize qualquer colmeia repleta de mel (ou Ninho de Abelhas) e atire uma perola de ender diretamente contra ela."
+				"Voce encolhera milagrosamente e despertara imerso em galerias de puro nectar e ambar cintilante!"
 			]
 			icon: {
 				id: "minecraft:ender_pearl"
@@ -21,18 +21,63 @@
 			id: "1004000000000010"
 			shape: "hexagon"
 			size: 1.5d
-			subtitle: "O teleporte para o interior do favo dimensional"
+			subtitle: "[Dificuldade: Facil] O salto quantico atraves do favo"
 			tasks: [
 				{
 					id: "1004000000000011"
-					title: "Adentre o Bumblezone"
+					title: "Teleporte-se para The Bumblezone"
 					type: "checkmark"
 				}
 			]
 			rewards: [
 				{
-					count: 4
+					count: 8
 					id: "1004000000000012"
+					item: {
+						count: 1
+						id: "minecraft:glass_bottle"
+					}
+					type: "item"
+				}
+				{
+					id: "1004000000000013"
+					xp_levels: 3
+					type: "xp_levels"
+				}
+			]
+			title: "Rumo a Colmeia Cosmica"
+			x: -9.8d
+			y: -3.0d
+		}
+		{
+			dependencies: ["1004000000000010"]
+			description: [
+				"Ao descer pelas galerias, repare que as paredes sao feitas de blocos de favo poroso que absorvem quedas e amortecem seus passos."
+				"Colete amostras para estudar sua composicao e construir estruturas acusticas e macias."
+			]
+			icon: {
+				id: "the_bumblezone:porous_honeycomb_block"
+			}
+			id: "1004000000000020"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Facil] A arquitetura esponjosa da colmeia"
+			tasks: [
+				{
+					count: 8L
+					id: "1004000000000021"
+					item: {
+						count: 1
+						id: "the_bumblezone:porous_honeycomb_block"
+					}
+					title: "Colete Blocos de Favo Poroso"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 4
+					id: "1004000000000022"
 					item: {
 						count: 1
 						id: "minecraft:honey_bottle"
@@ -40,131 +85,82 @@
 					type: "item"
 				}
 				{
-					id: "1004000000000013"
-					type: "xp_levels"
-					xp_levels: 5
+					id: "1004000000000023"
+					xp: 100
+					type: "xp"
 				}
 			]
-			title: "A Fenda dos Favos: O Bumblezone"
-			x: -10.0d
-			y: 0.0d
+			title: "Os Favos Porosos do Solo"
+			x: -7.0d
+			y: -3.0d
 		}
 		{
-			dependencies: ["1004000000000010"]
+			dependencies: ["1004000000000020"]
 			description: [
-				"Nas paredes das cavernas de mel crescem cristais dourados reluzentes."
-				"Com esses fragmentos, voce pode forjar ferramentas refractarias e o formidavel Escudo de Mel Cristalizado, que regenera sua propria durabilidade quando banhado em mel!"
+				"A cera secretada pelas operarias (Beehive Beeswax) e ultra maleavel e serve para confeccionar velas, tijolos ornamentados e selar recipientes."
+				"Mantenha sempre um estoque na sua bolsa para os artesanatos refinados do formigueiro de mel."
 			]
 			icon: {
-				id: "the_bumblezone:honey_crystal_shards"
+				id: "the_bumblezone:beehive_beeswax"
 			}
-			id: "1004000000000020"
+			id: "1004000000000030"
 			shape: "circle"
-			size: 1.1d
-			subtitle: "[Dificuldade: Media] Minerios cristalinos e armaduras refractarias"
+			size: 1.2d
+			subtitle: "[Dificuldade: Facil] Isolamento impermeavel e artesanato puro"
 			tasks: [
 				{
-					count: 16L
-					id: "1004000000000021"
+					count: 6L
+					id: "1004000000000031"
 					item: {
 						count: 1
-						id: "the_bumblezone:honey_crystal_shards"
+						id: "the_bumblezone:beehive_beeswax"
 					}
-					type: "item"
-				}
-				{
-					id: "1004000000000022"
-					item: {
-						count: 1
-						id: "the_bumblezone:honey_crystal_shield"
-					}
+					title: "Colete Cera de Abelha"
 					type: "item"
 				}
 			]
 			rewards: [
 				{
 					count: 4
-					id: "1004000000000023"
-					item: {
-						count: 1
-						id: "the_bumblezone:glistering_honey_crystal"
-					}
-					type: "item"
-				}
-				{
-					id: "1004000000000024"
-					type: "xp_levels"
-					xp_levels: 6
-				}
-			]
-			title: "Mel Cristalizado e Escudo Dourado"
-			x: -7.5d
-			y: 0.0d
-		}
-		{
-			dependencies: ["1004000000000020"]
-			description: [
-				"A Bussola de Mel sintoniza a vibracao de feromonios no ar."
-				"Clique com o botao direito para faze-la apontar para Santuarios Sempiternos, Salas do Trono da Rainha ou Labirintos de Celulas subterraneos sem perambular no escuro!"
-			]
-			icon: {
-				id: "the_bumblezone:honey_compass"
-			}
-			id: "1004000000000030"
-			shape: "circle"
-			size: 1.1d
-			subtitle: "Navegacao por feromonios entre as colmeias"
-			tasks: [
-				{
-					id: "1004000000000031"
-					item: {
-						count: 1
-						id: "the_bumblezone:honey_compass"
-					}
-					type: "item"
-				}
-			]
-			rewards: [
-				{
-					count: 8
 					id: "1004000000000032"
 					item: {
 						count: 1
-						id: "minecraft:honeycomb"
+						id: "minecraft:candle"
 					}
 					type: "item"
 				}
 				{
 					id: "1004000000000033"
-					type: "xp_levels"
-					xp_levels: 6
+					xp: 120
+					type: "xp"
 				}
 			]
-			title: "A Bussola de Mel"
-			x: -7.5d
-			y: -2.5d
+			title: "A Cera Protetora das Abelhas"
+			x: -4.2d
+			y: -3.0d
 		}
 		{
-			dependencies: ["1004000000000020"]
+			dependencies: ["1004000000000030"]
 			description: [
-				"Ao arremessar Bolas de Polen (Pollen Puffs) em flores e cultivos, elas polinizam e aceleram colheitas instantaneamente."
-				"Use seu estilingue ou arremesse com a mao para domesticar ou acalmar abelhas agitadas."
+				"Misturando acucar cristal em garrafas de agua limpa voce prepara Sugar Water Bottles."
+				"Beber essa infusao regenera sua energia com agilidade, e oferecer as abelhas ganha imediatamente sua admiracao e gratidao!"
 			]
 			icon: {
-				id: "the_bumblezone:pollen_puff"
+				id: "the_bumblezone:sugar_water_bottle"
 			}
 			id: "1004000000000040"
 			shape: "circle"
-			size: 1.1d
-			subtitle: "[Dificuldade: Media] A poeira floral que fertiliza biomas inteiros"
+			size: 1.2d
+			subtitle: "[Dificuldade: Facil] A bebida favorita das operarias cansadas"
 			tasks: [
 				{
-					count: 16L
+					count: 4L
 					id: "1004000000000041"
 					item: {
 						count: 1
-						id: "the_bumblezone:pollen_puff"
+						id: "the_bumblezone:sugar_water_bottle"
 					}
+					title: "Prepare Garrafas de Agua com Acucar"
 					type: "item"
 				}
 			]
@@ -174,376 +170,398 @@
 					id: "1004000000000042"
 					item: {
 						count: 1
-						id: "the_bumblezone:pollen_puff"
-					}
-					type: "item"
-				}
-				{
-					id: "1004000000000043"
-					type: "xp_levels"
-					xp_levels: 6
-				}
-			]
-			title: "Projéteis de Polen"
-			x: -7.5d
-			y: 2.5d
-		}
-		{
-			dependencies: ["1004000000000020"]
-			description: [
-				"A Geleia Real e o elixir maximo das abelhas nobres."
-				"Beber este néctar divino concede restauracao instantanea de todos os coracoes e previne venenos por longos minutos."
-			]
-			icon: {
-				id: "the_bumblezone:royal_jelly_bottle"
-			}
-			id: "1004000000000050"
-			shape: "diamond"
-			size: 1.3d
-			subtitle: "[Dificuldade: Dificil] O elixir sagrado da colmeia imperial"
-			tasks: [
-				{
-					count: 3L
-					id: "1004000000000051"
-					item: {
-						count: 1
-						id: "the_bumblezone:royal_jelly_bottle"
-					}
-					type: "item"
-				}
-			]
-			rewards: [
-				{
-					count: 2
-					id: "1004000000000052"
-					item: {
-						count: 1
-						id: "the_bumblezone:royal_jelly_bottle"
-					}
-					type: "item"
-				}
-				{
-					id: "1004000000000053"
-					type: "xp_levels"
-					xp_levels: 10
-				}
-			]
-			title: "O Manjar Imperial: Geleia Real"
-			x: -5.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["1004000000000050"]
-			description: [
-				"Cristais cintilantes de mel concentram energia pura das abelhas operarias para misturas alquimicas avancadas."
-			]
-			icon: {
-				id: "the_bumblezone:glistering_honey_crystal"
-			}
-			id: "1004000000000110"
-			shape: "circle"
-			size: 1.1d
-			subtitle: "[Dificuldade: Media] Cristalizacao cintilante de alta doçura"
-			tasks: [
-				{
-					count: 8L
-					id: "1004000000000111"
-					item: {
-						count: 1
-						id: "the_bumblezone:glistering_honey_crystal"
-					}
-					type: "item"
-				}
-			]
-			rewards: [
-				{
-					count: 4
-					id: "1004000000000112"
-					item: {
-						count: 1
-						id: "the_bumblezone:glistering_honey_crystal"
-					}
-					type: "item"
-				}
-				{
-					id: "1004000000000113"
-					type: "xp_levels"
-					xp_levels: 8
-				}
-			]
-			title: "Mel Cintilante Místico"
-			x: -5.0d
-			y: -2.5d
-		}
-		{
-			dependencies: ["1004000000000050"]
-			description: [
-				"Forjada com o ferrão endurecido de abelhas gigantes, esta lanca causa sangramento e perfuracao aguda."
-				"Excelente para investidas velozes enquanto voce desliza sobre blocos pegajosos de mel!"
-			]
-			icon: {
-				id: "the_bumblezone:stinger_spear"
-			}
-			id: "1004000000000060"
-			shape: "pentagon"
-			size: 1.25d
-			subtitle: "[Dificuldade: Dificil] Perfuracao pontiaguda com ferroes gigantes"
-			tasks: [
-				{
-					id: "1004000000000061"
-					item: {
-						count: 1
-						id: "the_bumblezone:stinger_spear"
-					}
-					type: "item"
-				}
-			]
-			rewards: [
-				{
-					count: 4
-					id: "1004000000000062"
-					item: {
-						count: 1
-						id: "minecraft:emerald"
-					}
-					type: "item"
-				}
-				{
-					id: "1004000000000063"
-					type: "xp_levels"
-					xp_levels: 12
-				}
-			]
-			title: "A Lança de Ferrão"
-			x: -5.0d
-			y: 2.5d
-		}
-		{
-			dependencies: ["1004000000000060"]
-			description: [
-				"Um capacete especial que permite carregar abelhas sobre sua cabeca sem deixa-las zangadas, garantindo protecao continua."
-			]
-			icon: {
-				id: "the_bumblezone:stingless_bee_helmet_1"
-			}
-			id: "1004000000000150"
-			shape: "circle"
-			size: 1.1d
-			subtitle: "[Dificuldade: Media] Camuflagem simpatica entre os enxames"
-			tasks: [
-				{
-					id: "1004000000000151"
-					item: {
-						count: 1
-						id: "the_bumblezone:stingless_bee_helmet_1"
-					}
-					type: "item"
-				}
-			]
-			rewards: [
-				{
-					count: 16
-					id: "1004000000000152"
-					item: {
-						count: 1
 						id: "minecraft:sugar"
 					}
 					type: "item"
 				}
 				{
-					id: "1004000000000153"
-					type: "xp_levels"
-					xp_levels: 8
+					id: "1004000000000043"
+					xp: 150
+					type: "xp"
 				}
 			]
-			title: "Elmo de Abelha Sem Ferrão"
-			x: -5.0d
-			y: 5.0d
+			title: "Agua com Acucar Revigorante"
+			x: -1.4d
+			y: -3.0d
 		}
 		{
-			dependencies: ["1004000000000050"]
+			dependencies: ["1004000000000040"]
 			description: [
-				"Localize a grandiosa Sala do Trono das Abelhas e curve-se diante da Rainha das Abelhas (Bee Queen)."
-				"Ela e neutra e comercializa artefatos arcanos em troca de baldes e frascos de Geleia Real. Complete seus pedidos para ganhar o respeito do enxame!"
+				"O Bee Bread e produzido atraves da fermentacao natural do polen com gotas de mel."
+				"Cada mordida sacia profundamente a fome do viajante, tornando-o o alimento de campo perfeito para quem passa longas jornadas explorando."
 			]
 			icon: {
-				id: "minecraft:honeycomb_block"
+				id: "the_bumblezone:bee_bread"
 			}
-			id: "1004000000000080"
-			shape: "diamond"
-			size: 1.5d
-			subtitle: "[Dificuldade: Dificil] Audiencia real com a soberana do enxame"
+			id: "1004000000000050"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Facil] Superalimento proteico fermentado na colmeia"
 			tasks: [
 				{
-					id: "1004000000000081"
-					title: "Encontre a Rainha das Abelhas"
-					type: "checkmark"
+					count: 4L
+					id: "1004000000000051"
+					item: {
+						count: 1
+						id: "the_bumblezone:bee_bread"
+					}
+					title: "Obtenha Pao de Abelha (Bee Bread)"
+					type: "item"
 				}
 			]
 			rewards: [
 				{
-					count: 3
-					id: "1004000000000082"
+					count: 8
+					id: "1004000000000052"
 					item: {
 						count: 1
-						id: "the_bumblezone:royal_jelly_bottle"
+						id: "the_bumblezone:bee_bread"
 					}
 					type: "item"
 				}
 				{
-					id: "1004000000000083"
-					type: "xp_levels"
-					xp_levels: 20
+					id: "1004000000000053"
+					xp: 150
+					type: "xp"
 				}
 			]
-			title: "A Sala do Trono da Rainha"
-			x: -2.5d
-			y: 0.0d
+			title: "O Pao de Mel Nutritivo (Bee Bread)"
+			x: 1.4d
+			y: -3.0d
 		}
 		{
-			dependencies: ["1004000000000080"]
+			dependencies: ["1004000000000050"]
 			description: [
-				"Uma peca de artilharia apicola que dispara abelhas amigaveis a alta velocidade contra os inimigos!"
-				"As abelhas atacam os alvos e retornam para o canhao apos a batalha."
+				"Pollen Puffs flutuam pelas flores gigantes e cantos da colmeia. Atire um Pollen Puff em lavouras para fertilizar o solo instantaneamente como farinha de osso em massa!"
+				"Excelente para suas plantacoes automatizadas sem nenhum esforco."
 			]
 			icon: {
-				id: "the_bumblezone:bee_cannon"
+				id: "the_bumblezone:pollen_puff"
 			}
-			id: "1004000000000070"
-			shape: "pentagon"
-			size: 1.25d
-			subtitle: "[Dificuldade: Dificil] Artilharia viva com projeteis voadores"
+			id: "1004000000000060"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Facil] Polinizacao acelerada em escala mistica"
 			tasks: [
 				{
-					id: "1004000000000071"
+					count: 6L
+					id: "1004000000000061"
 					item: {
 						count: 1
-						id: "the_bumblezone:bee_cannon"
+						id: "the_bumblezone:pollen_puff"
 					}
+					title: "Colete Tufos de Polen (Pollen Puff)"
 					type: "item"
 				}
 			]
 			rewards: [
 				{
 					count: 16
+					id: "1004000000000062"
+					item: {
+						count: 1
+						id: "minecraft:bone_meal"
+					}
+					type: "item"
+				}
+				{
+					id: "1004000000000063"
+					xp: 150
+					type: "xp"
+				}
+			]
+			title: "Tufos de Polen no Ar"
+			x: 4.2d
+			y: -3.0d
+		}
+		{
+			dependencies: ["1004000000000060"]
+			description: [
+				"A Honey Compass sincroniza seus magnetos de nectar para apontar diretamente para colmeias e santuarios secretos."
+				"Nunca mais se sinta perdido nas infinitas galerias de cera."
+			]
+			icon: {
+				id: "the_bumblezone:honey_compass"
+			}
+			id: "1004000000000070"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Facil] A Bussola de Mel que aponta para maravilhas"
+			tasks: [
+				{
+					id: "1004000000000071"
+					item: {
+						count: 1
+						id: "the_bumblezone:honey_compass"
+					}
+					title: "Crie a Honey Compass"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 4
 					id: "1004000000000072"
 					item: {
 						count: 1
-						id: "minecraft:honey_bottle"
+						id: "the_bumblezone:sugar_water_bottle"
 					}
 					type: "item"
 				}
 				{
 					id: "1004000000000073"
+					xp_levels: 3
 					type: "xp_levels"
-					xp_levels: 15
 				}
 			]
-			title: "O Canhão de Abelhas"
-			x: -2.5d
-			y: 2.5d
+			title: "Navegacao por Docura"
+			x: 7.0d
+			y: -3.0d
 		}
 		{
-			dependencies: ["1004000000000080"]
+			dependencies: ["1004000000000070"]
 			description: [
-				"O Santuario Sempiterno guarda testes misticos que concedem as lendarias Essencias de Habilidade."
+				"Confeccionado com ceras especiais, o Stingless Bee Helmet faz com que as abelhas te vejam como um aliado benevolente."
+				"Evite olhares de reprovacao e explore em total harmonia com os enxames."
 			]
 			icon: {
-				id: "the_bumblezone:glistering_honey_crystal"
+				id: "the_bumblezone:stingless_bee_helmet_1"
 			}
-			id: "1004000000000120"
-			shape: "diamond"
-			size: 1.25d
-			subtitle: "[Dificuldade: Dificil] O templo ancestral das provacoes de habilidade"
+			id: "1004000000000080"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Facil] O primeiro equipamento mimetico da colmeia"
 			tasks: [
 				{
-					id: "1004000000000121"
-					title: "Descubra o Santuario Sempiterno"
-					type: "checkmark"
+					id: "1004000000000081"
+					item: {
+						count: 1
+						id: "the_bumblezone:stingless_bee_helmet_1"
+					}
+					title: "Forje o Capacete de Abelha Sem Ferrao"
+					type: "item"
 				}
 			]
 			rewards: [
 				{
-					count: 2
-					id: "1004000000000122"
+					count: 8
+					id: "1004000000000082"
 					item: {
 						count: 1
-						id: "the_bumblezone:royal_jelly_bottle"
+						id: "the_bumblezone:beehive_beeswax"
 					}
 					type: "item"
 				}
 				{
-					id: "1004000000000123"
+					id: "1004000000000083"
+					xp_levels: 4
 					type: "xp_levels"
-					xp_levels: 15
 				}
 			]
-			title: "O Santuario Sempiterno"
-			x: -2.5d
-			y: -2.5d
+			title: "Capacete de Abelha Sem Ferrao"
+			x: 9.8d
+			y: -3.0d
 		}
 		{
-			dependencies: ["1004000000000080"]
+			dependencies: ["1004000000000030"]
 			description: [
-				"A Flor Cristalina e uma reliquia viva que absorve experiencia e néctar místico para florescer em niveis cosmicos."
-				"Alimente-a com niveis de XP ate que ela atinja a maturidade maxima, liberando atributos transcendentes!"
+				"Luminescent Wax Nodes sao nos de cera brilhante que emitem fotons continuos mesmo debaixo d'agua e em correntes de ar viscoso."
+				"Perfeitos para sinalizar tuneis e criar estacoes subterraneas seguras."
 			]
 			icon: {
-				id: "the_bumblezone:crystalline_flower"
+				id: "the_bumblezone:luminescent_wax_node"
 			}
 			id: "1004000000000090"
-			shape: "diamond"
-			size: 1.5d
-			subtitle: "[Dificuldade: Extrema] O milagre botânico do cosmos apicola"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Media] Iluminacao de ambar sem queimar oxigenio"
 			tasks: [
 				{
+					count: 4L
 					id: "1004000000000091"
 					item: {
 						count: 1
-						id: "the_bumblezone:crystalline_flower"
+						id: "the_bumblezone:luminescent_wax_node"
 					}
+					title: "Colete Nos de Cera Luminescente"
 					type: "item"
 				}
 			]
 			rewards: [
 				{
-					count: 2
+					count: 8
 					id: "1004000000000092"
 					item: {
 						count: 1
-						id: "minecraft:netherite_block"
+						id: "the_bumblezone:luminescent_wax_node"
 					}
 					type: "item"
 				}
 				{
 					id: "1004000000000093"
+					xp_levels: 4
 					type: "xp_levels"
-					xp_levels: 30
 				}
 			]
-			title: "A Flor Cristalina Cosmica"
-			x: 0.0d
-			y: 0.0d
+			title: "Nos de Cera Luminescente"
+			x: -9.8d
+			y: 0.5d
 		}
 		{
-			dependencies: ["1004000000000120"]
+			dependencies: ["1004000000000090"]
 			description: [
-				"A Essencia Calmante apazigua monstros furiosos ao redor, impedindo emboscadas."
+				"Em cavernas profundas, o mel se cristaliza em estalactites densas com resistencia de pedras preciosas."
+				"Extraia Honey Crystal Shards para forjar escudos refratarios e ferramentas duraveis."
 			]
 			icon: {
-				id: "the_bumblezone:essence_calming"
+				id: "the_bumblezone:honey_crystal_shards"
+			}
+			id: "1004000000000100"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Media] Minerando geodos de mel petrificado"
+			tasks: [
+				{
+					count: 8L
+					id: "1004000000000101"
+					item: {
+						count: 1
+						id: "the_bumblezone:honey_crystal_shards"
+					}
+					title: "Minerar Fragmentos de Cristal de Mel"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 8
+					id: "1004000000000102"
+					item: {
+						count: 1
+						id: "the_bumblezone:honey_crystal_shards"
+					}
+					type: "item"
+				}
+				{
+					id: "1004000000000103"
+					xp_levels: 5
+					type: "xp_levels"
+				}
+			]
+			title: "Fragmentos do Cristal de Mel"
+			x: -7.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["1004000000000100"]
+			description: [
+				"O Honey Crystal Shield absorve impactos e gruda ataques fisicos, reduzindo a velocidade dos agressores."
+				"Uma protecao confiavel para repelir vespas agressivas e monstros venenosos."
+			]
+			icon: {
+				id: "the_bumblezone:honey_crystal_shield"
+			}
+			id: "1004000000000110"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Media] Defesa gelatinosa que desacelera projeteis"
+			tasks: [
+				{
+					id: "1004000000000111"
+					item: {
+						count: 1
+						id: "the_bumblezone:honey_crystal_shield"
+					}
+					title: "Forje o Escudo de Cristal de Mel"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 8
+					id: "1004000000000112"
+					item: {
+						count: 1
+						id: "minecraft:golden_carrot"
+					}
+					type: "item"
+				}
+				{
+					id: "1004000000000113"
+					xp_levels: 5
+					type: "xp_levels"
+				}
+			]
+			title: "O Escudo Cristalino de Mel"
+			x: -4.2d
+			y: 0.5d
+		}
+		{
+			dependencies: ["1004000000000050"]
+			description: [
+				"A Bee Soup une caldos de vegetais ricos com geleia real, nutrindo o corpo com rapidez incomparavel."
+				"Tenha tigelas preparadas antes de descer as fendas mais profundas da dimensao."
+			]
+			icon: {
+				id: "the_bumblezone:bee_soup"
+			}
+			id: "1004000000000120"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Media] Refeicao quente para climas viscosos"
+			tasks: [
+				{
+					count: 2L
+					id: "1004000000000121"
+					item: {
+						count: 1
+						id: "the_bumblezone:bee_soup"
+					}
+					title: "Prepare Sopa de Mel"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 4
+					id: "1004000000000122"
+					item: {
+						count: 1
+						id: "the_bumblezone:bee_soup"
+					}
+					type: "item"
+				}
+				{
+					id: "1004000000000123"
+					xp_levels: 4
+					type: "xp_levels"
+				}
+			]
+			title: "Sopa de Mel Reconfortante"
+			x: -1.4d
+			y: 0.5d
+		}
+		{
+			dependencies: ["1004000000000100"]
+			description: [
+				"As Carpenter Bee Boots permitem que o portador suba e se fixe em paredes de favos pegajosos com estabilidade absoluta."
+				"Nunca mais escorregue acidentalmente em cascatas de mel!"
+			]
+			icon: {
+				id: "the_bumblezone:carpenter_bee_boots_1"
 			}
 			id: "1004000000000130"
-			shape: "pentagon"
-			size: 1.25d
-			subtitle: "[Dificuldade: Dificil] A paz absoluta canalizada do néctar"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Media] Escalada aderente em superficies escorregadias"
 			tasks: [
 				{
 					id: "1004000000000131"
 					item: {
 						count: 1
-						id: "the_bumblezone:essence_calming"
+						id: "the_bumblezone:carpenter_bee_boots_1"
 					}
+					title: "Forje as Botas de Abelha Carpinteira"
 					type: "item"
 				}
 			]
@@ -553,165 +571,174 @@
 					id: "1004000000000132"
 					item: {
 						count: 1
-						id: "minecraft:golden_carrot"
+						id: "minecraft:slime_ball"
 					}
 					type: "item"
 				}
 				{
 					id: "1004000000000133"
+					xp_levels: 5
 					type: "xp_levels"
-					xp_levels: 15
 				}
 			]
-			title: "Essencia Calmante"
-			x: 0.0d
-			y: -2.5d
-		}
-		{
-			dependencies: ["1004000000000090"]
-			description: [
-				"A Essencia da Furia concede velocidade de ataque frenetica e dano critico amplificado."
-			]
-			icon: {
-				id: "the_bumblezone:essence_raging"
-			}
-			id: "1004000000000160"
-			shape: "pentagon"
-			size: 1.25d
-			subtitle: "[Dificuldade: Dificil] A colera do enxame em combate corporal"
-			tasks: [
-				{
-					id: "1004000000000161"
-					item: {
-						count: 1
-						id: "the_bumblezone:essence_raging"
-					}
-					type: "item"
-				}
-			]
-			rewards: [
-				{
-					count: 2
-					id: "1004000000000162"
-					item: {
-						count: 1
-						id: "minecraft:diamond_block"
-					}
-					type: "item"
-				}
-				{
-					id: "1004000000000163"
-					type: "xp_levels"
-					xp_levels: 15
-				}
-			]
-			title: "Essencia da Furia"
-			x: 0.0d
-			y: 2.5d
-		}
-		{
-			dependencies: ["1004000000000090"]
-			description: [
-				"A fusao de todas as gracas das abelhas culmina na Essencia das Abelhas, que concede voo suave, regeneracao e protecao sagrada!"
-			]
-			icon: {
-				id: "the_bumblezone:essence_of_the_bees"
-			}
-			id: "1004000000000100"
-			shape: "diamond"
-			size: 1.6d
-			subtitle: "[Dificuldade: Extrema] O dom supremo da monarquia alada"
-			tasks: [
-				{
-					id: "1004000000000101"
-					item: {
-						count: 1
-						id: "the_bumblezone:essence_of_the_bees"
-					}
-					type: "item"
-				}
-			]
-			rewards: [
-				{
-					count: 4
-					id: "1004000000000102"
-					item: {
-						count: 1
-						id: "the_bumblezone:royal_jelly_bottle"
-					}
-					type: "item"
-				}
-				{
-					id: "1004000000000103"
-					type: "xp_levels"
-					xp_levels: 35
-				}
-			]
-			title: "A Essencia Suprema das Abelhas"
-			x: 2.5d
-			y: 0.0d
+			title: "Botas da Abelha Carpinteira"
+			x: 1.4d
+			y: 0.5d
 		}
 		{
 			dependencies: ["1004000000000130"]
 			description: [
-				"A Essencia Radiante cega e queima mortos-vivos com luz dourada incandescente."
+				"Costuradas com peles polinizadas, as Honey Bee Leggings complementam o traje concedendo reducao de dano contra venenos e acido de ferroes."
+				"Indispensaveis para explorar ninhos de vespas."
 			]
 			icon: {
-				id: "the_bumblezone:essence_radiance"
+				id: "the_bumblezone:honey_bee_leggings_1"
 			}
 			id: "1004000000000140"
 			shape: "circle"
-			size: 1.1d
-			subtitle: "[Dificuldade: Dificil] O fulgor solar nos corredores escuros"
+			size: 1.2d
+			subtitle: "[Dificuldade: Media] Mobilidade e resistencia ao acido da colmeia"
 			tasks: [
 				{
 					id: "1004000000000141"
 					item: {
 						count: 1
-						id: "the_bumblezone:essence_radiance"
+						id: "the_bumblezone:honey_bee_leggings_1"
 					}
+					title: "Forje as Perneiras de Abelha Operaria"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 6
+					id: "1004000000000142"
+					item: {
+						count: 1
+						id: "minecraft:iron_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "1004000000000143"
+					xp_levels: 5
+					type: "xp_levels"
+				}
+			]
+			title: "Perneiras da Abelha Operaria"
+			x: 4.2d
+			y: 0.5d
+		}
+		{
+			dependencies: ["1004000000000140"]
+			description: [
+				"O Bumble Bee Chestplate confere defesa massiva e melhora o planeio com asas aerodinamicas da colmeia."
+				"Combine as quatro pecas para usufruir de beneficios de simpatia com a colonia inteira."
+			]
+			icon: {
+				id: "the_bumblezone:bumble_bee_chestplate_1"
+			}
+			id: "1004000000000150"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Media] Armadura quitinosa com asas integradas"
+			tasks: [
+				{
+					id: "1004000000000151"
+					item: {
+						count: 1
+						id: "the_bumblezone:bumble_bee_chestplate_1"
+					}
+					title: "Forje o Peitoral de Abelha"
 					type: "item"
 				}
 			]
 			rewards: [
 				{
 					count: 8
-					id: "1004000000000142"
+					id: "1004000000000152"
 					item: {
 						count: 1
-						id: "the_bumblezone:glistering_honey_crystal"
+						id: "the_bumblezone:honey_crystal_shards"
 					}
 					type: "item"
 				}
 				{
-					id: "1004000000000143"
+					id: "1004000000000153"
+					xp_levels: 6
 					type: "xp_levels"
-					xp_levels: 12
 				}
 			]
-			title: "Essencia Radiante"
-			x: 2.5d
-			y: -2.5d
+			title: "Peitoral Protetor da Colmeia"
+			x: 7.0d
+			y: 0.5d
 		}
 		{
-			dependencies: ["1004000000000160"]
+			dependencies: ["1004000000000030"]
 			description: [
-				"A Essencia da Vida cura continuamente seu portador, tornando-o quase imbativel em batalhas prolongadas."
+				"A Potion Candle queima liberando vapores alquimicos suaves que concedem efeitos beneficos para todos os jogadores ao redor."
+				"Acenda uma vela em sua base na colmeia para respirar tranquilo e recarregar suas energias."
 			]
 			icon: {
-				id: "the_bumblezone:essence_life"
+				id: "the_bumblezone:potion_candle"
+			}
+			id: "1004000000000160"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Media] Aromatizadores que pacificam os ares"
+			tasks: [
+				{
+					id: "1004000000000161"
+					item: {
+						count: 1
+						id: "the_bumblezone:potion_candle"
+					}
+					title: "Crie uma Vela de Pocao (Potion Candle)"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 4
+					id: "1004000000000162"
+					item: {
+						count: 1
+						id: "minecraft:blaze_powder"
+					}
+					type: "item"
+				}
+				{
+					id: "1004000000000163"
+					xp_levels: 5
+					type: "xp_levels"
+				}
+			]
+			title: "Velas Aromaticas Alquimicas"
+			x: 9.8d
+			y: 0.5d
+		}
+		{
+			dependencies: ["1004000000000150"]
+			description: [
+				"Em seu trono colossal repousa a majestosa Bee Queen. Ela e pacifica por natureza, mas exige tributos dignos em troca de reliquias arcanas."
+				"Faca trocas com a Rainha oferecendo nectares raros e pecas de armadura para receber presentes inestimaveis!"
+			]
+			icon: {
+				id: "the_bumblezone:bee_stinger"
 			}
 			id: "1004000000000170"
 			shape: "circle"
-			size: 1.1d
-			subtitle: "[Dificuldade: Dificil] Vitalidade biologica inesgotavel"
+			size: 1.2d
+			subtitle: "[Dificuldade: Dificil] Negociacoes e trocas de tributos reais"
 			tasks: [
 				{
+					count: 2L
 					id: "1004000000000171"
 					item: {
 						count: 1
-						id: "the_bumblezone:essence_life"
+						id: "the_bumblezone:bee_stinger"
 					}
+					title: "Obtenha Ferroes de Abelha Raros"
 					type: "item"
 				}
 			]
@@ -721,46 +748,471 @@
 					id: "1004000000000172"
 					item: {
 						count: 1
-						id: "minecraft:enchanted_golden_apple"
+						id: "minecraft:gold_block"
 					}
 					type: "item"
 				}
 				{
 					id: "1004000000000173"
+					xp_levels: 7
 					type: "xp_levels"
-					xp_levels: 15
 				}
 			]
-			title: "Essencia da Vida"
-			x: 2.5d
-			y: 2.5d
+			title: "Audiencia com a Rainha Abelha"
+			x: -11.2d
+			y: 4.0d
 		}
 		{
 			dependencies: ["1004000000000170"]
 			description: [
-				"A Essencia do Conhecimento destaca estruturas secretas, baus e minerios ocultos atraves das paredes!"
+				"O Bee Cannon e uma das armas mais irreverentes e poderosas da colmeia. Ele dispara abelhas enfurecidas teleguiadas em direcao a qualquer agressor!"
+				"Trate suas municoes com carinho e veja as hordas inimigas sucumbirem ao enxame zumbidor."
 			]
 			icon: {
-				id: "the_bumblezone:essence_knowing"
+				id: "the_bumblezone:bee_cannon"
 			}
 			id: "1004000000000180"
-			shape: "diamond"
-			size: 1.25d
-			subtitle: "[Dificuldade: Extrema] Visao onisciente atraves dos favos"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Dificil] Artilharia viva alimentada por enxames"
 			tasks: [
 				{
 					id: "1004000000000181"
 					item: {
 						count: 1
-						id: "the_bumblezone:essence_knowing"
+						id: "the_bumblezone:bee_cannon"
 					}
+					title: "Construa o Canhao de Abelhas"
 					type: "item"
 				}
 			]
 			rewards: [
 				{
-					count: 2
+					count: 8
 					id: "1004000000000182"
+					item: {
+						count: 1
+						id: "the_bumblezone:sugar_water_bottle"
+					}
+					type: "item"
+				}
+				{
+					id: "1004000000000183"
+					xp_levels: 7
+					type: "xp_levels"
+				}
+			]
+			title: "O Canhao de Abelhas (Bee Cannon)"
+			x: -8.4d
+			y: 4.0d
+		}
+		{
+			dependencies: ["1004000000000170"]
+			description: [
+				"Estruturas em ruinas espalhadas pela dimensao foram erguidas com Ancient Wax Bricks, um material indestrutivel por chamas convencionais."
+				"Explore os altares para desvendar os segredos dos ancestrais da colmeia."
+			]
+			icon: {
+				id: "the_bumblezone:ancient_wax_bricks"
+			}
+			id: "1004000000000190"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Dificil] Monumentos e santuarios das velhas dinastias"
+			tasks: [
+				{
+					count: 16L
+					id: "1004000000000191"
+					item: {
+						count: 1
+						id: "the_bumblezone:ancient_wax_bricks"
+					}
+					title: "Colete Tijolos de Cera Ancestral"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 12
+					id: "1004000000000192"
+					item: {
+						count: 1
+						id: "minecraft:emerald"
+					}
+					type: "item"
+				}
+				{
+					id: "1004000000000193"
+					xp_levels: 6
+					type: "xp_levels"
+				}
+			]
+			title: "Tijolos de Cera Ancestral"
+			x: -5.6d
+			y: 4.0d
+		}
+		{
+			dependencies: ["1004000000000190"]
+			description: [
+				"A Essence of the Bees e o extrato supremo de fertilidade e vida vegetal. Ela repara equipamentos biologicos e cura enxames instantaneamente."
+				"Guarde com extrema reverencia este elixir dourado."
+			]
+			icon: {
+				id: "the_bumblezone:essence_of_the_bees"
+			}
+			id: "1004000000000200"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Dificil] A destilacao concentrada do espirito coletivo"
+			tasks: [
+				{
+					id: "1004000000000201"
+					item: {
+						count: 1
+						id: "the_bumblezone:essence_of_the_bees"
+					}
+					title: "Conquiste a Essencia das Abelhas"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					id: "1004000000000202"
+					item: {
+						count: 1
+						id: "the_bumblezone:essence_of_the_bees"
+					}
+					type: "item"
+				}
+				{
+					id: "1004000000000203"
+					xp_levels: 8
+					type: "xp_levels"
+				}
+			]
+			title: "A Essencia das Abelhas"
+			x: -2.8d
+			y: 4.0d
+		}
+		{
+			dependencies: ["1004000000000200"]
+			description: [
+				"Nos santuarios da Rainha encontram-se Honey Cocoons. Ao serem abertos com ferramentas delicadas, revelam criaturas raras e tesouros esquecidos."
+				"Cuide dos casulos para preservar a linhagem real."
+			]
+			icon: {
+				id: "the_bumblezone:honey_cocoon"
+			}
+			id: "1004000000000210"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Dificil] Incubacao e renascimento na colmeia"
+			tasks: [
+				{
+					id: "1004000000000211"
+					item: {
+						count: 1
+						id: "the_bumblezone:honey_cocoon"
+					}
+					title: "Resgate um Casulo de Mel (Honey Cocoon)"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 6
+					id: "1004000000000212"
+					item: {
+						count: 1
+						id: "the_bumblezone:bee_bread"
+					}
+					type: "item"
+				}
+				{
+					id: "1004000000000213"
+					xp_levels: 7
+					type: "xp_levels"
+				}
+			]
+			title: "O Casulo Sagrado de Mel"
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["1004000000000190"]
+			description: [
+				"A Super Candle e forjada a partir de ceras ancestrais refinadas. Seu raio de iluminacao dissipa a escuridao mesmo nas maiores cavernas abertas."
+				"Um artefato decorativo e funcional digno de mestres construtores."
+			]
+			icon: {
+				id: "the_bumblezone:super_candle"
+			}
+			id: "1004000000000220"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Dificil] O fogo perene que ilumina kilometros de favos"
+			tasks: [
+				{
+					id: "1004000000000221"
+					item: {
+						count: 1
+						id: "the_bumblezone:super_candle"
+					}
+					title: "Crie uma Super Vela"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 16
+					id: "1004000000000222"
+					item: {
+						count: 1
+						id: "minecraft:glowstone"
+					}
+					type: "item"
+				}
+				{
+					id: "1004000000000223"
+					xp_levels: 6
+					type: "xp_levels"
+				}
+			]
+			title: "A Super Vela dos Santuarios"
+			x: 2.8d
+			y: 4.0d
+		}
+		{
+			dependencies: ["1004000000000150"]
+			description: [
+				"Ao consagrar seu peitoral de abelha com tecidos de quitina translucida perante a Rainha, voce forja o Bumble Bee Chestplate Translucido."
+				"Sua velocidade no ar atinge novos patamares de elegancia e liberdade."
+			]
+			icon: {
+				id: "the_bumblezone:bumble_bee_chestplate_trans_1"
+			}
+			id: "1004000000000230"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Dificil] As asas celestiais de quitina pura"
+			tasks: [
+				{
+					id: "1004000000000231"
+					item: {
+						count: 1
+						id: "the_bumblezone:bumble_bee_chestplate_trans_1"
+					}
+					title: "Forje o Manto Translucido da Rainha"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 32
+					id: "1004000000000232"
+					item: {
+						count: 1
+						id: "minecraft:feather"
+					}
+					type: "item"
+				}
+				{
+					id: "1004000000000233"
+					xp_levels: 8
+					type: "xp_levels"
+				}
+			]
+			title: "O Manto Translucido da Rainha"
+			x: 5.6d
+			y: 4.0d
+		}
+		{
+			dependencies: ["1004000000000170"]
+			description: [
+				"A Rainha reconhece chefs dedicados. Prepare um farto carregamento de Bee Bread e sopas para abastecer a despensa real em epocas de seca."
+				"O pacto de lealdade sera recompensado com acesso irrestrito aos tesouros mais profundos."
+			]
+			icon: {
+				id: "the_bumblezone:bee_bread"
+			}
+			id: "1004000000000240"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Dificil] Preparando oferendas gastronomicas reais"
+			tasks: [
+				{
+					count: 16L
+					id: "1004000000000241"
+					item: {
+						count: 1
+						id: "the_bumblezone:bee_bread"
+					}
+					title: "Entregue 16 Paes de Abelha"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 16
+					id: "1004000000000242"
+					item: {
+						count: 1
+						id: "the_bumblezone:sugar_water_bottle"
+					}
+					type: "item"
+				}
+				{
+					id: "1004000000000243"
+					xp_levels: 7
+					type: "xp_levels"
+				}
+			]
+			title: "O Banquete dos Campeoes"
+			x: 8.4d
+			y: 4.0d
+		}
+		{
+			dependencies: ["1004000000000210"]
+			description: [
+				"Muitos favos de criacao sao contaminados por fungos e parasitas externos. Use agua doce enriquecida e essencia para revitalizar os blocos de criacao (Brood Blocks)."
+				"A harmonia ecologica da colmeia depende do seu cuidado paternal."
+			]
+			icon: {
+				id: "the_bumblezone:honey_cocoon"
+			}
+			id: "1004000000000250"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Dificil] Preservando o futuro da especie"
+			tasks: [
+				{
+					id: "1004000000000251"
+					title: "Revitalize um Berçario da Colmeia"
+					type: "checkmark"
+				}
+			]
+			rewards: [
+				{
+					count: 8
+					id: "1004000000000252"
+					item: {
+						count: 1
+						id: "minecraft:honey_block"
+					}
+					type: "item"
+				}
+				{
+					id: "1004000000000253"
+					xp_levels: 7
+					type: "xp_levels"
+				}
+			]
+			title: "A Cura das Larvas da Colmeia"
+			x: 11.2d
+			y: 4.0d
+		}
+		{
+			dependencies: ["1004000000000230"]
+			description: [
+				"O Beehemoth e a majestosa abelha gigante capaz de carregar cavaleiros em seu dorso. Para doma-lo, alimente-o pacientemente com agua adocada e amizade constante."
+				"Uma vez domado, coloque uma sela e voe com controle impecavel pelas alturas infinitas da dimensao!"
+			]
+			icon: {
+				id: "the_bumblezone:sugar_water_bottle"
+			}
+			id: "1004000000000260"
+			shape: "hexagon"
+			size: 1.4d
+			subtitle: "[Dificuldade: Extrema] Domando a maior criatura dos ceus de mel"
+			tasks: [
+				{
+					id: "1004000000000261"
+					title: "Dome e Cavalgue um Beehemoth"
+					type: "checkmark"
+				}
+			]
+			rewards: [
+				{
+					id: "1004000000000262"
+					item: {
+						count: 1
+						id: "minecraft:saddle"
+					}
+					type: "item"
+				}
+				{
+					id: "1004000000000263"
+					xp_levels: 10
+					type: "xp_levels"
+				}
+			]
+			title: "O Colosso Alado: Beehemoth"
+			x: -4.2d
+			y: 7.5d
+		}
+		{
+			dependencies: ["1004000000000180"]
+			description: [
+				"Perturbar favos proibidos ou agredir a realeza desperta o terrível efeito Wrath of the Hive. O ceu escurece em carmesim e milhares de abelhas vorazes emergem das paredes!"
+				"Sobreviva a toda a duracao do efeito sem morrer para provar sua invulnerabilidade suprema."
+			]
+			icon: {
+				id: "the_bumblezone:bee_stinger"
+			}
+			id: "1004000000000270"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Extrema] Sobrevivendo ao Wrath of the Hive nivel maximo"
+			tasks: [
+				{
+					id: "1004000000000271"
+					title: "Sobreviva ao Wrath of the Hive Maximo"
+					type: "checkmark"
+				}
+			]
+			rewards: [
+				{
+					id: "1004000000000272"
+					item: {
+						count: 1
+						id: "minecraft:totem_of_undying"
+					}
+					type: "item"
+				}
+				{
+					id: "1004000000000273"
+					xp_levels: 12
+					type: "xp_levels"
+				}
+			]
+			title: "A Furia da Colmeia Superada"
+			x: -1.4d
+			y: 7.5d
+		}
+		{
+			dependencies: ["1004000000000190"]
+			description: [
+				"No santuario subterraneo mais profundo aguarda o Labirinto de Cera Antiga. Armadilhas de teia de mel, lavas doces e sentinelas velozes guardam a camara final."
+				"Conquiste o nucleo do labirinto e receba as honrarias da corte das abelhas."
+			]
+			icon: {
+				id: "the_bumblezone:ancient_wax_bricks"
+			}
+			id: "1004000000000280"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Extrema] Desafiando os guardioes milenares"
+			tasks: [
+				{
+					id: "1004000000000281"
+					title: "Conquiste o Labirinto do Templo"
+					type: "checkmark"
+				}
+			]
+			rewards: [
+				{
+					count: 2
+					id: "1004000000000282"
 					item: {
 						count: 1
 						id: "minecraft:netherite_ingot"
@@ -768,14 +1220,53 @@
 					type: "item"
 				}
 				{
-					id: "1004000000000183"
+					id: "1004000000000283"
+					xp_levels: 12
 					type: "xp_levels"
-					xp_levels: 25
 				}
 			]
-			title: "Essencia do Conhecimento"
-			x: 2.5d
-			y: 5.0d
+			title: "O Labirinto do Templo de Cera"
+			x: 1.4d
+			y: 7.5d
+		}
+		{
+			dependencies: ["1004000000000260", "1004000000000270", "1004000000000280"]
+			description: [
+				"Voce alcancou a compreensao total da simbiose com as abelhas. A colmeia nao e um lugar para saquear com pressa, mas sim um lar acolhedor de infinita docura."
+				"Receba o titulo de Guardiao Supremo do Ambar e desfrute da sua jornada eterna!"
+			]
+			icon: {
+				id: "the_bumblezone:essence_of_the_bees"
+			}
+			id: "1004000000000290"
+			shape: "diamond"
+			size: 1.5d
+			subtitle: "[Dificuldade: Extrema] A soberania pacifica do Mundo Eterno"
+			tasks: [
+				{
+					id: "1004000000000291"
+					title: "Consagre-se Mestre do Nectar"
+					type: "checkmark"
+				}
+			]
+			rewards: [
+				{
+					id: "1004000000000292"
+					item: {
+						count: 1
+						id: "minecraft:nether_star"
+					}
+					type: "item"
+				}
+				{
+					id: "1004000000000293"
+					xp_levels: 15
+					type: "xp_levels"
+				}
+			]
+			title: "O Mestre do Nectar Cosmico"
+			x: 4.2d
+			y: 7.5d
 		}
 	]
 }

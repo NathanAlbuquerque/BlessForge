@@ -13,7 +13,7 @@
 		{
 			description: [
 				"Para abrir o portal para a dimensao do crepusculo eterno, cave um buraco 2x2 na grama, preencha com agua, cerque as bordas de flores coloridas e atire um diamante la dentro."
-				"Um raio místico caira do ceu transformando a agua em um portal violeta encantado!"
+				"Um raio mistico caira do ceu transformando a agua em um portal violeta encantado!"
 			]
 			icon: {
 				id: "minecraft:diamond"
@@ -21,7 +21,7 @@
 			id: "1003000000000010"
 			shape: "hexagon"
 			size: 1.5d
-			subtitle: "O ritual sagrado do diamante e das flores"
+			subtitle: "[Dificuldade: Facil] O ritual sagrado do diamante e das flores"
 			tasks: [
 				{
 					id: "1003000000000011"
@@ -34,47 +34,409 @@
 					id: "1003000000000012"
 					item: {
 						count: 1
-						id: "twilightforest:magic_map"
+						id: "twilightforest:firefly_jar"
 					}
 					type: "item"
 				}
 				{
 					id: "1003000000000013"
+					xp_levels: 3
 					type: "xp_levels"
-					xp_levels: 5
 				}
 			]
 			title: "Rumo ao Crepusculo Eterno"
-			x: -12.5d
-			y: 0.0d
+			x: -9.8d
+			y: -3.0d
 		}
 		{
 			dependencies: ["1003000000000010"]
 			description: [
-				"O Mapa Magico revela biomas encantados e os icones dos lordes sombrios protegidos por barreiras magicas."
-				"Combine penas de corvo, bagas reluzentes e papel para orientar sua jornada com precisao absoluta."
+				"Ao pisar na Twilight Forest, a penumbra e o silencio sao acolhedores. Vaga-lumes luminosos flutuam nos troncos das arvores gigantescas."
+				"Colete ou prenda um vaga-lume para criar iluminacao organica e comecar a decorar seu primeiro refugio."
 			]
 			icon: {
-				id: "twilightforest:magic_map"
+				id: "twilightforest:firefly"
 			}
 			id: "1003000000000020"
 			shape: "circle"
 			size: 1.2d
-			subtitle: "A cartografia arcana da floresta"
+			subtitle: "[Dificuldade: Facil] Capturando vaga-lumes na floresta encantada"
 			tasks: [
 				{
 					id: "1003000000000021"
 					item: {
 						count: 1
-						id: "twilightforest:magic_map"
+						id: "twilightforest:firefly"
 					}
+					title: "Colete um Vaga-lume"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 2
+					id: "1003000000000022"
+					item: {
+						count: 1
+						id: "twilightforest:firefly_jar"
+					}
+					type: "item"
+				}
+				{
+					id: "1003000000000023"
+					xp: 100
+					type: "xp"
+				}
+			]
+			title: "Luzes no Dossel"
+			x: -7.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["1003000000000020"]
+			description: [
+				"As arvores de carvalho crepuscular (Twilight Oak) e de dossel (Canopy Tree) fornecem madeiras densas com copas imensas."
+				"Colete mudas nativas para iniciar seu reflorestamento sustentavel perto do portal."
+			]
+			icon: {
+				id: "twilightforest:twilight_oak_sapling"
+			}
+			id: "1003000000000030"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Facil] A silvicultura das arvores colossais"
+			tasks: [
+				{
+					id: "1003000000000031"
+					item: {
+						count: 1
+						id: "twilightforest:twilight_oak_sapling"
+					}
+					title: "Obtenha uma Muda de Carvalho Crepuscular"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 2
+					id: "1003000000000032"
+					item: {
+						count: 1
+						id: "twilightforest:canopy_sapling"
+					}
+					type: "item"
+				}
+				{
+					id: "1003000000000033"
+					xp: 100
+					type: "xp"
+				}
+			]
+			title: "Mudas Gigantes da Floresta"
+			x: -4.2d
+			y: -3.0d
+		}
+		{
+			dependencies: ["1003000000000030"]
+			description: [
+				"Pelo solo umido da floresta brotam cogumelos azuis cintilantes chamados Mushglooms."
+				"Eles emitem uma luz suave e sao excelentes ingredientes para preparos culinarios e tinturas naturais."
+			]
+			icon: {
+				id: "twilightforest:mushgloom"
+			}
+			id: "1003000000000040"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Facil] A bioluminescencia dos Mushglooms"
+			tasks: [
+				{
+					count: 4L
+					id: "1003000000000041"
+					item: {
+						count: 1
+						id: "twilightforest:mushgloom"
+					}
+					title: "Colha Mushglooms"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 2
+					id: "1003000000000042"
+					item: {
+						count: 1
+						id: "minecraft:mushroom_stew"
+					}
+					type: "item"
+				}
+				{
+					id: "1003000000000043"
+					xp: 150
+					type: "xp"
+				}
+			]
+			title: "Cogumelos do Chao Mistico"
+			x: -1.4d
+			y: -3.0d
+		}
+		{
+			dependencies: ["1003000000000040"]
+			description: [
+				"Corvos negros e silenciosos empoleiram-se nos galhos baixos. Ao contrario dos monstros do submundo, a fauna do crepusculo e pacifica e graciosa."
+				"Encontre penas caidas ou interaja com corvos para obter a materia-prima essencial dos mapas magicos."
+			]
+			icon: {
+				id: "twilightforest:raven_feather"
+			}
+			id: "1003000000000050"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Facil] Coleta pacifica com as aves nativas"
+			tasks: [
+				{
+					count: 2L
+					id: "1003000000000051"
+					item: {
+						count: 1
+						id: "twilightforest:raven_feather"
+					}
+					title: "Colete Penas de Corvo"
 					type: "item"
 				}
 			]
 			rewards: [
 				{
 					count: 8
-					id: "1003000000000022"
+					id: "1003000000000052"
+					item: {
+						count: 1
+						id: "minecraft:paper"
+					}
+					type: "item"
+				}
+				{
+					id: "1003000000000053"
+					xp: 150
+					type: "xp"
+				}
+			]
+			title: "Penas de Corvo da Floresta"
+			x: 1.4d
+			y: -3.0d
+		}
+		{
+			dependencies: ["1003000000000050"]
+			description: [
+				"Penduradas nas raizes subterraneas das colinas ocas crescem bagas incandescentes conhecidas como Torchberries."
+				"Elas servem tanto para alimentar viajantes quanto para sintetizar tintas arcanas que reagem com energia magica."
+			]
+			icon: {
+				id: "twilightforest:torchberries"
+			}
+			id: "1003000000000060"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Facil] Colheita de Torchberries sob as colinas"
+			tasks: [
+				{
+					count: 6L
+					id: "1003000000000061"
+					item: {
+						count: 1
+						id: "twilightforest:torchberries"
+					}
+					title: "Colha Torchberries"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 8
+					id: "1003000000000062"
+					item: {
+						count: 1
+						id: "minecraft:glow_berries"
+					}
+					type: "item"
+				}
+				{
+					id: "1003000000000063"
+					xp: 150
+					type: "xp"
+				}
+			]
+			title: "Bagas Reluzentes das Cavernas"
+			x: 4.2d
+			y: -3.0d
+		}
+		{
+			dependencies: ["1003000000000060"]
+			description: [
+				"Abaixo do solo fertil, blocos de raiz verde pulsam com seiva mineral. Ao quebrar essas raizes, recolha Liveroots."
+				"Essa raiz viva pode ser ralada e combinada com metais para criar uma liga magica incomparavel."
+			]
+			icon: {
+				id: "twilightforest:liveroot"
+			}
+			id: "1003000000000070"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Facil] Extracao de Live Root nas colinas ocas"
+			tasks: [
+				{
+					count: 4L
+					id: "1003000000000071"
+					item: {
+						count: 1
+						id: "twilightforest:liveroot"
+					}
+					title: "Extraia Raizes Vivas (Liveroot)"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 4
+					id: "1003000000000072"
+					item: {
+						count: 1
+						id: "minecraft:iron_ingot"
+					}
+					type: "item"
+				}
+				{
+					count: 16
+					id: "1003000000000073"
+					item: {
+						count: 1
+						id: "minecraft:gold_nugget"
+					}
+					type: "item"
+				}
+			]
+			title: "Raizes Vivas da Terra"
+			x: 7.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["1003000000000070"]
+			description: [
+				"A floresta recompensa a exploracao paciente. Em baus nas colinas ocas e pequenas ruinas repousam Talismas da Vida (Charm of Life)."
+				"Carregar um talisma no inventario impede um golpe fatal, restaurando sua vida em momentos criticos!"
+			]
+			icon: {
+				id: "twilightforest:charm_of_life_1"
+			}
+			id: "1003000000000080"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Facil] O primeiro folego do aventureiro cauteloso"
+			tasks: [
+				{
+					id: "1003000000000081"
+					item: {
+						count: 1
+						id: "twilightforest:charm_of_life_1"
+					}
+					title: "Encontre um Talisma da Vida I"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 2
+					id: "1003000000000082"
+					item: {
+						count: 1
+						id: "minecraft:golden_apple"
+					}
+					type: "item"
+				}
+				{
+					id: "1003000000000083"
+					xp_levels: 3
+					type: "xp_levels"
+				}
+			]
+			title: "O Talisma de Protecao"
+			x: 9.8d
+			y: -3.0d
+		}
+		{
+			dependencies: ["1003000000000070"]
+			description: [
+				"Combinando raiz viva ralada, ferro e pepitas de ouro numa bancada de trabalho, voce forja lingotes de Ironwood brutos que ja saem da fornalha naturalmente encantados!"
+				"Equipamentos de Ironwood sao a porta de entrada perfeita para o combate estruturado na floresta."
+			]
+			icon: {
+				id: "twilightforest:ironwood_ingot"
+			}
+			id: "1003000000000090"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Media] Criando a liga organico-metalica Ironwood"
+			tasks: [
+				{
+					count: 4L
+					id: "1003000000000091"
+					item: {
+						count: 1
+						id: "twilightforest:ironwood_ingot"
+					}
+					title: "Forje Lingotes de Ironwood"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 4
+					id: "1003000000000092"
+					item: {
+						count: 1
+						id: "twilightforest:ironwood_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "1003000000000093"
+					xp_levels: 4
+					type: "xp_levels"
+				}
+			]
+			title: "A Forja da Madeira de Ferro"
+			x: -11.2d
+			y: 0.5d
+		}
+		{
+			dependencies: ["1003000000000050", "1003000000000060"]
+			description: [
+				"O Mapa Magico revela a posicao exata das masmorras e lordes protegidos por barreiras arcanas."
+				"Combine penas de corvo, bagas luminosas e papel para orientar sua rota sem desvios frustrantes."
+			]
+			icon: {
+				id: "twilightforest:magic_map"
+			}
+			id: "1003000000000100"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Media] O Mapa Magico que dissipa o nevoeiro"
+			tasks: [
+				{
+					id: "1003000000000101"
+					item: {
+						count: 1
+						id: "twilightforest:magic_map"
+					}
+					title: "Crie um Mapa Magico do Crepusculo"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 8
+					id: "1003000000000102"
 					item: {
 						count: 1
 						id: "twilightforest:torchberries"
@@ -82,51 +444,53 @@
 					type: "item"
 				}
 				{
-					id: "1003000000000023"
-					type: "xp_levels"
+					id: "1003000000000103"
 					xp_levels: 5
+					type: "xp_levels"
 				}
 			]
-			title: "O Mapeamento do Crepusculo"
-			x: -10.0d
-			y: 0.0d
+			title: "Cartografia Crepuscular"
+			x: -8.4d
+			y: 0.5d
 		}
 		{
-			dependencies: ["1003000000000020"]
+			dependencies: ["1003000000000100"]
 			description: [
 				"O Po de Transformacao transmuta criaturas da floresta em animais do mundo comum e vice-versa."
-				"O Ímã de Minerios puxa veios inteiros de minerios enterrados na terra diretamente para voce!"
+				"O Íma de Minerios atrai veios inteiros soterrados na rocha diretamente para a superficie, poupando horas de picaretagem no escuro!"
 			]
 			icon: {
 				id: "twilightforest:ore_magnet"
 			}
-			id: "1003000000000150"
+			id: "1003000000000110"
 			shape: "circle"
-			size: 1.1d
-			subtitle: "[Dificuldade: Media] Magnetismo geologico e transmutacao arcana"
+			size: 1.2d
+			subtitle: "[Dificuldade: Media] Ferramentas alquimicas de prospeccao geologica"
 			tasks: [
 				{
-					id: "1003000000000151"
+					id: "1003000000000111"
 					item: {
 						count: 1
 						id: "twilightforest:ore_magnet"
 					}
+					title: "Obtenha um Íma de Minerios"
 					type: "item"
 				}
 				{
 					count: 8L
-					id: "1003000000000152"
+					id: "1003000000000112"
 					item: {
 						count: 1
 						id: "twilightforest:transformation_powder"
 					}
+					title: "Colete Po de Transformacao"
 					type: "item"
 				}
 			]
 			rewards: [
 				{
 					count: 16
-					id: "1003000000000153"
+					id: "1003000000000113"
 					item: {
 						count: 1
 						id: "twilightforest:transformation_powder"
@@ -134,325 +498,87 @@
 					type: "item"
 				}
 				{
-					id: "1003000000000154"
-					type: "xp_levels"
+					id: "1003000000000114"
 					xp_levels: 6
+					type: "xp_levels"
 				}
 			]
-			title: "Artefatos Utilitarios do Crepusculo"
-			x: -10.0d
-			y: -2.5d
+			title: "Magnetismo e Transmutacao"
+			x: -5.6d
+			y: 0.5d
 		}
 		{
-			dependencies: ["1003000000000020"]
+			dependencies: ["1003000000000100"]
 			description: [
-				"Nas colinas ocas do Crepusculo descansam minerios raros e baus repletos de amuletos protetores."
-				"O Amuleto da Vida (Charm of Life) salva voce da morte iminente, restaurando coracoes no momento critico!"
+				"A Naga desliza veloz pelo labirinto de sebes. Seus segmentos de cauda vao se soltando conforme ela recebe dano concentrado."
+				"Ataque a cabeca com saltos cronometrados para triunfar sem sofrer grandes impactos."
 			]
 			icon: {
-				id: "twilightforest:charm_of_life_2"
+				id: "twilightforest:naga_trophy"
 			}
-			id: "1003000000000030"
+			id: "1003000000000120"
 			shape: "circle"
-			size: 1.1d
-			subtitle: "[Dificuldade: Media] Protecao milagrosa nas masmorras das colinas ocas"
+			size: 1.2d
+			subtitle: "[Dificuldade: Media] A serpente blindada do jardim de sebes"
 			tasks: [
 				{
-					id: "1003000000000031"
+					id: "1003000000000121"
 					item: {
 						count: 1
-						id: "twilightforest:charm_of_life_2"
+						id: "twilightforest:naga_trophy"
 					}
+					title: "Obtenha o Trofeu da Naga"
 					type: "item"
 				}
 			]
 			rewards: [
 				{
-					id: "1003000000000032"
-					item: {
-						count: 1
-						id: "twilightforest:charm_of_keeping_3"
-					}
-					type: "item"
-				}
-				{
-					id: "1003000000000033"
-					type: "xp_levels"
-					xp_levels: 6
-				}
-			]
-			title: "O Amuleto da Salvacao"
-			x: -10.0d
-			y: 2.5d
-		}
-		{
-			dependencies: ["1003000000000020"]
-			description: [
-				"O primeiro guardiao da progressao repousa em um patio cercado de pedra musgosa."
-				"A Naga se move em velocidade estarrecedora em arcos sinuosos, quebrando blocos pelo caminho. Acerte a cauda ou a cabeca ate desarma-la por completo!"
-			]
-			icon: {
-				id: "twilightforest:naga_trophy"
-			}
-			id: "1003000000000060"
-			shape: "diamond"
-			size: 1.3d
-			subtitle: "[Dificuldade: Media] O predador serpentino do patio ancestral"
-			tasks: [
-				{
-					entity: "twilightforest:naga"
-					id: "1003000000000061"
-					type: "kill"
-					value: 1L
-				}
-				{
-					count: 8L
-					id: "1003000000000062"
+					count: 8
+					id: "1003000000000122"
 					item: {
 						count: 1
 						id: "twilightforest:naga_scale"
 					}
 					type: "item"
 				}
-			]
-			rewards: [
 				{
-					id: "1003000000000063"
-					item: {
-						count: 1
-						id: "twilightforest:naga_trophy"
-					}
-					type: "item"
-				}
-				{
-					id: "1003000000000064"
-					type: "xp_levels"
-					xp_levels: 10
-				}
-			]
-			title: "A Serpente do Patio: A Naga"
-			x: -7.5d
-			y: 0.0d
-		}
-		{
-			dependencies: ["1003000000000060"]
-			description: [
-				"Combinando ferro bruto, ouro e madeira viva, forje o Ironwood — um metal impregnado de forca vegetal que ja nasce pre-encantado!"
-				"Forje uma espada de Ironwood para cortar inimigos com durabilidade ampliada."
-			]
-			icon: {
-				id: "twilightforest:ironwood_ingot"
-			}
-			id: "1003000000000040"
-			shape: "circle"
-			size: 1.1d
-			subtitle: "[Dificuldade: Media] A fusao botanica de ferro e magia da terra"
-			tasks: [
-				{
-					count: 8L
-					id: "1003000000000041"
-					item: {
-						count: 1
-						id: "twilightforest:ironwood_ingot"
-					}
-					type: "item"
-				}
-				{
-					id: "1003000000000042"
-					item: {
-						count: 1
-						id: "twilightforest:ironwood_sword"
-					}
-					type: "item"
-				}
-			]
-			rewards: [
-				{
-					count: 8
-					id: "1003000000000043"
-					item: {
-						count: 1
-						id: "twilightforest:ironwood_ingot"
-					}
-					type: "item"
-				}
-				{
-					id: "1003000000000044"
-					type: "xp_levels"
+					id: "1003000000000123"
 					xp_levels: 6
-				}
-			]
-			title: "Metal Botanico: Ironwood"
-			x: -7.5d
-			y: 2.5d
-		}
-		{
-			dependencies: ["1003000000000060"]
-			description: [
-				"No topo de uma torre colossal ergue-se o Lich do Crepusculo, protegido por escudos magicos invulneraveis."
-				"Rebata os projeteis azuis com sua espada para romper seus escudos, elimine seus clones e encare sua forma fisica quando ele empunhar sua espada dourada!"
-			]
-			icon: {
-				id: "twilightforest:lich_trophy"
-			}
-			id: "1003000000000070"
-			shape: "diamond"
-			size: 1.3d
-			subtitle: "[Dificuldade: Media] O feiticeiro soberano da torre espiral"
-			tasks: [
-				{
-					entity: "twilightforest:lich"
-					id: "1003000000000071"
-					type: "kill"
-					value: 1L
-				}
-			]
-			rewards: [
-				{
-					id: "1003000000000072"
-					item: {
-						count: 1
-						id: "twilightforest:lich_trophy"
-					}
-					type: "item"
-				}
-				{
-					id: "1003000000000073"
 					type: "xp_levels"
-					xp_levels: 15
 				}
 			]
-			title: "O Soberano da Torre: Twilight Lich"
-			x: -5.0d
-			y: 0.0d
+			title: "O Colosso do Labirinto: Naga"
+			x: -2.8d
+			y: 0.5d
 		}
 		{
-			dependencies: ["1003000000000070"]
+			dependencies: ["1003000000000120"]
 			description: [
-				"Folhas místicas colhidas nos baus das masmorras subterraneas podem ser prensadas em Lingotes de Folhaco (Steeleaf)."
-				"O Steeleaf confere velocidade de ataque e encantamentos rapidos."
+				"Escamas de Naga possuem propriedades repelentes unicas. Ao costura-las em peitorais e perneiras, voce adquire encantamentos nativos de Protecao e Agilidade."
+				"Um equipamento nobre para quem prefere mobilidade rapida nos combates."
 			]
 			icon: {
-				id: "twilightforest:steeleaf_ingot"
+				id: "twilightforest:naga_chestplate"
 			}
-			id: "1003000000000050"
+			id: "1003000000000130"
 			shape: "circle"
-			size: 1.1d
-			subtitle: "[Dificuldade: Media] O aco vegetal do dossel sombrio"
+			size: 1.2d
+			subtitle: "[Dificuldade: Media] Protecao leve e agilidade escorregadia"
 			tasks: [
 				{
-					count: 8L
-					id: "1003000000000051"
+					id: "1003000000000131"
 					item: {
 						count: 1
-						id: "twilightforest:steeleaf_ingot"
+						id: "twilightforest:naga_chestplate"
 					}
-					type: "item"
-				}
-				{
-					id: "1003000000000052"
-					item: {
-						count: 1
-						id: "twilightforest:steeleaf_sword"
-					}
+					title: "Forje o Peitoral de Naga"
 					type: "item"
 				}
 			]
 			rewards: [
 				{
-					count: 8
-					id: "1003000000000053"
-					item: {
-						count: 1
-						id: "twilightforest:steeleaf_ingot"
-					}
-					type: "item"
-				}
-				{
-					id: "1003000000000054"
-					type: "xp_levels"
-					xp_levels: 6
-				}
-			]
-			title: "Aco das Folhas: Steeleaf"
-			x: -5.0d
-			y: 2.5d
-		}
-		{
-			dependencies: ["1003000000000070"]
-			description: [
-				"No segundo nivel dos labirintos no pantano reside o Minocogumelo (Minoshroom)."
-				"Ele investe violentamente com seu machado de diamante. Abata-o para recolher a sopa Stroganoff de Meef, que quebra a maldicao de fome do pantano!"
-			]
-			icon: {
-				id: "twilightforest:minoshroom_trophy"
-			}
-			id: "1003000000000080"
-			shape: "pentagon"
-			size: 1.25d
-			subtitle: "[Dificuldade: Media] O lorde touro dos corredores subterraneos"
-			tasks: [
-				{
-					entity: "twilightforest:minoshroom"
-					id: "1003000000000081"
-					type: "kill"
-					value: 1L
-				}
-				{
-					id: "1003000000000082"
-					item: {
-						count: 1
-						id: "twilightforest:meef_stroganoff"
-					}
-					type: "item"
-				}
-			]
-			rewards: [
-				{
-					id: "1003000000000083"
-					item: {
-						count: 1
-						id: "twilightforest:mazebreaker_pickaxe"
-					}
-					type: "item"
-				}
-				{
-					id: "1003000000000084"
-					type: "xp_levels"
-					xp_levels: 12
-				}
-			]
-			title: "O Terror do Labirinto: Minoshroom"
-			x: -2.5d
-			y: 0.0d
-		}
-		{
-			dependencies: ["1003000000000080"]
-			description: [
-				"A Mazebreaker e a picareta secreta que quebra os blocos inquebraveis dos labirintos do Crepusculo com velocidade instantanea."
-				"Encontre sua sala secreta ou conquiste-a como espolio de batalha!"
-			]
-			icon: {
-				id: "twilightforest:mazebreaker_pickaxe"
-			}
-			id: "1003000000000200"
-			shape: "circle"
-			size: 1.1d
-			subtitle: "[Dificuldade: Media] A lendaria picareta perfuradora de labirintos"
-			tasks: [
-				{
-					id: "1003000000000201"
-					item: {
-						count: 1
-						id: "twilightforest:mazebreaker_pickaxe"
-					}
-					type: "item"
-				}
-			]
-			rewards: [
-				{
-					count: 4
-					id: "1003000000000202"
+					count: 2
+					id: "1003000000000132"
 					item: {
 						count: 1
 						id: "minecraft:diamond"
@@ -460,269 +586,345 @@
 					type: "item"
 				}
 				{
-					id: "1003000000000203"
+					id: "1003000000000133"
+					xp_levels: 5
 					type: "xp_levels"
-					xp_levels: 10
 				}
 			]
-			title: "A Picareta Quebra-Labirintos"
-			x: -2.5d
-			y: 2.5d
+			title: "Armadura de Escamas da Naga"
+			x: 0.0d
+			y: 0.5d
 		}
 		{
-			dependencies: ["1003000000000080"]
+			dependencies: ["1003000000000120"]
 			description: [
-				"Nas entranhas de uma montanha calcinada no pantano flamejante ruge a Hidra."
-				"Cada cabeca decepada faz nascer outras duas, vomitando fogo e bombas incendiarias!"
-				"Mire na boca aberta quando ela for cuspir chamas para causar dano critico triplicado e colher o Sangue Ígneo (Fiery Blood)!"
+				"No topo da torre de tijolos musgosos reina o Lich. Seus escudos arcanos sao imunes a espadas convencionais."
+				"Rebata os projeteis magicos do proprio feiticeiro para destruir sua barreira antes de engajar no combate corpo a corpo!"
 			]
 			icon: {
-				id: "twilightforest:hydra_trophy"
+				id: "twilightforest:lich_trophy"
 			}
-			id: "1003000000000090"
-			shape: "pentagon"
-			size: 1.3d
-			subtitle: "[Dificuldade: Dificil] O monstro multicabecas do pantano ardente"
+			id: "1003000000000140"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Media] O mestre necromante e seus escudos de eter"
 			tasks: [
 				{
-					entity: "twilightforest:hydra"
-					id: "1003000000000091"
-					type: "kill"
-					value: 1L
-				}
-				{
-					count: 4L
-					id: "1003000000000092"
+					id: "1003000000000141"
 					item: {
 						count: 1
-						id: "twilightforest:fiery_blood"
+						id: "twilightforest:lich_trophy"
 					}
+					title: "Obtenha o Trofeu do Lich"
 					type: "item"
 				}
 			]
 			rewards: [
 				{
-					count: 8
-					id: "1003000000000093"
+					count: 3
+					id: "1003000000000142"
 					item: {
 						count: 1
-						id: "twilightforest:fiery_ingot"
+						id: "minecraft:golden_apple"
 					}
 					type: "item"
 				}
 				{
-					id: "1003000000000094"
+					id: "1003000000000143"
+					xp_levels: 7
 					type: "xp_levels"
-					xp_levels: 20
 				}
 			]
-			title: "O Fogo Eterno da Hidra"
-			x: 0.0d
-			y: 0.0d
+			title: "O Lich da Torre Obscura"
+			x: 2.8d
+			y: 0.5d
 		}
 		{
-			dependencies: ["1003000000000090"]
+			dependencies: ["1003000000000140"]
 			description: [
-				"Com os Lingotes Ígneos forjados com Sangue de Hidra, construa armamentos que colocam fogo continuo nos alvos e derretem blocos ao minerar!"
+				"O Lich empunhava um dos quatro lendarios cetros: Cetro do Crepusculo, Cetro de Zumbis, Cetro de Escudos ou Cetro de Drenagem."
+				"Empunhe um desses cetros para usar feitiçaria devastadora contra hordas de monstros."
 			]
 			icon: {
-				id: "twilightforest:fiery_sword"
+				id: "twilightforest:twilight_scepter"
 			}
-			id: "1003000000000160"
-			shape: "diamond"
-			size: 1.25d
-			subtitle: "[Dificuldade: Dificil] Laminas incandescentes fundidas em sangue de Hidra"
+			id: "1003000000000150"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Media] Dominando os artefactos magicos do Lich"
 			tasks: [
 				{
-					id: "1003000000000161"
+					id: "1003000000000151"
 					item: {
 						count: 1
-						id: "twilightforest:fiery_sword"
+						id: "twilightforest:twilight_scepter"
 					}
-					type: "item"
-				}
-				{
-					id: "1003000000000162"
-					item: {
-						count: 1
-						id: "twilightforest:fiery_pickaxe"
-					}
+					title: "Conquiste um Cetro Magico"
 					type: "item"
 				}
 			]
 			rewards: [
 				{
 					count: 4
-					id: "1003000000000163"
+					id: "1003000000000152"
 					item: {
 						count: 1
-						id: "twilightforest:fiery_ingot"
+						id: "minecraft:ender_pearl"
 					}
 					type: "item"
 				}
 				{
-					id: "1003000000000164"
+					id: "1003000000000153"
+					xp_levels: 5
 					type: "xp_levels"
-					xp_levels: 15
 				}
 			]
-			title: "A Forja Ígnea da Hidra"
-			x: 0.0d
-			y: -2.5d
+			title: "Os Cetros Arcanos do Crepusculo"
+			x: 5.6d
+			y: 0.5d
 		}
 		{
-			dependencies: ["1003000000000070"]
+			dependencies: ["1003000000000140"]
 			description: [
-				"Na impenetravel Floresta Negra, sob o labirinto de goblins, fantasmas de cavaleiros espectrais defendem sua tumba sagrada."
-				"Seis espectros voam simultaneamente arremessando armas fantasmagoricas e machados. Fique atento aos seus escudos e abata todos eles!"
+				"Abaixo dos pantanos ergue-se o labirinto de dois andares. Em seu centro reside o Minoshroom empunhando um machado colossale de diamante."
+				"Derrote o lorde bovino para provar sua forca e destravar os ingredientes das receitas ancestrais."
 			]
 			icon: {
-				id: "twilightforest:knight_phantom_trophy"
+				id: "twilightforest:minoshroom_trophy"
 			}
-			id: "1003000000000100"
-			shape: "pentagon"
-			size: 1.25d
-			subtitle: "[Dificuldade: Dificil] Os cavaleiros espectrais da tumba esquecida"
+			id: "1003000000000160"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Media] A fera furiosa do submundo de estalactites"
 			tasks: [
 				{
-					entity: "twilightforest:knight_phantom"
-					id: "1003000000000101"
-					type: "kill"
-					value: 1L
-				}
-				{
-					count: 8L
-					id: "1003000000000102"
+					id: "1003000000000161"
 					item: {
 						count: 1
-						id: "twilightforest:knightmetal_ingot"
+						id: "twilightforest:minoshroom_trophy"
 					}
+					title: "Obtenha o Trofeu do Minoshroom"
 					type: "item"
 				}
 			]
 			rewards: [
 				{
-					count: 8
-					id: "1003000000000103"
+					count: 2
+					id: "1003000000000162"
 					item: {
 						count: 1
-						id: "twilightforest:knightmetal_ingot"
+						id: "twilightforest:meef_stroganoff"
 					}
 					type: "item"
 				}
 				{
-					id: "1003000000000104"
+					id: "1003000000000163"
+					xp_levels: 6
 					type: "xp_levels"
-					xp_levels: 18
 				}
 			]
-			title: "O Conclave dos Cavaleiros Espectrais"
-			x: 2.5d
-			y: 0.0d
+			title: "O Minotauro do Labirinto"
+			x: 8.4d
+			y: 0.5d
 		}
 		{
-			dependencies: ["1003000000000100"]
+			dependencies: ["1003000000000160"]
 			description: [
-				"O Knightmetal e um aco espinhoso forjado a partir de fragmentos de armaduras de goblins caídos."
-				"Forje o Escudo de Knightmetal para refletir dano diretamente contra agressores que golpearem sua guarda!"
+				"O Machado de Diamante do Minotauro e famoso por causar dano colossal quando empunhado enquanto corre em direcao ao adversario."
+				"A ferramenta perfeita para abrir caminhos atraves de hordas inimigas."
 			]
 			icon: {
-				id: "twilightforest:knightmetal_shield"
+				id: "twilightforest:diamond_minotaur_axe"
 			}
 			id: "1003000000000170"
 			shape: "circle"
-			size: 1.1d
-			subtitle: "[Dificuldade: Dificil] Defesa espinhosa de aco de cavaleiro"
+			size: 1.2d
+			subtitle: "[Dificuldade: Media] Dano devastador durante arrancadas ferozes"
 			tasks: [
 				{
 					id: "1003000000000171"
 					item: {
 						count: 1
-						id: "twilightforest:knightmetal_shield"
+						id: "twilightforest:diamond_minotaur_axe"
 					}
+					title: "Empunhe o Machado do Minotauro"
 					type: "item"
 				}
 			]
 			rewards: [
 				{
-					count: 8
+					count: 3
 					id: "1003000000000172"
 					item: {
 						count: 1
-						id: "twilightforest:knightmetal_ingot"
+						id: "minecraft:diamond"
 					}
 					type: "item"
 				}
 				{
 					id: "1003000000000173"
+					xp_levels: 6
 					type: "xp_levels"
-					xp_levels: 12
 				}
 			]
-			title: "A Égide de Knightmetal"
-			x: 2.5d
-			y: -2.5d
+			title: "O Machado do Minotauro"
+			x: 11.2d
+			y: 0.5d
 		}
 		{
-			dependencies: ["1003000000000100"]
+			dependencies: ["1003000000000150"]
 			description: [
-				"No pinaculo da Torre Sombria flutua o Ur-Ghast, uma colossal aberracao mecânica-espectral com tentaculos de carminita."
-				"Ele chora lagrimas de fogo e devora ghasts menores para se curar. Ative as Armadilhas de Ghast na plataforma para pulveriza-lo com raios de redstone!"
+				"O Peacock Feather Fan canaliza o vento da copa das arvores para arremessar inimigos para longe com forca monumental."
+				"Excelente para controlar grupos em beiras de abismos e torres."
 			]
 			icon: {
-				id: "twilightforest:ur_ghast_trophy"
+				id: "twilightforest:peacock_feather_fan"
 			}
-			id: "1003000000000110"
-			shape: "pentagon"
-			size: 1.3d
-			subtitle: "[Dificuldade: Dificil] O colosso carmesim no topo da Torre Sombria"
+			id: "1003000000000180"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Dificil] Rajadas de vento e repulsao em area"
 			tasks: [
 				{
-					entity: "twilightforest:ur_ghast"
-					id: "1003000000000111"
-					type: "kill"
-					value: 1L
+					id: "1003000000000181"
+					item: {
+						count: 1
+						id: "twilightforest:peacock_feather_fan"
+					}
+					title: "Adquira o Peacock Feather Fan"
+					type: "item"
 				}
 			]
 			rewards: [
 				{
-					id: "1003000000000112"
+					count: 16
+					id: "1003000000000182"
 					item: {
 						count: 1
-						id: "twilightforest:ur_ghast_trophy"
+						id: "minecraft:feather"
 					}
 					type: "item"
 				}
 				{
-					id: "1003000000000113"
+					id: "1003000000000183"
+					xp_levels: 5
 					type: "xp_levels"
-					xp_levels: 20
 				}
 			]
-			title: "O Terror Carmesim: Ur-Ghast"
-			x: 5.0d
-			y: 0.0d
+			title: "O Leque de Penas do Pavao"
+			x: -11.2d
+			y: 4.0d
 		}
 		{
-			dependencies: ["1003000000000110"]
+			dependencies: ["1003000000000160"]
 			description: [
-				"A Carminita e o mineral sintetico pulsante da Torre Sombria, usado para construir portas que desaparecem e reatores arcanos."
+				"A maca com corrente (Block and Chain) e uma arma pesadissima recuperada dos gigantes do submundo."
+				"Arremesse o bloco macico para quebrar escudos de defensores e atordoar alvos blindados."
 			]
 			icon: {
-				id: "twilightforest:carminite"
+				id: "twilightforest:block_and_chain"
+			}
+			id: "1003000000000190"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Dificil] A arma de quebra-escudo das profundezas"
+			tasks: [
+				{
+					id: "1003000000000191"
+					item: {
+						count: 1
+						id: "twilightforest:block_and_chain"
+					}
+					title: "Obtenha a Maca e Corrente"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 2
+					id: "1003000000000192"
+					item: {
+						count: 1
+						id: "minecraft:iron_block"
+					}
+					type: "item"
+				}
+				{
+					id: "1003000000000193"
+					xp_levels: 6
+					type: "xp_levels"
+				}
+			]
+			title: "Maca e Corrente Demolidora"
+			x: -8.4d
+			y: 4.0d
+		}
+		{
+			dependencies: ["1003000000000160"]
+			description: [
+				"No coracao do pantano de fogo, a Hidra cospe chamas e bolas de fogo incandescentes."
+				"Quando uma cabeca abre a boca para rugir ou disparar, mire seus projeteis exatamente no interior para causar dano critico!"
+			]
+			icon: {
+				id: "twilightforest:hydra_trophy"
+			}
+			id: "1003000000000200"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Dificil] O terror de sete cabecas do pantano ardente"
+			tasks: [
+				{
+					id: "1003000000000201"
+					item: {
+						count: 1
+						id: "twilightforest:hydra_trophy"
+					}
+					title: "Obtenha o Trofeu da Hidra"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 5
+					id: "1003000000000202"
+					item: {
+						count: 1
+						id: "twilightforest:hydra_chop"
+					}
+					type: "item"
+				}
+				{
+					id: "1003000000000203"
+					xp_levels: 8
+					type: "xp_levels"
+				}
+			]
+			title: "A Hidra Flamejante dos Pantanos"
+			x: -5.6d
+			y: 4.0d
+		}
+		{
+			dependencies: ["1003000000000200"]
+			description: [
+				"O sangue da besta morta ferve a temperaturas vulcanicas. Ele e o ingrediente lendario para a forja dos lingotes de fogo."
+				"Manuseie com cuidado antes de introduzir nas matrizes de ferro."
+			]
+			icon: {
+				id: "twilightforest:fiery_blood"
 			}
 			id: "1003000000000210"
 			shape: "circle"
-			size: 1.1d
-			subtitle: "[Dificuldade: Dificil] O mineral vivo sintetizado na Torre Sombria"
+			size: 1.2d
+			subtitle: "[Dificuldade: Dificil] O fluido incandescente para ligas termicas"
 			tasks: [
 				{
-					count: 8L
+					count: 4L
 					id: "1003000000000211"
 					item: {
 						count: 1
-						id: "twilightforest:carminite"
+						id: "twilightforest:fiery_blood"
 					}
+					title: "Recolha Sangue da Hidra"
 					type: "item"
 				}
 			]
@@ -732,187 +934,402 @@
 					id: "1003000000000212"
 					item: {
 						count: 1
-						id: "twilightforest:carminite"
+						id: "minecraft:blaze_rod"
 					}
 					type: "item"
 				}
 				{
 					id: "1003000000000213"
+					xp_levels: 7
 					type: "xp_levels"
-					xp_levels: 12
 				}
 			]
-			title: "Sintese de Carminita"
-			x: 5.0d
-			y: 2.5d
+			title: "Sangue Ardente da Hidra"
+			x: -2.8d
+			y: 4.0d
 		}
 		{
-			dependencies: ["1003000000000070"]
+			dependencies: ["1003000000000210"]
 			description: [
-				"Nas cavernas glaciais sob a neve eterna vive o Alfa Yeti."
-				"Ele arremessa blocos macicos de gelo e pisa no chao causando estalagmites pontiagudas do teto. Sobreviva a tempestade glacial para colher as Peles Articas!"
+				"Ao fundir o sangue da Hidra com ferro refinado, nascem os Lingotes de Fogo (Fiery Ingot)."
+				"Armas forjadas desse material incendeiam permanentemente os alvos e a armadura repele ataques com labaredas retaliatorias."
 			]
 			icon: {
-				id: "twilightforest:arctic_fur"
-			}
-			id: "1003000000000120"
-			shape: "pentagon"
-			size: 1.25d
-			subtitle: "[Dificuldade: Dificil] A forca bruta das cavernas congeladas"
-			tasks: [
-				{
-					entity: "twilightforest:alpha_yeti"
-					id: "1003000000000121"
-					type: "kill"
-					value: 1L
-				}
-				{
-					count: 6L
-					id: "1003000000000122"
-					item: {
-						count: 1
-						id: "twilightforest:arctic_fur"
-					}
-					type: "item"
-				}
-			]
-			rewards: [
-				{
-					count: 8
-					id: "1003000000000123"
-					item: {
-						count: 1
-						id: "twilightforest:arctic_fur"
-					}
-					type: "item"
-				}
-				{
-					id: "1003000000000124"
-					type: "xp_levels"
-					xp_levels: 18
-				}
-			]
-			title: "A Furia Glacial: Alpha Yeti"
-			x: 7.5d
-			y: 0.0d
-		}
-		{
-			dependencies: ["1003000000000120"]
-			description: [
-				"As Peles Articas do Yeti produzem armaduras com resistencia a frio e congelamento, alem de conferir armadura macica."
-			]
-			icon: {
-				id: "twilightforest:arctic_fur"
+				id: "twilightforest:fiery_ingot"
 			}
 			id: "1003000000000220"
 			shape: "circle"
-			size: 1.1d
-			subtitle: "[Dificuldade: Dificil] Blindagem termica contra nevascas extremas"
+			size: 1.2d
+			subtitle: "[Dificuldade: Dificil] Fiery Ingot e a fusao termica suprema"
 			tasks: [
 				{
-					count: 16L
+					count: 4L
 					id: "1003000000000221"
 					item: {
 						count: 1
-						id: "twilightforest:arctic_fur"
+						id: "twilightforest:fiery_ingot"
 					}
+					title: "Forje Lingotes de Fogo"
 					type: "item"
 				}
 			]
 			rewards: [
 				{
-					count: 8
+					count: 2
 					id: "1003000000000222"
 					item: {
 						count: 1
-						id: "twilightforest:arctic_fur"
+						id: "twilightforest:fiery_ingot"
 					}
 					type: "item"
 				}
 				{
 					id: "1003000000000223"
+					xp_levels: 8
 					type: "xp_levels"
-					xp_levels: 12
 				}
 			]
-			title: "Blindagem de Pele Artica"
-			x: 7.5d
-			y: 2.5d
+			title: "Forja da Armadura Flamejante"
+			x: 0.0d
+			y: 4.0d
 		}
 		{
-			dependencies: ["1003000000000120"]
+			dependencies: ["1003000000000140"]
 			description: [
-				"No topo do Palacio de Aurora brilha a soberana absoluta do gelo: a Rainha da Neve."
-				"Flutuando sobre um escudo impenetravel de gelo, ela invoca tempestades e fadas de neve cortantes. Quebre seu treno de gelo para desarma-la e conquistar o cobicado Arco de Gelo!"
+				"Nas profundezas da Floresta Sombria repousa a tumba de seis cavaleiros esqueleto espectrais."
+				"Eles atacam coordenadamente arremessando armas fantasmas. Derrote todos para dissipar a maldicao da tumba!"
 			]
 			icon: {
-				id: "twilightforest:snow_queen_trophy"
+				id: "twilightforest:knight_phantom_trophy"
 			}
-			id: "1003000000000130"
-			shape: "diamond"
-			size: 1.5d
-			subtitle: "[Dificuldade: Extrema] A soberana do Palacio de Aurora"
+			id: "1003000000000230"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Dificil] Batalha de espectros na Fortaleza das Trevas"
 			tasks: [
 				{
-					entity: "twilightforest:snow_queen"
-					id: "1003000000000131"
-					type: "kill"
-					value: 1L
+					id: "1003000000000231"
+					item: {
+						count: 1
+						id: "twilightforest:knight_phantom_trophy"
+					}
+					title: "Obtenha o Trofeu dos Cavaleiros"
+					type: "item"
 				}
 			]
 			rewards: [
 				{
-					id: "1003000000000132"
+					id: "1003000000000232"
 					item: {
 						count: 1
-						id: "twilightforest:snow_queen_trophy"
+						id: "twilightforest:phantom_helmet"
 					}
 					type: "item"
 				}
 				{
-					id: "1003000000000133"
+					id: "1003000000000233"
+					xp_levels: 8
 					type: "xp_levels"
-					xp_levels: 30
 				}
 			]
-			title: "A Soberana da Aurora: Snow Queen"
-			x: 10.0d
-			y: 0.0d
+			title: "A Tumba dos Cavaleiros Fantasmas"
+			x: 2.8d
+			y: 4.0d
 		}
 		{
-			dependencies: ["1003000000000130"]
+			dependencies: ["1003000000000230"]
 			description: [
-				"O Arco de Gelo congela os alvos em blocos macicos, enquanto o Arco Rastreador (Seeker Bow) curva flechas no ar perseguindo inimigos automaticamente!"
+				"O Knightmetal e extraido dos fragmentos de armaduras deixados pelos guerreiros caidos."
+				"Com ele voce forja picaretas que danificam inimigos que tentam te interromper e espadas velozes como fantasmas."
 			]
 			icon: {
-				id: "twilightforest:ice_bow"
+				id: "twilightforest:knightmetal_ingot"
 			}
-			id: "1003000000000180"
-			shape: "diamond"
-			size: 1.25d
-			subtitle: "[Dificuldade: Extrema] Flechas teleguiadas e congelamento absoluto"
+			id: "1003000000000240"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Dificil] O Knightmetal e as armas fantasmagoricas"
 			tasks: [
 				{
-					id: "1003000000000181"
+					count: 4L
+					id: "1003000000000241"
 					item: {
 						count: 1
-						id: "twilightforest:ice_bow"
+						id: "twilightforest:knightmetal_ingot"
+					}
+					title: "Forje Lingotes de Knightmetal"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 4
+					id: "1003000000000242"
+					item: {
+						count: 1
+						id: "twilightforest:knightmetal_ingot"
 					}
 					type: "item"
 				}
 				{
-					id: "1003000000000182"
+					id: "1003000000000243"
+					xp_levels: 7
+					type: "xp_levels"
+				}
+			]
+			title: "Metal dos Cavaleiros Espectrais"
+			x: 5.6d
+			y: 4.0d
+		}
+		{
+			dependencies: ["1003000000000230"]
+			description: [
+				"No ápice da gigantesca Torre Escura flutua o Ur-Ghast em meio a tempestade de raios e lagrimas carmim."
+				"Ative os alçapoes com carminite para capturar servos ghasts e disparar ondas de choque letais contra o monarca!"
+			]
+			icon: {
+				id: "twilightforest:ur_ghast_trophy"
+			}
+			id: "1003000000000250"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Dificil] O senhor dos tentaculos mecânicos nas nuvens"
+			tasks: [
+				{
+					id: "1003000000000251"
 					item: {
 						count: 1
-						id: "twilightforest:seeker_bow"
+						id: "twilightforest:ur_ghast_trophy"
 					}
+					title: "Obtenha o Trofeu do Ur-Ghast"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 8
+					id: "1003000000000252"
+					item: {
+						count: 1
+						id: "minecraft:ghast_tear"
+					}
+					type: "item"
+				}
+				{
+					id: "1003000000000253"
+					xp_levels: 9
+					type: "xp_levels"
+				}
+			]
+			title: "O Ur-Ghast da Torre Escura"
+			x: 8.4d
+			y: 4.0d
+		}
+		{
+			dependencies: ["1003000000000250"]
+			description: [
+				"As Fiery Tears do Ur-Ghast sao o equivalente aéreo do sangue da Hidra. Possuem uma afinidade mágica potente para criação de armaduras de fogo e encantos supremos."
+				"Colete o frasco de lágrimas para completar a progressão da Torre Escura."
+			]
+			icon: {
+				id: "twilightforest:fiery_tears"
+			}
+			id: "1003000000000260"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Dificil] A essencia liquida da tristeza celestial"
+			tasks: [
+				{
+					count: 2L
+					id: "1003000000000261"
+					item: {
+						count: 1
+						id: "twilightforest:fiery_tears"
+					}
+					title: "Recolha Lagrimas Ardentes"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 2
+					id: "1003000000000262"
+					item: {
+						count: 1
+						id: "twilightforest:fiery_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "1003000000000263"
+					xp_levels: 8
+					type: "xp_levels"
+				}
+			]
+			title: "Lagrimas Ardentes do Vazio"
+			x: 11.2d
+			y: 4.0d
+		}
+		{
+			dependencies: ["1003000000000200", "1003000000000250"]
+			description: [
+				"Dentro da caverna congelada de quatro entradas vive o colossal Yeti Alfa. Quando ele ruge e se enfurece, estalactites pontiagudas caem do teto!"
+				"Esquive-se das estalactites e contra-ataque durante os breves intervalos de fadiga do monstro."
+			]
+			icon: {
+				id: "twilightforest:alpha_yeti_trophy"
+			}
+			id: "1003000000000270"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Extrema] O guardiao furioso das cavernas de gelo"
+			tasks: [
+				{
+					id: "1003000000000271"
+					item: {
+						count: 1
+						id: "twilightforest:alpha_yeti_trophy"
+					}
+					title: "Obtenha o Trofeu do Yeti Alfa"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 6
+					id: "1003000000000272"
+					item: {
+						count: 1
+						id: "twilightforest:alpha_yeti_fur"
+					}
+					type: "item"
+				}
+				{
+					id: "1003000000000273"
+					xp_levels: 9
+					type: "xp_levels"
+				}
+			]
+			title: "O Yeti Alfa da Geleira"
+			x: -8.4d
+			y: 7.5d
+		}
+		{
+			dependencies: ["1003000000000270"]
+			description: [
+				"A pelagem do Yeti Alfa permite criar vestes que congelam oponentes que te atacam corpo a corpo."
+				"Essencial para suportar a nevasca implacavel do Palacio de Aurora."
+			]
+			icon: {
+				id: "twilightforest:alpha_yeti_fur"
+			}
+			id: "1003000000000280"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Extrema] Isolamento contra o frio absoluto"
+			tasks: [
+				{
+					count: 4L
+					id: "1003000000000281"
+					item: {
+						count: 1
+						id: "twilightforest:alpha_yeti_fur"
+					}
+					title: "Forje Traje com Pelagem de Yeti"
 					type: "item"
 				}
 			]
 			rewards: [
 				{
 					count: 32
-					id: "1003000000000183"
+					id: "1003000000000282"
+					item: {
+						count: 1
+						id: "minecraft:packed_ice"
+					}
+					type: "item"
+				}
+				{
+					id: "1003000000000283"
+					xp_levels: 8
+					type: "xp_levels"
+				}
+			]
+			title: "Pelagem do Yeti e Armadura Termica"
+			x: -5.6d
+			y: 7.5d
+		}
+		{
+			dependencies: ["1003000000000270"]
+			description: [
+				"No ápice do Palacio de Aurora aguarda a Snow Queen, protegida por um escudo rotativo de cristais de gelo e voando sobre um bloco flutuante."
+				"Foque seus ataques quando ela descer para esmagar o chao, destruindo sua guarda com arcos precisos!"
+			]
+			icon: {
+				id: "twilightforest:snow_queen_trophy"
+			}
+			id: "1003000000000290"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Extrema] A soberana dos cristais e do gelo vivo"
+			tasks: [
+				{
+					id: "1003000000000291"
+					item: {
+						count: 1
+						id: "twilightforest:snow_queen_trophy"
+					}
+					title: "Obtenha o Trofeu da Rainha da Neve"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					id: "1003000000000292"
+					item: {
+						count: 1
+						id: "minecraft:diamond_block"
+					}
+					type: "item"
+				}
+				{
+					id: "1003000000000293"
+					xp_levels: 10
+					type: "xp_levels"
+				}
+			]
+			title: "A Rainha da Neve da Torre Glacial"
+			x: -2.8d
+			y: 7.5d
+		}
+		{
+			dependencies: ["1003000000000290"]
+			description: [
+				"O Ice Bow da Rainha dispara flechas cobertas de gelo magico que congelam o alvo no lugar por preciosos segundos."
+				"Uma arma tatica inestimavel para o controle de chefes hiper-velozes."
+			]
+			icon: {
+				id: "twilightforest:ice_bow"
+			}
+			id: "1003000000000300"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Extrema] Disparos que congelam a alma dos inimigos"
+			tasks: [
+				{
+					id: "1003000000000301"
+					item: {
+						count: 1
+						id: "twilightforest:ice_bow"
+					}
+					title: "Adquira o Arco de Gelo"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 32
+					id: "1003000000000302"
 					item: {
 						count: 1
 						id: "minecraft:spectral_arrow"
@@ -920,111 +1337,101 @@
 					type: "item"
 				}
 				{
-					id: "1003000000000184"
+					id: "1003000000000303"
+					xp_levels: 8
 					type: "xp_levels"
-					xp_levels: 20
 				}
 			]
-			title: "Balistica Glacial: Arcos Místicos"
-			x: 10.0d
-			y: -2.5d
+			title: "O Arco Glacial Perfurante"
+			x: 0.0d
+			y: 7.5d
 		}
 		{
-			dependencies: [
-				"1003000000000090"
-				"1003000000000110"
-				"1003000000000130"
-			]
+			dependencies: ["1003000000000290"]
 			description: [
-				"Com os poderes da Hidra, do Ur-Ghast e da Rainha da Neve absorvidos, o Planalto das Terras Altas se abre."
-				"Suba ate os castelos de nuvens, enfrente os Gigantes Mineiros e guerreiros colossais e acenda a Lampada das Cinzas para queimar os espinhos eternos do Castelo Final!"
+				"Nas nuvens acima do planalto vivem gigantes empunhando ferramentas monumentais. A Giant's Pickaxe consegue quebrar blocos 4x4 de uma so vez!"
+				"Uma dadiva fabulosa para abrir espacos gigantescos em construcoes subterraneas."
 			]
 			icon: {
-				id: "twilightforest:lamp_of_cinders"
+				id: "twilightforest:giant_pickaxe"
 			}
-			id: "1003000000000140"
-			shape: "diamond"
-			size: 1.5d
-			subtitle: "[Dificuldade: Extrema] A queima dos espinhos e a conquista do Castelo Final"
+			id: "1003000000000310"
+			shape: "circle"
+			size: 1.2d
+			subtitle: "[Dificuldade: Extrema] Mineracao colossal em escala monumental"
 			tasks: [
 				{
-					id: "1003000000000141"
-					item: {
-						count: 1
-						id: "twilightforest:lamp_of_cinders"
-					}
-					type: "item"
-				}
-			]
-			rewards: [
-				{
-					count: 4
-					id: "1003000000000142"
-					item: {
-						count: 1
-						id: "minecraft:netherite_ingot"
-					}
-					type: "item"
-				}
-				{
-					id: "1003000000000143"
-					type: "xp_levels"
-					xp_levels: 35
-				}
-			]
-			title: "A Lampada das Cinzas e o Castelo Final"
-			x: 12.5d
-			y: 0.0d
-		}
-		{
-			dependencies: ["1003000000000140"]
-			description: [
-				"Armas colossais arrancadas das maos dos Gigantes das Nuvens. A Espada Gigante causa impacto descomunal que arremessa qualquer criatura longe."
-			]
-			icon: {
-				id: "twilightforest:giant_sword"
-			}
-			id: "1003000000000190"
-			shape: "diamond"
-			size: 1.3d
-			subtitle: "[Dificuldade: Extrema] As armas descomunais dos gigantes das nuvens"
-			tasks: [
-				{
-					id: "1003000000000191"
-					item: {
-						count: 1
-						id: "twilightforest:giant_sword"
-					}
-					type: "item"
-				}
-				{
-					id: "1003000000000192"
+					id: "1003000000000311"
 					item: {
 						count: 1
 						id: "twilightforest:giant_pickaxe"
 					}
+					title: "Recupere a Picareta do Gigante"
 					type: "item"
 				}
 			]
 			rewards: [
 				{
 					count: 2
-					id: "1003000000000193"
+					id: "1003000000000312"
 					item: {
 						count: 1
-						id: "minecraft:netherite_block"
+						id: "minecraft:netherite_scrap"
 					}
 					type: "item"
 				}
 				{
-					id: "1003000000000194"
+					id: "1003000000000313"
+					xp_levels: 10
 					type: "xp_levels"
-					xp_levels: 30
 				}
 			]
-			title: "O Arsenal dos Gigantes"
-			x: 12.5d
-			y: -2.5d
+			title: "A Picareta do Gigante das Nuvens"
+			x: 2.8d
+			y: 7.5d
+		}
+		{
+			dependencies: ["1003000000000310"]
+			description: [
+				"A Lamp of Cinders abriga uma chama ancestral capaz de reduzir a cinzas os densos espinhos que cercam o Castelo Final."
+				"Voce alcancou o ponto mais avancado do Crepusculo Eterno. Guarde sua lampada como simbolo da sua soberania sobre a floresta!"
+			]
+			icon: {
+				id: "twilightforest:lamp_of_cinders"
+			}
+			id: "1003000000000320"
+			shape: "diamond"
+			size: 1.5d
+			subtitle: "[Dificuldade: Extrema] O artefato supremo para queimar as roseiras de espinhos"
+			tasks: [
+				{
+					id: "1003000000000321"
+					item: {
+						count: 1
+						id: "twilightforest:lamp_of_cinders"
+					}
+					title: "Conquiste a Lampada das Cinzas"
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					id: "1003000000000322"
+					item: {
+						count: 1
+						id: "minecraft:nether_star"
+					}
+					type: "item"
+				}
+				{
+					id: "1003000000000323"
+					xp_levels: 15
+					type: "xp_levels"
+				}
+			]
+			title: "A Lampada das Cinzas Eternas"
+			x: 5.6d
+			y: 7.5d
 		}
 	]
 }
