@@ -12,9 +12,9 @@
 	quests: [
 		{
 			description: [
-				"Bem-vindo ao mundo do BlessForge!"
-				"Com o mod FallingTree instalado, quebrar a base de um tronco derrubará a árvore inteira instantaneamente."
-				"Dica: Segure SHIFT (agachar) caso queira coletar apenas um bloco de madeira sem derrubar o resto!"
+				"Bem-vindo aos primeiros passos do seu Mundo Eterno!"
+				"Com o mod FallingTree, quebrar um único bloco na base de uma árvore derruba o tronco inteiro de uma só vez, poupando seu tempo e energia."
+				"Dica de ouro: Segure SHIFT (agachar) caso queira quebrar apenas um bloco isolado sem derrubar a árvore inteira!"
 			]
 			icon: {
 				id: "minecraft:oak_log"
@@ -44,40 +44,730 @@
 			]
 			rewards: [
 				{
+					count: 16
 					id: "1001000000000013"
 					item: {
-						count: 16
+						count: 1
 						id: "minecraft:torch"
 					}
 					type: "item"
 				}
 				{
+					count: 8
 					id: "1001000000000014"
 					item: {
-						count: 8
+						count: 1
 						id: "minecraft:bread"
 					}
 					type: "item"
 				}
 			]
 			title: "A Queda da Floresta"
-			x: -4.0d
+			x: -6.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["1001000000000010"]
 			description: [
-				"Um bom aventureiro precisa carregar seus despojos sem sobrecarregar seus bolsos."
-				"A mochila de couro do Sophisticated Backpacks pode ser aprimorada depois para níveis de Ferro, Ouro e Diamante!"
+				"Com a madeira em mãos, construa sua bancada de trabalho."
+				"Graças ao mod Visual Workbench, os itens colocados na grade de fabricação ficam salvos visualmente em cima da mesa e não caem no chão quando você fecha a interface!"
+			]
+			icon: {
+				id: "minecraft:crafting_table"
+			}
+			id: "1001000000000020"
+			subtitle: "A base de toda criação manual"
+			tasks: [
+				{
+					id: "1001000000000021"
+					item: {
+						count: 1
+						id: "minecraft:crafting_table"
+					}
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 16
+					id: "1001000000000022"
+					item: {
+						count: 1
+						id: "minecraft:stick"
+					}
+					type: "item"
+				}
+				{
+					id: "1001000000000023"
+					type: "xp"
+					xp: 50
+				}
+			]
+			title: "A Bancada de Criação"
+			x: -4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1001000000000020"]
+			description: [
+				"O fogo transforma matéria e afasta os perigos da noite."
+				"Asse troncos de madeira em uma fornalha para produzir Carvão Vegetal (Charcoal) caso ainda não tenha encontrado jazidas de carvão mineral no solo."
+			]
+			icon: {
+				id: "minecraft:furnace"
+			}
+			id: "1001000000000030"
+			subtitle: "Combustível sustentável e calor acolhedor"
+			tasks: [
+				{
+					id: "1001000000000031"
+					item: {
+						count: 1
+						id: "minecraft:furnace"
+					}
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "1001000000000032"
+					item: {
+						count: 1
+						id: "minecraft:charcoal"
+					}
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 16
+					id: "1001000000000033"
+					item: {
+						count: 1
+						id: "minecraft:torch"
+					}
+					type: "item"
+				}
+				{
+					id: "1001000000000034"
+					type: "xp"
+					xp: 50
+				}
+			]
+			title: "O Calor do Fogo"
+			x: -3.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["1001000000000020"]
+			description: [
+				"Em um mundo que durará para sempre, a renovação dos recursos naturais é primordial."
+				"Plante mudas próximas da sua base para nunca precisar viajar longe apenas para buscar madeira."
+			]
+			icon: {
+				id: "minecraft:oak_sapling"
+			}
+			id: "1001000000000040"
+			subtitle: "Sustentabilidade para o futuro"
+			tasks: [
+				{
+					count: 8L
+					id: "1001000000000041"
+					item: {
+						count: 1
+						id: "minecraft:oak_sapling"
+					}
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 16
+					id: "1001000000000042"
+					item: {
+						count: 1
+						id: "minecraft:bone_meal"
+					}
+					type: "item"
+				}
+				{
+					id: "1001000000000043"
+					type: "xp"
+					xp: 50
+				}
+			]
+			title: "Mudas para o Futuro"
+			x: -3.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["1001000000000030"]
+			description: [
+				"Extraia seus primeiros pedregulhos das encostas e cavernas rasas."
+				"Ferramentas de pedra duram mais e abrem o caminho para quebrar minérios nobres como ferro e cobre."
+			]
+			icon: {
+				id: "minecraft:cobblestone"
+			}
+			id: "1001000000000110"
+			subtitle: "A solidez dos minerais básicos"
+			tasks: [
+				{
+					count: 32L
+					id: "1001000000000111"
+					item: {
+						count: 1
+						id: "minecraft:cobblestone"
+					}
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					id: "1001000000000112"
+					item: {
+						count: 1
+						id: "minecraft:stone_pickaxe"
+					}
+					type: "item"
+				}
+				{
+					id: "1001000000000113"
+					type: "xp"
+					xp: 50
+				}
+			]
+			title: "Fundações de Pedra"
+			x: -1.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["1001000000000110"]
+			description: [
+				"O Cortador de Pedra (Stonecutter) economiza materiais preciosos ao esculpir escadas, lajes e tijolos de pedra na proporção de 1 para 1."
+				"Essencial para erguer castelos e casas imponentes sem desperdiçar blocos."
+			]
+			icon: {
+				id: "minecraft:stonecutter"
+			}
+			id: "1001000000000120"
+			subtitle: "Esculpindo blocos decorativos com precisão"
+			tasks: [
+				{
+					id: "1001000000000121"
+					item: {
+						count: 1
+						id: "minecraft:stonecutter"
+					}
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "1001000000000122"
+					item: {
+						count: 1
+						id: "minecraft:stone_bricks"
+					}
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 32
+					id: "1001000000000123"
+					item: {
+						count: 1
+						id: "minecraft:stone_bricks"
+					}
+					type: "item"
+				}
+				{
+					id: "1001000000000124"
+					type: "xp"
+					xp: 75
+				}
+			]
+			title: "A Arte da Cantaria"
+			x: 0.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["1001000000000110"]
+			description: [
+				"Dormir em uma cama reseta o ponto de renascimento e pula as noites escuras e perigosas."
+				"Com o mod Cinematic Respawn instalado, renascer é cinematográfico e suave!"
+			]
+			icon: {
+				id: "minecraft:white_bed"
+			}
+			id: "1001000000000130"
+			subtitle: "Um refúgio seguro para descansar"
+			tasks: [
+				{
+					id: "1001000000000131"
+					item: {
+						count: 1
+						id: "minecraft:white_bed"
+					}
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 1
+					id: "1001000000000132"
+					item: {
+						count: 1
+						id: "minecraft:clock"
+					}
+					type: "item"
+				}
+				{
+					id: "1001000000000133"
+					type: "xp"
+					xp: 50
+				}
+			]
+			title: "Noites em Claro Nunca Mais"
+			x: 0.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["1001000000000120", "1001000000000130"]
+			description: [
+				"Criaturas hostis só nascem no escuro total (nível de luz zero)."
+				"Lanternas proporcionam uma iluminação elegante e acolhedora, podendo ser penduradas em tetos ou nas próprias correntes do teto da sua casa!"
+			]
+			icon: {
+				id: "minecraft:lantern"
+			}
+			id: "1001000000000140"
+			subtitle: "Estética medieval e proteção perimetral"
+			tasks: [
+				{
+					count: 4L
+					id: "1001000000000141"
+					item: {
+						count: 1
+						id: "minecraft:lantern"
+					}
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 4
+					id: "1001000000000142"
+					item: {
+						count: 1
+						id: "minecraft:chain"
+					}
+					type: "item"
+				}
+				{
+					id: "1001000000000143"
+					type: "xp"
+					xp: 75
+				}
+			]
+			title: "Luz na Escuridão"
+			x: 1.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["1001000000000020"]
+			description: [
+				"A fome não pode ser um obstáculo no seu dia a dia."
+				"Use uma enxada próxima à água para arar a terra e plante sementes de trigo. Logo você terá colheitas regulares de pão quente!"
+			]
+			icon: {
+				id: "minecraft:wheat_seeds"
+			}
+			id: "1001000000000210"
+			subtitle: "O primeiro cultivo agrícola"
+			tasks: [
+				{
+					count: 16L
+					id: "1001000000000211"
+					item: {
+						count: 1
+						id: "minecraft:wheat_seeds"
+					}
+					type: "item"
+				}
+				{
+					id: "1001000000000212"
+					item: {
+						count: 1
+						id: "minecraft:stone_hoe"
+					}
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 8
+					id: "1001000000000213"
+					item: {
+						count: 1
+						id: "minecraft:bone_meal"
+					}
+					type: "item"
+				}
+				{
+					id: "1001000000000214"
+					type: "xp"
+					xp: 50
+				}
+			]
+			title: "O Pão de Cada Dia"
+			x: -1.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["1001000000000210"]
+			description: [
+				"Com o mod AppleSkin, você pode ver exatamente quanta nutrição e saturação cada alimento fornece ao segurá-lo na mão."
+				"Combine seus trigos para fazer pães e colete maçãs das árvores caídas para uma dieta balanceada."
+			]
+			icon: {
+				id: "minecraft:apple"
+			}
+			id: "1001000000000220"
+			subtitle: "Energia constante para suas jornadas"
+			tasks: [
+				{
+					count: 8L
+					id: "1001000000000221"
+					item: {
+						count: 1
+						id: "minecraft:apple"
+					}
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "1001000000000222"
+					item: {
+						count: 1
+						id: "minecraft:bread"
+					}
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 4
+					id: "1001000000000223"
+					item: {
+						count: 1
+						id: "minecraft:golden_apple"
+					}
+					type: "item"
+				}
+				{
+					id: "1001000000000224"
+					type: "xp"
+					xp: 75
+				}
+			]
+			title: "Pomar e Sustento"
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["1001000000000210"]
+			description: [
+				"Segurar trigo na mão atrai vacas e ovelhas para dentro dos seus cercados."
+				"A reprodução de animais fornece couro (indispensável para suas mochilas e livros) e lã para decoração e camas."
+			]
+			icon: {
+				id: "minecraft:wheat"
+			}
+			id: "1001000000000230"
+			subtitle: "Fontes de couro, lã e fartura"
+			tasks: [
+				{
+					count: 16L
+					id: "1001000000000231"
+					item: {
+						count: 1
+						id: "minecraft:wheat"
+					}
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "1001000000000232"
+					item: {
+						count: 1
+						id: "minecraft:leather"
+					}
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 8
+					id: "1001000000000233"
+					item: {
+						count: 1
+						id: "minecraft:leather"
+					}
+					type: "item"
+				}
+				{
+					id: "1001000000000234"
+					type: "xp"
+					xp: 75
+				}
+			]
+			title: "Pecuária Pacífica"
+			x: 0.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["1001000000000220", "1001000000000230"]
+			description: [
+				"Gatos naturalmente assustam Creepers e Phantoms. Mas no BlessForge, graças ao mod Cat Fighting, seus gatos domésticos também lutam e sobem de nível em combate!"
+				"Pesque bacalhau ou salmão cru nos rios para domar seu primeiro felino guardião da base."
+			]
+			icon: {
+				id: "minecraft:cod"
+			}
+			id: "1001000000000240"
+			shape: "diamond"
+			subtitle: "Seu guardião de quatro patas com Cat Fighting"
+			tasks: [
+				{
+					count: 8L
+					id: "1001000000000241"
+					item: {
+						count: 1
+						id: "minecraft:cod"
+					}
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					id: "1001000000000242"
+					item: {
+						count: 1
+						id: "minecraft:fishing_rod"
+					}
+					type: "item"
+				}
+				{
+					count: 1
+					id: "1001000000000243"
+					item: {
+						count: 1
+						id: "minecraft:name_tag"
+					}
+					type: "item"
+				}
+				{
+					id: "1001000000000244"
+					type: "xp"
+					xp: 100
+				}
+			]
+			title: "O Companheiro Felino"
+			x: 1.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["1001000000000030"]
+			description: [
+				"O ferro é o metal que abre as portas da era mecânica e da segurança verdadeira."
+				"Encontre jazidas nas montanhas de Terralith ou nas profundezas e funda seus primeiros lingotes."
+			]
+			icon: {
+				id: "minecraft:iron_ingot"
+			}
+			id: "1001000000000310"
+			shape: "hexagon"
+			size: 1.4d
+			subtitle: "A espinha dorsal da metalurgia"
+			tasks: [
+				{
+					count: 16L
+					id: "1001000000000311"
+					item: {
+						count: 1
+						id: "minecraft:iron_ingot"
+					}
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					id: "1001000000000312"
+					item: {
+						count: 1
+						id: "minecraft:iron_pickaxe"
+					}
+					type: "item"
+				}
+				{
+					id: "1001000000000313"
+					type: "xp"
+					xp: 100
+				}
+			]
+			title: "Rumo ao Subsolo"
+			x: -1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1001000000000310"]
+			description: [
+				"Esqueletos e monstros das cavernas podem causar dano inesperado."
+				"Com um escudo em mãos, você bloqueia 100% do dano de flechas e ataques diretos, tornando a exploração muito mais relaxante e livre de sustos."
+			]
+			icon: {
+				id: "minecraft:shield"
+			}
+			id: "1001000000000320"
+			subtitle: "Defesa absoluta contra ataques surpresa"
+			tasks: [
+				{
+					id: "1001000000000321"
+					item: {
+						count: 1
+						id: "minecraft:shield"
+					}
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 4
+					id: "1001000000000322"
+					item: {
+						count: 1
+						id: "minecraft:iron_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "1001000000000323"
+					type: "xp"
+					xp: 50
+				}
+			]
+			title: "A Égide Protetora"
+			x: 0.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["1001000000000310"]
+			description: [
+				"O cobre é abundante nas entranhas da terra."
+				"Combine cobre e ametista para construir a Luneta (Spyglass). Ela permite avistar vilas distantes, marcos de Waystones e picos montanhosos sem precisar caminhar até lá!"
+			]
+			icon: {
+				id: "minecraft:copper_ingot"
+			}
+			id: "1001000000000330"
+			subtitle: "Visão além do alcance e telhados duradouros"
+			tasks: [
+				{
+					count: 16L
+					id: "1001000000000331"
+					item: {
+						count: 1
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "1001000000000332"
+					item: {
+						count: 1
+						id: "minecraft:spyglass"
+					}
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 16
+					id: "1001000000000333"
+					item: {
+						count: 1
+						id: "minecraft:copper_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "1001000000000334"
+					type: "xp"
+					xp: 75
+				}
+			]
+			title: "A Era do Cobre"
+			x: 0.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["1001000000000310"]
+			description: [
+				"Nas camadas mais baixas da ardósia profunda (Deepslate, Y: -58), brilham os cobiçados diamantes."
+				"Com eles você forja armaduras de alta durabilidade, abre o portal da Twilight Forest e forja armas ancestrais do Simply Swords."
+			]
+			icon: {
+				id: "minecraft:diamond"
+			}
+			id: "1001000000000340"
+			shape: "diamond"
+			size: 1.3d
+			subtitle: "A gema mais preciosa do subsolo"
+			tasks: [
+				{
+					count: 4L
+					id: "1001000000000341"
+					item: {
+						count: 1
+						id: "minecraft:diamond"
+					}
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 2
+					id: "1001000000000342"
+					item: {
+						count: 1
+						id: "minecraft:diamond"
+					}
+					type: "item"
+				}
+				{
+					id: "1001000000000343"
+					type: "xp_levels"
+					xp_levels: 3
+				}
+			]
+			title: "O Brilho Azul das Profundezas"
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1001000000000310"]
+			description: [
+				"Chega de voltar correndo para casa porque o inventário ficou cheio de pedras e minérios."
+				"A mochila básica do Sophisticated Backpacks pode ser vestida nas costas ou no slot de curios, abrindo espaço imediato para suas coletas!"
 			]
 			icon: {
 				id: "sophisticatedbackpacks:backpack"
 			}
-			id: "1001000000000020"
-			subtitle: "Armazenamento móvel de alta performance"
+			id: "1001000000000410"
+			subtitle: "O companheiro essencial de qualquer jornada"
 			tasks: [
 				{
-					id: "1001000000000021"
+					id: "1001000000000411"
 					item: {
 						count: 1
 						id: "sophisticatedbackpacks:backpack"
@@ -87,37 +777,174 @@
 			]
 			rewards: [
 				{
-					id: "1001000000000022"
+					count: 4
+					id: "1001000000000412"
+					item: {
+						count: 1
+						id: "minecraft:leather"
+					}
+					type: "item"
+				}
+				{
+					id: "1001000000000413"
+					type: "xp"
+					xp: 100
+				}
+			]
+			title: "Mochila de Aventureiro"
+			x: 3.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["1001000000000410"]
+			description: [
+				"Instale este módulo na sua mochila: os itens que você minera ou colhe do chão são teleportados diretamente para dentro dela, sem poluir sua barra rápida de itens!"
+			]
+			icon: {
+				id: "sophisticatedbackpacks:pickup_upgrade"
+			}
+			id: "1001000000000420"
+			subtitle: "Itens coletados sem esforço manual"
+			tasks: [
+				{
+					id: "1001000000000421"
 					item: {
 						count: 1
 						id: "sophisticatedbackpacks:pickup_upgrade"
 					}
 					type: "item"
 				}
+			]
+			rewards: [
 				{
-					id: "1001000000000023"
-					xp: 100
+					count: 8
+					id: "1001000000000422"
+					item: {
+						count: 1
+						id: "minecraft:iron_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "1001000000000423"
 					type: "xp"
+					xp: 75
 				}
 			]
-			title: "Bagagem de Respeito"
-			x: -2.0d
+			title: "Mãos Livres: Auto-Coleta"
+			x: 4.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["1001000000000410"]
+			description: [
+				"Melhore sua mochila de couro com lingotes de ferro para transformá-la em uma Mochila de Ferro."
+				"Mais que dobra sua capacidade de armazenamento e libera slots adicionais para módulos de alimentação e compactação!"
+			]
+			icon: {
+				id: "sophisticatedbackpacks:iron_backpack"
+			}
+			id: "1001000000000430"
+			shape: "diamond"
+			subtitle: "Capacidade ampliada para longas viagens"
+			tasks: [
+				{
+					id: "1001000000000431"
+					item: {
+						count: 1
+						id: "sophisticatedbackpacks:iron_backpack"
+					}
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 4
+					id: "1001000000000432"
+					item: {
+						count: 1
+						id: "minecraft:gold_ingot"
+					}
+					type: "item"
+				}
+				{
+					id: "1001000000000433"
+					type: "xp"
+					xp: 150
+				}
+			]
+			title: "A Mochila Reforçada"
+			x: 4.5d
 			y: -1.0d
 		}
 		{
-			dependencies: ["1001000000000010"]
+			dependencies: ["1001000000000420", "1001000000000430"]
 			description: [
-				"Com os mods Connectible Chains e Ziplines: Rezipped!, você pode deslizar rapidamente sobre abismos e montanhas!"
-				"Como funciona: Clique com correntes em cercas ou muros para criar uma linha suspensa no ar. Depois, pule na corrente segurando qualquer Picareta ou Chave Inglesa na mão para deslizar em alta velocidade!"
+				"O Tom's Simple Storage é o fim definitivo da bagunça na sua base."
+				"Coloque o Inventory Connector encostado nos seus baús e posicione o Storage Terminal na parede. Pronto: todos os seus itens agora estão acessíveis em uma única janela com barra de busca!"
+			]
+			icon: {
+				id: "toms_storage:storage_terminal"
+			}
+			id: "1001000000000440"
+			shape: "square"
+			size: 1.3d
+			subtitle: "Busca instantânea e unificação total de baús"
+			tasks: [
+				{
+					id: "1001000000000441"
+					item: {
+						count: 1
+						id: "toms_storage:inventory_connector"
+					}
+					type: "item"
+				}
+				{
+					id: "1001000000000442"
+					item: {
+						count: 1
+						id: "toms_storage:storage_terminal"
+					}
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 16
+					id: "1001000000000443"
+					item: {
+						count: 1
+						id: "toms_storage:inventory_cable"
+					}
+					type: "item"
+				}
+				{
+					id: "1001000000000444"
+					item: {
+						count: 1
+						id: "toms_storage:wireless_terminal"
+					}
+					type: "item"
+				}
+			]
+			title: "Armazenamento Centralizado"
+			x: 6.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["1001000000000310"]
+			description: [
+				"Por que escalar montanhas devagar se você pode surfar pelos céus?"
+				"Com Connectible Chains, clique com correntes em muros ou cercas no topo de colinas. Depois, segure qualquer picareta na mão e pule na linha para deslizar em alta velocidade até a sua base!"
 			]
 			icon: {
 				id: "minecraft:chain"
 			}
-			id: "1001000000000030"
-			subtitle: "Velocidade nos ares com Correntes e Picareta"
+			id: "1001000000000510"
+			subtitle: "Tirolesas velozes ligando seus postos avançados"
 			tasks: [
 				{
-					id: "1001000000000031"
+					id: "1001000000000511"
 					item: {
 						count: 1
 						id: "minecraft:iron_pickaxe"
@@ -125,8 +952,8 @@
 					type: "item"
 				}
 				{
-					count: 8L
-					id: "1001000000000032"
+					count: 16L
+					id: "1001000000000512"
 					item: {
 						count: 1
 						id: "minecraft:chain"
@@ -136,79 +963,79 @@
 			]
 			rewards: [
 				{
-					id: "1001000000000033"
+					count: 32
+					id: "1001000000000513"
 					item: {
-						count: 16
+						count: 1
 						id: "minecraft:chain"
 					}
 					type: "item"
 				}
 				{
-					id: "1001000000000034"
-					xp: 50
+					id: "1001000000000514"
 					type: "xp"
+					xp: 100
 				}
 			]
-			title: "Cortando os Céus"
-			x: -2.0d
+			title: "Cortando os Céus: Tirolesas"
+			x: 3.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["1001000000000510"]
+			description: [
+				"O gerador de mundos Terralith cria mais de 100 biomas novos espetaculares (Canyon, Caldera, Wintry Forest, etc.)."
+				"Segure a Nature's Compass e escolha o bioma que deseja visitar. Ela apontará a direção e a distância exata, evitando caminhadas cegas!"
+			]
+			icon: {
+				id: "naturescompass:naturescompass"
+			}
+			id: "1001000000000520"
+			subtitle: "Navegação precisa sem andar no escuro"
+			tasks: [
+				{
+					id: "1001000000000521"
+					item: {
+						count: 1
+						id: "naturescompass:naturescompass"
+					}
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 4
+					id: "1001000000000522"
+					item: {
+						count: 1
+						id: "minecraft:ender_pearl"
+					}
+					type: "item"
+				}
+				{
+					id: "1001000000000523"
+					type: "xp"
+					xp: 75
+				}
+			]
+			title: "Mapeando o Terralith"
+			x: 4.5d
 			y: 1.0d
 		}
 		{
-			dependencies: ["1001000000000020"]
+			dependencies: ["1001000000000510"]
 			description: [
-				"O Upgrader é o coração do balanceamento do seu poder no BlessForge."
-				"Com ele você queima itens valiosos para extrair pontos de experiência material e imbuir atributos em armaduras, espadas e arcos."
-			]
-			icon: {
-				id: "upgrader:upgrader"
-			}
-			id: "1001000000000040"
-			shape: "diamond"
-			size: 1.25d
-			subtitle: "A essência do poder evolutivo"
-			tasks: [
-				{
-					id: "1001000000000041"
-					item: {
-						count: 1
-						id: "upgrader:upgrader"
-					}
-					type: "item"
-				}
-			]
-			rewards: [
-				{
-					id: "1001000000000042"
-					item: {
-						count: 4
-						id: "minecraft:diamond"
-					}
-					type: "item"
-				}
-				{
-					id: "1001000000000043"
-					xp_levels: 5
-					type: "xp_levels"
-				}
-			]
-			title: "A Forja Evolutiva"
-			x: 0.0d
-			y: -1.0d
-		}
-		{
-			dependencies: ["1001000000000030"]
-			description: [
-				"O mundo gerado pelo Terralith e Tectonic é gigantesco."
-				"Encontre ou fabrique uma Waystone para marcar sua base e poder voltar num piscar de olhos usando Scrolls ou Warp Stones!"
+				"Encontrou uma vila bonita do Towns e Towers ou um local perfeito nas montanhas?"
+				"Ative a Waystone do local. Você poderá retornar até ela de qualquer canto do mundo usando um Warp Scroll ou a pedra de retorno!"
 			]
 			icon: {
 				id: "waystones:waystone"
 			}
-			id: "1001000000000050"
-			subtitle: "Pontos de retorno no vasto horizonte"
+			id: "1001000000000530"
+			subtitle: "Viagem instantânea entre seus postos do mundo"
 			tasks: [
 				{
-					id: "1001000000000051"
+					id: "1001000000000531"
 					item: {
 						count: 1
 						id: "waystones:warp_scroll"
@@ -218,7 +1045,7 @@
 			]
 			rewards: [
 				{
-					id: "1001000000000052"
+					id: "1001000000000532"
 					item: {
 						count: 1
 						id: "waystones:waystone"
@@ -226,38 +1053,41 @@
 					type: "item"
 				}
 				{
-					id: "1001000000000053"
-					xp: 150
+					id: "1001000000000533"
 					type: "xp"
+					xp: 150
 				}
 			]
-			title: "Marco no Horizonte"
-			x: 0.0d
-			y: 1.0d
+			title: "Marco no Horizonte: Waystone"
+			x: 4.5d
+			y: 2.0d
 		}
 		{
-			dependencies: ["1001000000000040", "1001000000000050"]
+			dependencies: ["1001000000000520", "1001000000000530"]
 			description: [
-				"Você dominou os primeiros elementos da sobrevivência e está pronto para voos maiores."
-				"A partir daqui, os caminhos da Engenharia a Vapor (Create) e das Dimensões Místicas se abrem!"
+				"O Bound Scroll é um pergaminho sagrado que você sintoniza clicando com botão direito em qualquer Waystone específica (por exemplo, na sua base principal)."
+				"Com ele na mochila, mesmo que você se perca a dezenas de milhares de blocos de distância, um clique trará você de volta ao calor do seu lar!"
 			]
 			icon: {
-				id: "minecraft:compass"
+				id: "waystones:bound_scroll"
 			}
-			id: "1001000000000060"
-			shape: "gear"
-			size: 1.5d
-			subtitle: "A encruzilhada do destino"
+			id: "1001000000000540"
+			shape: "diamond"
+			subtitle: "O retorno garantido à sua fortaleza"
 			tasks: [
 				{
-					id: "1001000000000061"
-					title: "Rumo à Próxima Era"
-					type: "checkmark"
+					id: "1001000000000541"
+					item: {
+						count: 1
+						id: "waystones:bound_scroll"
+					}
+					type: "item"
 				}
 			]
 			rewards: [
 				{
-					id: "1001000000000062"
+					count: 3
+					id: "1001000000000542"
 					item: {
 						count: 1
 						id: "waystones:bound_scroll"
@@ -265,13 +1095,101 @@
 					type: "item"
 				}
 				{
-					id: "1001000000000063"
-					xp_levels: 3
+					id: "1001000000000543"
+					type: "xp"
+					xp: 150
+				}
+			]
+			title: "O Lar Eterno Marcado"
+			x: 6.0d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"1001000000000340"
+				"1001000000000440"
+				"1001000000000540"
+			]
+			description: [
+				"O Upgrader coroa a sua independência de grind cansativo."
+				"Em vez de depender de encantamentos aleatórios que quebram suas ferramentas, o Upgrader absorve materiais extras para conceder atributos permanentes de velocidade, durabilidade e força de ataque aos seus itens favoritos!"
+			]
+			icon: {
+				id: "upgrader:upgrader"
+			}
+			id: "1001000000000610"
+			shape: "gear"
+			size: 1.5d
+			subtitle: "Aprimoramento justo e sem loteria"
+			tasks: [
+				{
+					id: "1001000000000611"
+					item: {
+						count: 1
+						id: "upgrader:upgrader"
+					}
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					count: 4
+					id: "1001000000000612"
+					item: {
+						count: 1
+						id: "minecraft:diamond"
+					}
+					type: "item"
+				}
+				{
+					id: "1001000000000613"
 					type: "xp_levels"
+					xp_levels: 5
+				}
+			]
+			title: "A Forja Evolutiva: Upgrader"
+			x: 7.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1001000000000610"]
+			description: [
+				"Parabéns, pioneiro!"
+				"Você agora tem base segura, casa aconchegante, gato de guarda, comida ilimitada, minérios, baús centralizados sem bagunça, teleporte rápido e equipamentos consagrados."
+				"A fundação do seu Mundo Eterno está completa. Explore os próximos capítulos no seu próprio tempo: domine a engenharia a vapor do Create ou atravesse os portais místicos!"
+			]
+			icon: {
+				id: "minecraft:compass"
+			}
+			id: "1001000000000620"
+			shape: "hexagon"
+			size: 1.8d
+			subtitle: "A fundação do seu império está completa"
+			tasks: [
+				{
+					id: "1001000000000621"
+					title: "Fundação Eterna Conquistada"
+					type: "checkmark"
+				}
+			]
+			rewards: [
+				{
+					count: 1
+					id: "1001000000000622"
+					item: {
+						count: 1
+						id: "minecraft:totem_of_undying"
+					}
+					type: "item"
+				}
+				{
+					id: "1001000000000623"
+					type: "xp_levels"
+					xp_levels: 5
 				}
 			]
 			title: "Pioneiro Consagrado"
-			x: 2.5d
+			x: 9.2d
 			y: 0.0d
 		}
 	]

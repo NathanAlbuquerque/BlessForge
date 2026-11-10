@@ -15,7 +15,7 @@
 		"Caminhar milhares de blocos no chão consome horas preciosas do seu dia."
 		"Para que suas sessões de jogo sejam 100% produtivas e empolgantes, o modpack traz soluções inteligentes:"
 		"• **Waystones**: Marque vilas e sua base para viajar instantaneamente pelo mapa através de pergaminhos ou pedras de teleporte."
-		"• **Tirolesas & Correntes (Ziplines)**: Conecte correntes entre montanhas com Connectible Chains e deslize velozmente segurando qualquer picareta na mão!"
+		"• **Tirolesas e Correntes (Ziplines)**: Conecte correntes entre montanhas com Connectible Chains e deslize velozmente segurando qualquer picareta na mão!"
 		"• **Nature's Compass**: Encontre qualquer bioma exuberante do Terralith diretamente, sem perambular no escuro."
 	]
 	quest.1000000000000030.title: "Pilar 2: Armazenamento Sem Bagunça"
@@ -34,12 +34,12 @@
 		"• **FallingTree**: Quebre a base de qualquer árvore e o tronco inteiro cai num instante. Chega de pular galho por galho! (Segure SHIFT para quebrar apenas 1 bloco quando quiser)."
 		"• **Upgrader Equilibrado**: Nós configuramos minuciosamente o valor de centenas de itens. Sobras de minérios e materiais raros podem ser sacrificados para aumentar o dano, armadura e velocidade dos seus itens com lógica e justiça."
 	]
-	quest.1000000000000050.title: "Pilar 4: Curiosidade & Descobertas"
+	quest.1000000000000050.title: "Pilar 4: Curiosidade e Descobertas"
 	quest.1000000000000050.quest_subtitle: "Aprenda mecânicas fascinantes sem pressa"
 	quest.1000000000000050.quest_desc: [
 		"Descubra os mods nas abas laterais deste livro, cada um no seu momento certo:"
 		"• **Create**: Entenda a beleza das engrenagens, prensas a vapor e até armas de fogo (Create: Gunsmithing) de forma suave e didática."
-		"• **Twilight Forest & Bumblezone**: Dimensões mágicas para visitar nos fins de semana e desbravar segredos com calma."
+		"• **Twilight Forest e Bumblezone**: Dimensões mágicas para visitar nos fins de semana e desbravar segredos com calma."
 		"• **L_Ender's Cataclysm**: Chefes monumentais guardando relíquias secretas para quando você desejar uma batalha épica e memorável!"
 	]
 	quest.1000000000000060.title: "O Início de um Legado"

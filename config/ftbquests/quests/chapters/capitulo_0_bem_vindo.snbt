@@ -71,7 +71,7 @@
 				"Caminhar milhares de blocos no chão consome horas preciosas do seu dia."
 				"Para que suas sessões de jogo sejam 100% produtivas e empolgantes, o modpack traz soluções inteligentes:"
 				"• **Waystones**: Marque vilas e sua base para viajar instantaneamente pelo mapa através de pergaminhos ou pedras de teleporte."
-				"• **Tirolesas & Correntes (Ziplines)**: Conecte correntes entre montanhas com Connectible Chains e deslize velozmente segurando qualquer picareta na mão!"
+				"• **Tirolesas e Correntes (Ziplines)**: Conecte correntes entre montanhas com Connectible Chains e deslize velozmente segurando qualquer picareta na mão!"
 				"• **Nature's Compass**: Encontre qualquer bioma exuberante do Terralith diretamente, sem perambular no escuro."
 			]
 			icon: {
@@ -205,7 +205,7 @@
 			description: [
 				"Descubra os mods nas abas laterais deste livro, cada um no seu momento certo:"
 				"• **Create**: Entenda a beleza das engrenagens, prensas a vapor e até armas de fogo (Create: Gunsmithing) de forma suave e didática."
-				"• **Twilight Forest & Bumblezone**: Dimensões mágicas para visitar nos fins de semana e desbravar segredos com calma."
+				"• **Twilight Forest e Bumblezone**: Dimensões mágicas para visitar nos fins de semana e desbravar segredos com calma."
 				"• **L_Ender's Cataclysm**: Chefes monumentais guardando relíquias secretas para quando você desejar uma batalha épica e memorável!"
 			]
 			icon: {
@@ -240,7 +240,7 @@
 					type: "item"
 				}
 			]
-			title: "Pilar 4: Curiosidade & Descobertas"
+			title: "Pilar 4: Curiosidade e Descobertas"
 			x: 3.5d
 			y: 0.5d
 		}
