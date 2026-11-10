@@ -1,0 +1,177 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "capitulo_4_bumblezone"
+	group: "1A2B3C4D5E6F7001"
+	icon: {
+		id: "the_bumblezone:royal_jelly_bottle"
+	}
+	id: "1004000000000001"
+	order_index: 3
+	title: "4. Zumbidos e Abismos (The Bumblezone)"
+	quests: [
+		{
+			description: [
+				"Para adentrar a dimensão colmeia The Bumblezone, atire uma Ender Pearl diretamente em uma colmeia ou ninho de abelha comum."
+				"Você será miniaturizado e teleportado para um universo feito inteiramente de cera, favos e néctar!"
+			]
+			icon: {
+				id: "minecraft:ender_pearl"
+			}
+			id: "1004000000000010"
+			shape: "hexagon"
+			size: 1.3d
+			subtitle: "O mergulho microscópico na colmeia"
+			tasks: [
+				{
+					id: "1004000000000011"
+					title: "Entre na Bumblezone"
+					type: "checkmark"
+				}
+			]
+			rewards: [
+				{
+					id: "1004000000000012"
+					item: {
+						count: 4
+						id: "minecraft:honey_bottle"
+					}
+					type: "item"
+				}
+				{
+					id: "1004000000000013"
+					xp: 100
+					type: "xp"
+				}
+			]
+			title: "A Invasão da Colmeia"
+			x: -3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1004000000000010"]
+			description: [
+				"Os cristais de mel são minérios bioluminescentes raríssimos da Bumblezone."
+				"Eles possuem dureza excepcional e capacidade de regeneração celular imediata quando consumidos ou aplicados em armas."
+			]
+			icon: {
+				id: "the_bumblezone:honey_crystal_shards"
+			}
+			id: "1004000000000020"
+			subtitle: "A joia dourada dos enxames"
+			tasks: [
+				{
+					count: 16L
+					id: "1004000000000021"
+					item: {
+						count: 1
+						id: "the_bumblezone:honey_crystal_shards"
+					}
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					id: "1004000000000022"
+					item: {
+						count: 1
+						id: "the_bumblezone:honey_crystal_shield"
+					}
+					type: "item"
+				}
+				{
+					id: "1004000000000023"
+					xp: 150
+					type: "xp"
+				}
+			]
+			title: "Cristais de Âmbar Doce"
+			x: -1.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["1004000000000010"]
+			description: [
+				"A Geleia Real é a substância mais potente produzida pela Rainha das Abelhas."
+				"Concede efeitos drásticos de cura e amplificação de atributos físicos, sendo um dos ingredientes de sacrifício mais valiosos no Upgrader."
+			]
+			icon: {
+				id: "the_bumblezone:royal_jelly_bottle"
+			}
+			id: "1004000000000030"
+			shape: "diamond"
+			subtitle: "O elixir supremo da monarquia abelínea"
+			tasks: [
+				{
+					count: 4L
+					id: "1004000000000031"
+					item: {
+						count: 1
+						id: "the_bumblezone:royal_jelly_bottle"
+					}
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					id: "1004000000000032"
+					item: {
+						count: 1
+						id: "the_bumblezone:stinger_spear"
+					}
+					type: "item"
+				}
+				{
+					id: "1004000000000033"
+					xp_levels: 5
+					type: "xp_levels"
+				}
+			]
+			title: "Geleia Real Soberana"
+			x: -1.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["1004000000000020", "1004000000000030"]
+			description: [
+				"O canhão de cristais dispara espinhos pontiagudos de néctar solidificado em altíssima velocidade."
+				"Uma arma biológica devastadora para complementar seu arsenal!"
+			]
+			icon: {
+				id: "the_bumblezone:crystal_cannon"
+			}
+			id: "1004000000000040"
+			shape: "square"
+			size: 1.3d
+			subtitle: "Artilharia entomológica pesada"
+			tasks: [
+				{
+					id: "1004000000000041"
+					item: {
+						count: 1
+						id: "the_bumblezone:crystal_cannon"
+					}
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					id: "1004000000000042"
+					item: {
+						count: 1
+						id: "the_bumblezone:essence_of_the_bees"
+					}
+					type: "item"
+				}
+				{
+					id: "1004000000000043"
+					xp_levels: 5
+					type: "xp_levels"
+				}
+			]
+			title: "Artilharia do Enxame"
+			x: 1.5d
+			y: 0.0d
+		}
+	]
+}

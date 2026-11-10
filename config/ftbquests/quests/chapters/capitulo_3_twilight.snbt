@@ -1,0 +1,224 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "capitulo_3_twilight"
+	group: "1A2B3C4D5E6F7001"
+	icon: {
+		id: "twilightforest:naga_trophy"
+	}
+	id: "1003000000000001"
+	order_index: 2
+	title: "3. Além do Dossel (Twilight Forest)"
+	quests: [
+		{
+			description: [
+				"Para abrir o portal para a dimensão do crepúsculo, cave um buraco 2x2 de água na grama, plante flores em toda a volta e atire um diamante lá dentro."
+				"Um raio cairá do céu abrindo o portal místico!"
+			]
+			icon: {
+				id: "minecraft:diamond"
+			}
+			id: "1003000000000010"
+			shape: "hexagon"
+			size: 1.3d
+			subtitle: "O ritual do diamante e das flores"
+			tasks: [
+				{
+					id: "1003000000000011"
+					title: "Abra o Portal do Crepúsculo"
+					type: "checkmark"
+				}
+			]
+			rewards: [
+				{
+					id: "1003000000000012"
+					item: {
+						count: 1
+						id: "twilightforest:magic_map"
+					}
+					type: "item"
+				}
+				{
+					id: "1003000000000013"
+					xp: 100
+					type: "xp"
+				}
+			]
+			title: "O Chamado do Crepúsculo"
+			x: -3.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1003000000000010"]
+			description: [
+				"A serpente gigante habita seu pátio de pedra cercado de hera."
+				"Mire na cauda dela para arrancar suas placas e expor seus pontos fracos!"
+			]
+			icon: {
+				id: "twilightforest:naga_scale"
+			}
+			id: "1003000000000020"
+			subtitle: "O terror sinuoso do labirinto"
+			tasks: [
+				{
+					id: "1003000000000021"
+					item: {
+						count: 1
+						id: "twilightforest:naga_scale"
+					}
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					id: "1003000000000022"
+					item: {
+						count: 1
+						id: "twilightforest:naga_chestplate"
+					}
+					type: "item"
+				}
+				{
+					id: "1003000000000023"
+					xp_levels: 3
+					type: "xp_levels"
+				}
+			]
+			title: "A Fúria da Naga"
+			x: -1.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["1003000000000020"]
+			description: [
+				"No topo de sua colossal torre de pedra, o Lich conjura escudos mágicos impenetráveis."
+				"Rebata os projéteis mágicos de volta contra ele para quebrar seus escudos antes de partir para o ataque corporal!"
+			]
+			icon: {
+				id: "twilightforest:lich_trophy"
+			}
+			id: "1003000000000030"
+			shape: "diamond"
+			subtitle: "O monarca esquelético da torre"
+			tasks: [
+				{
+					id: "1003000000000031"
+					item: {
+						count: 1
+						id: "twilightforest:lich_trophy"
+					}
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					id: "1003000000000032"
+					item: {
+						count: 8
+						id: "minecraft:golden_apple"
+					}
+					type: "item"
+				}
+				{
+					id: "1003000000000033"
+					xp_levels: 5
+					type: "xp_levels"
+				}
+			]
+			title: "O Eclipse do Lich"
+			x: 0.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["1003000000000010"]
+			description: [
+				"Nas profundezas escuras dos labirintos subterrâneos repousa o Minoshroom."
+				"Derrote-o para obter o lendário Diamond Minotaur Axe e a refeição fortificante Meef Stroganoff!"
+			]
+			icon: {
+				id: "twilightforest:meef_stroganoff"
+			}
+			id: "1003000000000040"
+			subtitle: "O guardião com chifres dos labirintos"
+			tasks: [
+				{
+					id: "1003000000000041"
+					item: {
+						count: 1
+						id: "twilightforest:meef_stroganoff"
+					}
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					id: "1003000000000042"
+					item: {
+						count: 1
+						id: "twilightforest:diamond_minotaur_axe"
+					}
+					type: "item"
+				}
+				{
+					id: "1003000000000043"
+					xp: 200
+					type: "xp"
+				}
+			]
+			title: "Labirinto do Minotauro"
+			x: -1.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["1003000000000030", "1003000000000040"]
+			description: [
+				"Com o poder dos chefes do Crepúsculo absorvido, você extrai o aço místico (Steelleaf e Ironwood) para fundir artefatos raros que serão essenciais na forja final de Simply Swords e Upgrader!"
+			]
+			icon: {
+				id: "twilightforest:steelleaf_ingot"
+			}
+			id: "1003000000000050"
+			shape: "square"
+			size: 1.4d
+			subtitle: "A colheita do crepúsculo eterno"
+			tasks: [
+				{
+					count: 8L
+					id: "1003000000000051"
+					item: {
+						count: 1
+						id: "twilightforest:steelleaf_ingot"
+					}
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "1003000000000052"
+					item: {
+						count: 1
+						id: "twilightforest:ironwood_ingot"
+					}
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					id: "1003000000000053"
+					item: {
+						count: 1
+						id: "twilightforest:charm_of_life_2"
+					}
+					type: "item"
+				}
+				{
+					id: "1003000000000054"
+					xp_levels: 6
+					type: "xp_levels"
+				}
+			]
+			title: "Metais Lendários do Crepúsculo"
+			x: 2.5d
+			y: 0.0d
+		}
+	]
+}

@@ -1,0 +1,175 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "capitulo_5_arsenal"
+	group: "1A2B3C4D5E6F7001"
+	icon: {
+		id: "simplyswords:brimstone_claymore"
+	}
+	id: "1005000000000001"
+	order_index: 4
+	title: "5. O Arsenal Lendário"
+	quests: [
+		{
+			description: [
+				"O Simply Swords adiciona armas ancestrais com animações e poderes mágicos únicos."
+				"Comece forjando suas primeiras variantes de lâminas pesadas (Claymores, Cutlasses, Chakrams ou Glaives)."
+			]
+			icon: {
+				id: "simplyswords:diamond_claymore"
+			}
+			id: "1005000000000010"
+			shape: "hexagon"
+			size: 1.3d
+			subtitle: "Muito além da espada tradicional"
+			tasks: [
+				{
+					id: "1005000000000011"
+					item: {
+						count: 1
+						id: "simplyswords:diamond_claymore"
+					}
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					id: "1005000000000012"
+					item: {
+						count: 2
+						id: "minecraft:netherite_scrap"
+					}
+					type: "item"
+				}
+				{
+					id: "1005000000000013"
+					xp: 200
+					type: "xp"
+				}
+			]
+			title: "A Arte da Lâmina Pesada"
+			x: -3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1005000000000010"]
+			description: [
+				"Em baús raros de estruturas (Lootr, Dungeons Arise e Explorify), você pode desenterrar armas místicas que possuem almas seladas."
+				"Exemplos: Brimstone Claymore, Runebreaker, Stormbringer, Arcanethyst."
+			]
+			icon: {
+				id: "simplyswords:brimstone_claymore"
+			}
+			id: "1005000000000020"
+			shape: "diamond"
+			size: 1.4d
+			subtitle: "Lâminas forjadas pelos próprios deuses"
+			tasks: [
+				{
+					id: "1005000000000021"
+					title: "Conquiste uma Espada Mítica"
+					type: "checkmark"
+				}
+			]
+			rewards: [
+				{
+					id: "1005000000000022"
+					item: {
+						count: 1
+						id: "minecraft:enchanted_golden_apple"
+					}
+					type: "item"
+				}
+				{
+					id: "1005000000000023"
+					xp_levels: 10
+					type: "xp_levels"
+				}
+			]
+			title: "Herança dos Titãs"
+			x: -0.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["1005000000000010"]
+			description: [
+				"Com os itens obtidos na Twilight Forest e na Bumblezone, alimente seu Upgrader com materiais nobres."
+				"Eleve sua arma e armadura principal para o patamar máximo de afiação e resistência!"
+			]
+			icon: {
+				id: "upgrader:upgrader"
+			}
+			id: "1005000000000030"
+			shape: "gear"
+			subtitle: "O auge do refinamento material"
+			tasks: [
+				{
+					count: 4L
+					id: "1005000000000031"
+					item: {
+						count: 1
+						id: "minecraft:netherite_ingot"
+					}
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					id: "1005000000000032"
+					item: {
+						count: 1
+						id: "minecraft:netherite_upgrade_smithing_template"
+					}
+					type: "item"
+				}
+				{
+					id: "1005000000000033"
+					xp_levels: 10
+					type: "xp_levels"
+				}
+			]
+			title: "Aprimoramento Absoluto"
+			x: -0.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["1005000000000020", "1005000000000030"]
+			description: [
+				"Você agora possui o equipamento mais poderoso que este mundo pode oferecer."
+				"Nada menos do que isso será suficiente para encarar o apocalipse biológico e cibernético de L_Ender's Cataclysm!"
+			]
+			icon: {
+				id: "minecraft:nether_star"
+			}
+			id: "1005000000000040"
+			shape: "heart"
+			size: 1.5d
+			subtitle: "O guerreiro perfeito para o desafio final"
+			tasks: [
+				{
+					id: "1005000000000041"
+					title: "Pronto para o Cataclismo"
+					type: "checkmark"
+				}
+			]
+			rewards: [
+				{
+					id: "1005000000000042"
+					item: {
+						count: 1
+						id: "minecraft:totem_of_undying"
+					}
+					type: "item"
+				}
+				{
+					id: "1005000000000043"
+					xp_levels: 15
+					type: "xp_levels"
+				}
+			]
+			title: "O Campeão Forjado"
+			x: 2.5d
+			y: 0.0d
+		}
+	]
+}

@@ -1,0 +1,237 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "capitulo_2_create"
+	group: "1A2B3C4D5E6F7001"
+	icon: {
+		id: "create:cogwheel"
+	}
+	id: "1002000000000001"
+	order_index: 1
+	title: "2. Revolução do Vapor e Balística"
+	quests: [
+		{
+			description: [
+				"A pedra angular de todas as máquinas rotacionais do Create."
+				"Misture cascalho de ferro com andesito para criar as ligas que suportam o estresse cinético das suas fábricas."
+			]
+			icon: {
+				id: "create:andesite_alloy"
+			}
+			id: "1002000000000010"
+			shape: "hexagon"
+			size: 1.3d
+			subtitle: "O nascimento da mecânica"
+			tasks: [
+				{
+					count: 16L
+					id: "1002000000000011"
+					item: {
+						count: 1
+						id: "create:andesite_alloy"
+					}
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					id: "1002000000000012"
+					item: {
+						count: 8
+						id: "create:cogwheel"
+					}
+					type: "item"
+				}
+				{
+					id: "1002000000000013"
+					item: {
+						count: 4
+						id: "create:large_cogwheel"
+					}
+					type: "item"
+				}
+			]
+			title: "Liga de Andesito"
+			x: -3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1002000000000010"]
+			description: [
+				"A força da água fluindo move suas primeiras engrenagens."
+				"Gera a Força Rotacional (SU) necessária para alimentar trituradores, prensas e esteiras."
+			]
+			icon: {
+				id: "create:water_wheel"
+			}
+			id: "1002000000000020"
+			subtitle: "A força dos rios ao seu favor"
+			tasks: [
+				{
+					id: "1002000000000021"
+					item: {
+						count: 1
+						id: "create:water_wheel"
+					}
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					id: "1002000000000022"
+					item: {
+						count: 16
+						id: "create:shaft"
+					}
+					type: "item"
+				}
+			]
+			title: "Energia Hidráulica"
+			x: -1.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["1002000000000020"]
+			description: [
+				"Posicione a prensa mecânica acima de uma base e aplique energia rotacional."
+				"Ela achatará lingotes em chapas perfeitas para a construção de mecanismos complexos."
+			]
+			icon: {
+				id: "create:mechanical_press"
+			}
+			id: "1002000000000030"
+			shape: "diamond"
+			subtitle: "Amassando metais com precisão"
+			tasks: [
+				{
+					id: "1002000000000031"
+					item: {
+						count: 1
+						id: "create:mechanical_press"
+					}
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "1002000000000032"
+					item: {
+						count: 1
+						id: "create:iron_sheet"
+					}
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					id: "1002000000000033"
+					item: {
+						count: 8
+						id: "create:brass_sheet"
+					}
+					type: "item"
+				}
+				{
+					id: "1002000000000034"
+					xp: 150
+					type: "xp"
+				}
+			]
+			title: "Prensa Industrial"
+			x: 1.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["1002000000000010"]
+			description: [
+				"Chega de baús desorganizados!"
+				"O Tom's Simple Storage se conecta a qualquer baú ou container da sua base através de cabos e um conector, centralizando tudo em um terminal de busca com pesquisa instantânea."
+			]
+			icon: {
+				id: "toms_storage:storage_terminal"
+			}
+			id: "1002000000000040"
+			subtitle: "Central de controle dos seus itens"
+			tasks: [
+				{
+					id: "1002000000000041"
+					item: {
+						count: 1
+						id: "toms_storage:inventory_connector"
+					}
+					type: "item"
+				}
+				{
+					id: "1002000000000042"
+					item: {
+						count: 1
+						id: "toms_storage:storage_terminal"
+					}
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					id: "1002000000000043"
+					item: {
+						count: 16
+						id: "toms_storage:inventory_cable"
+					}
+					type: "item"
+				}
+				{
+					id: "1002000000000044"
+					item: {
+						count: 1
+						id: "toms_storage:wireless_terminal"
+					}
+					type: "item"
+				}
+			]
+			title: "Armazenamento Centralizado"
+			x: -1.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["1002000000000030"]
+			description: [
+				"As feras das outras dimensões não terão piedade de quem usar apenas flechas comuns."
+				"Com o Create: Gunsmithing você forja canos de aço, câmaras e gatilhos para montar suas próprias armas de fogo!"
+			]
+			icon: {
+				id: "create_gunsmithing:flintlock"
+			}
+			id: "1002000000000050"
+			shape: "square"
+			size: 1.3d
+			subtitle: "Pólvora, cano de metal e chumbo grosso"
+			tasks: [
+				{
+					id: "1002000000000051"
+					item: {
+						count: 1
+						id: "create_gunsmithing:flintlock"
+					}
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					id: "1002000000000052"
+					item: {
+						count: 32
+						id: "minecraft:gunpowder"
+					}
+					type: "item"
+				}
+				{
+					id: "1002000000000053"
+					xp_levels: 5
+					type: "xp_levels"
+				}
+			]
+			title: "A Arte da Armaria"
+			x: 3.0d
+			y: 0.0d
+		}
+	]
+}

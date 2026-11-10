@@ -1,0 +1,278 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "capitulo_1_pioneiro"
+	group: "1A2B3C4D5E6F7001"
+	icon: {
+		id: "minecraft:iron_axe"
+	}
+	id: "1001000000000001"
+	order_index: 0
+	title: "1. O Despertar do Pioneiro"
+	quests: [
+		{
+			description: [
+				"Bem-vindo ao mundo do BlessForge!"
+				"Com o mod FallingTree instalado, quebrar a base de um tronco derrubará a árvore inteira instantaneamente."
+				"Dica: Segure SHIFT (agachar) caso queira coletar apenas um bloco de madeira sem derrubar o resto!"
+			]
+			icon: {
+				id: "minecraft:oak_log"
+			}
+			id: "1001000000000010"
+			shape: "hexagon"
+			size: 1.5d
+			subtitle: "Derrube sua primeira árvore de uma só vez"
+			tasks: [
+				{
+					id: "1001000000000011"
+					item: {
+						count: 1
+						id: "minecraft:wooden_axe"
+					}
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "1001000000000012"
+					item: {
+						count: 1
+						id: "minecraft:oak_log"
+					}
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					id: "1001000000000013"
+					item: {
+						count: 16
+						id: "minecraft:torch"
+					}
+					type: "item"
+				}
+				{
+					id: "1001000000000014"
+					item: {
+						count: 8
+						id: "minecraft:bread"
+					}
+					type: "item"
+				}
+			]
+			title: "A Queda da Floresta"
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1001000000000010"]
+			description: [
+				"Um bom aventureiro precisa carregar seus despojos sem sobrecarregar seus bolsos."
+				"A mochila de couro do Sophisticated Backpacks pode ser aprimorada depois para níveis de Ferro, Ouro e Diamante!"
+			]
+			icon: {
+				id: "sophisticatedbackpacks:backpack"
+			}
+			id: "1001000000000020"
+			subtitle: "Armazenamento móvel de alta performance"
+			tasks: [
+				{
+					id: "1001000000000021"
+					item: {
+						count: 1
+						id: "sophisticatedbackpacks:backpack"
+					}
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					id: "1001000000000022"
+					item: {
+						count: 1
+						id: "sophisticatedbackpacks:pickup_upgrade"
+					}
+					type: "item"
+				}
+				{
+					id: "1001000000000023"
+					xp: 100
+					type: "xp"
+				}
+			]
+			title: "Bagagem de Respeito"
+			x: -2.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["1001000000000010"]
+			description: [
+				"Com as correntes re-conectáveis e a tirolesa, você pode deslizar rapidamente entre picos de montanhas e sobre desfiladeiros perigosos."
+				"Conecte as correntes entre dois blocos altos e use a roldana para surfar pelos céus!"
+			]
+			icon: {
+				id: "zipline:zipline"
+			}
+			id: "1001000000000030"
+			subtitle: "Velocidade nos ares com Ziplines"
+			tasks: [
+				{
+					id: "1001000000000031"
+					item: {
+						count: 1
+						id: "zipline:zipline"
+					}
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "1001000000000032"
+					item: {
+						count: 1
+						id: "minecraft:chain"
+					}
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					id: "1001000000000033"
+					item: {
+						count: 16
+						id: "minecraft:chain"
+					}
+					type: "item"
+				}
+				{
+					id: "1001000000000034"
+					xp: 50
+					type: "xp"
+				}
+			]
+			title: "Cortando os Céus"
+			x: -2.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["1001000000000020"]
+			description: [
+				"O Upgrader é o coração do balanceamento do seu poder no BlessForge."
+				"Com ele você queima itens valiosos para extrair pontos de experiência material e imbuir atributos em armaduras, espadas e arcos."
+			]
+			icon: {
+				id: "upgrader:upgrader"
+			}
+			id: "1001000000000040"
+			shape: "diamond"
+			size: 1.25d
+			subtitle: "A essência do poder evolutivo"
+			tasks: [
+				{
+					id: "1001000000000041"
+					item: {
+						count: 1
+						id: "upgrader:upgrader"
+					}
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					id: "1001000000000042"
+					item: {
+						count: 4
+						id: "minecraft:diamond"
+					}
+					type: "item"
+				}
+				{
+					id: "1001000000000043"
+					xp_levels: 5
+					type: "xp_levels"
+				}
+			]
+			title: "A Forja Evolutiva"
+			x: 0.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["1001000000000030"]
+			description: [
+				"O mundo gerado pelo Terralith e Tectonic é gigantesco."
+				"Encontre ou fabrique uma Waystone para marcar sua base e poder voltar num piscar de olhos usando Scrolls ou Warp Stones!"
+			]
+			icon: {
+				id: "waystones:waystone"
+			}
+			id: "1001000000000050"
+			subtitle: "Pontos de retorno no vasto horizonte"
+			tasks: [
+				{
+					id: "1001000000000051"
+					item: {
+						count: 1
+						id: "waystones:warp_scroll"
+					}
+					type: "item"
+				}
+			]
+			rewards: [
+				{
+					id: "1001000000000052"
+					item: {
+						count: 1
+						id: "waystones:waystone"
+					}
+					type: "item"
+				}
+				{
+					id: "1001000000000053"
+					xp: 150
+					type: "xp"
+				}
+			]
+			title: "Marco no Horizonte"
+			x: 0.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["1001000000000040", "1001000000000050"]
+			description: [
+				"Você dominou os primeiros elementos da sobrevivência e está pronto para voos maiores."
+				"A partir daqui, os caminhos da Engenharia a Vapor (Create) e das Dimensões Místicas se abrem!"
+			]
+			icon: {
+				id: "minecraft:compass"
+			}
+			id: "1001000000000060"
+			shape: "gear"
+			size: 1.5d
+			subtitle: "A encruzilhada do destino"
+			tasks: [
+				{
+					id: "1001000000000061"
+					title: "Rumo à Próxima Era"
+					type: "checkmark"
+				}
+			]
+			rewards: [
+				{
+					id: "1001000000000062"
+					item: {
+						count: 1
+						id: "waystones:bound_scroll"
+					}
+					type: "item"
+				}
+				{
+					id: "1001000000000063"
+					xp_levels: 3
+					type: "xp_levels"
+				}
+			]
+			title: "Pioneiro Consagrado"
+			x: 2.5d
+			y: 0.0d
+		}
+	]
+}

@@ -8,10 +8,10 @@
 
 | Localização / Status | Quantidade | Descrição |
 | :--- | :---: | :--- |
-| 🟢 **ATIVOS** (`mods/`) | **102** | Mods prontos para copiar/usar no Minecraft |
+| 🟢 **ATIVOS** (`mods/`) | **105** | Mods prontos para copiar/usar no Minecraft |
 | 🔴 **DESATIVADOS** (`desativados/`) | **13** | Mods isolados para teste ou backup |
 | 🎨 **RESOURCE PACKS** (`resourcepacks/`) | **8** | Pacotes visuais e de áudio em formato `.zip` |
-| **Total Geral** | **115** | **Arquivos JAR únicos catalogados** |
+| **Total Geral** | **118** | **Arquivos JAR únicos catalogados** |
 
 ---
 
@@ -22,7 +22,7 @@
 - [⚡ Otimização & Performance (10 mods)](#otimização--performance)
 - [🎒 Armazenamento & Inventário (8 mods)](#armazenamento--inventário)
 - [🎨 Gráficos, Áudio & Imersão (9 mods)](#gráficos,-áudio--imersão)
-- [💡 Qualidade de Vida (QoL) & Utilidades (36 mods)](#qualidade-de-vida-qol--utilidades)
+- [💡 Qualidade de Vida (QoL) & Utilidades (39 mods)](#qualidade-de-vida-qol--utilidades)
 - [📚 Bibliotecas, Frameworks & APIs (26 mods)](#bibliotecas,-frameworks--apis)
 - [🖥️ Interface (UI/HUD) & Controles (11 mods)](#interface-ui/hud--controles)
 - [🗺️ Aventura, Dimensões & Estruturas (10 mods)](#aventura,-dimensões--estruturas)
@@ -116,7 +116,10 @@
 | 🔴 Desativado | **[EMI Loot](https://github.com/fzzyhmstrs/EMI_loot)** | `emi_loot-0.7.9+1.21+neoforge.jar` | Client | Mod | emi, fzzy_config | --- | Plugin for EMI that shows chest loot, block drops, mob drops, and gameplay loot like fishing. |
 | 🟢 Ativo | **[FallingTree](https://www.curseforge.com/minecraft/mc-mods/falling-tree)** | `FallingTree-1.21.1-1.21.1.11.jar` | Client | Mod | cloth-config | --- | Change the way you cut trees. |
 | 🟢 Ativo | **[Freecam](https://www.curseforge.com/minecraft/mc-mods/free-cam)** | `freecam-neoforge-1.3.0+mc1.21.jar` | Client | Mod | --- | --- | --- |
+| 🟢 Ativo | **[FTB Filter System](https://www.curseforge.com/minecraft/mc-mods/ftb-filter-system)** | `ftb-filter-system-neoforge-21.1.4.jar` | Both | Mod | architectury, ftblibrary, jei, ftbxmodcompat | --- | --- |
+| 🟢 Ativo | **FTB Quests** | `ftb-quests-neoforge-2101.1.38.jar` | Both | Mod | architectury, ftblibrary, ftbteams, ftbxmodcompat | --- | --- |
 | 🟢 Ativo | **FTB Ranks** | `ftb-ranks-neoforge-2101.1.5.jar` | Client | Mod | architectury, ftblibrary | --- | --- |
+| 🟢 Ativo | **FTB Teams** | `ftb-teams-neoforge-2101.1.12.jar` | Both | Mod | architectury, ftblibrary | FTB Quests | --- |
 | 🟢 Ativo | **FTB Ultimine** | `ftb-ultimine-neoforge-2101.1.15.jar` | Both | Mod | architectury, ftblibrary, ftbezcrystals | --- | --- |
 | 🟢 Ativo | **[Gravestone Mod](https://www.curseforge.com/minecraft/mc-mods/gravestone-mod)** | `gravestone-neoforge-1.21.1-1.0.40.jar` | Both | Mod | jade | --- | Places a gravestone with your inventory items inside when you die |
 | 🟢 Ativo | **hennyfullbright-neoforge-1.21.1-1.0.jar** | `hennyfullbright-neoforge-1.21.1-1.0.jar` | Client | Mod | --- | --- | --- |
@@ -146,7 +149,7 @@
 | Status | Mod / Nome | Arquivo JAR | Lado | Tipo | Dependências | Usado Por (Dependentes) | Descrição & Links |
 | :---: | :--- | :--- | :---: | :---: | :--- | :--- | :--- |
 | 🟢 Ativo | **[Anvian's Lib](https://modrinth.com/mod/anvians-lib)** | `anvianslib-neoforge-1.21-1.4.2.jar` | Both | Lib | --- | Inventory Tweak | A small utility library for Anvian's mods. |
-| 🟢 Ativo | **Architectury** | `architectury-13.0.11-neoforge.jar` | Both | Lib | --- | Simply Tooltips, FTB Library, FTB Ranks, FTB Ultimine, Simply Swords, Skin Changer | --- |
+| 🟢 Ativo | **Architectury** | `architectury-13.0.11-neoforge.jar` | Both | Lib | --- | Simply Tooltips, FTB Filter System, FTB Library, FTB Quests, FTB Ranks, FTB Teams, FTB Ultimine, Simply Swords, Skin Changer | --- |
 | 🟢 Ativo | **[Balm](https://mods.twelveiterations.com/)** | `balm-neoforge-1.21.1-21.0.66.jar` | Both | Lib | --- | Waystones | Abstraction Layer (but not really) for Blay's multiplatform mods |
 | 🟢 Ativo | **[Blueprint](https://www.teamabnormals.com/mods/blueprint)** | `blueprint-1.21.1-8.2.0.jar` | Both | Lib | --- | Caverns & Chasms | --- |
 | 🟢 Ativo | **Cloth Config v15 API** | `cloth-config-15.0.140-neoforge.jar` | Both | Lib | --- | BetterF3, InvMove, Inventory Tweak, moreculling-neoforge-1.21.1-1.0.10.jar, Sound Physics Remastered, improved-inventory-tabs-neoforge-1.21.1-1.5.0.jar | --- |
@@ -154,7 +157,7 @@
 | 🟢 Ativo | **[Curios API](https://github.com/TheIllusiveC4/Curios)** | `curios-neoforge-9.5.1+1.21.1.jar` | Both | Lib | --- | L_Ender's Cataclysm 1.21.1-3.33.jar | A flexible and expandable accessory/equipment API for users and developers. |
 | 🟢 Ativo | **[Forge Config API Port](https://github.com/Fuzss/forgeconfigapiport)** | `ForgeConfigAPIPort-v21.1.6-1.21.1-NeoForge.jar` | Both | Lib | --- | --- | Provides NeoForge's & Forge's config systems to other modding ecosystems. Designed for a multi-loader architecture. |
 | 🟢 Ativo | **[Forgified Fabric API](https://github.com/Sinytra/ForgifiedFabricAPI)** | `forgified-fabric-api-0.116.15+2.3.5+1.21.1.jar` | Both | Lib | --- | Continuity, Voxy | Core API module providing key hooks and intercompatibility features. |
-| 🟢 Ativo | **FTB Library** | `ftb-library-neoforge-2101.1.37.jar` | Both | Lib | architectury | FTB Ranks, FTB Ultimine | --- |
+| 🟢 Ativo | **FTB Library** | `ftb-library-neoforge-2101.1.37.jar` | Both | Lib | architectury | FTB Filter System, FTB Quests, FTB Ranks, FTB Teams, FTB Ultimine | --- |
 | 🟢 Ativo | **Fzzy Config** | `fzzy_config-0.7.7+1.21+neoforge.jar` | Both | Lib | kotlinforforge | Simply Tooltips, EMI Loot, Simply Swords | --- |
 | 🟢 Ativo | **[GeckoLib 4](http://geckolib.com/)** | `geckolib-neoforge-1.21.1-4.9.3.jar` | Both | Lib | geckoanimfix | Mielon's The Sift, NukaTeam's Gun Lib, Pathogen : monster plague | --- |
 | 🟢 Ativo | **kotlinforforge-5.12.0-all.jar** | `kotlinforforge-5.12.0-all.jar` | Both | Lib | --- | --- | --- |
