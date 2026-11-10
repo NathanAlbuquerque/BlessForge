@@ -63,7 +63,7 @@
 				}
 			]
 			title: "A Queda da Floresta"
-			x: -6.0d
+			x: -11.0d
 			y: 0.0d
 		}
 		{
@@ -104,7 +104,7 @@
 				}
 			]
 			title: "A Bancada de Criação"
-			x: -4.5d
+			x: -8.5d
 			y: 0.0d
 		}
 		{
@@ -154,8 +154,8 @@
 				}
 			]
 			title: "O Calor do Fogo"
-			x: -3.0d
-			y: -0.5d
+			x: -6.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["1001000000000020"]
@@ -196,8 +196,8 @@
 				}
 			]
 			title: "Mudas para o Futuro"
-			x: -3.0d
-			y: 0.5d
+			x: -6.0d
+			y: 2.5d
 		}
 		{
 			dependencies: ["1001000000000030"]
@@ -237,8 +237,8 @@
 				}
 			]
 			title: "Fundações de Pedra"
-			x: -1.5d
-			y: -2.0d
+			x: -6.0d
+			y: -3.0d
 		}
 		{
 			dependencies: ["1001000000000110"]
@@ -287,8 +287,8 @@
 				}
 			]
 			title: "A Arte da Cantaria"
-			x: 0.0d
-			y: -2.5d
+			x: -3.5d
+			y: -4.5d
 		}
 		{
 			dependencies: ["1001000000000110"]
@@ -328,8 +328,8 @@
 				}
 			]
 			title: "Noites em Claro Nunca Mais"
-			x: 0.0d
-			y: -1.5d
+			x: -3.5d
+			y: -2.5d
 		}
 		{
 			dependencies: ["1001000000000120", "1001000000000130"]
@@ -370,8 +370,8 @@
 				}
 			]
 			title: "Luz na Escuridão"
-			x: 1.5d
-			y: -2.0d
+			x: -1.5d
+			y: -3.5d
 		}
 		{
 			dependencies: ["1001000000000020"]
@@ -420,8 +420,8 @@
 				}
 			]
 			title: "O Pão de Cada Dia"
-			x: -1.5d
-			y: 2.0d
+			x: -8.5d
+			y: 3.5d
 		}
 		{
 			dependencies: ["1001000000000210"]
@@ -471,8 +471,8 @@
 				}
 			]
 			title: "Pomar e Sustento"
-			x: 0.0d
-			y: 1.5d
+			x: -8.5d
+			y: 6.0d
 		}
 		{
 			dependencies: ["1001000000000210"]
@@ -522,8 +522,8 @@
 				}
 			]
 			title: "Pecuária Pacífica"
-			x: 0.0d
-			y: 2.5d
+			x: -6.0d
+			y: 5.0d
 		}
 		{
 			dependencies: ["1001000000000220", "1001000000000230"]
@@ -573,8 +573,8 @@
 				}
 			]
 			title: "O Companheiro Felino"
-			x: 1.5d
-			y: 2.0d
+			x: -3.5d
+			y: 5.0d
 		}
 		{
 			dependencies: ["1001000000000030"]
@@ -616,7 +616,7 @@
 				}
 			]
 			title: "Rumo ao Subsolo"
-			x: -1.5d
+			x: -3.0d
 			y: 0.0d
 		}
 		{
@@ -658,7 +658,7 @@
 			]
 			title: "A Égide Protetora"
 			x: 0.0d
-			y: -0.5d
+			y: 0.0d
 		}
 		{
 			dependencies: ["1001000000000310"]
@@ -708,7 +708,7 @@
 			]
 			title: "A Era do Cobre"
 			x: 0.0d
-			y: 0.5d
+			y: 2.5d
 		}
 		{
 			dependencies: ["1001000000000310"]
@@ -751,7 +751,7 @@
 				}
 			]
 			title: "O Brilho Azul das Profundezas"
-			x: 1.5d
+			x: 3.0d
 			y: 0.0d
 		}
 		{
@@ -793,7 +793,7 @@
 			]
 			title: "Mochila de Aventureiro"
 			x: 3.0d
-			y: -1.5d
+			y: 3.5d
 		}
 		{
 			dependencies: ["1001000000000410"]
@@ -832,8 +832,8 @@
 				}
 			]
 			title: "Mãos Livres: Auto-Coleta"
-			x: 4.5d
-			y: -2.0d
+			x: 5.5d
+			y: 4.5d
 		}
 		{
 			dependencies: ["1001000000000410"]
@@ -874,8 +874,8 @@
 				}
 			]
 			title: "A Mochila Reforçada"
-			x: 4.5d
-			y: -1.0d
+			x: 5.5d
+			y: 2.5d
 		}
 		{
 			dependencies: ["1001000000000420", "1001000000000430"]
@@ -928,8 +928,8 @@
 				}
 			]
 			title: "Armazenamento Centralizado"
-			x: 6.0d
-			y: -1.5d
+			x: 8.5d
+			y: 3.5d
 		}
 		{
 			dependencies: ["1001000000000310"]
@@ -979,7 +979,7 @@
 			]
 			title: "Cortando os Céus: Tirolesas"
 			x: 3.0d
-			y: 1.5d
+			y: 7.0d
 		}
 		{
 			dependencies: ["1001000000000510"]
@@ -1019,8 +1019,8 @@
 				}
 			]
 			title: "Mapeando o Terralith"
-			x: 4.5d
-			y: 1.0d
+			x: 5.5d
+			y: 7.0d
 		}
 		{
 			dependencies: ["1001000000000510"]
@@ -1059,8 +1059,8 @@
 				}
 			]
 			title: "Marco no Horizonte: Waystone"
-			x: 4.5d
-			y: 2.0d
+			x: 5.5d
+			y: 9.5d
 		}
 		{
 			dependencies: ["1001000000000520", "1001000000000530"]
@@ -1101,8 +1101,8 @@
 				}
 			]
 			title: "O Lar Eterno Marcado"
-			x: 6.0d
-			y: 1.5d
+			x: 8.5d
+			y: 8.5d
 		}
 		{
 			dependencies: [
@@ -1148,7 +1148,7 @@
 				}
 			]
 			title: "A Forja Evolutiva: Upgrader"
-			x: 7.5d
+			x: 12.0d
 			y: 0.0d
 		}
 		{
@@ -1189,7 +1189,7 @@
 				}
 			]
 			title: "Pioneiro Consagrado"
-			x: 9.2d
+			x: 14.5d
 			y: 0.0d
 		}
 	
@@ -1249,8 +1249,8 @@
 				}
 			]
 			title: "Cacada Noturna: Hordas Esqueleticas"
-			x: -1.5d
-			y: -3.5d
+			x: 1.0d
+			y: -2.5d
 		}
 		{
 			description: [
@@ -1300,8 +1300,8 @@
 				}
 			]
 			title: "Risco Explosivo: Emboscada de Creepers"
-			x: -0.5d
-			y: -4.5d
+			x: -1.0d
+			y: -5.5d
 		}
 		{
 			description: [
@@ -1359,8 +1359,8 @@
 				}
 			]
 			title: "O Veneno nas Trevas: Minas Abandonadas"
-			x: -1.5d
-			y: -4.5d
+			x: 1.5d
+			y: -5.0d
 		}
 		{
 			description: [
@@ -1427,8 +1427,8 @@
 				}
 			]
 			title: "Maldicao do Pantano: O Covil da Bruxa"
-			x: -0.5d
-			y: -5.5d
+			x: 1.0d
+			y: -7.5d
 		}
 		{
 			description: [
@@ -1472,8 +1472,8 @@
 				}
 			]
 			title: "A Prata Purificadora"
-			x: 0.5d
-			y: -3.5d
+			x: 3.5d
+			y: -2.5d
 		}
 		{
 			description: [
@@ -1516,8 +1516,8 @@
 				}
 			]
 			title: "Laminas Especializadas: A Forja de Combate"
-			x: 1.5d
-			y: -3.5d
+			x: 6.0d
+			y: -2.5d
 		}
 		{
 			description: [
@@ -1566,8 +1566,8 @@
 				}
 			]
 			title: "O Terror dos Mares: Afogados e as Profundezas"
-			x: 0.5d
-			y: -4.5d
+			x: 3.8d
+			y: -4.8d
 		}
 		{
 			description: [
@@ -1616,8 +1616,8 @@
 				}
 			]
 			title: "A Patrulha Hostil: Batedores Saqueadores"
-			x: 1.5d
-			y: -4.5d
+			x: 6.0d
+			y: -4.8d
 		}
 		{
 			description: [
@@ -1674,8 +1674,8 @@
 				}
 			]
 			title: "Desbravador de Masmorras: Explorify e Spawners"
-			x: 0.5d
-			y: -5.5d
+			x: -1.0d
+			y: -8.0d
 		}
 		{
 			description: [
@@ -1740,8 +1740,8 @@
 				}
 			]
 			title: "A Carapaca do Guerreiro: Blindagem Completa"
-			x: 2.5d
-			y: -3.5d
+			x: 8.5d
+			y: -2.5d
 		}
 
 		{
@@ -1803,8 +1803,8 @@
 				}
 			]
 			title: "A Fortaleza Saqueadora: O Posto Avancado"
-			x: 2.5d
-			y: -4.5d
+			x: 6.0d
+			y: -7.2d
 		}
 		{
 			description: [
@@ -1866,8 +1866,8 @@
 				}
 			]
 			title: "O Cerco a Vila: O Massacre do Devastador"
-			x: 3.5d
-			y: -4.5d
+			x: 6.0d
+			y: -9.5d
 		}
 		{
 			description: [
@@ -1913,8 +1913,8 @@
 				}
 			]
 			title: "O Santuario das Laminas: A Tabua Runica"
-			x: 3.5d
-			y: -3.5d
+			x: 8.5d
+			y: -4.8d
 		}
 		{
 			description: [
@@ -1966,8 +1966,8 @@
 				}
 			]
 			title: "Incursao as Camaras de Provacao"
-			x: 4.5d
-			y: -3.5d
+			x: 11.0d
+			y: -4.8d
 		}
 		{
 			description: [
@@ -2017,8 +2017,8 @@
 				}
 			]
 			title: "O Duelista dos Ventos: O Breeze das Alturas"
-			x: 4.5d
-			y: -4.5d
+			x: 11.0d
+			y: -7.2d
 		}
 
 		{
@@ -2089,8 +2089,8 @@
 				}
 			]
 			title: "O Julgamento Sinistro: O Nucleo e a Maca"
-			x: 5.5d
-			y: -5.0d
+			x: 8.5d
+			y: -9.5d
 		}
 		{
 			description: [
@@ -2163,8 +2163,8 @@
 				}
 			]
 			title: "O Silencio dos Abismos: A Cidade Ancestral"
-			x: 3.5d
-			y: -6.0d
+			x: 13.5d
+			y: -7.2d
 		}
 	]
 }
