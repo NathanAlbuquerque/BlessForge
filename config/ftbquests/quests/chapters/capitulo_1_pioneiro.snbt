@@ -107,20 +107,20 @@
 		{
 			dependencies: ["1001000000000010"]
 			description: [
-				"Com as correntes re-conectáveis e a tirolesa, você pode deslizar rapidamente entre picos de montanhas e sobre desfiladeiros perigosos."
-				"Conecte as correntes entre dois blocos altos e use a roldana para surfar pelos céus!"
+				"Com os mods Connectible Chains e Ziplines: Rezipped!, você pode deslizar rapidamente sobre abismos e montanhas!"
+				"Como funciona: Clique com correntes em cercas ou muros para criar uma linha suspensa no ar. Depois, pule na corrente segurando qualquer Picareta ou Chave Inglesa na mão para deslizar em alta velocidade!"
 			]
 			icon: {
-				id: "zipline:zipline"
+				id: "minecraft:chain"
 			}
 			id: "1001000000000030"
-			subtitle: "Velocidade nos ares com Ziplines"
+			subtitle: "Velocidade nos ares com Correntes e Picareta"
 			tasks: [
 				{
 					id: "1001000000000031"
 					item: {
 						count: 1
-						id: "zipline:zipline"
+						id: "minecraft:iron_pickaxe"
 					}
 					type: "item"
 				}

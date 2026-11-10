@@ -198,7 +198,7 @@
 				"Com o Create: Gunsmithing você forja canos de aço, câmaras e gatilhos para montar suas próprias armas de fogo!"
 			]
 			icon: {
-				id: "create_gunsmithing:flintlock"
+				id: "cgs:flintlock"
 			}
 			id: "1002000000000050"
 			shape: "square"
@@ -209,7 +209,7 @@
 					id: "1002000000000051"
 					item: {
 						count: 1
-						id: "create_gunsmithing:flintlock"
+						id: "cgs:flintlock"
 					}
 					type: "item"
 				}

@@ -172,10 +172,10 @@
 		{
 			dependencies: ["1003000000000030", "1003000000000040"]
 			description: [
-				"Com o poder dos chefes do Crepúsculo absorvido, você extrai o aço místico (Steelleaf e Ironwood) para fundir artefatos raros que serão essenciais na forja final de Simply Swords e Upgrader!"
+				"Com o poder dos chefes do Crepúsculo absorvido, você extrai o aço místico (Steeleaf e Ironwood) para fundir artefatos raros que serão essenciais na forja final de Simply Swords e Upgrader!"
 			]
 			icon: {
-				id: "twilightforest:steelleaf_ingot"
+				id: "twilightforest:steeleaf_ingot"
 			}
 			id: "1003000000000050"
 			shape: "square"
@@ -187,7 +187,7 @@
 					id: "1003000000000051"
 					item: {
 						count: 1
-						id: "twilightforest:steelleaf_ingot"
+						id: "twilightforest:steeleaf_ingot"
 					}
 					type: "item"
 				}
