@@ -8,10 +8,10 @@
 
 | Localização / Status | Quantidade | Descrição |
 | :--- | :---: | :--- |
-| 🟢 **ATIVOS** (`mods/`) | **99** | Mods prontos para copiar/usar no Minecraft |
+| 🟢 **ATIVOS** (`mods/`) | **102** | Mods prontos para copiar/usar no Minecraft |
 | 🔴 **DESATIVADOS** (`desativados/`) | **13** | Mods isolados para teste ou backup |
 | 🎨 **RESOURCE PACKS** (`resourcepacks/`) | **8** | Pacotes visuais e de áudio em formato `.zip` |
-| **Total Geral** | **112** | **Arquivos JAR únicos catalogados** |
+| **Total Geral** | **115** | **Arquivos JAR únicos catalogados** |
 
 ---
 
@@ -22,7 +22,7 @@
 - [⚡ Otimização & Performance (10 mods)](#otimização--performance)
 - [🎒 Armazenamento & Inventário (8 mods)](#armazenamento--inventário)
 - [🎨 Gráficos, Áudio & Imersão (9 mods)](#gráficos,-áudio--imersão)
-- [💡 Qualidade de Vida (QoL) & Utilidades (33 mods)](#qualidade-de-vida-qol--utilidades)
+- [💡 Qualidade de Vida (QoL) & Utilidades (36 mods)](#qualidade-de-vida-qol--utilidades)
 - [📚 Bibliotecas, Frameworks & APIs (26 mods)](#bibliotecas,-frameworks--apis)
 - [🖥️ Interface (UI/HUD) & Controles (11 mods)](#interface-ui/hud--controles)
 - [🗺️ Aventura, Dimensões & Estruturas (10 mods)](#aventura,-dimensões--estruturas)
@@ -104,6 +104,7 @@
 | :---: | :--- | :--- | :---: | :---: | :--- | :--- | :--- |
 | 🔴 Desativado | **[Auto Eat](https://modrinth.com/project/automaticallyeat/)** | `autoeat-1.6.8.jar` | Client | Mod | simpleguiapi, multiloaderapi | --- | When your fullness drops below the specified value, you will automatically consume food items in your inventory. |
 | 🟢 Ativo | **carryon-neoforge-1.21.1-2.2.6.13.jar** | `carryon-neoforge-1.21.1-2.2.6.13.jar` | Both | Mod | --- | --- | --- |
+| 🟢 Ativo | **catfighting-neoforge-1.21.1-1.2.0.jar** | `catfighting-neoforge-1.21.1-1.2.0.jar` | Both | Mod | --- | --- | --- |
 | 🔴 Desativado | **[Chunky](https://github.com/pop4959/Chunky)** | `Chunky-NeoForge-1.4.23.jar` | Both | Mod | --- | --- | Pre-generates chunks, quickly, efficiently, and safely |
 | 🟢 Ativo | **connector-2.0.0-beta.17+1.21.1-full.jar** | `connector-2.0.0-beta.17+1.21.1-full.jar` | Both | Mod | --- | --- | --- |
 | 🟢 Ativo | **[CreativeCore](https://modrinth.com/mod/creativecore)** | `CreativeCore_NEOFORGE_v2.13.51_mc1.21.1.jar` | Both | Mod | --- | AmbientSounds | A simple but powerful coremod. |
@@ -128,6 +129,7 @@
 | 🟢 Ativo | **[Nature's Compass](https://github.com/MattCzyr/NaturesCompass)** | `NaturesCompass-1.21.1-3.4.0-neoforge.jar` | Both | Mod | --- | --- | --- |
 | 🔴 Desativado | **[Pathogen : monster plague](https://www.curseforge.com/minecraft/mc-mods/pathogen)** | `pathogen-1.4.7-neoforge-1.21.1.jar` | Both | Mod | geckolib, GeckoLib | --- | --- |
 | 🟢 Ativo | **Projectiles Trajectory Prediction** | `ptp-1.21.1-1.0.35.jar` | * | Mod | fabric-api | --- | Shows the trajectory of projectiles like arrows, snowballs, eggs, tridents and ender pearls. |
+| 🟢 Ativo | **Reconnectible Chains** | `connectiblechains-2.5.0+1.21.1-neoforge.jar` | Client | Mod | yet_another_config_lib_v3 | Zipline | Connect your fences with a decorative chain! |
 | 🔴 Desativado | **[Resource Pack Options](https://git.frohnmeyer-wds.de/JfMods/Respackopts)** | `respackopts-4.11.3+forge.jar` | Both | Mod | libjf_base, libjf_data_manipulation_v0, libjf_config_core_v2, muscript | --- | --- |
 | 🟢 Ativo | **[Skin Changer](https://www.curseforge.com/minecraft/mc-mods/skinchanger)** | `skin_changer-neoforge-1.21-0.9.2.jar` | Both | Mod | architectury | --- | This mod allows you to change your Minecraft server skin on the fly even if it is in offline mode. |
 | 🟢 Ativo | **Symbols 'n' Stuff** | `symbols_n_stuff-0.1.2+1.21+neoforge.jar` | Both | Mod | kotlinforforge | --- | --- |
@@ -135,6 +137,7 @@
 | 🟢 Ativo | **Upgrader** | `upgrader-neoforge-1.2.1+1.21.1.jar` | Both | Mod | --- | --- | Gambling-style item upgrader: risk an item for a shot at a better one. |
 | 🔴 Desativado | **Voxy** | `voxy-0.6.0.jar` | Client | Mod | sodium, fabric_api | --- | Far distance rendering mod utilising LoDs |
 | 🟢 Ativo | **[Waystones](https://mods.twelveiterations.com/minecraft/waystones)** | `waystones-neoforge-1.21.1-21.1.46.jar` | Both | Mod | balm | --- | Teleport back to activated waystones. For Survival, Adventure or Servers. |
+| 🟢 Ativo | **Zipline** | `zipline-1.5.3+1.21.1-neoforge.jar` | Client | Mod | yet_another_config_lib_v3, connectiblechains | --- | Satisfactory-inspired ziplines in Minecraft! |
 
 ---
 
@@ -166,7 +169,7 @@
 | 🟢 Ativo | **Resourceful Lib** | `resourcefullib-neoforge-1.21-3.0.12.jar` | Both | Lib | --- | --- | Team Resourceful Library |
 | 🔴 Desativado | **Simple GUI API** | `simpleguiapi-1.5.10.jar` | Both | Lib | multiloaderapi | Auto Eat | Reusable config GUI API for NeoForge mods. |
 | 🟢 Ativo | **[U Team Core](https://u-team.info/mods/uteamcore)** | `u_team_core-neoforge-1.21.1-5.6.2.384.jar` | Both | Lib | --- | Music Player | Join our discord server here: https://discord.hycrafthd.net\n\nThis library contains many useful modding stuff! |
-| 🟢 Ativo | **YetAnotherConfigLib** | `yet_another_config_lib_v3-3.8.2+1.21.1-neoforge.jar` | Both | Lib | --- | armoroftheages-neoforge-1.21.1-1.5.11.jar, Chest Tracker | YetAnotherConfigLib (yacl) is just that. A builder-based configuration library for Minecraft.\n |
+| 🟢 Ativo | **YetAnotherConfigLib** | `yet_another_config_lib_v3-3.8.2+1.21.1-neoforge.jar` | Both | Lib | --- | armoroftheages-neoforge-1.21.1-1.5.11.jar, Reconnectible Chains, Zipline, Chest Tracker | YetAnotherConfigLib (yacl) is just that. A builder-based configuration library for Minecraft.\n |
 | 🟢 Ativo | **[YUNG's API](https://www.curseforge.com/minecraft/mc-mods/yungs-api-neoforge)** | `YungsApi-1.21.1-NeoForge-5.1.9.jar` | Both | Lib | --- | Traveler's Titles | API Library for YUNG's minecraft mods. |
 
 ---
