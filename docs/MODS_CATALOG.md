@@ -157,7 +157,7 @@
 | 🟢 Ativo | **[Curios API](https://github.com/TheIllusiveC4/Curios)** | `curios-neoforge-9.5.1+1.21.1.jar` | Both | Lib | --- | L_Ender's Cataclysm 1.21.1-3.33.jar | A flexible and expandable accessory/equipment API for users and developers. |
 | 🟢 Ativo | **[Forge Config API Port](https://github.com/Fuzss/forgeconfigapiport)** | `ForgeConfigAPIPort-v21.1.6-1.21.1-NeoForge.jar` | Both | Lib | --- | --- | Provides NeoForge's & Forge's config systems to other modding ecosystems. Designed for a multi-loader architecture. |
 | 🟢 Ativo | **[Forgified Fabric API](https://github.com/Sinytra/ForgifiedFabricAPI)** | `forgified-fabric-api-0.116.15+2.3.5+1.21.1.jar` | Both | Lib | --- | Continuity, Voxy | Core API module providing key hooks and intercompatibility features. |
-| 🟢 Ativo | **FTB Library** | `ftb-library-neoforge-2101.1.37.jar` | Both | Lib | architectury | FTB Filter System, FTB Quests, FTB Ranks, FTB Teams, FTB Ultimine | --- |
+| 🟢 Ativo | **FTB Library** | `ftb-library-neoforge-2101.1.39.jar` | Both | Lib | architectury, ftbxmodcompat | FTB Filter System, FTB Quests, FTB Ranks, FTB Teams, FTB Ultimine | --- |
 | 🟢 Ativo | **Fzzy Config** | `fzzy_config-0.7.7+1.21+neoforge.jar` | Both | Lib | kotlinforforge | Simply Tooltips, EMI Loot, Simply Swords | --- |
 | 🟢 Ativo | **[GeckoLib 4](http://geckolib.com/)** | `geckolib-neoforge-1.21.1-4.9.3.jar` | Both | Lib | geckoanimfix | Mielon's The Sift, NukaTeam's Gun Lib, Pathogen : monster plague | --- |
 | 🟢 Ativo | **kotlinforforge-5.12.0-all.jar** | `kotlinforforge-5.12.0-all.jar` | Both | Lib | --- | --- | --- |
